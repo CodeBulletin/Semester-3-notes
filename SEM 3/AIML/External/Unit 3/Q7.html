@@ -1,0 +1,98 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q7</h1>
+
+      <div class="ck-content">
+        <h2>(a) How Least Square, Total sum of squares and sum of square of residuals are different from each other give example?</h2>
+        <p>In statistics and machine learning, Least Squares, Total Sum of Squares
+          (TSS), and Sum of Squares of Residuals (SSR) are all related but distinct
+          concepts. They are often used in the context of regression analysis. Let's
+          define each one and then illustrate their differences with an example.</p>
+        <p><strong>Least Squares:</strong> This is a method used in regression analysis
+          to estimate the parameters of a linear model. It works by minimizing the
+          sum of the squares of the residuals (the differences between observed and
+          predicted values). The goal is to find the line (or hyperplane in multiple
+          dimensions) that minimizes these squared differences.</p>
+        <p><strong>Total Sum of Squares (TSS):</strong> TSS measures the total variance
+          in the observed data. It is the sum of the squares of the difference between
+          each observed value and the overall mean of the dataset. It represents
+          the amount of variability within the data.</p>
+        <p><strong>Sum of Squares of Residuals (SSR):</strong> SSR is the sum of the
+          squares of the residuals - the differences between each observed value
+          and its estimated value (predicted by the model). It measures the unexplained
+          variance by the model.</p>
+        <h2>(b) What is confusion matrix? Explain with suitable example?</h2>
+        <p>A confusion matrix is a table often used in classification to describe
+          the performance of a classification model (or "classifier") on a set of
+          test data for which the true values are known. It allows you to visualize
+          the performance of an algorithm, especially in terms of how many instances
+          were correctly or incorrectly classified, and is particularly useful when
+          dealing with imbalanced classes.</p>
+        <p>The confusion matrix itself is simple to understand, but the related terminology
+          can be a bit confusing. Here's a breakdown:</p>
+        <ul>
+          <li><strong>True Positives (TP):</strong> These are cases in which we predicted
+            yes (the event occurs), and they do actually occur.</li>
+          <li><strong>True Negatives (TN):</strong> We predicted no, and they don't occur.</li>
+          <li><strong>False Positives (FP), also known as Type I Error:</strong> We predicted
+            yes, but they don't actually occur.</li>
+          <li><strong>False Negatives (FN), also known as Type II Error:</strong> We
+            predicted no, but they actually do occur.</li>
+        </ul>
+        <p>From these values, various metrics can be calculated, such as accuracy,
+          precision, recall, and F1 score.</p>
+        <p><strong>Example:</strong>
+        </p>
+        <p>Suppose you have developed a model to predict whether a given email is
+          spam (positive class) or not spam (negative class). After running your
+          model on a test set of 100 emails, you get the following results:</p>
+        <ul>
+          <li>40 emails are correctly identified as spam (TP).</li>
+          <li>45 emails are correctly identified as not spam (TN).</li>
+          <li>5 emails are incorrectly identified as spam (FP).</li>
+          <li>10 emails are incorrectly identified as not spam (FN).</li>
+        </ul>
+        <p>So, your confusion matrix would look like this:</p>
+        <figure class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                <th>Predicted: Spam</th>
+                <th>Predicted: Not Spam</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Actual: Spam</strong>
+                </td>
+                <td>40 (TP)</td>
+                <td>10 (FN)</td>
+              </tr>
+              <tr>
+                <td><strong>Actual: Not Spam</strong>
+                </td>
+                <td>5 (FP)</td>
+                <td>45 (TN)</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <p>This matrix provides a wealth of information to evaluate the model's performance.
+          For example, you can see that the model is relatively good at identifying
+          not spam emails but struggles a bit with incorrectly identifying some non-spam
+          emails as spam.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

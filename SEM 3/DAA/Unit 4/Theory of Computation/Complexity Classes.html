@@ -1,0 +1,61 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Complexity Classes</h1>
+
+      <div class="ck-content">
+        <p>There are several different complexity classes in computational complexity
+          theory, each representing a different level of computational difficulty.
+          Here are some of the most commonly studied complexity classes:</p>
+        <ol>
+          <li><strong>P (Polynomial Time)</strong>: P is the class of decision problems
+            that can be solved by a deterministic Turing machine in polynomial time.
+            These are problems that have efficient algorithms for their solution.</li>
+          <li><strong>NP (Nondeterministic Polynomial Time)</strong>: NP is the class
+            of decision problems that can be verified in polynomial time. While finding
+            a solution to an NP problem may be difficult, given a potential solution,
+            it can be efficiently verified. The question of whether P = NP, i.e., whether
+            every problem in NP can be solved in polynomial time, is one of the most
+            important open problems in computer science.</li>
+          <li><strong>NP-complete</strong>: NP-complete is a subset of NP problems that
+            are considered to be among the most difficult problems in NP. A problem
+            is NP-complete if every other problem in NP can be reduced to it in polynomial
+            time. If a polynomial-time algorithm is found for any NP-complete problem,
+            it would imply that P = NP.</li>
+          <li><strong>NP-hard</strong>: NP-hard is a class of problems that are at least
+            as difficult as the NP-complete problems. While NP-complete problems are
+            a subset of NP-hard problems, NP-hard problems may or may not be in NP.
+            They represent problems that are computationally challenging and do not
+            necessarily have efficient solutions.</li>
+          <li><strong>EXP (Exponential Time)</strong>: EXP is the class of decision
+            problems that can be solved by a deterministic Turing machine in exponential
+            time. These problems have solutions that require an exponential amount
+            of time to compute.</li>
+          <li><strong>PSPACE (Polynomial Space)</strong>: PSPACE is the class of decision
+            problems that can be solved by a deterministic Turing machine using a polynomial
+            amount of memory space. It represents problems that can be solved with
+            a reasonable amount of memory.</li>
+          <li><strong>BPP (Bounded-error Probabilistic Polynomial Time)</strong>: BPP
+            is the class of decision problems that can be solved by a probabilistic
+            Turing machine in polynomial time with a bounded probability of error.
+            These problems can be solved with a randomized algorithm that produces
+            the correct answer with high probability.</li>
+        </ol>
+        <p>These are just a few examples of complexity classes, and there are many
+          more, each representing different levels of computational difficulty. The
+          study of complexity classes helps in understanding the inherent complexity
+          of computational problems and provides insights into the limits of efficient
+          computation.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

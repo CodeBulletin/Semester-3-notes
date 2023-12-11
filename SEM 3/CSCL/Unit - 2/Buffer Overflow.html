@@ -1,0 +1,60 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Buffer Overflow</h1>
+
+      <div class="ck-content">
+        <p>Buffer Overflow is a type of software vulnerability that occurs when a
+          program or process tries to store more data in a buffer (a temporary storage
+          area) than it can handle. This can lead to the overflow of excess data
+          into adjacent memory locations, potentially overwriting other data or executing
+          arbitrary code.</p>
+        <p>Here's how Buffer Overflow works:</p>
+        <ol>
+          <li><strong>Buffer allocation</strong>: When a program allocates memory for
+            a buffer, it sets aside a specific amount of memory to store data.</li>
+          <li><strong>Insufficient bounds checking</strong>: If the program does not
+            properly check the size of the data being inputted into the buffer, it
+            may allow more data to be stored than the allocated memory can hold.</li>
+          <li><strong>Data overflow</strong>: When more data is inputted than the buffer
+            can handle, the excess data overflows into adjacent memory locations, potentially
+            overwriting important data or control structures.</li>
+          <li><strong>Code execution or system compromise</strong>: If the overflowed
+            data contains executable code or instructions, it can be executed by the
+            program, leading to arbitrary code execution. This can allow an attacker
+            to gain unauthorized access, execute malicious actions, or take control
+            of the affected system.</li>
+        </ol>
+        <p>Buffer Overflow vulnerabilities can be exploited by attackers to execute
+          arbitrary code, crash a program, gain unauthorized access, or escalate
+          privileges. They are commonly found in programs written in low-level languages
+          like C or C++, where manual memory management is required.</p>
+        <p>To prevent Buffer Overflow vulnerabilities, developers can follow secure
+          coding practices:</p>
+        <ol>
+          <li><strong>Input validation and bounds checking</strong>: Validate and sanitize
+            all user input to ensure it does not exceed the allocated buffer size.
+            Perform proper bounds checking to prevent buffer overflows.</li>
+          <li><strong>Use secure coding libraries and functions</strong>: Utilize secure
+            coding libraries and functions that handle memory management and input
+            validation automatically, reducing the risk of buffer overflows.</li>
+          <li><strong>Enable compiler security features</strong>: Enable compiler security
+            features, such as stack canaries or address space layout randomization
+            (ASLR), which can detect or mitigate buffer overflow attacks.</li>
+          <li><strong>Regular updates and patches</strong>: Keep the software and its
+            dependencies up to date with the latest security patches to address any
+            known vulnerabilities.</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

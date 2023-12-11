@@ -1,0 +1,56 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Red Black Tree</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Red-Black Trees are a type of self-balancing binary search tree data structure.
+          They were developed to ensure that a binary search tree remains approximately
+          balanced, which helps to maintain efficient operations for searching, insertion,
+          and deletion.</p>
+        <p style="margin-left:0px;">Red-Black Trees have the following properties:</p>
+        <p style="margin-left:0px;"><strong>Binary Search Tree Property</strong>: Like all binary search trees,
+          a Red-Black Tree satisfies the binary search tree property, meaning that
+          for each node:</p>
+        <ul>
+          <li>All nodes in its left subtree have keys less than its key.</li>
+          <li>All nodes in its right subtree have keys greater than its key.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Red-Black Properties</strong>:</p>
+        <ul>
+          <li>Each node is colored, either red or black.</li>
+          <li>The root node is always black.</li>
+          <li>Every leaf (NIL) is considered black.</li>
+          <li>If a red node has a red child, then its parent must be black. In other
+            words, no two red nodes can be adjacent along any path.</li>
+          <li>For each node, any simple path from this node to any of its descendant
+            leaves has the same number of black nodes. This property ensures that the
+            tree remains approximately balanced.</li>
+        </ul>
+        <p style="margin-left:0px;">The balancing properties of Red-Black Trees make sure that the longest
+          path from the root to a leaf is no more than twice as long as the shortest
+          path. This guarantees that the tree remains balanced, and the worst-case
+          time complexity for operations such as insertion, deletion, and search
+          is O(log N), where N is the number of nodes in the tree.</p>
+        <p style="margin-left:0px;">Red-Black Trees are widely used in many programming languages and libraries
+          to implement data structures like associative arrays (maps and dictionaries)
+          and as a foundation for more advanced data structures like AVL trees and
+          B-trees. They are particularly useful in situations where you need to maintain
+          a sorted collection of data while performing frequent insertions and deletions.</p>
+        <figure
+        class="image">
+          <img src="Red%20Black%20Tree/image.png">
+          </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

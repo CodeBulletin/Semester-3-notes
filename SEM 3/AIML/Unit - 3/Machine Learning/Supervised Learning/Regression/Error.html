@@ -1,0 +1,84 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Error</h1>
+
+      <div class="ck-content">
+        <p><span class="text-big"><strong>Residual Sum of Squares (RSS)</strong></span>:
+          It is a statistical measure used in regression analysis to quantify the
+          total sum of squared differences between the observed values of the dependent
+          variable and the predicted values from a regression model.</p>
+        <p>The RSS is calculated by summing the squared differences between each
+          observed value of the dependent variable and its corresponding predicted
+          value from the regression model. The formula for RSS is:</p>
+        <p><span class="math-tex">\(RSS = \sum(y_t-y_p)^2\)</span>
+        </p>
+        <p>where&nbsp;<span class="math-tex">\(y_p\)</span>&nbsp;represents the predicted
+          values,&nbsp;<span class="math-tex">\(y_t\)</span>&nbsp;represents the
+          actual values,</p>
+        <p><span class="text-big"><strong>The Total Sum of Squares (TSS)</strong></span>:
+          it is a statistical measure used to quantify the total variation or dispersion
+          in a dataset. It is commonly used in regression analysis to assess the
+          total variability of the dependent variable.</p>
+        <p>The TSS is calculated by summing the squared differences between each
+          data point and the mean of the dependent variable. The formula for TSS
+          is:</p>
+        <p><span class="math-tex">\(TSS = \sum(y_t-\bar{y})^2\)</span>
+        </p>
+        <p>where&nbsp;<span class="math-tex">\(\bar{y}\)</span>&nbsp;represents the
+          mean of the dependent variable</p>
+        <p><span class="text-big"><strong>The Total Sum of Squares Regression (TSSR)</strong></span>:
+          also known as the Explained Sum of Squares (<strong>ESS</strong>), is a
+          statistical measure used in regression analysis to quantify the total sum
+          of squared differences between the predicted values from a regression model
+          and the mean of the dependent variable.</p>
+        <p>The TSSR is calculated by summing the squared differences between each
+          predicted value from the regression model and the mean of the dependent
+          variable. The formula for TSSR is:</p>
+        <p><span class="math-tex">\(ESS = \sum(y_p - \bar y)^2\)</span>
+        </p>
+        <p><span class="text-big"><strong>Mean Squared Error (MSE)</strong></span>:
+          MSE is a commonly used cost function for regression problems. It calculates
+          the average squared difference between the predicted values and the actual
+          values.&nbsp;</p>
+        <p>The formula for MSE is:</p>
+        <p><span class="math-tex">\(MSE = \frac{RSS}{n}\)</span>
+        </p>
+        <p>where &nbsp;<span class="math-tex">\(n\)</span>&nbsp;is the number of
+          data points.</p>
+        <p><span class="text-big"><strong>Root Mean Squared Error (RMSE)</strong></span>:
+          It is a commonly used metric to measure the average deviation between predicted
+          values and actual values in regression problems. RMSE is derived from the
+          mean squared error (MSE) by taking the square root of the average squared
+          differences.</p>
+        <p>The formula for RMSE is:</p>
+        <p><span class="math-tex">\(RMSE = \sqrt{MSE}\)</span>
+        </p>
+        <p><span class="text-big"><strong>R-squared</strong></span>, also known as
+          the coefficient of determination, is a statistical measure used in regression
+          analysis to assess the goodness of fit of a regression model. It represents
+          the proportion of the total variation in the dependent variable that is
+          explained by the independent variables in the model.</p>
+        <p>R-squared is a value between 0 and 1, where:</p>
+        <ul>
+          <li>0 indicates that the independent variables do not explain any of the variation
+            in the dependent variable.</li>
+          <li>1 indicates that the independent variables explain all of the variation
+            in the dependent variable.</li>
+        </ul>
+        <p>The formula for calculating R-squared is:</p>
+        <p>R-squared =&nbsp;<span class="math-tex">\(1 - \frac{RSS}{TSS}\)</span>
+        </p>
+      </div>
+    </div>
+  </body>
+
+</html>

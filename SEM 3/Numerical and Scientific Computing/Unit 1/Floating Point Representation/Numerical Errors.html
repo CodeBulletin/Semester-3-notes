@@ -1,0 +1,108 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Numerical Errors</h1>
+
+      <div class="ck-content">
+        <p>Numerical errors refer to inaccuracies or deviations that occur when performing
+          calculations with finite precision arithmetic on digital computers. These
+          errors can arise due to the limitations of representing real numbers using
+          a fixed number of digits or bits in a computer's memory.</p>
+        <h2 style="margin-left:0px;">Numerical errors can have various consequences:</h2>
+        <ol>
+          <li><strong>Loss of Accuracy</strong>: The calculated result may differ significantly
+            from the true mathematical value due to accumulated errors.</li>
+          <li><strong>Instability</strong>: Certain algorithms or computations may become
+            unstable and produce wildly divergent results as errors accumulate.</li>
+          <li><strong>Convergence Issues</strong>: Numerical errors can affect the convergence
+            of iterative algorithms, making them converge much slower or not at all.</li>
+          <li><strong>Incorrect Decisions</strong>: In scientific simulations and engineering
+            applications, small numerical errors can lead to incorrect decisions and
+            predictions.</li>
+        </ol>
+        <h2>Types of Numerical Errors</h2>
+        <ol>
+          <li><strong>Inherent Error</strong>:
+            <br>This term generally refers to errors that are inherent to a process or
+            measurement due to its nature. It could be errors caused by limitations
+            in equipment, environmental factors, or the fundamental principles involved
+            in the process. In numerical computation, it might also refer to errors
+            that are unavoidable due to the nature of representing real numbers in
+            finite precision.
+            <br>&nbsp;</li>
+          <li><strong>Round Off Error</strong>:
+            <br>Round-off error occurs when real numbers are approximated using a finite
+            number of digits or bits. It's the discrepancy between the true value and
+            the rounded value. This error accumulates in calculations, and it's a type
+            of error caused by representing continuous values with discrete approximations.
+            <br><strong>Example</strong>:
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(x = 1.2775495\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(\bar{x} = 1.278\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(R = |x - \bar{x}| = 0.0004505\)</span>
+            <br>&nbsp;</li>
+          <li><strong>Chopping Error</strong>:
+            <br>Chopping error is a form of round-off error that occurs when a number
+            is rounded down to a specific number of decimal places or significant figures.
+            This can result in a loss of accuracy in calculations. Chopping is often
+            used as a simplified representation of rounding for teaching purposes.
+            <br><strong>Example</strong>:
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(x = 1.2775495\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(\bar{x} = 1.277\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(E_c = |x - \bar{x}| = 0.0005495\)</span>
+            <br>&nbsp;</li>
+          <li><strong>Truncation Error</strong>:&nbsp;
+            <br>In numerical analysis and scientific computing, truncation error is an
+            error caused by approximating a mathematical process. Truncation error
+            results from ignoring all but a finite number of terms of an infinite series.
+            For example, the exponential function ex may be expressed as the sum of
+            the infinite series.
+            <br><strong>Example</strong>:
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + ...\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(\bar{e^x} = 1 + x + \frac{x^2}{2!}+\frac{x^3}{3!}\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(T_r = \frac{x^4}{4!} + \frac{x^5}{5!} + \frac{x^6}{6!} + ...\)</span>
+            <br>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(e^1 = 2.71828182846\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(\bar{e^1} = 2.66666666667\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(err = |e^1 - \bar{e^1}| = 0.05161516178\)</span>
+            <br>&nbsp;</li>
+          <li><strong>Absolute Error</strong>:
+            <br>The absolute error is the difference between the measured or calculated
+            value and the true or expected value. It gives you an idea of how far off
+            your estimation is from the actual value, without considering the scale
+            or magnitude of the values involved.
+            <br><strong>Example</strong>:
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(x = 1.27195\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(\bar{x} = 1.273\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(E_a = |x - \bar{x}| = 0.00105\)</span>
+            <br>&nbsp;</li>
+          <li><strong>Relative Error</strong>:
+            <br>The relative error is the ratio of the absolute error to the true value.
+            It's often expressed as a percentage. Relative error provides a way to
+            compare the error to the size of the actual value, giving you a sense of
+            the proportion of error.
+            <br><strong>Example</strong>:
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(E_r = \frac{E_a}{x}\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(E_r = 0.00082550414\)</span>
+            <br>&nbsp;</li>
+          <li><strong>Percentage Error</strong>:
+            <br>Percentage error is the relative error expressed as a percentage of the
+            true value. It's a way of quantifying how much the calculated value deviates
+            from the true value in terms of a percentage of the true value.
+            <br><strong>Example</strong>:
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(E_p = 100E_r\%\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(E_p = 0.082550414\%\)</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

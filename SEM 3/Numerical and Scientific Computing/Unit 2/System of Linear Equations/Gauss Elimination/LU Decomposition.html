@@ -1,0 +1,65 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>LU Decomposition</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">LU decomposition, short for " Lower-Upper Decomposition," is a matrix
+          factorization method used in linear algebra to decompose a square matrix
+          A into the product of two matrices: a lower triangular matrix (L) and an
+          upper triangular matrix (U). Mathematically, it can be expressed as:</p>
+        <p
+        style="margin-left:0px;">A = LU</p>
+          <p style="margin-left:0px;">Where:</p>
+          <ul>
+            <li>A is the original square matrix you want to decompose.</li>
+            <li>L is the lower triangular matrix, which has zeros above the main diagonal
+              (the diagonal running from the top-left to the bottom-right) and ones on
+              the main diagonal.</li>
+            <li>U is the upper triangular matrix, which has zeros below the main diagonal.</li>
+          </ul>
+          <p style="margin-left:0px;">LU decomposition is particularly useful when you need to solve the same
+            system of equations for different right-hand sides (different b vectors)
+            with the same coefficient matrix A. After performing the LU decomposition
+            of A once, you can solve for x for different b vectors more efficiently
+            because the back-substitution step for Ux = y is relatively fast.</p>
+          <p
+          style="margin-left:0px;">Additionally, LU decomposition is numerically stable and avoids some of
+            the issues related to division by small numbers that can occur in Gaussian
+            elimination with partial pivoting. It is a fundamental technique in numerical
+            linear algebra and is widely used in scientific and engineering computations.</p>
+            <p
+            style="margin-left:0px;">Method:</p>
+              <p style="margin-left:0px;">Suppose A =&nbsp;<span class="math-tex">\(\begin{bmatrix} a_{11} &amp; a_{12} &amp; a_{13} \\ a_{21} &amp; a_{22} &amp; a_{23} \\ a_{31} &amp; a_{32} &amp; a_{33}\end{bmatrix}\)</span>
+              </p>
+              <p style="margin-left:0px;">Convert A into L using Row Operations&nbsp;<span class="math-tex">\(\begin{bmatrix} b_{11} &amp; b_{12} &amp; b_{13} \\ 0 &amp; b_{22} &amp; b_{23} \\ 0 &amp; 0 &amp; b_{33} \end{bmatrix}\)</span>and
+                use the additive inverse of Row Operations to create matrix U =&nbsp;
+                <span
+                class="math-tex">\(\begin{bmatrix} 1 &amp; &nbsp;0 &amp; 0 \\ c_{21} &amp; 1 &amp; 0 \\
+                  c_{31} &amp; c_{32} &amp; 1\end{bmatrix}\)</span>
+              </p>
+              <p style="margin-left:0px;">Such That LU = A</p>
+              <p style="margin-left:0px;">To Solve A system of equation using LU Decomposition&nbsp;</p>
+              <ol>
+                <li>first convert A in AX = B to A = LU&nbsp;
+                  <ol>
+                    <li>LUX = B</li>
+                    <li>Let UX = Y</li>
+                    <li>Then LY = B,</li>
+                  </ol>
+                </li>
+                <li>First Solve LY = B then UX = Y</li>
+              </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

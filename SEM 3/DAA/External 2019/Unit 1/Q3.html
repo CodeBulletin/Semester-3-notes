@@ -1,0 +1,43 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q3</h1>
+
+      <div class="ck-content">
+        <h2>(a) The general form of the master method is given as&nbsp;<span class="math-tex">\(T(n) = aT(n/b) + f(n)\)</span>. Explain the meaning of the terms&nbsp;<span class="math-tex">\(n\)</span>,&nbsp;<span class="math-tex">\(a\)</span>&nbsp;and&nbsp;<span class="math-tex">\(f(n)\)</span>. Solve the equation for the case when&nbsp;<span class="math-tex">\(a = b\)</span>&nbsp;and&nbsp;<span class="math-tex">\(f(n) = kn\)</span>.</h2>
+        <p>The Master Theorem is a tool in computer science used to determine the
+          asymptotic complexity of recurrence relations of the form:</p>
+        <p><span class="math-tex">\(T(n)=aT(n/b)+f(n)\)</span>
+        </p>
+        <p>where:</p>
+        <ul>
+          <li><span class="math-tex">\(a \ge 1\)</span>&nbsp;is the number of subproblems
+            in the recursion.</li>
+          <li><span class="math-tex">\(n/b\)</span>&nbsp;is the size of each subproblem.
+            (Here,&nbsp;<span class="math-tex">\(b &gt; 1\)</span>)</li>
+          <li><span class="math-tex">\(f(n)\)</span>&nbsp;is the cost of the work done
+            outside the recursive calls.</li>
+        </ul>
+        <p>The Master Theorem helps in finding the time complexity of divide and
+          conquer algorithms, but it's not always applicable.</p>
+        <figure class="image">
+          <img src="Q3/image.jpg">
+        </figure>
+        <h2>(b) Find order of complexity of function&nbsp;<span class="math-tex">\(f(n)=2f(n-1)+5\)</span>&nbsp;with initial condition of&nbsp;<span class="math-tex">\(f(1) = 1\)</span>.</h2>
+        <figure class="image">
+          <img src="Q3/1_image.jpg">
+        </figure>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,99 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q1</h1>
+
+      <div class="ck-content">
+        <h2>(a) Difference between Boosting and Bagging?&nbsp;</h2>
+        <p><strong>Boosting</strong> and <strong>Bagging</strong> are both ensemble
+          techniques in machine learning, but they have different approaches:</p>
+        <p><strong>Boosting</strong>: This method combines multiple weak learners
+          (models that are slightly better than random guessing) to create a strong
+          learner. Each new model is trained with a focus on the instances that previous
+          models misclassified. Boosting is sequential, meaning each model builds
+          on the previous ones, and it often leads to better predictive accuracy.
+          However, it can also lead to overfitting if not carefully managed. Examples
+          include AdaBoost and Gradient Boosting.</p>
+        <p><strong>Bagging</strong>: Short for Bootstrap Aggregating, this technique
+          involves training multiple models (typically of the same type) on different
+          subsets of the training dataset. Each model gets a subset of data sampled
+          with replacement (bootstrap samples). The final prediction is made by aggregating
+          (averaging or voting) the predictions of each model. Bagging reduces variance
+          and helps to avoid overfitting. A classic example is the Random Forest
+          algorithm.</p>
+        <h2>(b) Compare Over fitting and Under fitting?</h2>
+        <p><strong>Overfitting</strong>: This occurs when a model learns the training
+          data too well, including its noise and outliers, making it perform poorly
+          on unseen data (high variance, low bias). It often happens with very complex
+          models that have too many parameters relative to the number of observations.</p>
+        <p><strong>Underfitting</strong>: In contrast, underfitting happens when
+          a model is too simple, leading to a poor job of capturing the underlying
+          patterns in the data (high bias, low variance). Such models perform poorly
+          on both training and new data.</p>
+        <h2>(c) Compare Depth First Search with Breath First Search?</h2>
+        <p><strong>Depth First Search (DFS)</strong>: This algorithm explores as
+          far as possible along each branch before backtracking. It's good for situations
+          where the solution is likely to be found far from the root node, and the
+          search tree is wide and shallow.</p>
+        <p><strong>Breadth First Search (BFS)</strong>: This algorithm explores all
+          the neighbor nodes at the present depth prior to moving on to the nodes
+          at the next depth level. It's more suitable when the tree is deep and the
+          solutions are frequently closer to the root.</p>
+        <h2>(d) What is difference between informed and uninformed search?</h2>
+        <p><strong>Informed Search</strong>: Also known as heuristic search, uses
+          domain-specific knowledge to find solutions more efficiently. Algorithms
+          like A* and Greedy Search fall into this category.</p>
+        <p><strong>Uninformed Search</strong>: Also known as blind search, does not
+          use any domain-specific knowledge. It searches by systematically exploring
+          the search space. Examples include BFS and DFS.</p>
+        <h2>(e) What is AI? Mention application of AI.</h2>
+        <p><strong>Artificial Intelligence (AI)</strong> is the simulation of human
+          intelligence in machines that are programmed to think and learn like humans.
+          Applications of AI include:</p>
+        <ul>
+          <li>Healthcare (e.g., diagnostic tools, personalized medicine)</li>
+          <li>Autonomous Vehicles</li>
+          <li>Voice Assistants (like Siri, Alexa)</li>
+          <li>Recommendation Systems (Netflix, Amazon)</li>
+          <li>Finance (algorithmic trading, fraud detection)</li>
+        </ul>
+        <h2>(f) What is constraint satisfaction Algorithm?</h2>
+        <p>A <strong>Constraint Satisfaction Algorithm</strong> is a method in AI that
+          solves problems by placing constraints on the possible solutions. These
+          problems have a set of variables, each with a domain of values, and a set
+          of constraints specifying allowable combinations of values. Algorithms
+          like backtracking, constraint propagation, and heuristic search are used.</p>
+        <h2>(g) What is Heuristic Search?</h2>
+        <p><strong>Heuristic Search</strong> is an AI search algorithm that employs
+          a heuristic for its search strategy. A heuristic is a technique designed
+          to solve a problem more quickly when classic methods are too slow, or to
+          find an approximate solution when classic methods fail to find any exact
+          solution. It speeds up the process by using domain-specific knowledge to
+          make educated guesses about which path to follow.</p>
+        <h2>(h) What are the various types of Neural Network?</h2>
+        <ol>
+          <li><strong>Feedforward Neural Networks</strong>: Basic type, where connections
+            between nodes do not form cycles.</li>
+          <li><strong>Convolutional Neural Networks (CNNs)</strong>: Great for image
+            recognition and processing.</li>
+          <li><strong>Recurrent Neural Networks (RNNs)</strong>: Useful for sequence
+            data like time series or natural language.</li>
+          <li><strong>Generative Adversarial Networks (GANs)</strong>: Consist of two
+            networks, a generator and a discriminator, that are trained together.</li>
+          <li><strong>Autoencoders</strong>: Used for unsupervised learning tasks like
+            dimensionality reduction or feature learning.</li>
+        </ol>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

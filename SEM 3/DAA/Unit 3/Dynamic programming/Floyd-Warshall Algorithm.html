@@ -1,0 +1,39 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Floyd-Warshall Algorithm</h1>
+
+      <div class="ck-content">
+        <p>The Floyd-Warshall algorithm is a graph algorithm used to find the shortest
+          paths between all pairs of vertices in a weighted graph. It can handle
+          both positive and negative edge weights, but it does not work with graphs
+          that contain negative cycles.</p>
+        <p>The algorithm works by iteratively considering all possible intermediate
+          vertices in the paths between any two vertices. It builds a matrix called
+          the "distance matrix" that stores the shortest distances between pairs
+          of vertices. Initially, the distance matrix is filled with the weights
+          of the edges in the graph.</p>
+        <p>Then, for each vertex in the graph, the algorithm considers it as a possible
+          intermediate vertex in the paths between all pairs of vertices. If the
+          path through this intermediate vertex is shorter than the current shortest
+          path, the distance matrix is updated accordingly.</p>
+        <p>By repeating this process for all vertices, the algorithm gradually computes
+          the shortest paths between all pairs of vertices. At the end, the distance
+          matrix contains the shortest distances between all pairs of vertices, and
+          it can be used to reconstruct the actual paths if needed.</p>
+        <figure class="image">
+          <img src="Floyd-Warshall%20Algorithm/photo_6303001576922527897_y.jp">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

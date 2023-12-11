@@ -1,0 +1,80 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q9</h1>
+
+      <div class="ck-content">
+        <h2>(a) Explain Principal Component Analysis (PCA), what problems this algorithm address in machine learning problems.&nbsp;</h2>
+        <p style="margin-left:0px;">Principal Component Analysis (PCA) is a dimensionality reduction technique
+          and a fundamental linear algebra method used in machine learning and data
+          analysis. Its primary goal is to transform high-dimensional data into a
+          lower-dimensional representation while retaining as much of the data's
+          variance as possible. PCA achieves this by identifying and extracting the
+          principal components of the data, which are orthogonal linear combinations
+          of the original features.</p>
+        <p style="margin-left:0px;">Here's an explanation of PCA and the problems it addresses in machine
+          learning:</p>
+        <p style="margin-left:0px;"><strong>1. Dimensionality Reduction:</strong> In many machine learning
+          problems, data can have a large number of features, which can lead to computational
+          inefficiency, increased model complexity, and the curse of dimensionality.
+          PCA addresses this issue by reducing the number of features while preserving
+          the most critical information. This reduction simplifies the problem, speeds
+          up training, and often leads to improved model performance.</p>
+        <p style="margin-left:0px;"><strong>2. Decorrelation and Whitening:</strong> PCA finds a new set of
+          variables, the principal components, which are uncorrelated with each other.
+          This decorrelation simplifies the interpretation of data and can help remove
+          multicollinearity issues in some machine learning models. Additionally,
+          PCA can be extended to perform whitening, which further scales the principal
+          components to have unit variance. Whitening can be beneficial in some machine
+          learning tasks, such as improving convergence in optimization algorithms.</p>
+        <p
+        style="margin-left:0px;"><strong>3. Noise Reduction:</strong> In real-world data, some features
+          may contain noisy or redundant information. PCA can emphasize the underlying
+          structure in data while reducing the influence of noise. By focusing on
+          the principal components with the highest variance, PCA effectively separates
+          signal from noise.</p>
+          <p style="margin-left:0px;"><strong>4. Visualization:</strong> PCA is often used for data visualization
+            because it reduces the data to a small number of dimensions (typically
+            two or three), allowing data to be plotted in a lower-dimensional space.
+            This can help analysts and data scientists better understand the data's
+            structure and relationships.</p>
+          <p style="margin-left:0px;"><strong>5. Feature Extraction and Compression:</strong> PCA can also be
+            used for feature extraction, reducing the dimensionality of the data while
+            retaining as much relevant information as possible. In some applications,
+            this compressed representation can be used to improve the efficiency of
+            data storage and transmission.</p>
+          <p style="margin-left:0px;"><strong>6. Data Preprocessing:</strong> PCA can be used as a data preprocessing
+            step to remove redundancy and to improve the quality of data fed into other
+            machine learning algorithms, making the modeling process more efficient
+            and effective.</p>
+          <h2>b) Define ensemble learning approaches. Differentiate between Boosting and Bagging</h2>
+          <p>Ensemble learning is a machine learning technique that combines the predictions
+            of multiple individual models (often referred to as base learners or weak
+            learners) to create a more robust and accurate predictive model. Ensemble
+            methods are particularly powerful because they can improve predictive performance,
+            reduce overfitting, and increase model generalization</p>
+          <ol style="list-style-type:decimal;">
+            <li><strong>Bagging (Bootstrap Aggregating)</strong>: In bagging, multiple
+              base models are trained independently on different subsets of the training
+              data, created through bootstrapping (sampling with replacement). The final
+              prediction is obtained by averaging or voting the predictions of the individual
+              models.</li>
+            <li><strong>Boosting</strong>: Boosting is an iterative ensemble method where
+              base models are trained sequentially, with each subsequent model focusing
+              on the samples that were misclassified by the previous models. The final
+              prediction is obtained by combining the predictions of all the models,
+              typically using weighted voting.</li>
+          </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

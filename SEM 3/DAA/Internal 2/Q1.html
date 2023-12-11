@@ -1,0 +1,115 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q1</h1>
+
+      <div class="ck-content">
+        <h2>(a) Define Omega notation.&nbsp;</h2>
+        <p>Omega notation (Ω) is used in computer science to describe the lower bound
+          of an algorithm's running time. It provides a guarantee that the algorithm
+          will take at least this amount of time to complete. For example, if an
+          algorithm has a time complexity of Ω(n^2), it means that the execution
+          time will not be less than a constant times n^2 for sufficiently large
+          n.</p>
+        <p>For a function&nbsp;<span class="math-tex">\(f(n)\)</span>,&nbsp;
+          <span
+          class="math-tex">\(\Omega(g(n))\)</span>&nbsp;represents an lower bound on its growth.
+            This means that there exists a constant&nbsp;<span class="math-tex">\(c &gt; 0\)</span>&nbsp;and
+            an input size&nbsp;<span class="math-tex">\(n_0\)</span>&nbsp;such that&nbsp;
+            <span
+            class="math-tex">\(f(n)\)</span>&nbsp;is bounded bellow by&nbsp;<span class="math-tex">\(c *g(n) \space \forall \space n \ge n_0\)</span>
+        </p>
+        <h2>(b) Derive the worst case complexity of the quick sort algorithm.&nbsp;</h2>
+        <p>Quick Sort is a divide-and-conquer algorithm. In the worst case, it occurs
+          when the pivot element is the smallest or the largest element in the list,
+          leading to unbalanced partitions. In such cases, the time complexity becomes&nbsp;
+          <span
+          class="math-tex">\(O(n^2)\)</span>. However, with a good pivot selection method, like choosing
+            the median, the average complexity can be&nbsp;<span class="math-tex">\(O(n log n)\)</span>.</p>
+        <p>
+          <img src="Q1/image.jpg">
+        </p>
+        <h2>(c) State the general principle of greedy method.&nbsp;</h2>
+        <p>The greedy method is an algorithmic approach that makes the best choice
+          at each step as it attempts to find the global optimum. It follows the
+          problem-solving heuristic of making the locally optimal choice at each
+          stage with the hope of finding a global optimum. Greedy algorithms are
+          known for their efficiency and are used in problems like the shortest path,
+          minimum spanning tree, and Huffman coding</p>
+        <p>Overall, greedy algorithms can be a useful tool for solving certain types
+          of problems efficiently, but they may not always provide the optimal solution.
+          It is important to carefully analyze the problem and consider alternative
+          approaches when using greedy algorithms.</p><pre><code class="language-text-plain">Greedy(a, n) {
+	for i = 1 to n {
+		x = Select(a)
+		if feasible(x) {
+			solution = solution + x 
+		}
+	}
+}</code></pre>
+        <h2>(d) Explain how reliability of a system is determined using dynamic programming?&nbsp;</h2>
+        <p>Dynamic programming can be used to enhance system reliability by optimizing
+          the redundancy and allocation of resources. The approach typically involves
+          breaking down the reliability problem into smaller subproblems, solving
+          each subproblem just once, and storing these solutions for future reference.
+          The optimal solution of the larger problem is then constructed from these
+          sub-solutions.</p>
+        <figure class="image">
+          <img src="Q1/image.png">
+        </figure>
+        <h2>(e) Explain the Hamiltonian circuit problem with an example.&nbsp;</h2>
+        <p>A Hamiltonian circuit is a path in a graph that visits each vertex exactly
+          once and returns to the starting vertex. For example, in a graph of five
+          vertices arranged in a pentagon, a Hamiltonian circuit would involve starting
+          at one vertex and visiting each of the other four vertices once before
+          returning to the starting vertex.</p>
+        <p>(note there maybe more than 1 Hamiltonian circuit in a graph or there
+          maybe no Hamiltonian circuit)&nbsp;</p>
+        <figure class="image">
+          <img src="Q1/1_image.jpg">
+        </figure>
+        <h2>(f) What is amortized analysis of algorithms and how is it different from asymptotic analysis?&nbsp;</h2>
+        <p>Amortized analysis is a method used to average the time complexity of
+          a sequence of operations in an algorithm over all the operations performed.
+          It differs from asymptotic analysis, which describes the complexity in
+          terms of the input size, often focusing on the worst-case scenario. Amortized
+          analysis provides a more precise understanding of the algorithm's performance
+          in practice.</p>
+        <h2>(g) Formulate 8-queens problem.&nbsp;</h2>
+        <p>he 8-Queens problem involves placing eight queens on an 8x8 chessboard
+          such that no two queens threaten each other. The challenge is that no two
+          queens can be in the same row, column, or diagonal. The problem is a classic
+          example of the more general n-queens problem of placing n queens on an
+          n×n chessboard.</p>
+        <h2>(h) Discuss the importance of knapsack algorithm in our daily life?&nbsp;</h2>
+        <p>The knapsack problem, where one must maximize the total value of items
+          in a knapsack without exceeding its weight capacity, has practical applications
+          in resource allocation, budget management, and logistics. In daily life,
+          it can be used for decision-making in situations like selecting the most
+          valuable items to pack for a trip within a limited space.</p>
+        <h2>(i) Define Optimal binary search tree with an example.&nbsp;</h2>
+        <p>n optimal binary search tree is a binary search tree where the nodes are
+          arranged on levels such that the tree cost (the sum of the search costs
+          of all elements) is minimized. For example, if you have nodes with different
+          probabilities of being searched, arranging them in an optimal BST minimizes
+          the total search cost.</p>
+        <figure class="image">
+          <img src="Q1/3_image.jpg">
+        </figure>
+        <h2>(j) In how many passes does the Merge sort technique sorts the following sequence 3, 27, 4, 11, 45, 39, 2, 16, 56</h2>
+        <figure class="image">
+          <img src="Q1/2_image.jpg">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,49 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Runge-Kutta method order 2</h1>
+
+      <div class="ck-content">
+        <p>The Runge-Kutta method is known for its accuracy and versatility, and
+          there are various orders of Runge-Kutta methods available. The second-order
+          Runge-Kutta method, often referred to as RK2 or the midpoint method, is
+          one of the simplest and most commonly used variants.</p>
+        <p>Here's how the second-order Runge-Kutta method works:</p>
+        <p>Start with an initial condition: a known value of the solution at a specific
+          point, often denoted as "x₀" and "y₀" for the independent and dependent
+          variables, respectively.</p>
+        <p>Choose a step size, denoted as "h," which determines the distance between
+          consecutive points in the approximation.</p>
+        <p>Use the initial condition to calculate the derivative of the function
+          at the starting point: "f(x₀, y₀)." This derivative represents the slope
+          of the function at that point.</p>
+        <p>Approximate the value of the solution at the midpoint of the interval
+          using Euler's method:</p>
+        <p>y_midpoint = y₀ + (h/2) * f(x₀, y₀)</p>
+        <p>Calculate the derivative of the function at the midpoint: "f(x₀ + h/2,
+          y_midpoint)."</p>
+        <p>Use the derivative at the midpoint to update the approximation:</p>
+        <p>y₁ = y₀ + h * f(x₀ + h/2, y_midpoint)</p>
+        <p>This equation represents the second-order Runge-Kutta update formula.</p>
+        <p>Repeat steps 3 to 6, using the newly approximated value as the initial
+          condition, to calculate the solution at subsequent points. Continue this
+          process until the desired range or number of points is reached.</p>
+        <p>The second-order Runge-Kutta method provides a more accurate approximation
+          compared to Euler's method by considering the slope at the midpoint of
+          the interval. However, it is still a second-order method, meaning that
+          the error in the approximation decreases quadratically with the step size.
+          For even higher accuracy, higher-order Runge-Kutta methods like RK4 can
+          be used.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

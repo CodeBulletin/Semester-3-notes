@@ -1,0 +1,71 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q5</h1>
+
+      <div class="ck-content">
+        <h2>(a) Explain Boole's Rule and Weddle's Rule With the help of mathematical formulation</h2>
+        <p>Boole's Rule and Weddle's Rule are both methods for numerical integration,
+          used to approximate the definite integral of a function. They are particularly
+          useful when dealing with integrals that are difficult or impossible to
+          solve analytically. Let's discuss each rule with its mathematical formulation:</p>
+        <p><span class="text-big"><strong>Boole's Rule</strong></span>
+        </p>
+        <p>Boole's Rule is an extension of Simpson's rule for numerical integration.
+          It is a Newton-Cotes formula for approximating integrals using polynomial
+          interpolation. Specifically, it uses fourth-degree polynomials (quartic
+          polynomials).</p>
+        <p>Given a function&nbsp;<span class="math-tex">\(f(x)\)</span>&nbsp;and
+          an interval&nbsp;<span class="math-tex">\((a, b)\)</span>&nbsp;divided
+          into four equal subintervals, with points&nbsp;<span class="math-tex">\(x_0, x_1, x_2, x_3, x_4\)</span>,
+          the integral of&nbsp;<span class="math-tex">\(f\)</span>&nbsp;from&nbsp;
+          <span
+          class="math-tex">\(a \space to \space b\)</span>&nbsp;is approximately:</p>
+        <p><span class="math-tex">\(\int_{a}^{b} f(x) \, dx \approx \frac{2h}{45} \left[ 7f(x_0) + 32f(x_1) + 12f(x_2) + 32f(x_3) + 7f(x_4) \right]\)</span>
+        </p>
+        <p>where&nbsp;<span class="math-tex">\(h = \frac{b - a}{4} \)</span>&nbsp;is
+          the width of each subinterval.</p>
+        <p><span class="text-big"><strong>Weddle's Rule</strong></span>
+        </p>
+        <p>Weddle's Rule is another method for numerical integration, less commonly
+          used than Boole's Rule but useful in specific contexts. It is an application
+          of Newton-Cotes formulas for a seven-point interpolation.</p>
+        <p>Given a function \( f(x) \) and an interval \([a, b]\) divided into six
+          equal subintervals, with points&nbsp;<span class="math-tex">\(x_0, x_1, x_2, x_3, x_4, x_5, x_6\)</span>,
+          the integral of&nbsp;<span class="math-tex">\(f\)</span>&nbsp;from&nbsp;
+          <span
+          class="math-tex">\(a \space to \space b\)</span>is approximately:</p>
+        <p><span class="math-tex">\(\int_{a}^{b} f(x) \, dx \approx \frac{3h}{10} \left[ f(x_0) + 5f(x_1) + f(x_2) + 6f(x_3) + f(x_4) + 5f(x_5) + f(x_6) \right]\)</span>
+        </p>
+        <p>where&nbsp;<span class="math-tex">\(h = \frac{b - a}{6}\)</span>&nbsp;is
+          the width of each subinterval.</p>
+        <p><span class="text-big"><strong>Usage and Accuracy</strong></span>
+        </p>
+        <p>Both rules are examples of closed Newton-Cotes formulas, where the endpoints
+          of the intervals are used in the approximation. They are more accurate
+          than lower-degree methods like the trapezoidal rule or Simpson's rule for
+          smooth functions but require more function evaluations. These rules are
+          especially useful when high accuracy is needed without resorting to very
+          small subinterval sizes. However, like all numerical integration techniques,
+          their accuracy decreases when applied to functions that are not well-behaved
+          or have significant curvature over the interval.</p>
+        <h2>(b) Illustrate Trapezoidal Method Error Formula&nbsp;</h2>
+        <figure class="image">
+          <img src="Q5/image.png">
+        </figure>
+        <figure class="image">
+          <img src="Q5/image.jpg">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

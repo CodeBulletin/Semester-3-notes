@@ -1,0 +1,63 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>N-Queen&#39;s Problem</h1>
+
+      <div class="ck-content">
+        <p>The N-Queens Problem is a classic example of a puzzle and a backtracking
+          problem in computer science and mathematical theory. Here's an overview:</p>
+        <p><strong>Problem Statement</strong>: Place N queens on an N×N chessboard
+          so that no two queens threaten each other. In chess, a queen can move any
+          number of squares vertically, horizontally, or diagonally. Therefore, the
+          solution requires that no two queens share the same row, column, or diagonal.</p>
+        <p><strong>Illustration</strong>: For a standard 8x8 chessboard, the problem
+          is to place 8 queens such that none of them can capture any other using
+          standard chess moves.</p>
+        <p><strong>Solution Complexity</strong>: The problem's complexity increases
+          exponentially with N. For small values of N (like N=4 or N=8), it's feasible
+          to find solutions manually, but as N increases, manual solutions become
+          impractical, and algorithmic approaches are necessary.</p>
+        <p><strong>Backtracking Solution</strong>: The N-Queens Problem is commonly
+          solved using backtracking. The approach typically involves placing a queen
+          in a valid position in the first row, then moving to the next row to place
+          another queen. If a valid position is not found in the next row (i.e.,
+          all positions lead to conflicts), the algorithm backtracks to the previous
+          row to move the queen to the next valid position and tries again.</p>
+        <p><strong>Applications</strong>: While it may seem like a theoretical problem,
+          the N-Queens puzzle has practical applications in computer science, particularly
+          in algorithm theory for solving constraint satisfaction problems. It's
+          a model for many types of real-world problems where a number of conditions
+          must be met without conflicts.</p>
+        <p><strong>Variations</strong>: There are variations of the problem, like
+          extending the chessboard size (greater than 8x8), or placing additional
+          constraints on the queens' placement.</p>
+        <p>The N-Queens Problem is an excellent example to understand and practice
+          backtracking algorithms, showcasing how to explore potential solutions
+          systematically and backtrack when a path leads to a conflict.</p>
+        <p><strong>Time Complexity Analysis</strong>:</p>
+        <ul>
+          <li><strong>Worst-case scenario</strong>: The most straightforward analysis
+            is for the worst-case scenario, which is exponential in nature, O(N!).
+            This is because, in the worst case, the algorithm tries every possible
+            arrangement of queens.</li>
+        </ul>
+        <p>Some Formulas</p>
+        <p>We Can place&nbsp;<span class="math-tex">\(n\)</span>&nbsp;queens in&nbsp;
+          <span
+          class="math-tex">\(n * n\)</span>&nbsp;board in&nbsp;<span class="math-tex">\(\binom{n^2}{n} ways\)</span>
+        </p>
+        <p>better way of placing&nbsp;<span class="math-tex">\(1 + \sum_{i=0}^j\prod_{j=0}^i(n-j)\)</span>
+        </p>
+      </div>
+    </div>
+  </body>
+
+</html>

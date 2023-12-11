@@ -1,0 +1,67 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Non - Monotonic</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Non-monotonic reasoning is a type of reasoning in artificial intelligence
+          and logic that allows for the revision of conclusions based on new information
+          without invalidating previously drawn conclusions. In non-monotonic reasoning,
+          unlike classical logic, adding additional facts or rules may lead to the
+          retraction or revision of prior inferences. This approach is essential
+          for handling uncertainty and incomplete information in AI systems.</p>
+        <p
+        style="margin-left:0px;"><strong>Key Characteristics of Non-Monotonic Reasoning:</strong>
+          </p>
+          <ol style="list-style-type:decimal;">
+            <li><strong>Default Reasoning:</strong> Non-monotonic reasoning often involves
+              default rules or assumptions that can be overridden or revised in the presence
+              of new evidence. These defaults represent tentative conclusions that are
+              assumed to be true unless contradicted.</li>
+            <li><strong>Closed-World Assumption:</strong> In non-monotonic reasoning, there
+              is a closed-world assumption, meaning that if a statement is not explicitly
+              known to be true, it is considered false. However, this assumption can
+              be overridden by default rules.</li>
+            <li><strong>Conflict Resolution:</strong> When conflicts arise between default
+              rules or conclusions, non-monotonic reasoning mechanisms attempt to resolve
+              these conflicts by taking into account the specificity or reliability of
+              the information.</li>
+          </ol>
+          <p style="margin-left:0px;"><strong>Example of Non-Monotonic Reasoning:</strong>
+          </p>
+          <p style="margin-left:0px;">Consider a non-monotonic reasoning scenario involving a bird classification
+            system. We have the following default rules:</p>
+          <ol style="list-style-type:decimal;">
+            <li>If an animal has feathers, it is classified as a bird (default assumption).</li>
+            <li>If an animal can fly, it is classified as a bird (default assumption).</li>
+            <li>Penguins have feathers, but they cannot fly (specific information).</li>
+          </ol>
+          <p style="margin-left:0px;">Now, let's apply non-monotonic reasoning to classify animals based on
+            these rules:</p>
+          <ul style="list-style-type:circle;">
+            <li>Given a generic animal X with feathers, non-monotonic reasoning would
+              initially classify X as a bird based on the first rule (default assumption).</li>
+            <li>However, if we encounter specific information about a penguin, which has
+              feathers but cannot fly (contradicting the second rule), non-monotonic
+              reasoning revises the classification for penguins. It recognizes that the
+              initial assumption based on the second rule was incorrect in this specific
+              case.</li>
+          </ul>
+          <p style="margin-left:0px;">So, in non-monotonic reasoning, the classification of penguins as birds
+            is revised or overridden when we encounter the specific information that
+            they cannot fly. This illustrates the ability of non-monotonic reasoning
+            to handle exceptions and revise conclusions based on new evidence without
+            violating the default assumptions entirely.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

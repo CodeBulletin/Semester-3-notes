@@ -1,0 +1,22 @@
+def optimal_bst(keys, freq):
+    n = len(keys)
+    
+    # Create a 2D table to store the optimal costs
+    cost = [[0] * n for _ in range(n)]
+    
+    # Initialize the diagonal elements of the table with the frequencies
+    for i in range(n):
+        cost[i][i] = freq[i]
+    
+    # Fill the table diagonally
+    for L in range(2, n+1):
+        for i in range(n-L+1):
+            j = i + L - 1
+            cost[i][j] = float('inf')
+            
+            # Calculate the cost for each possible root in the range
+            for r in range(i, j+1):
+                c = sum(freq[i:j+1]) + (cost[i][r-1] if r > i else 0) + (cost[r+1][j] if r < j else 0)
+                cost[i][j] = min(cost[i][j], c)
+    
+    return cost[0][n-1]

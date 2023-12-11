@@ -1,0 +1,62 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Optimal Binary Search Trees</h1>
+
+      <div class="ck-content">
+        <p>Optimal Binary Search Trees (OBSTs) are binary search trees that minimize
+          the average search time for a given set of keys. In a binary search tree,
+          each node has a key, and the keys in the left subtree are smaller than
+          the key in the node, while the keys in the right subtree are greater.</p>
+        <p>An optimal binary search tree is constructed based on the frequency or
+          probability of accessing each key. The goal is to arrange the keys in a
+          way that minimizes the expected search time. The expected search time is
+          the weighted average of the search times for each key, where the weights
+          are the frequencies or probabilities.</p>
+        <p>The construction of an optimal binary search tree involves dynamic programming.
+          The algorithm builds a table that stores the optimal search cost for each
+          subproblem. It starts with the smallest subproblems (single keys) and gradually
+          builds up to the larger subproblems (subsets of keys).</p>
+        <p>The algorithm considers all possible subtrees and calculates the cost
+          of each subtree based on the probabilities or frequencies. It then selects
+          the subtree with the minimum cost and stores it in the table. This process
+          is repeated until the optimal binary search tree for the entire set of
+          keys is constructed.</p>
+        <p>Once the optimal binary search tree is constructed, it can be used to
+          efficiently search for keys. The expected search time for a key in an optimal
+          binary search tree is minimized compared to other possible binary search
+          trees.</p>
+        <p>number of treen with&nbsp;<span class="math-tex">\(n\)</span>&nbsp;nodes
+          =&nbsp;<span class="math-tex">\(\frac{\binom{2n}{n}}{n+1}\)</span>
+        </p>
+        <p><span class="math-tex">\(cost[0, n] = \sum_{1}^{n}p_i*level(p_i) + \sum_{0}^{n} q_i * (level(q_i)-1)\)</span>&nbsp;for
+          existing trees</p>
+        <p><span class="math-tex">\(cost[i, j] = min_{i \le k \lt j}\{c[i, k-1] + c[k, j]\} + w[i, j]\)</span>
+        </p>
+        <p>(uns)</p>
+        <p><span class="math-tex">\(w[i, j] = w[i, j-1] + p_i + q_j\)</span>,&nbsp;
+          <span
+          class="math-tex">\(w[i, i] =q_i\)</span>
+        </p>
+        <p>(s)</p>
+        <p><span class="math-tex">\(w[i, j] = 4 \sum_{i+1}^{j} f(i)\)</span>
+        </p>
+        <figure class="image">
+          <img src="Optimal%20Binary%20Search%20Trees/photo_6305253376736213239_y.jp">
+        </figure>
+        <figure class="image">
+          <img src="Optimal%20Binary%20Search%20Trees/photo_6305253376736213303_y.jp">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,95 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q9</h1>
+
+      <div class="ck-content">
+        <h2>(a) Difference between Feed Forward and Back Propagation Algorithm?</h2>
+        <p><strong>Purpose and Direction</strong>:</p>
+        <ul>
+          <li><strong>Feed Forward Algorithm</strong>: This is the process where the
+            input data is passed through the network from the input layer to the hidden
+            layers and finally to the output layer. It is a forward movement of data
+            through the network.</li>
+          <li><strong>Back Propagation Algorithm</strong>: Back Propagation is used
+            during training of the neural network. It is the process of tuning the
+            weights of the network by propagating the error back through the network.
+            This process occurs in the reverse direction, from the output back to the
+            input layer.</li>
+        </ul>
+        <p><strong>Functionality</strong>:</p>
+        <ul>
+          <li><strong>Feed Forward</strong>: In feed forward, the goal is to obtain
+            the output given the input. Each neuron processes the input (by applying
+            weights and biases) and passes it to the next layer until the output layer
+            is reached.</li>
+          <li><strong>Back Propagation</strong>: In back propagation, the output of
+            the feed forward process is compared against the desired output (ground
+            truth), and the error is calculated. This error is then used to adjust
+            the weights and biases of the network, so that in subsequent iterations,
+            the network can produce outputs closer to the desired result.</li>
+        </ul>
+        <p><strong>Role in Neural Networks</strong>:</p>
+        <ul>
+          <li><strong>Feed Forward</strong>: It is used both during training and testing
+            of the network. It is the basic functionality of any neural network.</li>
+          <li><strong>Back Propagation</strong>: It is used only during the training
+            phase of the network to improve the accuracy of predictions by learning
+            from the error in previous outputs.</li>
+        </ul>
+        <p><strong>Mathematical Operations</strong>:</p>
+        <ul>
+          <li><strong>Feed Forward</strong>: Involves linear operations (like matrix
+            multiplication) and application of activation functions.</li>
+          <li><strong>Back Propagation</strong>: Involves computation of gradients (using
+            methods like the chain rule from calculus) and updating weights and biases
+            (using methods like gradient descent).</li>
+        </ul>
+        <h2>(b) Explain Recommender system? With Suitable example?</h2>
+        <p>Recommender systems are tools and techniques used for suggesting products
+          or contents to users based on various inputs like user's past behavior,
+          similarity with other items or users, and contextual information.</p>
+        <p><strong>Types</strong>:</p>
+        <ol>
+          <li><strong>Collaborative Filtering</strong>: Recommends items based on user
+            interaction patterns. For example, if User A and User B both liked Movie
+            1 and Movie 2, and User A liked Movie 3, the system might recommend Movie
+            3 to User B.</li>
+          <li><strong>Content-Based Filtering</strong>: Makes recommendations by matching
+            the content of the items with a user's profile. For example, if a user
+            frequently watches science fiction movies, the system will recommend other
+            movies of the same genre.</li>
+          <li><strong>Hybrid Systems</strong>: Combine collaborative and content-based
+            methods to enhance the recommendation process. For example, Netflix uses
+            a hybrid system to recommend movies and TV shows based on user's watching
+            habits and the content of the shows.</li>
+        </ol>
+        <p><strong>Example</strong>: Imagine an online bookstore:</p>
+        <ul>
+          <li><strong>Collaborative Filtering</strong>: The system might recommend a
+            book to a user because it was liked and highly rated by users who have
+            similar reading patterns or preferences.</li>
+          <li><strong>Content-Based Filtering</strong>: If a user frequently purchases
+            mystery novels, the system will recommend other books categorized under
+            mystery or by the same author.</li>
+          <li><strong>Hybrid Approach</strong>: The system might use both the user’s
+            past book purchasing history and the similarity of books (genre, author,
+            themes) to make recommendations.</li>
+        </ul>
+        <p>In summary, recommender systems aim to personalize the user experience
+          and enhance user engagement by predicting and suggesting items users are
+          likely to be interested in. They are crucial in various domains like e-commerce,
+          entertainment, and social media platforms.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

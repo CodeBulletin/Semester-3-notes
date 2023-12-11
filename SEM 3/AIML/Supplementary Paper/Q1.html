@@ -1,0 +1,253 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q1</h1>
+
+      <div class="ck-content">
+        <h2>(a) Differentiation between supervised, unsupervised and reinforcement learning.&nbsp;</h2>
+        <figure class="table" style="width:956.341px;">
+          <table style="border:0px solid inherit;">
+            <thead>
+              <tr>
+                <th style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Learning Type</th>
+                <th style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Definition</th>
+                <th style="background-color:var(--background);border:0px solid var(--border-primary);padding:0.5rem 0.75rem;">Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Supervised</td>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Learning from labeled data, where input-output pairs are provided.</td>
+                <td
+                style="background-color:var(--background);border:0px solid var(--border-primary);padding:0.5rem 0.75rem;">Image classification, sentiment analysis, speech recognition</td>
+              </tr>
+              <tr>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Unsupervised</td>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Learning from unlabeled data, finding patterns or structures in the data.</td>
+                <td
+                style="background-color:var(--background);border:0px solid var(--border-primary);padding:0.5rem 0.75rem;">Clustering, dimensionality reduction, anomaly detection</td>
+              </tr>
+              <tr>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Reinforcement</td>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Learning through trial and error, based on rewards or punishments.</td>
+                <td
+                style="background-color:var(--background);border:0px solid var(--border-primary);padding:0.5rem 0.75rem;">Game playing (e.g., AlphaGo), robot control, autonomous driving</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <h2>(b) The knowledge representation models are based on which criteria.</h2>
+        <p>Knowledge representation models are based on the following criteria:</p>
+        <ol>
+          <li><strong>Expressiveness</strong>: How well the model can represent different
+            types of knowledge and relationships.</li>
+          <li><strong>Inferential Power</strong>: The ability of the model to make logical
+            deductions and draw conclusions.</li>
+          <li><strong>Efficiency</strong>: The computational complexity and scalability
+            of the model.</li>
+          <li><strong>Interpretability</strong>: How easily humans can understand and
+            interpret the knowledge represented.</li>
+          <li><strong>Extensibility</strong>: The ease of adding new knowledge or modifying
+            existing knowledge in the model.</li>
+        </ol>
+        <h2>(c) Identify blind search and informed search algorithm.</h2>
+        <p><strong>Blind Search</strong>: These algorithms do not have any additional
+          information about the problem domain other than the problem definition.
+          They explore the search space systematically without considering the specific
+          characteristics of the problem. Examples include Breadth-First Search (BFS)
+          and Depth-First Search (DFS).</p>
+        <p><strong>Informed Search</strong>: These algorithms use additional information
+          or heuristics to guide the search process. They make use of problem-specific
+          knowledge to prioritize the exploration of certain paths in the search
+          space. Examples include A* search, Greedy Best-First Search, and Iterative
+          Deepening A* (IDA*).</p>
+        <h2>(d) Write A* algorithm and its applications.&nbsp;</h2><pre><code class="language-text-plain">from queue import PriorityQueue
+
+def astar_pathfinding(graph, start, goal):
+    open_set = PriorityQueue()
+    open_set.put((0, start))
+    came_from = dict()
+    g_score = {node: float('inf') for node in graph}
+    g_score[start] = 0
+    f_score = {node: float('inf') for node in graph}
+    f_score[start] = heuristic(start, goal)
+
+    while not open_set.empty():
+        _, current = open_set.get()
+
+        if current == goal:
+            return reconstruct_path(came_from, current)
+
+        for neighbor in graph[current]:
+            tentative_g_score = g_score[current] + graph[current][neighbor]
+
+            if tentative_g_score &lt; g_score[neighbor]:
+                came_from[neighbor] = current
+                g_score[neighbor] = tentative_g_score
+                f_score[neighbor] = tentative_g_score + heuristic(neighbor, goal)
+                open_set.put((f_score[neighbor], neighbor))
+
+    return None</code></pre>
+        <p>some common applications of the A* algorithm</p>
+        <ol>
+          <li>Pathfinding in Games</li>
+          <li>Robotics and Autonomous Navigation</li>
+          <li>GPS and Navigation Systems</li>
+          <li>Network Routing</li>
+          <li>Maze Solving</li>
+          <li>Terrain Analysis and Mapping</li>
+          <li>Traffic Planning and Management</li>
+        </ol>
+        <h2>(e) State the differences between traditional and machine learning approaches.</h2>
+        <ol>
+          <li><strong>Problem-solving approach</strong>: Traditional approaches typically
+            involve manually designing algorithms or rules to solve a specific problem.
+            Machine learning approaches, on the other hand, focus on training models
+            on data to learn patterns and make predictions or decisions.</li>
+          <li><strong>Data-driven vs. rule-based</strong>: Traditional approaches rely
+            on predefined rules or logic to solve problems, while machine learning
+            approaches learn from data to automatically discover patterns and make
+            predictions or decisions.</li>
+          <li><strong>Generalization</strong>: Traditional approaches often require
+            explicit programming for each specific case or scenario. In contrast, machine
+            learning approaches aim to generalize from training data to make predictions
+            or decisions on unseen or new data.</li>
+          <li><strong>Adaptability</strong>: Traditional approaches may require manual
+            adjustments or modifications to adapt to changing conditions or new data.
+            Machine learning approaches can automatically adapt and update their models
+            based on new data, allowing for more flexibility and scalability.</li>
+          <li><strong>Expert knowledge vs. data-driven knowledge</strong>: Traditional
+            approaches heavily rely on expert knowledge and domain expertise to design
+            algorithms or rules. Machine learning approaches leverage data-driven knowledge
+            and patterns learned from training data.</li>
+        </ol>
+        <h2>(f) Define the terms: Target variables, Feature variables.</h2>
+        <ol>
+          <li><strong>Target variables</strong>: In machine learning, the target variable
+            (also known as the dependent variable or response variable) is the variable
+            that we want to predict or model. It is the output or the value we are
+            trying to estimate based on the input data and the learned patterns. For
+            example, in a housing price prediction model, the target variable could
+            be the price of a house based on various features.</li>
+          <li><strong>Feature variables</strong>: Feature variables (also known as independent
+            variables or input variables) are the variables or attributes used as input
+            to a machine learning model. They are the characteristics or properties
+            of the data that are used to make predictions or decisions. These variables
+            provide information or context to the model for learning patterns and relationships.
+            In the housing price prediction example, the features could include the
+            number of bedrooms, square footage, location, etc.</li>
+        </ol>
+        <h2>(g) With given value of TSS and RSS, how to calculate R-squared values.</h2>
+        <p><span class="math-tex">\(R^2 = 1 - \frac{RSS}{TSS}\)</span>
+        </p>
+        <p><strong>Example</strong>:</p>
+        <p>let the true values be {2, 7, 8, 13}</p>
+        <p>and let the predicted values be {3, 6, 9, 12}</p>
+        <p>then&nbsp;<span class="math-tex">\(\bar x = \frac{2+7+8+13}{4} = \frac{30}4 = 7.5 \)</span>
+        </p>
+        <p><span class="math-tex">\(RSS = (2 - 3)^2 + (7 - 6)^2 + (8 - 9)^2 + (13 - 12)^2 = 4\)</span>
+        </p>
+        <p><span class="math-tex">\(TSS = (2 - 7.5)^2 + (7 - 7.5)^2 + (8 - 7.5)^2 + (13 - 7.5)^2 = 61\)</span>
+        </p>
+        <p><span class="math-tex">\(R^2 = 1 - \frac{4}{61} = 0.93443\)</span>
+        </p>
+        <h2>(h) Explain types of neural network.</h2>
+        <ol>
+          <li><strong>Feedforward Neural Network (FNN)</strong>: This is the most basic
+            type of neural network, where information flows in one direction, from
+            the input layer to the output layer. There are no loops or cycles in the
+            network structure. FNNs are commonly used for tasks like classification
+            and regression.</li>
+          <li><strong>Convolutional Neural Network (CNN)</strong>: CNNs are primarily
+            used for image and video processing tasks. They are designed to automatically
+            learn and extract features from input data using convolutional layers.
+            CNNs are effective in tasks like image classification, object detection,
+            and image segmentation.</li>
+          <li><strong>Recurrent Neural Network (RNN)</strong>: RNNs are designed to
+            process sequential data, where the output at each step depends on the previous
+            steps. They have loops in their architecture, allowing them to maintain
+            internal memory. RNNs are commonly used in tasks like natural language
+            processing, speech recognition, and time series analysis.</li>
+          <li><strong>Long Short-Term Memory (LSTM) Network</strong>: LSTM is a type
+            of RNN that addresses the vanishing gradient problem and can capture long-term
+            dependencies in sequential data. It introduces memory cells and gates to
+            selectively remember or forget information over time. LSTMs are widely
+            used in tasks that involve long-term dependencies, such as language modeling
+            and machine translation.</li>
+          <li><strong>Generative Adversarial Network (GAN)</strong>: GANs consist of
+            two neural networks, a generator and a discriminator, that are trained
+            together in a competitive setting. The generator generates synthetic data
+            samples, while the discriminator tries to distinguish between real and
+            fake samples. GANs are used for tasks like image generation, data synthesis,
+            and style transfer.</li>
+          <li><strong>Autoencoder</strong>: Autoencoders are unsupervised learning models
+            that aim to learn efficient representations of input data. They consist
+            of an encoder network that compresses the input data into a lower-dimensional
+            representation, and a decoder network that reconstructs the original input
+            from the compressed representation. Autoencoders are used for tasks like
+            dimensionality reduction, anomaly detection, and denoising.</li>
+        </ol>
+        <h2>(i) What is content based recommender system.</h2>
+        <p>A content-based recommender system is a type of recommendation system
+          that suggests items to users based on their preferences and the characteristics
+          of the items themselves. It relies on the content or attributes of the
+          items to make recommendations, rather than considering the preferences
+          or behavior of other users.</p>
+        <p>The system analyzes the features or properties of the items and creates
+          a profile or representation for each user based on their past interactions
+          or explicit preferences. It then recommends items that have similar content
+          or attributes to the ones the user has shown interest in before.</p>
+        <p>For example, in a movie recommendation system, a content-based approach
+          would consider features like genre, actors, director, and plot summary
+          of movies. If a user has shown a preference for action movies, the system
+          would recommend other action movies with similar attributes.</p>
+        <p>Content-based recommender systems are useful when there is limited or
+          no information about other users' preferences or when the focus is on recommending
+          items with specific characteristics or content that match the user's preferences.</p>
+        <h2>(j) Explain Ensemble Learning</h2>
+        <p>Ensemble Learning is a machine learning technique that combines multiple
+          individual models (called base models or weak learners) to create a more
+          powerful and accurate model. The idea behind ensemble learning is that
+          by combining the predictions of multiple models, the overall performance
+          can be improved compared to using a single model.</p>
+        <p>There are different types of ensemble learning methods:</p>
+        <ol>
+          <li><strong>Bagging (Bootstrap Aggregating)</strong>: In bagging, multiple
+            base models are trained independently on different subsets of the training
+            data, created through bootstrapping (sampling with replacement). The final
+            prediction is obtained by averaging or voting the predictions of the individual
+            models.</li>
+          <li><strong>Boosting</strong>: Boosting is an iterative ensemble method where
+            base models are trained sequentially, with each subsequent model focusing
+            on the samples that were misclassified by the previous models. The final
+            prediction is obtained by combining the predictions of all the models,
+            typically using weighted voting.</li>
+          <li><strong>Random Forest</strong>: Random Forest is an ensemble method that
+            combines the concepts of bagging and decision trees. It creates an ensemble
+            of decision trees, where each tree is trained on a random subset of features
+            and a random subset of the training data. The final prediction is obtained
+            by averaging or voting the predictions of the individual trees.</li>
+          <li><strong>Stacking</strong>: Stacking involves training multiple base models
+            on the same training data and then training a meta-model (also called a
+            blender or aggregator) to make the final prediction based on the predictions
+            of the base models. The meta-model learns to combine the predictions of
+            the base models using the training data.</li>
+        </ol>
+        <p>Ensemble learning can improve the overall performance, robustness, and
+          generalization of machine learning models by leveraging the diversity and
+          collective wisdom of multiple models. It is widely used in various domains
+          and has achieved state-of-the-art results in many machine learning competitions
+          and applications.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,44 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Bellman-Ford Algorithm</h1>
+
+      <div class="ck-content">
+        <p>The Bellman-Ford algorithm is a popular algorithm used to find the shortest
+          paths from a single source vertex to all other vertices in a weighted directed
+          graph. It can handle graphs with negative edge weights, unlike some other
+          shortest path algorithms like Dijkstra's algorithm.</p>
+        <p>Here's a high-level overview of the Bellman-Ford algorithm:</p>
+        <ol>
+          <li>Initialize the distance of the source vertex to 0 and the distance of
+            all other vertices to infinity.</li>
+          <li>Relax each edge in the graph |V| - 1 times, where |V| is the number of
+            vertices in the graph. During each relaxation, update the distance of the
+            destination vertex if a shorter path is found.</li>
+          <li>After |V| - 1 iterations, check for negative-weight cycles. If a shorter
+            path is found during the |V|th iteration, then there is a negative-weight
+            cycle in the graph.</li>
+          <li>If there are no negative-weight cycles, the algorithm has found the shortest
+            paths from the source vertex to all other vertices.</li>
+        </ol>
+        <p>Time Complexity:</p>
+        <p>Best Case:&nbsp;<span class="math-tex">\(O(n^2)\)</span>
+        </p>
+        <p>Worst Case:&nbsp;<span class="math-tex">\(O(n^3)\)</span>
+        </p>
+        <figure class="image">
+          <img src="Bellman-Ford%20Algorithm/photo_6303001576922527868_y.jp">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

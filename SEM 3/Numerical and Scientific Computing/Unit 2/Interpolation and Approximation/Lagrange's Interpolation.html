@@ -1,0 +1,38 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Lagrange&#39;s Interpolation</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Lagrange interpolation is a method for constructing a polynomial that
+          passes through a set of given data points. It's a technique used in numerical
+          analysis and mathematics to approximate a function when you have a discrete
+          set of data points but want to find values between those points.</p>
+        <p
+        style="margin-left:0px;">The key idea behind Lagrange interpolation is to construct a polynomial
+          of the lowest possible degree that passes through all the given data points.
+          This polynomial is known as the Lagrange polynomial, and it's represented
+          as a weighted sum of basis polynomials.</p>
+          <p style="margin-left:0px;">The Lagrange interpolation formula finds the lowest order polynominal
+            L(x) which interpolates the points (x_i, y_i)</p>
+          <p style="margin-left:0px;">Formula:&nbsp;</p>
+          <p style="margin-left:0px;">Suppose you have a set of data points&nbsp;<span class="math-tex">\((x_1, y_1), (x_2, y_2), ..., (x_n, y_n)\)</span>,
+            where each&nbsp;<span class="math-tex">\((x_i, y_i)\)</span>&nbsp;represents
+            a data point.</p>
+          <p style="margin-left:0px;">The Lagrange's Polynominal is given by:&nbsp;<span class="math-tex">\(L(x) = \sum_{i=0}^ny_il_i(x)\)</span>
+          </p>
+          <p style="margin-left:0px;">where&nbsp;<span class="math-tex">\(l_i(x) = \prod_{j=0; j \ne i}^{n}\frac{x-x_j}{x_i-x_j}\)</span>
+          </p>
+      </div>
+    </div>
+  </body>
+
+</html>

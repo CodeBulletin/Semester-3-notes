@@ -1,0 +1,33 @@
+import numpy as np
+from sys import maxsize
+
+def assignmentProblem(costMatrix):
+    n = len(costMatrix)
+    minCost = [maxsize]
+    assignment = [-1] * n
+
+    def solve(row, costSoFar, assigned):
+        if row == n:
+            if costSoFar < minCost[0]:
+                minCost[0] = costSoFar
+                assignment[:] = assigned
+            return
+
+        for col in range(n):
+            if col not in assigned:
+                newCost = costSoFar + costMatrix[row][col]
+                if newCost < minCost[0]:
+                    solve(row + 1, newCost, assigned + [col])
+
+    solve(0, 0, [])
+    return minCost[0], [i + 1 for i in assignment]
+
+# Example usage
+costMatrix = [[9, 2, 7, 8], 
+              [6, 4, 3, 7], 
+              [5, 8, 1, 8], 
+              [7, 6, 9, 4]]
+
+cost, assignment = assignmentProblem(costMatrix)
+print("Minimum Cost:", cost)
+print("Assignment:", assignment)

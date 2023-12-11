@@ -1,0 +1,16 @@
+def kth_smallest(data, k):
+    sorted_data = sorted(data)
+    
+    if 1 <= k <= len(sorted_data):
+        return sorted_data[k - 1]
+    else:
+        return None  # Return None for invalid k values
+
+data = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+k = 3  # Find the 3rd smallest element
+
+result = kth_smallest(data, k)
+if result is not None:
+    print(f"The {k}-th smallest element is: {result}")
+else:
+    print(f"Invalid k value. List has {len(data)} elements.")

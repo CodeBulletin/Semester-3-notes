@@ -1,0 +1,59 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Chebyshev polynomial</h1>
+
+      <div class="ck-content">
+        <p>Chebyshev polynomials are a family of orthogonal polynomials that have
+          many applications in various fields of mathematics, science, and engineering</p>
+        <p>&nbsp;Chebyshev polynomials are typically denoted as&nbsp;<span class="math-tex">\(T_n(x)\)</span>&nbsp;or&nbsp;
+          <span
+          class="math-tex">\(U_n(x)\)</span>, where&nbsp;<span class="math-tex">\(n\)</span>&nbsp;is
+            a non-negative integer, and&nbsp;<span class="math-tex">\(x\)</span>&nbsp;is
+            a real number.</p>
+        <p>There are two commonly used sequences of Chebyshev polynomials: the Chebyshev
+          polynomials of the first kind&nbsp;<span class="math-tex">\(T_n(x)\)</span>&nbsp;and
+          the Chebyshev polynomials of the second kind&nbsp;<span class="math-tex">\(U_n(x)\)</span>.</p>
+        <ol>
+          <li style="margin-left:0px;">Chebyshev Polynomials of the First Kind&nbsp;<span class="math-tex">\(T_n(x)\)</span>:
+            <br>The Chebyshev polynomials of the first kind are defined by the recurrence
+            relation:
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(T_0(x) = 1\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(T_1(x) = x\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(T_n(x) = 2x*T_{n-1}(x) - T_{n-2}(x)\)</span>&nbsp;for&nbsp;
+            <span
+            class="math-tex">\(n \ge 1\)</span>
+              <br>These polynomials have many important properties, including:
+              <ul>
+                <li style="margin-left:0px;">They are orthogonal with respect to the weight function&nbsp;<span class="math-tex">\(w(x) = \frac{1}{\sqrt{1-x^2}}\)</span>&nbsp;on
+                  the interval&nbsp;<span class="math-tex">\([-1, 1]\)</span>.</li>
+                <li style="margin-left:0px;">They are bounded within the interval&nbsp;<span class="math-tex">\([-1, 1]\)</span>,
+                  with their maximum and minimum values being ±1.</li>
+                <li style="margin-left:0px;">They are used in various numerical analysis and approximation techniques,
+                  such as Chebyshev interpolation and Chebyshev spectral methods.</li>
+              </ul>
+          </li>
+          <li>Chebyshev Polynomials of the Second Kind&nbsp;<span class="math-tex">\(U_n(x)\)</span>:
+            <br>The Chebyshev polynomials of the first kind are defined by the recurrence
+            relation:
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(U_0(x) = 1\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(U_1(x) = 2x\)</span>
+            <br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(U_n(x) = 2x*U_{n-1}(x) - U_{n-2}(x)\)</span>&nbsp;for&nbsp;
+            <span
+            class="math-tex">\(n \ge 1\)</span>
+              <br>Like the first kind, these polynomials also have important properties
+              and applications, though they are not orthogonal.</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,87 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Floating Point Representation</h1>
+
+      <div class="ck-content">
+        <h2>What is Floating Point Representation?</h2>
+        <p style="margin-left:0px;">Floating-point representation is a method used in computing to represent
+          and store real numbers, which include both rational and irrational numbers.
+          It is a way of approximating real numbers with a finite number of bits
+          (binary digits) in a computer's memory. The term "floating-point" comes
+          from the fact that the decimal point (or binary point in this case) can
+          "float" to represent a wide range of values, both large and small, by adjusting
+          the exponent.</p>
+        <p style="margin-left:0px;">The representation consists of three main components:</p>
+        <p style="margin-left:0px;">Sign bit: A single bit that indicates whether the number is positive or
+          negative. 0 typically represents positive, and 1 represents negative.</p>
+        <p
+        style="margin-left:0px;">Exponent: A fixed number of bits used to represent the scale or magnitude
+          of the number. By adjusting the exponent, floating-point numbers can cover
+          a wide range of magnitudes.</p>
+          <p style="margin-left:0px;">Mantissa (also known as fraction or significand): Another fixed number
+            of bits that represents the precision or fractional part of the number.</p>
+          <p
+          style="margin-left:0px;">The basic idea is to store the number in scientific notation (base 2),
+            where the number is expressed as a product of two parts: the significand
+            and 2 raised to the power of the exponent.</p>
+            <h2>What are the Pitfalls of floating point representation?</h2>
+            <p style="margin-left:0px;">Floating-point representation, while widely used and versatile, has some
+              inherent pitfalls and limitations that programmers and developers should
+              be aware of:</p>
+            <ol>
+              <li style="margin-left:0px;"><strong>Rounding Errors</strong>: Floating-point numbers can only approximate
+                real numbers. Some real numbers cannot be represented precisely using a
+                finite number of bits, leading to rounding errors. These errors can accumulate
+                during computations and cause unexpected results in certain situations.</li>
+              <li
+              style="margin-left:0px;"><strong>Limited Precision</strong>: Floating-point numbers have limited
+                precision due to the finite number of bits used to represent the fractional
+                part (mantissa). Operations involving very small or very large numbers
+                may lose precision, resulting in inaccuracies.</li>
+                <li style="margin-left:0px;"><strong>Non-Associativity</strong>: The lack of associativity in floating-point
+                  arithmetic means that the order in which operations are performed can affect
+                  the final result. This behavior can lead to unexpected results when performing
+                  seemingly straightforward computations.</li>
+                <li style="margin-left:0px;"><strong>Inexact Representations</strong>: Some decimal numbers (e.g.,
+                  0.1) cannot be represented exactly in binary floating-point format, leading
+                  to small discrepancies between the real number and its floating-point representation.</li>
+                <li
+                style="margin-left:0px;"><strong>Denormalized Numbers</strong>: Very small numbers close to zero
+                  (subnormal or denormalized numbers) are represented with reduced precision,
+                  which can lead to additional loss of accuracy during calculations.</li>
+                  <li
+                  style="margin-left:0px;"><strong>Overflow and Underflow</strong>: Floating-point representations
+                    have finite ranges for exponents, and numbers that exceed these ranges
+                    can cause overflow (resulting in positive or negative infinity) or underflow
+                    (resulting in zero or a subnormal number).</li>
+                    <li style="margin-left:0px;"><strong>NaN and Infinity</strong>: Special values like NaN (Not-a-Number)
+                      and positive/negative infinity can occur as results of certain operations,
+                      making it crucial to handle these exceptional cases correctly.</li>
+                    <li
+                    style="margin-left:0px;"><strong>Comparisons</strong>: Due to rounding errors, comparing floating-point
+                      numbers for equality can be tricky. It is generally recommended to use
+                      an epsilon-based comparison (checking if the absolute difference between
+                      two numbers is below a small threshold) instead of direct equality checks.</li>
+                      <li
+                      style="margin-left:0px;"><strong>Portability Issues</strong>: Different hardware and programming
+                        languages may use different floating-point representations, leading to
+                        portability issues when transferring data between platforms.</li>
+                        <li style="margin-left:0px;"><strong>Performance Trade-offs</strong>: Floating-point operations are
+                          typically slower than integer operations, and the use of floating-point
+                          arithmetic can impact the performance of certain algorithms, especially
+                          on resource-constrained systems.</li>
+            </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

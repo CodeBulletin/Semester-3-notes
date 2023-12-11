@@ -1,0 +1,96 @@
+import numpy as np
+
+class NeuralNetwork:
+    def __init__(self, input_size, hidden_size, output_size, learning_rate=0.1):
+        self.input_size = input_size
+        self.hidden_size = hidden_size
+        self.output_size = output_size
+
+        # Initialize the weights and biases
+        self.weights = [np.random.randn(input_size, hidden_size), np.random.randn(hidden_size, output_size)]
+        self.biases = [np.random.randn(hidden_size), np.random.randn(output_size)]
+
+        # Initialize the learning rate
+        self.learning_rate = learning_rate
+
+        print([i.shape for i in self.weights])
+        print([i.shape for i in self.biases])
+
+    def sigmoid(self, x):
+        return 1 / (1 + np.exp(-x))
+    
+    def sigmoid_derivative(self, x):
+        return x * (1 - x)
+
+    def forward(self, x):
+        # Calculate the dot product of the input and weights
+        self.hidden_layer = np.dot(x, self.weights[0]) + self.biases[0]
+
+        # Apply the activation function
+        self.hidden_layer = self.sigmoid(self.hidden_layer)
+
+        # Calculate the dot product of the hidden layer and weights
+        self.output_layer = np.dot(self.hidden_layer, self.weights[1]) + self.biases[1]
+
+        # Apply the activation function
+        self.output_layer = self.sigmoid(self.output_layer)
+
+        return self.output_layer
+
+    def backpropagate(self, y, output):
+        # Calculate the error in the output layer
+        self.output_error = y - output
+
+        # Calculate the delta in the output layer
+        self.output_delta = self.output_error * self.sigmoid_derivative(output)
+
+        # Calculate the error in the hidden layer
+        self.hidden_error = np.dot(self.output_delta, self.weights[1].T)
+
+        # Calculate the delta in the hidden layer
+        self.hidden_delta = self.hidden_error * self.sigmoid_derivative(self.hidden_layer)
+
+        # Update the weights and biases
+        self.weights[1] += self.learning_rate * np.dot(self.hidden_layer.T, self.output_delta)
+        self.weights[0] += self.learning_rate * np.dot(X.T, self.hidden_delta)
+
+        self.biases[1] += self.learning_rate * np.sum(self.output_delta, axis=0)
+        self.biases[0] += self.learning_rate * np.sum(self.hidden_delta, axis=0)
+
+
+    def train(self, x, y, epochs):
+        for epoch in range(epochs):
+            # Forward propagate the input data
+            output = self.forward(x)
+
+            # Backpropagate the error
+            self.backpropagate(y, output)
+
+    def predict(self, x):
+        # Forward propagate the input data
+        output = self.forward(x)
+
+        return output
+
+if __name__ == "__main__":
+    # The input data
+    X = np.array([[0, 0],
+                  [0, 1],
+                  [1, 0],
+                  [1, 1]])
+
+    # The output data
+    y = np.array([[0],
+                  [1],
+                  [1],
+                  [0]])
+
+    # Create the neural network
+    nn = NeuralNetwork(2, 4, 1)
+
+    # Train the neural network
+    nn.train(X, y, 10000)
+
+    # Test the neural network
+    print(nn.predict(X))
+

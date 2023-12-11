@@ -1,0 +1,48 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Job Sequencing with Deadlines </h1>
+
+      <div class="ck-content">
+        <p style="margin-left:auto;">The Job Sequencing with Deadlines problem is another classic optimization
+          problem that involves scheduling a set of jobs with associated profits
+          and deadlines to maximize the total profit. Each job has a specific deadline
+          by which it needs to be completed, and only one job can be scheduled at
+          a time also one job requires 1 unit of time.</p>
+        <p style="margin-left:auto;">Here's a step-by-step approach to solving the Job Sequencing with Deadlines
+          problem:</p>
+        <ol>
+          <li>Sort the jobs in descending order based on their profits.</li>
+          <li>Initialize an array or list to keep track of the time slots. Each time
+            slot represents a specific deadline.</li>
+          <li>Iterate through the sorted jobs and do the following:
+            <ul>
+              <li>Starting from the job's deadline, find the first available time slot (i.e.,
+                a time slot that is not yet occupied).</li>
+              <li>If a time slot is available, assign the job to that time slot and mark
+                it as occupied.</li>
+              <li>If no time slot is available, skip the job (as it cannot be scheduled
+                within its deadline).</li>
+            </ul>
+          </li>
+          <li>Calculate the total profit by summing up the profits of the scheduled
+            jobs.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p><span class="math-tex">\(Time \space Complexity = O(n \space log \space n + n * d)\)</span>,</p>
+        <p>Where,</p>
+        <p style="margin-left:40px;"><span class="math-tex">\(n\)</span>&nbsp;is number of jobs</p>
+        <p style="margin-left:40px;"><span class="math-tex">\(d\)</span>&nbsp;is maximum deadline</p>
+      </div>
+    </div>
+  </body>
+
+</html>

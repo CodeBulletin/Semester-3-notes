@@ -1,0 +1,57 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Activity Selection Problem</h1>
+
+      <div class="ck-content">
+        <p>The Activity Selection Problem is a classic optimization problem that
+          involves selecting a maximum-size set of non-overlapping activities from
+          a given set of activities, each with a start time and an end time. The
+          goal is to find the maximum number of activities that can be performed
+          without any conflicts.</p>
+        <p>Here's a formal description of the problem:</p>
+        <p>Given a set of n activities, each represented by a pair (start time, end
+          time), the task is to select the maximum number of activities that can
+          be performed, assuming that a person can only work on a single activity
+          at a time. Two activities are considered compatible if their time intervals
+          do not overlap.</p>
+        <p>The Activity Selection Problem can be efficiently solved using a greedy
+          algorithm. The algorithm follows these steps:</p>
+        <ol>
+          <li>Sort the activities based on their end times in ascending order.</li>
+          <li>Select the first activity with the earliest end time and add it to the
+            selected set.</li>
+          <li>For each subsequent activity, if its start time is greater than or equal
+            to the end time of the previously selected activity, add it to the selected
+            set.</li>
+          <li>Repeat step 3 until all activities have been considered.</li>
+        </ol>
+        <p>The greedy approach works because selecting the activity with the earliest
+          end time leaves more room for selecting other activities. By always choosing
+          the activity that finishes first, we maximize the number of activities
+          that can be performed.</p>
+        <p>The time complexity of the greedy algorithm for the Activity Selection
+          Problem is O(n log n), where n is the number of activities. This is due
+          to the initial sorting step. The selection process itself takes linear
+          time.</p>
+        <p>The Activity Selection Problem has various real-world applications, such
+          as scheduling tasks, job sequencing, classroom scheduling, and resource
+          allocation.</p>
+        <p><strong>Time Complexity:&nbsp;</strong><span class="math-tex">\(O(n logn)\)</span>&nbsp;(Because
+          of Sorting)</p>
+        <figure class="image">
+          <img src="Activity%20Selection%20Problem/image.png">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

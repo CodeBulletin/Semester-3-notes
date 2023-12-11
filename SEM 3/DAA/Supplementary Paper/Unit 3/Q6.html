@@ -1,0 +1,109 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q6</h1>
+
+      <div class="ck-content">
+        <h2>(a) Write Huffman coding algorithm and demonstrate its execution to find variable length codes for the following data&nbsp;<br>(a: 45%, b: 33%, c: 10%, d: 7%, e: 5%)</h2><pre><code class="language-text-plain">import heapq
+from collections import defaultdict
+
+def huffman_encoding(data):
+    # Step 1: Calculate the frequency of each character in the data
+    frequency = defaultdict(int)
+    for char in data:
+        frequency[char] += 1
+
+    # Step 2: Create a priority queue of nodes
+    heap = [[weight, [char, ""]] for char, weight in frequency.items()]
+    heapq.heapify(heap)
+
+    # Step 3: Combine nodes until only one node remains
+    while len(heap) &gt; 1:
+        lo = heapq.heappop(heap)
+        hi = heapq.heappop(heap)
+        for pair in lo[1:]:
+            pair[1] = '0' + pair[1]
+        for pair in hi[1:]:
+            pair[1] = '1' + pair[1]
+        heapq.heappush(heap, [lo[0] + hi[0]] + lo[1:] + hi[1:])
+
+    # Step 4: Extract the codes from the remaining node
+    huffman_codes = heap[0][1:]
+
+    return huffman_codes
+
+def huffman_decoding(data, huffman_codes):
+    # Reverse the huffman_codes dictionary
+    reverse_codes = {code: char for char, code in huffman_codes}
+
+    # Decode the data using the reverse_codes dictionary
+    decoded_data = ""
+    code = ""
+    for bit in data:
+        code += bit
+        if code in reverse_codes:
+            char = reverse_codes[code]
+            decoded_data += char
+            code = ""
+
+    return decoded_data
+
+# Example usage
+data = "aabbccdddeee"
+huffman_codes = huffman_encoding(data)
+encoded_data = "".join([code for char, code in huffman_codes for c in data if c == char])
+decoded_data = huffman_decoding(encoded_data, huffman_codes)
+
+print("Original data:", data)
+print("Encoded data:", encoded_data)
+print("Decoded data:", decoded_data)</code></pre>
+        <h2>(b) Write the Floyd Warshall's algorithm to find all pair shortest path in a weighted directed graph. Define diameter of a graph.</h2><pre><code class="language-text-plain">INF = float('inf')
+
+def floyd_warshall(graph):
+    num_vertices = len(graph)
+    dist = [[INF] * num_vertices for _ in range(num_vertices)]
+
+    # Initialize the distance matrix with the graph's edge weights
+    for i in range(num_vertices):
+        for j in range(num_vertices):
+            if i == j:
+                dist[i][j] = 0
+            elif graph[i][j] != 0:
+                dist[i][j] = graph[i][j]
+
+    # Perform the Floyd-Warshall algorithm
+    for k in range(num_vertices):
+        for i in range(num_vertices):
+            for j in range(num_vertices):
+                dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
+
+    return dist
+
+# Example usage
+graph = [
+    [0, 3, INF, 7],
+    [8, 0, 2, INF],
+    [5, INF, 0, 1],
+    [2, INF, INF, 0]
+]
+
+shortest_paths = floyd_warshall(graph)
+for row in shortest_paths:
+    print(row)</code></pre>
+        <p>The diameter of a graph is defined as the maximum shortest path length
+          among all pairs of vertices. To find the diameter of a graph using the
+          Floyd-Warshall algorithm, you can simply find the maximum value in the
+          dist matrix returned by the algorithm.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,112 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q7</h1>
+
+      <div class="ck-content">
+        <h2>(a) What are various Machine Learning problems?</h2>
+        <ol>
+          <li>Image and object recognition</li>
+          <li>Speech recognition and natural language processing</li>
+          <li>Sentiment analysis and opinion mining</li>
+          <li>Fraud detection and cybersecurity</li>
+          <li>Recommendation systems for personalized content or product recommendations</li>
+          <li>Autonomous vehicles and self-driving cars</li>
+          <li>Medical diagnosis and healthcare analytics</li>
+          <li>Financial forecasting and stock market analysis</li>
+          <li>Customer segmentation and targeted marketing</li>
+          <li>Predictive maintenance for industrial equipment</li>
+          <li>Energy load forecasting and optimization</li>
+          <li>Text generation and language translation</li>
+          <li>Virtual assistants and chatbots</li>
+          <li>Credit scoring and risk assessment</li>
+          <li>Supply chain optimization and demand forecasting</li>
+          <li>Gaming and game playing algorithms</li>
+          <li>Social media analysis and social network modeling</li>
+          <li>Drug discovery and genomics research</li>
+          <li>Human resource management and talent acquisition</li>
+          <li>Environmental monitoring and climate prediction</li>
+        </ol>
+        <h2>(b) State the difference between Bias and Variance. Why both of them are important.</h2>
+        <figure class="table" style="width:461px;">
+          <table style="background-color:rgb(68, 70, 84);border:0px solid inherit;">
+            <thead>
+              <tr>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Aspect</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Bias</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border:1px solid rgb(217, 217, 227);padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Variance</strong>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Definition</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Bias refers to the error introduced by approximating a real-world problem
+                  with a simplified model. It results in underfitting, where the model is
+                  too simple to capture the underlying patterns in the data.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Variance refers to the model's sensitivity to small fluctuations or noise
+                  in the training data. It results in overfitting, where the model is too
+                  complex and captures noise instead of the underlying patterns.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Impact on Model</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">High bias leads to a model that is systematically inaccurate and overly
+                  simplistic. It doesn't adapt well to the training data and performs poorly
+                  on both the training and test datasets.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">High variance leads to a model that is excessively responsive to the training
+                  data, capturing noise and fluctuations. It performs well on the training
+                  data but poorly on unseen or test data.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Remedies</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">To reduce bias, one can use more complex models, feature engineering,
+                  or increasing the model's capacity.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">To reduce variance, one can use simpler models, add more training data,
+                  perform regularization, or use feature selection to reduce model complexity.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Trade-off</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">There's often a trade-off between bias and variance. As one is reduced,
+                  the other tends to increase. Finding the right balance is crucial for creating
+                  a well-generalized model.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Balancing bias and variance is essential. A model with both high bias
+                  and high variance will not perform well. The goal is to minimize both to
+                  create a model that generalizes well to unseen data.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Example</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Linear regression is an example of a model with high bias. It assumes
+                  a linear relationship between variables and may not capture complex patterns.</td>
+                <td
+                style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">A decision tree with unlimited depth is an example of a model with high
+                  variance. It can create a highly complex structure that fits the training
+                  data perfectly but fails to generalize.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Importance in Machine Learning</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Both bias and variance are crucial factors in machine learning because
+                  they affect a model's ability to make accurate predictions. Finding the
+                  right trade-off is essential for model performance.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Balancing bias and variance is fundamental for creating models that perform
+                  well on both training and test data. High bias leads to underfitting, and
+                  high variance leads to overfitting, both of which result in poor predictive
+                  performance.</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

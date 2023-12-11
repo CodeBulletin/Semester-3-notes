@@ -1,0 +1,68 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Variance</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Variance is a statistical concept that measures the spread or dispersion
+          of a set of data points around their mean (average) value. It provides
+          insight into how much individual data points in a dataset deviate from
+          the mean value, indicating the degree of variability or diversity within
+          the dataset.</p>
+        <p style="margin-left:0px;">Mathematically, variance is calculated as the average of the squared differences
+          between each data point and the mean.&nbsp;</p>
+        <p style="margin-left:0px;">The formula to calculate the sample variance is</p>
+        <p style="margin-left:0px;"><span class="math-tex">\(s^2 = \frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1} = \frac{\sum_{i=1}^cf_i(x_i - \bar{x})^2}{(\sum_{i=1}^cf_i) - 1}\)</span>
+        </p>
+        <p style="margin-left:0px;">where,
+          <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(s^2\)</span>&nbsp;is
+          the sample variance
+          <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(x_i\)</span>&nbsp;is
+          individual data point
+          <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(\bar{x}\)</span>&nbsp;is
+          the sample mean
+          <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(n\)</span>&nbsp;is
+          the size of sample</p>
+        <p style="margin-left:0px;">The formula to calculate the Population variance is</p>
+        <p style="margin-left:0px;"><span class="math-tex">\(\sigma^2 = \frac{\sum_{i=1}^N(x_i - \mu)^2}{N} = \frac{\sum_{i=1}^Cf_i(x_i - \mu)^2}{\sum_{i=1}^Cf_i}\)</span>
+        </p>
+        <p style="margin-left:0px;">where,
+          <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(\sigma^2\)</span>&nbsp;is
+          the population variance
+          <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(x_i\)</span>&nbsp;is
+          individual data point
+          <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(\mu\)</span>&nbsp;is
+          the sample mean
+          <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(N\)</span>&nbsp;is
+          the size of population</p>
+        <p style="margin-left:0px;"><span class="math-tex">\(variance = (std\_dev)^2\)</span>
+        </p>
+        <h2 style="margin-left:0px;">For example, let's consider the sample dataset: 5, 8, 10, 12, 15.</h2>
+        <ol>
+          <li>Find&nbsp;<span class="math-tex">\(\bar{x}\)</span>&nbsp;=&nbsp;
+            <span
+            class="math-tex">\(\frac{5 + 8 + 10 + 12 + 15}{5} = 10\)</span>
+          </li>
+          <li>Calculate&nbsp;<span class="math-tex">\((x-\bar{x})\)</span>, (5 - 10)
+            = -5, (8 - 10) = -2, (10 - 10) = 0, (12 - 10) = 2</li>
+          <li>Calculate&nbsp;<span class="math-tex">\((x-\bar{x})^2\)</span>, 25, 4,
+            0, 4, 25&nbsp;</li>
+          <li>Calculate&nbsp;<span class="math-tex">\(\sum_{i=1}^n(x-\bar{x})^2\)</span>&nbsp;=
+            25 + 4 + 0 + 4 + 25 = 58</li>
+          <li>Calculate&nbsp;<span class="math-tex">\(s^2 = \frac{\sum_{i=1}^n(x-\bar{x})^2}{n-1}\)</span>&nbsp;=&nbsp;
+            <span
+            class="math-tex">\(\frac{58}4\)</span>&nbsp;= 14.5</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

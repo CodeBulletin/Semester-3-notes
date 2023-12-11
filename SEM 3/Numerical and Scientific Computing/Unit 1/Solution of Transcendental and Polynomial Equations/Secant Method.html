@@ -1,0 +1,74 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Secant Method</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The Secant Method is a numerical technique used for finding approximate
+          solutions to equations, specifically to find the roots of a continuous
+          function. It's an iterative method that refines the estimate of a root
+          with each iteration. The Secant Method is an improvement over the Bisection
+          Method and the Regula Falsi Method in terms of convergence speed, as it
+          can converge faster when the function's behavior is well-behaved.</p>
+        <p
+        style="margin-left:0px;">Here's how the Secant Method works:</p>
+          <p style="margin-left:0px;">Choose two initial points,&nbsp;<span class="math-tex">\(x_0, x_1\)</span>&nbsp;that
+            are reasonably close to the root.</p>
+          <p style="margin-left:0px;">Calculate the function values&nbsp;<span class="math-tex">\(f(x_0)\)</span>&nbsp;and&nbsp;
+            <span
+            class="math-tex">\(f(x_1)\)</span>&nbsp;at these initial points.</p>
+          <p style="margin-left:0px;">Compute the next approximation to the root using linear interpolation.
+            The formula for this is:</p>
+          <p style="margin-left:0px;"><span class="math-tex">\(x_{n+1} = \frac{x_nf(x_{n-1}) - &nbsp;x_{n-1}f(x_n)}{f(x_{n-1}) -f(x_{n})}\)</span>
+          </p>
+          <p style="margin-left:0px;">Update the values of&nbsp;<span class="math-tex">\(x_{n-1}\)</span>&nbsp;and&nbsp;
+            <span
+            class="math-tex">\(x_n\)</span>&nbsp;to&nbsp;<span class="math-tex">\(x_n\)</span>&nbsp;and&nbsp;
+              <span
+              class="math-tex">\(x_{n+1}\)</span>, respectively, for the next iteration.</p>
+          <p style="margin-left:0px;">Repeat steps 2 to 4 iteratively until the desired level of accuracy is
+            achieved.</p>
+          <p style="margin-left:0px;">The Secant Method essentially uses the slope of the secant line connecting
+            the points&nbsp;<span class="math-tex">\((x_{n-1}, f(x_{n-1}))\)</span>&nbsp;and&nbsp;
+            <span
+            class="math-tex">\((x_{n}, f(x_{n}))\)</span>&nbsp;to estimate where the root might be.
+              This linear interpolation helps the method converge more quickly than linear
+              methods like the Bisection and Regula Falsi methods</p>
+          <h2 style="margin-left:0px;">Order of Convergence</h2>
+          <p style="margin-left:0px;">
+            <br>The order of convergence of the Secant Method is approximately 1.6181.618
+            or the golden ratio <i>ϕ</i>. The order of convergence indicates how quickly
+            the method converges to the root as the number of iterations increases.</p>
+          <p
+          style="margin-left:0px;">The Secant Method exhibits superlinear convergence, which is faster than
+            linear convergence (as seen in methods like the Bisection or Regula Falsi
+            methods), but generally slower than quadratic convergence (as seen in methods
+            like Newton's Method under certain conditions).</p>
+            <p style="margin-left:0px;">Mathematically, if&nbsp;<span class="math-tex">\(e_n\)</span>​ represents
+              the error in the&nbsp;<span class="math-tex">\(n^{th}\)</span>&nbsp;iteration
+              (the difference between the true root and the approximation obtained after
+              n iterations), the order of convergence p of the Secant Method can be estimated
+              by looking at the limit:</p>
+            <p style="margin-left:0px;"><span class="math-tex">\(p \approx \frac{log(\frac{|e_{n+1}|}{|e_n|})}{log(\frac{|e_{n}|}{|e_{n-1}|})}\)</span>
+            </p>
+            <p style="margin-left:0px;">If the limit above converges to a value close to 1.618 (the golden ratio <i>ϕ</i>),
+              it indicates that the method's order of convergence is superlinear and
+              is around the golden ratio.</p>
+            <p style="margin-left:0px;">This means that in each iteration, the number of accurate digits approximately
+              increases by a factor of 1.6181.618, making the Secant Method relatively
+              faster than linear methods but not as fast as quadratic methods. However,
+              it's important to note that the order of convergence might vary depending
+              on the specific behavior of the function and the choice of initial points.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

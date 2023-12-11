@@ -1,0 +1,25 @@
+void BFS(struct Graph* graph, int startNode) {
+    bool visited[MAX_NODES];
+    for (int i = 0; i < graph->numNodes; i++) {
+        visited[i] = false;
+    }
+
+    struct Queue queue;
+    queue.front = 0;
+    queue.rear = 0;
+
+    visited[startNode] = true;
+    enqueue(&queue, startNode);
+
+    while (!isQueueEmpty(&queue)) {
+        int currentNode = dequeue(&queue);
+        printf("%d ", currentNode);
+
+        for (int i = 0; i < graph->numNodes; i++) {
+            if (graph->adjMatrix[currentNode][i] == 1 && !visited[i]) {
+                visited[i] = true;
+                enqueue(&queue, i);
+            }
+        }
+    }
+}

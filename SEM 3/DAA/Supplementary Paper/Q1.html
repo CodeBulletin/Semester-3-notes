@@ -1,0 +1,139 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q1</h1>
+
+      <div class="ck-content">
+        <h2>(a) Briefly explain the concept of growth of function in asymptotic notations.</h2>
+        <p>The concept of growth of function in asymptotic notations is used to analyze
+          the behavior of functions as their input size approaches infinity. It provides
+          a way to describe the rate at which a function grows or decreases. Asymptotic
+          notations, such as Big O, Big Omega, and Big Theta, are used to express
+          the upper, lower, and tight bounds of a function's growth rate, respectively.
+          These notations help us understand how the time or space complexity of
+          an algorithm scales with the input size.</p>
+        <h2>(b) Explain the difficulty when we try to merge two unsorted list to get a ordered list.</h2>
+        <p>When merging two unsorted lists to obtain an ordered list, the main difficulty
+          lies in determining the correct order of the elements. In an unsorted list,
+          the elements can be in any arbitrary order, and there is no inherent structure
+          that allows for efficient merging. To merge the lists, we need to compare
+          each element from both lists and place them in the correct order in the
+          merged list. This requires comparing each element with every other element,
+          resulting in a time complexity of O(n^2), where n is the total number of
+          elements in both lists. In contrast, if the lists were already sorted,
+          we could merge them in linear time, resulting in a time complexity of O(n).</p>
+        <h2>(c) Briefly write the purpose of Matrix Chain Multiplication method.</h2>
+        <p>The purpose of the Matrix Chain Multiplication method is to determine
+          the most efficient way to multiply a chain of matrices. In this problem,
+          we are given a sequence of matrices, and the goal is to find the order
+          of multiplication that minimizes the total number of scalar multiplications
+          required. This problem is important in various fields, such as computer
+          graphics, optimization, and numerical analysis. The Matrix Chain Multiplication
+          method uses dynamic programming to solve this problem by breaking it down
+          into smaller subproblems and building up the solution iteratively.</p>
+        <h2>(d) Define the 0/1 knapsack problem.</h2>
+        <p>The 0/1 knapsack problem is a classic optimization problem in computer
+          science. In this problem, we are given a set of items, each with a weight
+          and a value, and a knapsack with a maximum weight capacity. The goal is
+          to determine the most valuable combination of items to include in the knapsack
+          without exceeding its weight capacity. The term "0/1" refers to the fact
+          that each item can either be included in its entirety or not included at
+          all, i.e., there are no fractional quantities allowed. The 0/1 knapsack
+          problem is known to be NP-hard, and various algorithms, such as dynamic
+          programming and branch and bound, are used to solve it.</p>
+        <h2>(e) Write a function in pseudo code to compare any two strings: S1 and S2. The function should return 0 when S1 and S2 are equal, returns -1 when S1 &lt; S2 and returns I when S1 &gt; S2</h2><pre><code class="language-text-plain">function compareStrings(S1, S2):
+    length1 = length of S1
+    length2 = length of S2
+    minLength = minimum of length1 and length2
+    
+    for i from 0 to minLength-1:
+        if S1[i] &lt; S2[i]:
+            return -1
+        else if S1[i] &gt; S2[i]:
+            return 1
+    
+    if length1 &lt; length2:
+        return -1
+    else if length1 &gt; length2:
+        return 1
+    else:
+        return 0</code></pre>
+        <h2>(f) State the situation when Kruskal's algorithm performs faster than Prim's algorithm while finding minimum spanning tree from a graph.</h2>
+        <p>Kruskal's algorithm performs faster than Prim's algorithm when the graph
+          is sparse, meaning it has relatively fewer edges compared to the number
+          of vertices. Kruskal's algorithm has a time complexity of O(E log E), where
+          E is the number of edges, while Prim's algorithm has a time complexity
+          of O(E log V), where V is the number of vertices. In a sparse graph, E
+          is much smaller than V^2, so Kruskal's algorithm can be more efficient.</p>
+        <h2>(g) What is time complexity of Dijsktra's algorithm when it is used to find shortest path between a pair of nodes?</h2>
+        <p>The time complexity of Dijkstra's algorithm, when used to find the shortest
+          path between a pair of nodes, is O((V + E) log V), where V is the number
+          of vertices and E is the number of edges in the graph. This time complexity
+          arises from the use of a priority queue (such as a min-heap) to efficiently
+          select the next vertex with the minimum distance.</p>
+        <h2>(h) Write four characteristics of dynamic programming that differentiate it from greedy algorithm.</h2>
+        <p>Four characteristics of dynamic programming that differentiate it from
+          greedy algorithms are:</p>
+        <ol>
+          <li><strong>Optimal Substructure</strong>: Dynamic programming breaks down
+            a problem into smaller overlapping subproblems and solves each subproblem
+            only once. The optimal solution to the larger problem can be constructed
+            from the optimal solutions of the subproblems.</li>
+          <li><strong>Overlapping Subproblems</strong>: Dynamic programming stores the
+            solutions to the subproblems in a table or cache, allowing for efficient
+            reuse of previously computed solutions. This avoids redundant computations
+            and improves the overall efficiency.</li>
+          <li><strong>Memoization</strong>: Dynamic programming often uses memoization,
+            which is a technique of storing the results of expensive function calls
+            and reusing them when the same inputs occur again. This helps avoid redundant
+            calculations and improves the overall performance.</li>
+          <li><strong>Bottom-up or Top-down Approach</strong>: Dynamic programming can
+            be implemented using either a bottom-up or top-down approach. The bottom-up
+            approach starts with solving the smallest subproblems and builds up to
+            the larger problem, while the top-down approach starts with the larger
+            problem and breaks it down into smaller subproblems. Both approaches have
+            their advantages depending on the problem at hand.</li>
+        </ol>
+        <h2>(i) Explain the concept of median in order statistics.</h2>
+        <p>In order statistics, the concept of the median refers to the middle element
+          of a sorted list of numbers. If the list has an odd number of elements,
+          the median is the middle element. If the list has an even number of elements,
+          the median is the average of the two middle elements. The median divides
+          the list into two equal halves, with half of the elements being smaller
+          than the median and half being larger. It is a measure of central tendency
+          and is often used to describe the typical value in a dataset. In order
+          statistics, finding the median is a common problem, and various algorithms,
+          such as quickselect or the median of medians algorithm, can be used to
+          efficiently find the median in linear time or sub-linear time complexity.</p>
+        <h2>(j) Differentiate between "verification of result in polynomial time" and "finding result in polynomial time". Which of the two belongs to P-class of complexity?</h2>
+        <p>"Verification of result in polynomial time" and "finding result in polynomial
+          time" are two different concepts in computational complexity theory.</p>
+        <p>"Verification of result in polynomial time" refers to the ability to verify
+          whether a given solution to a problem is correct or not in polynomial time.
+          In other words, given a solution, we can efficiently check if it satisfies
+          the problem's constraints and produces the desired output. This is often
+          done by constructing a polynomial-time algorithm that verifies the correctness
+          of the solution. If such a verification algorithm exists, it implies that
+          the problem is in the complexity class NP (nondeterministic polynomial
+          time).</p>
+        <p>On the other hand, "finding result in polynomial time" refers to the ability
+          to find a solution to a problem in polynomial time. This means that there
+          exists an algorithm that can efficiently compute the correct solution for
+          any given input of the problem. If a problem can be solved in polynomial
+          time, it belongs to the complexity class P (polynomial time).</p>
+        <p>In terms of complexity classes, P is a subset of NP. This means that if
+          a problem can be solved in polynomial time, it can also be verified in
+          polynomial time.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

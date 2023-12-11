@@ -1,0 +1,91 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Boosting</h1>
+
+      <div class="ck-content">
+        <p>Boosting is a method in ensemble learning designed to improve the accuracy
+          of machine learning algorithms. It works by sequentially combining multiple
+          weak learners (typically simple models) to create a strong overall model.
+          The key principle behind boosting is to focus on training instances that
+          previous models misclassified, thereby increasing the overall accuracy
+          step by step.</p>
+        <p>Here are some important aspects of boosting:</p>
+        <p><strong>Sequential Training:</strong>
+        </p>
+        <ul>
+          <li>Unlike bagging methods where models are trained in parallel and independently,
+            boosting trains models sequentially.</li>
+          <li>Each model in the sequence focuses on the errors made by the previous
+            model, giving more weight to instances that were misclassified or harder
+            to classify.</li>
+        </ul>
+        <p><strong>Weak Learners:</strong>
+        </p>
+        <ul>
+          <li>Boosting algorithms typically use simple models as weak learners. Decision
+            trees (often just one level deep, called stumps) are commonly used.</li>
+          <li>These weak learners are usually insufficient on their own but perform
+            well when combined.</li>
+        </ul>
+        <p><strong>Weight Adjustment:</strong>
+        </p>
+        <ul>
+          <li>After each round of training, boosting algorithms adjust the weights of
+            the training data.</li>
+          <li>Misclassified data points gain more weight, while correctly classified
+            points lose weight.</li>
+          <li>This adjustment process guides the next model in the sequence to focus
+            on the harder cases.</li>
+        </ul>
+        <p><strong>Final Model:</strong>
+        </p>
+        <ul>
+          <li>The final model makes predictions based on a weighted vote (in classification
+            problems) or a weighted sum (in regression problems) of all the weak learners.</li>
+        </ul>
+        <p><strong>Popular Boosting Algorithms:</strong>
+        </p>
+        <ul>
+          <li><strong>AdaBoost (Adaptive Boosting):</strong> One of the first boosting
+            algorithms. It adapts by adjusting the weights of misclassified data points.</li>
+          <li><strong>Gradient Boosting:</strong> Improves the model by minimizing a
+            loss function. It builds the model in a stage-wise fashion like AdaBoost,
+            but the approach for calculating the errors is different.</li>
+          <li><strong>XGBoost, LightGBM, CatBoost:</strong> These are implementations
+            of gradient boosting that are optimized for speed and performance.</li>
+        </ul>
+        <p><strong>Advantages:</strong>
+        </p>
+        <ul>
+          <li><strong>Improved Accuracy:</strong> Boosting often results in higher accuracy
+            than other ensemble methods, especially in cases where the amount of data
+            is limited.</li>
+          <li><strong>Effectiveness with Weak Learners:</strong> Boosting can achieve
+            good performance even with simple models.</li>
+        </ul>
+        <p><strong>Challenges:</strong>
+        </p>
+        <ul>
+          <li><strong>Overfitting:</strong> If not properly controlled, boosting can
+            overfit the training data, especially in the presence of noisy data.</li>
+          <li><strong>Computational Complexity:</strong> Sequential training can be more
+            time-consuming than parallel methods like bagging.</li>
+        </ul>
+        <p>In summary, boosting is a powerful and widely-used ensemble technique
+          that incrementally builds complex models from simple ones, focusing on
+          correcting the mistakes of previous models in the sequence. This approach
+          has proven to be highly effective in a variety of machine learning tasks.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,88 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Biscetion Method</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The bisection method is a simple iterative numerical technique used to
+          find the root of a real-valued function. The root of a function is the
+          point at which the function equals zero. This method is particularly useful
+          for functions that are continuous and have a single root within a given
+          interval.</p>
+        <p style="margin-left:0px;">Here's how the bisection method works:</p>
+        <ol>
+          <li><strong>Interval Selection</strong>: Start with an initial interval [a,
+            b] where the function changes sign (i.e., f(a) and f(b) have opposite signs).
+            This ensures that there is at least one root within the interval.</li>
+          <li><strong>Midpoint Calculation</strong>: Calculate the midpoint of the interval,&nbsp;
+            <span
+            class="math-tex">\(c = \frac{a+b}{2}\)</span>
+          </li>
+          <li><strong>Function Evaluation</strong>: Evaluate the function at the midpoint,&nbsp;
+            <span
+            class="math-tex">\(f(c)\)</span>
+          </li>
+          <li><strong>Root Refinement</strong>: Determine the subinterval [a, c] or
+            [c, b] where the sign of&nbsp;<span class="math-tex">\(f(c)\)</span>&nbsp;is
+            opposite to the sign of either&nbsp;<span class="math-tex">\(f(a)\)</span>&nbsp;or&nbsp;
+            <span
+            class="math-tex">\(f(b)\)</span>. This subinterval is guaranteed to contain the root.</li>
+          <li><strong>Iteration</strong>: Repeat steps 2 to 4 using the new subinterval
+            as the interval. Continue this process iteratively until the width of the
+            interval becomes sufficiently small or until a desired level of accuracy
+            is achieved.</li>
+        </ol>
+        <p style="margin-left:0px;">The bisection method converges to the root of the function at a linear
+          rate, meaning that with each iteration, the error is halved. This makes
+          it a very reliable method for finding roots, especially when a high level
+          of accuracy is needed or when other methods might be less stable.</p>
+        <p
+        style="margin-left:0px;">However, the bisection method may converge relatively slowly, especially
+          when compared to more advanced methods like Newton's method or secant method,
+          which converge faster in many cases. Additionally, the bisection method
+          requires that the initial interval is chosen such that it contains a root
+          and the function changes sign within the interval. If these conditions
+          are not met, the method might not work as expected.</p>
+          <h2 style="margin-left:0px;">Order of Convergence</h2>
+          <p style="margin-left:0px;">The Order of convergence of the Bisection Method is linear. This means
+            that with each iteration of the method, the error is approximately halved.
+            In mathematical terms, the error (the difference between the approximation
+            and the true root) decreases by a constant factor in each iteration.</p>
+          <p
+          style="margin-left:0px;">The bisection method divides the interval in which the root is believed
+            to exist into two equal subintervals and selects the subinterval that contains
+            the root based on the Intermediate Value Theorem. The process is repeated
+            iteratively, with each iteration narrowing down the interval where the
+            root lies. The error at each step is reduced by a factor of 1/2, leading
+            to linear convergence.</p>
+            <p style="margin-left:0px;">Mathematically, the rate of convergence of bisection method can be expressed
+              as follows:</p>
+            <p style="margin-left:0px;"><span class="math-tex">\(|e_{n+1}| = C * |e_n|^k\)</span>
+            </p>
+            <p style="margin-left:0px;">Where:</p>
+            <ul>
+              <li><span class="math-tex">\(e_{n+1}\)</span>&nbsp;is the error in the (n+1)-th
+                iteration.</li>
+              <li><span class="math-tex">\(e_n\)</span>&nbsp;is the error in the n-th iteration.</li>
+              <li>C is a constant factor =&nbsp;<span class="math-tex">\(\frac12\)</span>.</li>
+              <li>k is order of convergence = 1.</li>
+            </ul>
+            <p style="margin-left:0px;">The linear convergence rate of the bisection method makes it relatively
+              slow compared to other root-finding methods like Newton's method or the
+              secant method, especially when the initial interval is large or the function
+              is not well-behaved. However, one advantage of the bisection method is
+              its reliability and guaranteed convergence for continuous functions with
+              a change of sign within the interval.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

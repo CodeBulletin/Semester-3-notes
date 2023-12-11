@@ -1,0 +1,38 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Prevention</h1>
+
+      <div class="ck-content">
+        <h3 style="margin-left:0px;"><strong>Prevention of SQL Injection:</strong></h3>
+        <ol>
+          <li style="margin-left:0px;"><strong>Use Prepared Statements</strong>: With prepared statements, the
+            SQL query is defined first, and then the input is sent to the server separately,
+            ensuring that user input is treated as data, not as part of the SQL command.</li>
+          <li
+          style="margin-left:0px;"><strong>Input Validation/Sanitization</strong>: Validate or sanitize user
+            inputs to ensure they do not contain malicious SQL.</li>
+            <li style="margin-left:0px;"><strong>Least Privilege Principle</strong>: Ensure that the database user
+              used by the application has only the necessary permissions, reducing the
+              potential impact of an SQL injection attack.</li>
+            <li style="margin-left:0px;"><strong>ORMs (Object-Relational Mappings)</strong>: Using ORMs can abstract
+              the SQL layer, reducing the risk of injection, though they are not foolproof.</li>
+            <li
+            style="margin-left:0px;"><strong>Regular Security Audits</strong>: Regularly testing and auditing
+              the application for vulnerabilities.</li>
+        </ol>
+        <p style="margin-left:0px;">Understanding and implementing these practices is crucial for the security
+          of any application that interacts with a SQL database.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

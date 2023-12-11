@@ -1,0 +1,178 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q8</h1>
+
+      <div class="ck-content">
+        <h2>(a) Compare and contrast between IDS(Intrusion Detection System) and IPS(Intrusion Prevention System).&nbsp;</h2>
+        <p style="margin-left:0px;">Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS)
+          are critical components of network security, but they serve different roles
+          and have distinct functionalities. Here's a comparison and contrast between
+          the two:</p>
+        <h3 style="margin-left:0px;"><strong>Intrusion Detection System (IDS)</strong></h3>
+        <p style="margin-left:0px;"><strong>Function</strong>: An IDS monitors network and/or system activities
+          for malicious activities or policy violations. It typically works in a
+          passive mode, analyzing copies of network traffic.</p>
+        <p style="margin-left:0px;"><strong>Response to Threats</strong>: When an IDS detects a potential
+          threat, it logs the information and alerts system administrators. However,
+          it does not take action to stop the threat.</p>
+        <p style="margin-left:0px;"><strong>Deployment</strong>: IDS can be network-based (NIDS), monitoring
+          traffic from all devices on the network, or host-based (HIDS), monitoring
+          activity on a single host.</p>
+        <p style="margin-left:0px;"><strong>Detection Methods</strong>:</p>
+        <ul>
+          <li><strong>Signature-Based Detection</strong>: Detects known threats by looking
+            for specific patterns, such as byte sequences in network traffic, or known
+            malicious instruction sequences.</li>
+          <li><strong>Anomaly-Based Detection</strong>: Detects unknown threats by comparing
+            current activity to a baseline and looking for anomalies.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Pros</strong>:</p>
+        <ul>
+          <li>Effective in identifying known threats.</li>
+          <li>Provides detailed information about detected intrusions.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Cons</strong>:</p>
+        <ul>
+          <li>Cannot prevent detected threats.</li>
+          <li>High false positive rate, especially in anomaly-based detection.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Intrusion Prevention System (IPS)</strong></h3>
+        <p style="margin-left:0px;"><strong>Function</strong>: An IPS, similar to an IDS, monitors network
+          and/or system activities, but it can also actively block or prevent intrusions.</p>
+        <p
+        style="margin-left:0px;"><strong>Response to Threats</strong>: When an IPS identifies a potential
+          threat, it can take action to block the threat, such as dropping malicious
+          packets, resetting connections, or blocking traffic from the source IP
+          address.</p>
+          <p style="margin-left:0px;"><strong>Deployment</strong>: Like IDS, IPS can be network-based or host-based.
+            It is typically placed inline (directly in the traffic flow) to actively
+            monitor and respond to network traffic.</p>
+          <p style="margin-left:0px;"><strong>Detection Methods</strong>: Uses similar methods as IDS (signature-based
+            and anomaly-based detection), but also includes other techniques like stateful
+            inspection.</p>
+          <p style="margin-left:0px;"><strong>Pros</strong>:</p>
+          <ul>
+            <li>Can prevent or mitigate attacks in real-time.</li>
+            <li>Reduces the burden on security teams by automatically responding to threats.</li>
+          </ul>
+          <p style="margin-left:0px;"><strong>Cons</strong>:</p>
+          <ul>
+            <li>Risk of false positives leading to legitimate traffic being blocked.</li>
+            <li>Can become a point of failure in the network if not properly managed.</li>
+          </ul>
+          <h3 style="margin-left:0px;"><strong>Comparison and Contrast</strong></h3>
+          <p style="margin-left:0px;"><strong>Active vs Passive</strong>: The primary difference is that IDS
+            is passive and only detects and alerts, while IPS is active and can prevent
+            or mitigate attacks.</p>
+          <p style="margin-left:0px;"><strong>Placement in Network</strong>: IPS is usually placed inline to
+            actively monitor and control the traffic, whereas IDS is typically deployed
+            out of band.</p>
+          <p style="margin-left:0px;"><strong>False Positives</strong>: Both systems can generate false positives,
+            but the consequences are more significant in IPS as it can lead to legitimate
+            traffic being blocked.</p>
+          <p style="margin-left:0px;"><strong>Complexity and Management</strong>: IPS is generally more complex
+            to manage due to its active role in network traffic. Misconfigurations
+            can have a direct impact on network performance.</p>
+          <p style="margin-left:0px;"><strong>Use Case</strong>: IDS is suitable for environments where detecting
+            threats and understanding attack patterns are crucial but active intervention
+            is not desired, while IPS is ideal for environments where preventing known
+            threats is a priority.</p>
+          <p style="margin-left:0px;">In summary, IDS and IPS are complementary technologies, with IDS suited
+            for monitoring and identifying security breaches and IPS aimed at actively
+            preventing and mitigating attacks. The choice between IDS and IPS, or the
+            decision to use both, depends on the specific security needs and policies
+            of the organization.</p>
+          <h2>(b) What are the various intrusion detection methodologies? Also, explain any three types of threats.</h2>
+          <p style="margin-left:0px;">Intrusion Detection Systems (IDS) employ various methodologies to detect
+            unauthorized access or anomalies in a network or system. The primary intrusion
+            detection methodologies are:</p>
+          <p style="margin-left:0px;"><strong>Signature-Based Detection</strong>:</p>
+          <ul>
+            <li><strong>Description</strong>: This method relies on a database of known
+              threat signatures - patterns of data that are typical of known malicious
+              activities.</li>
+            <li><strong>Operation</strong>: The IDS compares incoming traffic against
+              these signatures to identify potential threats.</li>
+            <li><strong>Pros</strong>: Highly effective at detecting known threats.</li>
+            <li><strong>Cons</strong>: Cannot detect new, unknown threats (zero-day attacks).</li>
+          </ul>
+          <p style="margin-left:0px;"><strong>Anomaly-Based Detection</strong>:</p>
+          <ul>
+            <li><strong>Description</strong>: This approach involves establishing a baseline
+              of normal network behavior and then monitoring for deviations from this
+              norm.</li>
+            <li><strong>Operation</strong>: It uses machine learning algorithms or statistical
+              analysis to detect unusual patterns that may indicate a security breach.</li>
+            <li><strong>Pros</strong>: Capable of detecting novel or unknown threats.</li>
+            <li><strong>Cons</strong>: Higher false positive rates as benign activities
+              that are not typical may be flagged as threats.</li>
+          </ul>
+          <p style="margin-left:0px;"><strong>Stateful Protocol Analysis</strong>:</p>
+          <ul>
+            <li><strong>Description</strong>: This method interprets various protocols
+              and data transfers to determine if they are behaving as expected.</li>
+            <li><strong>Operation</strong>: It understands and tracks the state of network
+              protocols over a session, ensuring they adhere to the defined protocol
+              standards.</li>
+            <li><strong>Pros</strong>: Effective in identifying protocol-specific attacks
+              and anomalies.</li>
+            <li><strong>Cons</strong>: Requires deep knowledge of protocols and can be
+              resource-intensive.</li>
+          </ul>
+          <p style="margin-left:0px;"><strong>Heuristic-Based Detection</strong>:</p>
+          <ul>
+            <li><strong>Description</strong>: Uses algorithms to evaluate the behavior
+              of applications and network traffic, looking for unusual patterns.</li>
+            <li><strong>Operation</strong>: It identifies potentially harmful software
+              or activity by comparing it to known harmful behaviors.</li>
+            <li><strong>Pros</strong>: Good at detecting new threats that haven't been
+              encountered before.</li>
+            <li><strong>Cons</strong>: Risk of false positives is high due to the heuristic
+              nature of detection.</li>
+          </ul>
+          <h3 style="margin-left:0px;"><strong>Types of Threats</strong></h3>
+          <p style="margin-left:0px;"><strong>Network Attacks</strong>:</p>
+          <ul>
+            <li><strong>Description</strong>: Attacks aimed at disrupting, damaging, or
+              gaining unauthorized access to computer networks and systems.</li>
+            <li><strong>Examples</strong>: DDoS attacks, Man-in-the-Middle (MitM) attacks,
+              and packet sniffing.</li>
+            <li><strong>Concerns</strong>: These attacks can compromise network integrity,
+              steal data, or render network services unavailable.</li>
+          </ul>
+          <p style="margin-left:0px;"><strong>Malware</strong>:</p>
+          <ul>
+            <li><strong>Description</strong>: Malicious software designed to harm, exploit,
+              or take unauthorized control over a system.</li>
+            <li><strong>Examples</strong>: Viruses, worms, trojans, ransomware, and spyware.</li>
+            <li><strong>Concerns</strong>: Malware can lead to data theft, system damage,
+              spying, and other malicious activities.</li>
+          </ul>
+          <p style="margin-left:0px;"><strong>Insider Threats</strong>:</p>
+          <ul>
+            <li><strong>Description</strong>: Threats from people within the organization
+              who have inside information concerning its security practices, data, and
+              computer systems.</li>
+            <li><strong>Examples</strong>: Employees misusing access privileges, stealing
+              confidential information, or sabotaging systems.</li>
+            <li><strong>Concerns</strong>: These threats are hard to detect as insiders
+              already have authorized access, and their actions can lead to significant
+              damage or data breaches.</li>
+          </ul>
+          <p style="margin-left:0px;">Each of these threats requires specific strategies and tools to detect
+            and mitigate, emphasizing the need for a multi-layered approach to security
+            that includes robust intrusion detection capabilities.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

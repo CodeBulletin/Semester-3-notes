@@ -1,0 +1,89 @@
+import heapq
+from collections import defaultdict
+
+
+class Node:
+    def __init__(self, char, freq):
+        self.char = char
+        self.freq = freq
+        self.left = None
+        self.right = None
+
+    def __lt__(self, other):
+        return self.freq < other.freq
+
+
+def calculate_frequency(data):
+    frequency = defaultdict(int)
+    for char in data:
+        frequency[char] += 1
+    return frequency
+
+
+def build_huffman_tree(frequency):
+    priority_queue = [Node(char, freq) for char, freq in frequency.items()]
+    heapq.heapify(priority_queue)
+
+    while len(priority_queue) > 1:
+        left_node = heapq.heappop(priority_queue)
+        right_node = heapq.heappop(priority_queue)
+
+        new_node = Node(None, left_node.freq + right_node.freq)
+        new_node.left = left_node
+        new_node.right = right_node
+
+        heapq.heappush(priority_queue, new_node)
+
+    return priority_queue[0]
+
+
+def generate_huffman_codes(root):
+    codes = {}
+
+    def traverse(node, code):
+        if node.char is not None:
+            codes[node.char] = code
+            return
+
+        traverse(node.left, code + '0')
+        traverse(node.right, code + '1')
+
+    traverse(root, '')
+    return codes
+
+
+def encode_data(data, codes):
+    encoded_data = ''
+    for char in data:
+        encoded_data += codes[char]
+    return encoded_data
+
+
+def decode_data(encoded_data, root):
+    decoded_data = ''
+    current_node = root
+
+    for bit in encoded_data:
+        if bit == '0':
+            current_node = current_node.left
+        else:
+            current_node = current_node.right
+
+        if current_node.char is not None:
+            decoded_data += current_node.char
+            current_node = root
+
+    return decoded_data
+
+
+# Example usage
+data = 'Huffman coding is a data compression algorithm.'
+frequency = calculate_frequency(data)
+huffman_tree = build_huffman_tree(frequency)
+huffman_codes = generate_huffman_codes(huffman_tree)
+encoded_data = encode_data(data, huffman_codes)
+decoded_data = decode_data(encoded_data, huffman_tree)
+
+print('Original data:', data)
+print('Encoded data:', encoded_data)
+print('Decoded data:', decoded_data)

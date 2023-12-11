@@ -1,0 +1,60 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Percentile</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">A percentile is a statistical measure that indicates the relative position
+          of a particular value within a dataset. It represents the value below which
+          a certain percentage of the data falls. For example, the 75th percentile
+          (also known as the third quartile) is the value below which 75% of the
+          data lies.</p>
+        <p style="margin-left:0px;">To calculate a percentile, follow these steps:</p>
+        <ol>
+          <li style="margin-left:0px;"><strong>Organize the Data:</strong> Arrange the data in ascending order.</li>
+          <li
+          style="margin-left:0px;"><strong>Identify the Position:</strong> Determine the position of the desired
+            percentile within the dataset. This can be done using the formula:
+            <br><span class="math-tex">\(Position = \frac{P}{100} * (n + 1)\)</span>
+            <br>Where:
+            <ol>
+              <li><span class="math-tex">\(P\)</span>&nbsp;is the desired percentile (e.g.,
+                25 for the 25th percentile).</li>
+              <li><span class="math-tex">\(n\)</span>&nbsp;is the total number of data points.</li>
+            </ol>
+            </li>
+            <li style="margin-left:0px;"><strong>Determine the Value:</strong> If the calculated position is a whole
+              number (i.e., not a fraction), then the value at that position in the ordered
+              dataset is the desired percentile. If the calculated position is a fraction,
+              take the average of the values at the positions just above and just below
+              the calculated position.</li>
+        </ol>
+        <p style="margin-left:0px;">Suppose you have the following data set: 12, 18, 20, 24, 26, 30, 32, 35,
+          40, 42</p>
+        <p style="margin-left:0px;">You want to find the 70th percentile.</p>
+        <p style="margin-left:0px;">Organize the data in ascending order: 12, 18, 20, 24, 26, 30, 32, 35,
+          40, 42</p>
+        <p style="margin-left:0px;">Calculate the position:</p>
+        <p style="margin-left:0px;"><span class="math-tex">\(Position = \frac{70}{100} * (10 + 1) = 0.7 * 11 = 7.7\)</span>
+        </p>
+        <p style="margin-left:0px;">Since the calculated position (7.7) is not a whole number, take the average
+          of the values at positions 7 and 8:&nbsp;<span class="math-tex">\(\frac{32+35}2 = \frac{67}2 = 33.5\)</span>
+        </p>
+        <p style="margin-left:0px;">So, the 70th percentile of this data set is 33.5.</p>
+        <p style="margin-left:0px;">Percentiles are useful for understanding how individual values relate
+          to the distribution of data. The median, for example, is the 50th percentile,
+          and quartiles (25th, 50th, and 75th percentiles) are often used to divide
+          data into quarters for analysis.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

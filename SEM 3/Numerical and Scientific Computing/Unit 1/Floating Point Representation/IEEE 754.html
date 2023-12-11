@@ -1,0 +1,92 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>IEEE 754</h1>
+
+      <div class="ck-content">
+        <p>IEEE 754 is a standard for floating-point arithmetic, developed by the
+          Institute of Electrical and Electronics Engineers (IEEE). It defines the
+          formats and rules for representing and performing arithmetic operations
+          on floating-point numbers in computers. The IEEE 754 standard was first
+          published in 1985 and has since been revised and extended.</p>
+        <figure class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Common Name</th>
+                <th>Short</th>
+                <th>Mantissa</th>
+                <th>Exponent</th>
+                <th>Bias</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Binary16</td>
+                <td>Half Precision</td>
+                <td>HP</td>
+                <td>11</td>
+                <td>5</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>Binary32</td>
+                <td>Single Precision</td>
+                <td>SP</td>
+                <td>24</td>
+                <td>8</td>
+                <td>127</td>
+              </tr>
+              <tr>
+                <td>Binary64</td>
+                <td>Double Precision</td>
+                <td>DP</td>
+                <td>53</td>
+                <td>11</td>
+                <td>1023</td>
+              </tr>
+              <tr>
+                <td>Binary128</td>
+                <td>Quadriple Precision</td>
+                <td>QP</td>
+                <td>113</td>
+                <td>15</td>
+                <td>16383</td>
+              </tr>
+              <tr>
+                <td>Binary256</td>
+                <td>Octuple Precision</td>
+                <td>OP</td>
+                <td>237</td>
+                <td>19</td>
+                <td>262143</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <p>Largest Positive Number (SP):&nbsp;
+          <br>(2 - 2<sup>-23</sup>) * 2<sup>127 </sup><i>~ </i>2 * 10<sup>38</sup>
+        </p>
+        <p>Smallest Positive Number (SP):
+          <br>1 * 2<sup>-126 </sup><i>~ </i>2 * 10<sup>-38</sup>
+        </p>
+        <p>Largest Positive Number (DP):&nbsp;
+          <br>(2 - 2<sup>-52</sup>) * 2<sup>1023 </sup><i>~ </i>2 * 10<sup>308</sup>
+        </p>
+        <p>Smallest Positive Number (DP):
+          <br>1 * 2<sup>-1023 </sup><i>~ </i>2 * 10<sup>-308</sup>
+        </p>
+      </div>
+    </div>
+  </body>
+
+</html>

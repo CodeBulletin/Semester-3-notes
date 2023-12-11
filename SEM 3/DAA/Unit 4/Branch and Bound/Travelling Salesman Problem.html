@@ -1,0 +1,81 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Travelling Salesman Problem</h1>
+
+      <div class="ck-content">
+        <p>The Traveling Salesman Problem (TSP) is a classic problem in combinatorial
+          optimization and computer science. It's a well-known and extensively studied
+          problem in the field of operations research and theoretical computer science
+          due to its practical and theoretical importance.</p>
+        <h3>Definition:</h3>
+        <ul>
+          <li>The TSP asks this question: "Given a list of cities and the distances
+            between each pair of cities, what is the shortest possible route that visits
+            each city exactly once and returns to the origin city?"</li>
+        </ul>
+        <h3>Key Aspects:</h3>
+        <ol>
+          <li><strong>Cities:</strong> A set of nn cities.</li>
+          <li><strong>Distances:</strong> The distance between each pair of cities is
+            known.</li>
+          <li><strong>Objective:</strong> Find the shortest possible route that visits
+            each city once and returns to the starting city.</li>
+          <li><strong>Graph Representation:</strong> TSP is often represented as a weighted
+            graph, where cities are the graph's vertices, paths are the edges, and
+            distances are the weights of the edges.</li>
+        </ol>
+        <h3>Types of TSP:</h3>
+        <ol>
+          <li><strong>Symmetric TSP:</strong> The distance between two cities is the
+            same in each opposite direction, forming an undirected graph.</li>
+          <li><strong>Asymmetric TSP:</strong> The distance between two cities may differ
+            depending on the direction, forming a directed graph.</li>
+        </ol>
+        <h3>Complexity:</h3>
+        <ul>
+          <li>TSP is NP-hard, meaning there is no known polynomial-time algorithm that
+            can solve all instances of this problem efficiently for large numbers of
+            cities.</li>
+          <li>It is often used as a benchmark for many optimization methods.</li>
+        </ul>
+        <h3>Algorithms and Approaches:</h3>
+        <ol>
+          <li><strong>Exact Algorithms:</strong> Such as the Held-Karp algorithm, use
+            dynamic programming, branch and bound, and integer linear programming.
+            They guarantee finding the shortest path but are not feasible for very
+            large numbers of cities due to exponential time complexity.</li>
+          <li><strong>Heuristic Methods:</strong> Approximation algorithms and heuristics
+            like the nearest neighbor, genetic algorithms, and simulated annealing
+            provide good solutions in a reasonable time but don't guarantee the optimal
+            solution.</li>
+          <li><strong>Metaheuristic Approaches:</strong> These are advanced heuristic
+            methods designed to escape local optima and explore the solution space
+            more broadly.</li>
+        </ol>
+        <h3>Practical Applications:</h3>
+        <ul>
+          <li>Logistics and transportation: Optimizing routes for delivery vehicles.</li>
+          <li>Manufacturing: Optimizing the movement of machines in a factory.</li>
+          <li>Network design: Minimizing the cost of laying cables or pipelines.</li>
+          <li>Circuit board design: Minimizing the length of the wiring.</li>
+        </ul>
+        <h3>Conclusion:</h3>
+        <p>The TSP is fundamental in theoretical computer science and operations
+          research due to its role in studying algorithmic efficiency and problem
+          complexity. Its numerous practical applications also make it a continual
+          focus of research, particularly in finding efficient heuristic methods
+          for larger instances of the problem.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

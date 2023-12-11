@@ -1,0 +1,68 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Constraint Satisfaction Procedure (CSP)</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">A Constraint Satisfaction Procedure (CSP) is a problem-solving technique
+          used in artificial intelligence and computer science to solve problems
+          where variables must be assigned values subject to a set of constraints.
+          CSPs are widely used in various domains, including scheduling, planning,
+          configuration, and many others.</p>
+        <p style="margin-left:0px;">Here are the key components of a Constraint Satisfaction Problem (CSP):</p>
+        <ol>
+          <li style="margin-left:0px;"><strong>Variables:</strong> These are the entities to which you need to
+            assign values to solve the problem. Variables can represent different aspects
+            of the problem, such as tasks to be scheduled, components to be configured,
+            or objects to be placed.</li>
+          <li style="margin-left:0px;"><strong>Domains:</strong> Each variable has a domain, which is the set
+            of possible values it can take. The domain represents the valid options
+            for each variable.</li>
+          <li style="margin-left:0px;"><strong>Constraints:</strong> Constraints are restrictions or conditions
+            that specify the relationships between variables. They define which combinations
+            of variable assignments are allowed and which are not. Constraints are
+            typically represented as logical expressions that must evaluate to true.</li>
+        </ol>
+        <p style="margin-left:0px;">The goal of a Constraint Satisfaction Procedure is to find a consistent
+          assignment of values to variables such that all constraints are satisfied
+          simultaneously. In other words, it seeks a solution that doesn't violate
+          any of the specified constraints.</p>
+        <p style="margin-left:0px;">The CSP solving process generally involves backtracking search and may
+          employ various heuristics and algorithms to efficiently explore the search
+          space. Here are some common steps involved in solving CSPs:</p>
+        <ol>
+          <li style="margin-left:0px;"><strong>Variable Assignment:</strong> Start with an empty assignment of
+            values to variables.</li>
+          <li style="margin-left:0px;"><strong>Variable Selection:</strong> Choose an unassigned variable.</li>
+          <li
+          style="margin-left:0px;"><strong>Value Assignment:</strong> For the selected variable, choose a
+            value from its domain.</li>
+            <li style="margin-left:0px;"><strong>Constraint Checking:</strong> Check if the assignment of the chosen
+              value to the selected variable violates any constraints. If it does, backtrack
+              (undo the assignment) and try a different value.</li>
+            <li style="margin-left:0px;"><strong>Repeat:</strong> Continue this process, selecting variables and
+              assigning values until all variables are assigned, and all constraints
+              are satisfied, or until it becomes evident that no solution exists.</li>
+            <li
+            style="margin-left:0px;"><strong>Backtracking:</strong> If a violation of constraints is detected,
+              backtrack to a previous assignment and explore alternative choices for
+              variables and values.</li>
+        </ol>
+        <p style="margin-left:0px;">Constraint Satisfaction Procedures are used in a wide range of applications,
+          such as solving Sudoku puzzles, scheduling problems, map coloring, and
+          more. They provide a powerful framework for modeling and solving problems
+          where decisions need to be made while respecting certain logical relationships
+          and constraints between variables.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

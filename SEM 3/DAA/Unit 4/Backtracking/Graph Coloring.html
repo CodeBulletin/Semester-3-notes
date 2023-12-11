@@ -1,0 +1,71 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Graph Coloring</h1>
+
+      <div class="ck-content">
+        <p>In the Graph Coloring Problem, you are given a graph and a set of colors.
+          The objective is to assign a color to each vertex of the graph such that
+          no two adjacent vertices (i.e., vertices connected by an edge) have the
+          same color. The goal is often to minimize the number of colors used.</p>
+        <h3>Types</h3>
+        <ol>
+          <li><strong>Vertex Coloring:</strong> The most common form, where colors are
+            assigned to vertices.</li>
+          <li><strong>Edge Coloring:</strong> Colors are assigned to edges so that no
+            two edges sharing a common vertex have the same color.</li>
+          <li><strong>Face Coloring:</strong> In planar graphs, coloring the faces of
+            the graph so that no two faces sharing a boundary have the same color.</li>
+        </ol>
+        <h3>Applications</h3>
+        <ul>
+          <li><strong>Scheduling Problems:</strong> Assigning time slots or resources
+            where conflicts must be avoided.</li>
+          <li><strong>Map Coloring:</strong> Such as coloring political maps with different
+            colors for adjacent countries.</li>
+          <li><strong>Register Allocation:</strong> In compiler optimization, where different
+            variables are assigned to different registers.</li>
+        </ul>
+        <h3>Complexity</h3>
+        <ul>
+          <li>The problem is known for its computational difficulty. Determining if
+            a graph can be colored with two colors (bipartite graph) is polynomial
+            in time; however, deciding if a graph can be colored with three or more
+            colors is NP-complete.</li>
+          <li>The simplest version, deciding if a graph can be colored with two colors,
+            is solvable in linear time. This is equivalent to checking if the graph
+            is bipartite.</li>
+          <li>For more than two colors, efficient algorithms are known only for special
+            types of graphs.</li>
+        </ul>
+        <h3>Algorithms</h3>
+        <ul>
+          <li><strong>Greedy Coloring:</strong> A simple heuristic used in algorithms.
+            It assigns colors one by one to vertices, picking the first available color.</li>
+          <li><strong>Backtracking:</strong> A brute-force approach that tries all possible
+            colorings.</li>
+          <li><strong>Approximation Algorithms:</strong> For some versions of the problem,
+            especially when minimizing the number of colors is important.</li>
+        </ul>
+        <h3>Chromatic Number</h3>
+        <ul>
+          <li>The minimum number of colors needed to color a graph is known as its chromatic
+            number. Determining the chromatic number of a general graph is an NP-hard
+            problem.</li>
+        </ul>
+        <p>Without any conditions it takes&nbsp;<span class="math-tex">\(C^{n+1}\)</span>&nbsp;time
+          to compute where&nbsp;<span class="math-tex">\(C\)</span>&nbsp;is number
+          of colors,&nbsp;<span class="math-tex">\(n\)</span>&nbsp;is number of nodes</p>
+      </div>
+    </div>
+  </body>
+
+</html>

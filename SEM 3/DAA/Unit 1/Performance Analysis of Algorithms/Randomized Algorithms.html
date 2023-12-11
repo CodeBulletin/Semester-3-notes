@@ -1,0 +1,73 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Randomized Algorithms</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Randomized algorithms are a class of algorithms that use randomness or
+          random sampling as an integral part of their design. Unlike deterministic
+          algorithms, which produce the same output for a given input every time,
+          randomized algorithms make use of random choices during their execution.
+          These algorithms have a wide range of applications in computer science,
+          mathematics, and various other fields. Here are some key concepts and characteristics
+          of randomized algorithms:</p>
+        <p style="margin-left:0px;"><strong>Randomness as a Resource</strong>: Randomized algorithms employ
+          randomness as a resource to solve problems more efficiently or to provide
+          probabilistic guarantees. By introducing randomness, they often achieve
+          better expected performance, even if their behavior can vary from one run
+          to another.</p>
+        <p style="margin-left:0px;"><strong>Probabilistic Analysis</strong>: Rather than providing deterministic
+          guarantees, randomized algorithms often come with probabilistic guarantees.
+          They aim to achieve the correct result with high probability, and their
+          analysis typically involves probability theory and statistics.</p>
+        <p style="margin-left:0px;"><strong>Monte Carlo vs. Las Vegas Algorithms</strong>:</p>
+        <ul>
+          <li><strong>Monte Carlo Algorithms</strong>: These algorithms use randomness
+            to quickly produce an answer that might be incorrect with a small probability.
+            However, they can often be run very fast and can be employed in situations
+            where speed is crucial. Users can trade off the probability of correctness
+            for runtime efficiency.</li>
+          <li><strong>Las Vegas Algorithms</strong>: These algorithms use randomness
+            to ensure that they always produce the correct result. The trade-off here
+            is that while they guarantee correctness, their runtime may vary.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Random Sampling</strong>: Many randomized algorithms make use
+          of random sampling techniques. For example, randomized algorithms for approximating
+          mathematical constants, like π or e, often use Monte Carlo methods that
+          involve random sampling.</p>
+        <p style="margin-left:0px;"><strong>Parallelization</strong>: Randomized algorithms can be particularly
+          well-suited for parallel and distributed computing environments. The use
+          of randomization can help avoid contention and improve scalability.</p>
+        <p
+        style="margin-left:0px;"><strong>Applications</strong>:</p>
+          <ul>
+            <li><strong>Randomized Data Structures</strong>: Data structures like skip
+              lists and randomized binary search trees use randomization to achieve average-case
+              performance guarantees.</li>
+            <li><strong>Numerical Approximation</strong>: Randomized algorithms are used
+              for approximating the value of mathematical constants, solving systems
+              of linear equations, and estimating probabilities.</li>
+            <li><strong>Graph Algorithms</strong>: Randomized algorithms are employed
+              in graph theory for tasks like graph coloring, finding matchings, and solving
+              network problems.</li>
+            <li><strong>Cryptography</strong>: Randomized algorithms are used in cryptographic
+              protocols, such as those based on the probabilistic primality testing of
+              large numbers.</li>
+          </ul>
+          <p style="margin-left:0px;"><strong>Randomized Rounding</strong>: In combinatorial optimization, randomized
+            rounding is a technique that uses randomization to round fractional solutions
+            to integer solutions in such a way that the expected value of the rounded
+            solution is a good approximation to the optimal integer solution</p>
+      </div>
+    </div>
+  </body>
+
+</html>

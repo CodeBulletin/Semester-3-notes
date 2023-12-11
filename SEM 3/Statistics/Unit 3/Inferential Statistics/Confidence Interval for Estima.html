@@ -1,0 +1,57 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Confidence Interval for Estimating Population Mean µ when σ is Unknown / t-satistics</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">
+          <br>When the population standard deviation (σ) is unknown, you can estimate
+          the population mean (µ) using a confidence interval based on the sample
+          standard deviation (s) and the t-distribution. This method is used when
+          you have a sample from the population but don't know the true population
+          standard deviation. Here's how to calculate a confidence interval for µ
+          when σ is unknown:</p>
+        <p style="margin-left:0px;"><strong>Collect Data</strong>: Start by collecting a random sample from
+          the population of interest. The sample should be random to ensure it is
+          representative of the population.</p>
+        <p style="margin-left:0px;"><strong>Determine Confidence Level</strong>: Decide on the confidence
+          level you want for your estimate. Common choices are 90%, 95%, and 99%,
+          but you can select any confidence level based on your requirements.</p>
+        <p
+        style="margin-left:0px;"><strong>Calculate Sample Mean and Sample Standard Deviation</strong>:
+          Compute the sample mean (x̄) and the sample standard deviation (s) from
+          your sample data.</p>
+          <p style="margin-left:0px;"><strong>Determine the Degrees of Freedom (df)</strong>: The degrees of
+            freedom are based on the sample size (n) and are used when working with
+            the t-distribution. The formula for degrees of freedom in this context
+            is (n - 1).</p>
+          <p style="margin-left:0px;"><strong>Find the Critical Value (t)</strong><i>: The critical value (t</i>)
+            is obtained from the t-distribution table or a statistical calculator,
+            based on the chosen confidence level and degrees of freedom. For a 95%
+            confidence level and n degrees of freedom, you typically find the t* value.</p>
+          <p
+          style="margin-left:0px;"><strong>Calculate the Standard Error (SE)</strong>: The standard error
+            is a measure of the variation in your estimate. It's calculated as:</p>
+            <p
+            style="margin-left:0px;">SE = s / √n</p>
+              <p style="margin-left:0px;"><strong>Calculate the Margin of Error (ME)</strong>: The margin of error
+                quantifies the range within which you expect the population mean to fall.
+                It is computed as:</p>
+              <p style="margin-left:0px;">ME = t* * (SE)</p>
+              <p style="margin-left:0px;"><strong>Construct the Confidence Interval</strong>: Use the sample mean
+                (x̄) and the margin of error (ME) to create the confidence interval:</p>
+              <p
+              style="margin-left:0px;">Confidence Interval = x̄ ± ME</p>
+      </div>
+    </div>
+  </body>
+
+</html>

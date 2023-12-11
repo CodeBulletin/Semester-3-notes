@@ -1,0 +1,86 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Interquartile Range (IQR)</h1>
+
+      <div class="ck-content">
+        <p>The interquartile range (IQR) is a measure of dispersion that is used
+          to describe the spread or variability of a dataset. It is calculated as
+          the difference between the upper quartile (Q3) and the lower quartile (Q1)
+          of a dataset.</p>
+        <p>To calculate the interquartile range, you first need to arrange the dataset
+          in ascending order. Then, you find the median, which is the middle value
+          of the dataset. The dataset is then split into two halves: the lower half
+          and the upper half.</p>
+        <p>The lower quartile (Q1) is the median of the lower half of the dataset,
+          and the upper quartile (Q3) is the median of the upper half of the dataset.
+          The interquartile range is then calculated as the difference between Q3
+          and Q1.</p>
+        <p>Here's an example to illustrate how to calculate the interquartile range:</p>
+        <p>Consider the following dataset: 5, 8, 10, 12, 15, 18, 20, 22, 25, 30</p>
+        <p>Arrange the dataset in ascending order: 5, 8, 10, 12, 15, 18, 20, 22,
+          25, 30</p>
+        <p>Calculate Q1 =&nbsp;<span class="math-tex">\(Size \space of \space [\frac{n+1}{4}]^{th}\)</span>&nbsp;=&nbsp;
+          <span
+          class="math-tex">\(\frac{11}4 = 2.75 = size \space of \space [2.75] = size \space of \space
+            [2] &nbsp;\space + 0.75(size \space of \space [3] - size \space of \space
+            [2]) \)</span>&nbsp;=&nbsp;<span class="math-tex">\(8 + 0.75(10-8) = 8 + 1.5 = 9.5\)</span>
+        </p>
+        <p>Calculate Q3 =&nbsp;<span class="math-tex">\(Size \space of \space 3[\frac{n+1}{4}]^{th}\)</span>&nbsp;=&nbsp;
+          <span
+          class="math-tex">\(3*\frac{11}4 = 8.25 = size \space of \space [8.25] = size \space of
+            \space [8] &nbsp;\space + \frac34(size \space of \space [9] - size \space
+            of \space [8])\)</span>&nbsp;=&nbsp;<span class="math-tex">\(22 + 0.25(25 - 22) = 22 + 0.75 = 22.75\)</span>
+        </p>
+        <p>Calculate the interquartile range (IQR): IQR = Q3 - Q1 = 13.25</p>
+        <p>Therefore, the interquartile range for this dataset is 13.25. The IQR
+          is often used as a robust measure of dispersion because it is less affected
+          by extreme values or outliers in the dataset.</p>
+        <h2>Quartile deviation</h2>
+        <p>also known as semi-interquartile range, is a measure of dispersion that
+          quantifies the spread of a dataset around the median. It is calculated
+          as half of the interquartile range (IQR), which is the difference between
+          the upper quartile (Q3) and the lower quartile (Q1) of the dataset.</p>
+        <p>The formula for calculating quartile deviation is:</p>
+        <p>Quartile Deviation =&nbsp;<span class="math-tex">\(\frac{(Q3 - Q1)}2\)</span>
+        </p>
+        <p>Where Q3 is the upper quartile and Q1 is the lower quartile.</p>
+        <p>Quartile deviation provides a measure of dispersion that is less sensitive
+          to extreme values or outliers compared to other measures such as the standard
+          deviation. It represents the average distance between the median and the
+          quartiles, indicating the spread of the middle 50% of the data.</p>
+        <p>For example, if the upper quartile (Q3) is 30 and the lower quartile (Q1)
+          is 10, the quartile deviation would be:</p>
+        <p>Quartile Deviation =&nbsp;<span class="math-tex">\(\frac{(30 - 20)}2\)</span>&nbsp;=
+          10</p>
+        <p>This means that, on average, the data points in the middle 50% of the
+          dataset deviate from the median by 10 units. Quartile deviation is often
+          used in descriptive statistics to provide a robust measure of dispersion.</p>
+        <h2>Coefficient of Quartile Deviation</h2>
+        <p>As Quartile Deviation is an absolute measure of dispersion, one cannot
+          use it for comparing the variability of two or more distributions when
+          they are expressed in different units. Therefore, in order to compare the
+          variability of two or more series with different units it is essential
+          to determine the relative measure of Quartile Deviation, which is also
+          known as the Coefficient of Quartile Deviation. It is studied to make the
+          comparison between the degree of variation in different series. The formula
+          for determining Coefficient of Quartile Deviation is as follows:</p>
+        <p>CQD =&nbsp;<span class="math-tex">\(\frac{Q3 - Q1}{Q3 + Q1}\)</span>
+        </p>
+        <p>For the Above Example</p>
+        <p>CQD =&nbsp;<span class="math-tex">\(\frac{30 - 10}{30 + 10} = \frac{20}{40} = 0.5 &nbsp;\)</span>
+        </p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

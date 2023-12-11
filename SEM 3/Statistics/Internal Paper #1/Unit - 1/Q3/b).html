@@ -1,0 +1,192 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>b)</h1>
+
+      <div class="ck-content">
+        <p>The Dow Jones Industrial Average (DJIA) and the Standard &amp; Poor's
+          500 Index (S&amp;P 500) are both used to measure the performance of the
+          stock market. The DJIA is based on the price of stocks for 30 large companies;
+          the S&amp;P 500 is based on the price of stocks for 500 companies. If both
+          the DJIA and S&amp;P 500 measure the performance of the stock market, how
+          are they correlated? The following data show the daily percent increase
+          or daily percent decrease in the DJIA and S&amp;P 500 for a sample of nine
+          days over a three-month period.</p>
+        <figure class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>DJIA</th>
+                <td>0.2</td>
+                <td>0.82</td>
+                <td>0.99</td>
+                <td>0.04</td>
+                <td>0.24</td>
+                <td>1.01</td>
+                <td>0.3</td>
+                <td>0.55</td>
+                <td>0.25</td>
+              </tr>
+              <tr>
+                <th>S&amp;P 500</th>
+                <td>0.24</td>
+                <td>0.19</td>
+                <td>0.91</td>
+                <td>0.08</td>
+                <td>0.33</td>
+                <td>0.87</td>
+                <td>0.36</td>
+                <td>0.83</td>
+                <td>0.16</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <p><span class="text-big"><strong>(i) </strong></span>Compute the sample
+          correlation coefficient for these data.</p>
+        <figure class="table">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="math-tex">\(x = DJIA\)</span>
+                </th>
+                <th><span class="math-tex">\(x-\bar x\)</span>
+                </th>
+                <th><span class="math-tex">\((x-\bar x)^2\)</span>
+                </th>
+                <th>S&amp;P 500</th>
+                <th><span class="math-tex">\(y - \bar y\)</span>
+                </th>
+                <th><span class="math-tex">\((y-\bar y)^2\)</span>
+                </th>
+                <th><span class="math-tex">\(\sum(x - \bar x)(y-\bar y)\)</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0.2</td>
+                <td>-0.29</td>
+                <td>0.0841</td>
+                <td>0.24</td>
+                <td>-0.2</td>
+                <td>0.04</td>
+                <td>0.7294</td>
+              </tr>
+              <tr>
+                <td>0.82</td>
+                <td>0.33</td>
+                <td>0.1089</td>
+                <td>0.19</td>
+                <td>-0.25</td>
+                <td>0.0625</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>0.99</td>
+                <td>0.5</td>
+                <td>0.25</td>
+                <td>0.91</td>
+                <td>0.47</td>
+                <td>0.2209</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>0.04</td>
+                <td>-0.45</td>
+                <td>0.2025</td>
+                <td>0.08</td>
+                <td>-0.36</td>
+                <td>0.1296</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>0.24</td>
+                <td>-0.25</td>
+                <td>0.0625</td>
+                <td>0.33</td>
+                <td>-0.11</td>
+                <td>0.0121</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>1.01</td>
+                <td>0.52</td>
+                <td>0.2704</td>
+                <td>0.87</td>
+                <td>0.43</td>
+                <td>0.1849</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>0.3</td>
+                <td>-0.19</td>
+                <td>0.0361</td>
+                <td>0.36</td>
+                <td>-0.08</td>
+                <td>0.0064</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>0.55</td>
+                <td>0.06</td>
+                <td>0.0036</td>
+                <td>0.83</td>
+                <td>0.39</td>
+                <td>0.1521</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>0.25</td>
+                <td>-0.24</td>
+                <td>0.0576</td>
+                <td>0.16</td>
+                <td>-0.28</td>
+                <td>0.0784</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>Sum =&nbsp;</td>
+                <td>-0.01</td>
+                <td>1.0757</td>
+                <td>Sum =&nbsp;</td>
+                <td>0.01</td>
+                <td>0.8869</td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <p><span class="math-tex">\(\sum x = 4.4\)</span>
+          <br><span class="math-tex">\(\bar x = 0.49\)</span>
+          <br>&nbsp;</p>
+        <p><span class="math-tex">\(\sum y = 3.97\)</span>
+          <br><span class="math-tex">\(\bar y = 0.44\)</span>
+        </p>
+        <p>r = 0.747</p>
+        <p><span class="text-big"><strong>(ii)</strong> </span>Discuss the association
+          between the DJIA and S&amp;P 500. Do you need to check both before having
+          a general idea about the daily stock market performance?</p>
+        <p>The strong positive correlation (approximately 0.747) between the DJIA
+          (Dow Jones Industrial Average) and the S&amp;P 500 (Standard &amp; Poor's
+          500 Index) indicates a significant association in their daily performance.
+          This correlation suggests that movements in one index are often mirrored
+          by similar movements in the other.</p>
+        <p>In short, no, you do not necessarily need to check both the DJIA and the
+          S&amp;P 500 to get a general idea about the daily stock market performance,
+          as there is a strong positive correlation between them. However, for a
+          more comprehensive understanding, considering both can provide a fuller
+          picture due to their differences in composition and coverage.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

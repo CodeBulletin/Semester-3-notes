@@ -1,0 +1,48 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>BFS</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">BFS stands for Breadth-First Search. It is a graph traversal algorithm
+          used to explore or search through a graph in a breadthward motion, visiting
+          all the nodes at the same level before moving to the next level.</p>
+        <p
+        style="margin-left:0px;">Here's how the BFS algorithm works:</p>
+          <ol>
+            <li>Start at a given source node in the graph.</li>
+            <li>Enqueue the source node into a queue (usually called the "frontier").</li>
+            <li>Mark the source node as visited.</li>
+            <li>Repeat the following steps until the queue is empty: a. Dequeue a node
+              from the queue. b. Visit the dequeued node and process it. c. Enqueue all
+              its unvisited neighbors into the queue and mark them as visited.</li>
+            <li>If there are still unvisited nodes in the graph, select an unvisited node
+              as the new source and repeat steps 2 to 4.</li>
+          </ol>
+          <p style="margin-left:0px;">BFS explores the graph in a layer-by-layer manner, visiting all nodes
+            at a particular level before moving to the next level. This ensures that
+            all nodes at a shorter distance from the source are visited before nodes
+            at a greater distance.</p>
+          <p style="margin-left:0px;">BFS can be used to solve various graph-related problems, such as finding
+            the shortest path between two nodes, determining the connected components
+            of a graph, or checking if a graph is bipartite.</p>
+          <p style="margin-left:0px;">The key data structure used in BFS is the queue, which follows the First-In-First-Out
+            (FIFO) principle. The queue is used to store the nodes that need to be
+            visited, and it ensures that nodes at a higher distance from the source
+            are explored after nodes at a lower distance.</p>
+          <p style="margin-left:0px;">BFS guarantees that it visits all nodes reachable from the source node
+            and that it visits them in the shortest possible order. It provides an
+            algorithmic basis for solving various graph problems efficiently.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

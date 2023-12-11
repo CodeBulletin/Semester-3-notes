@@ -1,0 +1,62 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Newtons Raphson Method</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Newton's Method, also known as the Newton-Raphson Method, is a widely
+          used iterative numerical technique for finding approximations to the roots
+          of a real-valued function. It is a powerful method for finding solutions
+          to equations but requires knowledge of the function's derivative. The method
+          is particularly effective when the initial guess is close to the actual
+          root and the function is well-behaved.</p>
+        <p style="margin-left:0px;">Here's how Newton's Method works:</p>
+        <ol>
+          <li>Start with an initial guess&nbsp;<span class="math-tex">\(x_0\)</span>​
+            close to the root of the function&nbsp;<span class="math-tex">\(f(x)\)</span>.</li>
+          <li>Calculate the function value&nbsp;<span class="math-tex">\(f(x_n)\)</span>&nbsp;and
+            its derivative&nbsp;<span class="math-tex">\(f'(x_n)\)</span>&nbsp;at the
+            initial guess.</li>
+          <li>Compute the next approximation to the root using the formula:
+            <br><span class="math-tex">\(x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}\)</span>
+          </li>
+          <li>Update the value of&nbsp;<span class="math-tex">\(x_{n+1}\)</span>&nbsp;to&nbsp;
+            <span
+            class="math-tex">\(x_n\)</span>&nbsp;and repeat steps 2 and 3 iteratively until the desired
+              level of accuracy is achieved.</li>
+        </ol>
+        <p style="margin-left:0px;">The main idea behind Newton's Method is to use a linear approximation
+          of the function at the current point to estimate the next root approximation.
+          The method effectively follows the tangent line to the function at the
+          current point and finds where it intersects the x-axis, which should be
+          closer to the root of the original function.</p>
+        <p style="margin-left:0px;">Newton's Method can converge rapidly, typically with quadratic convergence,
+          meaning that with each iteration, the number of accurate digits roughly
+          doubles. This rapid convergence is a major advantage of the method when
+          compared to linear methods like the Bisection or Regula Falsi methods.
+          However, Newton's Method is sensitive to the choice of initial guess and
+          might fail to converge or converge to a different root if the initial guess
+          is not sufficiently close to the actual root or if the function has multiple
+          roots in close proximity.</p>
+        <p style="margin-left:0px;">To summarize, Newton's Method is a powerful iterative technique for finding
+          roots of functions when the derivative is available. It can converge quickly
+          but requires careful consideration of the initial guess and the behavior
+          of the function.</p>
+        <h2 style="margin-left:0px;">Order of Convergence of Newton's method</h2>
+        <p style="margin-left:0px;">The order of convergence of Newton's Method is quadratic, meaning that
+          the number of accurate digits roughly doubles with each iteration. This
+          rapid convergence is one of the key strengths of the method when compared
+          to linear methods like the Bisection or Regula Falsi methods.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

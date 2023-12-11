@@ -1,0 +1,61 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q7</h1>
+
+      <div class="ck-content">
+        <h2>(a) Derive Runge-Kutta&nbsp;<span class="math-tex">\(2^{nd}\)</span>&nbsp;order method</h2>
+        <figure class="image">
+          <img src="Q7/image.png">
+        </figure>
+        <figure class="image">
+          <img src="Q7/1_image.png">
+        </figure>
+        <figure class="image">
+          <img src="Q7/2_image.png">
+        </figure>
+        <h2>(b) Explain one of the techniques utilized for the numerical solution of Boundary Value Problem</h2>
+        <p>Euler's method is a simple and widely used numerical method for approximating
+          the solution of ordinary differential equations (ODEs). It is named after
+          the Swiss mathematician Leonhard Euler, who introduced it in the 18th century.</p>
+        <p>Euler's method is based on the idea of approximating the solution by taking
+          small steps along the derivative of the function at each point. The method
+          is derived from the first-order Taylor series expansion.</p>
+        <p>Here's how Euler's method works:</p>
+        <p>Start with an initial condition: a known value of the solution at a specific
+          point, often denoted as "x₀" and "y₀" for the independent and dependent
+          variables, respectively.</p>
+        <p>Choose a step size, denoted as "h," which determines the distance between
+          consecutive points in the approximation.</p>
+        <p>Use the initial condition to calculate the derivative of the function
+          at the starting point: "f(x₀, y₀)." This derivative represents the slope
+          of the function at that point.</p>
+        <p>Approximate the value of the solution at the next point, "x₁," by taking
+          a step of size "h" in the direction of the derivative:</p>
+        <p>y₁ = y₀ + h * f(x₀, y₀)</p>
+        <p>This equation represents the Euler's method update formula.</p>
+        <p>Repeat steps 3 and 4, using the newly approximated value as the initial
+          condition, to calculate the solution at subsequent points. Continue this
+          process until the desired range or number of points is reached.</p>
+        <p>Euler's method is relatively straightforward to implement and computationally
+          efficient. However, it is a first-order method, meaning that the error
+          in the approximation tends to accumulate over time. As a result, it may
+          not provide highly accurate solutions for complex ODEs or when a high level
+          of precision is required.</p>
+        <figure class="image">
+          <img src="Q7/image.jpg">
+        </figure>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

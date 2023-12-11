@@ -1,0 +1,91 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q8</h1>
+
+      <div class="ck-content">
+        <h2>(a) Using a graph to find the Hamiltonian circuit in it, demonstrate the concept of backtracking? How does a backtracking affect the times complexity of an algorithm?</h2>
+        <p style="margin-left:0px;">Backtracking is a technique used in algorithm design to systematically
+          search for solutions to problems, typically in a depth-first manner. It
+          involves exploring potential solutions and, when a solution is found to
+          be invalid, backtracking to explore alternative paths. Backtracking can
+          significantly affect the time complexity of an algorithm, often reducing
+          it by avoiding unnecessary exploration of the search space. However, the
+          exact impact on time complexity depends on the problem and how efficiently
+          backtracking is implemented.</p>
+        <p style="margin-left:0px;">Here are some key points to consider regarding how backtracking can affect
+          the time complexity of an algorithm:</p>
+        <p style="margin-left:0px;"><strong>Reducing Search Space:</strong> Backtracking can dramatically reduce
+          the size of the search space by avoiding the exploration of unpromising
+          or invalid paths. This reduction can lead to a significant improvement
+          in time complexity. Without backtracking, you might need to explore all
+          possibilities, leading to exponential time complexity.</p>
+        <p style="margin-left:0px;"><strong>Pruning Techniques:</strong> Effective backtracking algorithms
+          use pruning techniques to eliminate large portions of the search space
+          quickly. This often involves checking constraints or conditions early in
+          the exploration process to discard paths that cannot lead to a valid solution.
+          These pruning techniques further reduce the time complexity.</p>
+        <p style="margin-left:0px;"><strong>Complexity Analysis:</strong> The time complexity of a backtracking
+          algorithm depends on various factors, including the problem size, the nature
+          of the problem, the efficiency of the pruning techniques, and the data
+          structures used. In some cases, backtracking can reduce the time complexity
+          from exponential to polynomial or even linear time.</p>
+        <p style="margin-left:0px;"><strong>Worst-Case Scenarios:</strong> While backtracking can be highly
+          efficient, there are scenarios in which it might not offer a significant
+          improvement in time complexity. In some problems, backtracking might still
+          result in exponential time complexity due to the intrinsic complexity of
+          the problem or the structure of the search space.</p>
+        <p style="margin-left:0px;"><strong>Optimizations:</strong> Advanced techniques such as memoization
+          (caching previously computed results) can further reduce the time complexity
+          of backtracking algorithms. Memoization allows the algorithm to avoid re-computation
+          of the same subproblems, which can lead to substantial speedups.</p>
+        <p
+        style="margin-left:0px;"><strong>Problem Dependency:</strong> The impact of backtracking on time
+          complexity varies from one problem to another. For some problems, backtracking
+          can turn an infeasible problem into one that is solvable in a reasonable
+          amount of time.</p>
+          <p>&nbsp;</p>
+          <h2>(b) Write algorithm to solve Tower of Hanoi problem and compute its complexity.</h2><pre><code class="language-text-plain">def tower_of_hanoi(n, source, auxiliary, target):
+    if n == 1:
+        print(f"Move disk 1 from {source} to {target}")
+        return
+    tower_of_hanoi(n - 1, source, target, auxiliary)
+    print(f"Move disk {n} from {source} to {target}")
+    tower_of_hanoi(n - 1, auxiliary, source, target)
+
+# Example usage:
+tower_of_hanoi(3, 'A', 'B', 'C')</code></pre>
+          <p><strong>Tower of hanoi time complexity</strong>
+          </p>
+          <p><span class="math-tex">\(T(n) = 2T(n-1)+1\)</span>
+          </p>
+          <p><span class="math-tex">\(T(n-1) = 2T(n-2)+1\)</span>
+          </p>
+          <p><span class="math-tex">\(T(n-2) = 2T(n-3)+1\)</span>
+          </p>
+          <p><span class="math-tex">\(...\)</span>
+          </p>
+          <p><span class="math-tex">\(T(2) = 2T(1) + 1\)</span>
+          </p>
+          <p><span class="math-tex">\(T(1) = 1\)</span>
+          </p>
+          <p><span class="math-tex">\(\implies T(n) = 2(2(2(...) + 1) + 1) + 1\)</span>
+          </p>
+          <p><span class="math-tex">\(\implies T(n) = 2^{n - 1} + 2^{n - 2} + 2^{n-3} + ... + 1 =\)</span>&nbsp;
+            <span
+            class="math-tex">\(1 * \frac{2^n - 1}{2 - 1}\)</span>&nbsp;=&nbsp;<span class="math-tex">\(2^n - 1\)</span>&nbsp;=&nbsp;
+              <span
+              class="math-tex">\(O(2^n)\)</span>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

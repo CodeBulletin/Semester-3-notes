@@ -1,0 +1,71 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q3</h1>
+
+      <div class="ck-content">
+        <h2>(a) Write an algorithm to find second minimum in a list of n items. The list is to be scanned only once.</h2><pre><code class="language-text-plain">function findSecondMinimum(list):
+    min1 = infinity
+    min2 = infinity
+    for num in list:
+        if num &lt; min1:
+            min2 = min1
+            min1 = num
+        else if num &lt; min2:
+            min2 = num
+    return min2</code></pre>
+        <p>&nbsp;</p>
+        <h2>(b) Write an algorithm to store a set in a linked list and then use the algorithm to find union of two sets.</h2><pre><code class="language-text-plain">struct Node:
+    value
+    next
+
+function storeSetInLinkedList(set):
+    head = None
+    for element in set:
+        newNode = Node()
+        newNode.value = element
+        newNode.next = head
+        head = newNode
+    return head
+
+function findUnion(list1, list2):
+    unionList = None
+    current = list1
+    while current is not None:
+        newNode = Node()
+        newNode.value = current.value
+        newNode.next = unionList
+        unionList = newNode
+        current = current.next
+    
+    current = list2
+    while current is not None:
+        if not existsInLinkedList(unionList, current.value):
+            newNode = Node()
+            newNode.value = current.value
+            newNode.next = unionList
+            unionList = newNode
+        current = current.next
+    
+    return unionList
+
+function existsInLinkedList(head, value):
+    current = head
+    while current is not None:
+        if current.value == value:
+            return True
+        current = current.next
+    return False</code></pre>
+      </div>
+    </div>
+  </body>
+
+</html>

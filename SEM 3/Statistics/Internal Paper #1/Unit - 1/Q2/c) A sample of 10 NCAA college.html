@@ -1,0 +1,286 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>c) A sample of 10 NCAA college basketball game scores provided the following data (USA Today, January 26, 2004).</h1>
+
+      <div class="ck-content">
+        <p>A sample of 10 NCAA college basketball game scores provided the following
+          data (USA Today, January 26, 2004).</p>
+        <figure class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>Winning Team</th>
+                <th>Points</th>
+                <th>Loosing Team</th>
+                <th>Points</th>
+                <th>Winning Margin</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Arizona</td>
+                <td>90</td>
+                <td>Oregon</td>
+                <td>66</td>
+                <td>24</td>
+              </tr>
+              <tr>
+                <td>Duke</td>
+                <td>85</td>
+                <td>Georgetown</td>
+                <td>66</td>
+                <td>19</td>
+              </tr>
+              <tr>
+                <td>Florida State</td>
+                <td>75</td>
+                <td>Wake Forest</td>
+                <td>70</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>Kansas</td>
+                <td>78</td>
+                <td>Colorado</td>
+                <td>57</td>
+                <td>21</td>
+              </tr>
+              <tr>
+                <td>Kentucky</td>
+                <td>71</td>
+                <td>Notre Dame</td>
+                <td>63</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>Louisville</td>
+                <td>65</td>
+                <td>Tennessee</td>
+                <td>62</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>Oklahoma state</td>
+                <td>72</td>
+                <td>Texas</td>
+                <td>66</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>Purdue</td>
+                <td>76</td>
+                <td>Michigan State</td>
+                <td>70</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>Stanford</td>
+                <td>77</td>
+                <td>Southern Cal</td>
+                <td>67</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>Wisconsin</td>
+                <td>76</td>
+                <td>Illinois</td>
+                <td>56</td>
+                <td>20</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <h2>(a) Compute the mean and standard Deviation of the points scored by winning team</h2>
+        <figure class="table">
+          <table style="border-color:hsl(0, 75%, 60%);border-style:solid;">
+            <thead>
+              <tr>
+                <th>Points</th>
+                <th><span class="math-tex">\(d = points - a;a=75\)</span>
+                </th>
+                <th><span class="math-tex">\((x -\bar x)^2\)</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>90</td>
+                <td>15</td>
+                <td>182.25</td>
+              </tr>
+              <tr>
+                <td>85</td>
+                <td>10</td>
+                <td>72.25</td>
+              </tr>
+              <tr>
+                <td>75</td>
+                <td>0</td>
+                <td>2.25</td>
+              </tr>
+              <tr>
+                <td>78</td>
+                <td>3</td>
+                <td>2.25</td>
+              </tr>
+              <tr>
+                <td>71</td>
+                <td>-4</td>
+                <td>30.25</td>
+              </tr>
+              <tr>
+                <td>65</td>
+                <td>-10</td>
+                <td>132.25</td>
+              </tr>
+              <tr>
+                <td>72</td>
+                <td>-3</td>
+                <td>20.25</td>
+              </tr>
+              <tr>
+                <td>76</td>
+                <td>1</td>
+                <td>0.25</td>
+              </tr>
+              <tr>
+                <td>77</td>
+                <td>2</td>
+                <td>0.25</td>
+              </tr>
+              <tr>
+                <td>76</td>
+                <td>1</td>
+                <td>0.25</td>
+              </tr>
+              <tr>
+                <td style="border-style:solid;border-width:2px;text-align:right;">Sum =&nbsp;</td>
+                <td style="border-style:solid;border-width:2px;text-align:right;">15</td>
+                <td style="border-style:solid;border-width:2px;text-align:right;">442.5</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <p><span class="math-tex">\(\bar x = a + \frac{\sum d}{n} = 75 + \frac{15}{10} = 76.5\)</span>
+          <br><span class="math-tex">\(s = \sqrt{\frac{\sum (x-\bar x)^2}{n - 1}} = 7.011\)</span>
+        </p>
+        <h2>(a) Compute the mean and standard Deviation for the winning margin. do the data contain outliers</h2>
+        <figure class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>Winning Margin</th>
+                <th><span class="math-tex">\(z = \frac{x - \bar x}{\sigma}\)</span>
+                </th>
+                <th><span class="math-tex">\(d = points - a; a = 10\)</span>
+                </th>
+                <th><span class="math-tex">\((x -\bar x)^2\)</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>24</td>
+                <td>1.49</td>
+                <td>14</td>
+                <td>139.24</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>0.86</td>
+                <td>9</td>
+                <td>46.24</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>-0.91</td>
+                <td>-5</td>
+                <td>51.84</td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>1.12</td>
+                <td>11</td>
+                <td>77.44</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>-0.53</td>
+                <td>-2</td>
+                <td>17.64</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>-1.17</td>
+                <td>-7</td>
+                <td>84.64</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>-0.78</td>
+                <td>-4</td>
+                <td>38.44</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>-0.78</td>
+                <td>-4</td>
+                <td>38.44</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>-0.28</td>
+                <td>0</td>
+                <td>4.84</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>0.99</td>
+                <td>10</td>
+                <td>60.84</td>
+              </tr>
+              <tr>
+                <td style="border-style:solid;border-width:2px;text-align:right;">Sum =&nbsp;</td>
+                <td>/</td>
+                <td style="border-style:solid;border-width:2px;text-align:right;">22</td>
+                <td style="border-style:solid;border-width:2px;text-align:right;">559.6</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <p><span class="math-tex">\(\bar x = a + \frac{\sum d}{n} = 10 + \frac{22}{10} = 12.2\)</span>
+          <br><span class="math-tex">\(s = \sqrt{\frac{\sum (x-\bar x)^2}{n - 1}} = 7.885\)</span>
+        </p>
+        <p>
+          <br>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

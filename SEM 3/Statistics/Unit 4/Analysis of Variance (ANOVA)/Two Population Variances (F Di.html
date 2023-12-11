@@ -1,0 +1,95 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Two Population Variances (F Distribution)</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Analysis of Variance (ANOVA) is a statistical technique used to compare
+          means of two or more groups to determine if there are any statistically
+          significant differences between them. When comparing the variances of two
+          populations, the F-test is commonly employed. The F-test is based on the
+          F-distribution, which is a probability distribution that arises in the
+          context of comparing variances.</p>
+        <p style="margin-left:0px;">Here's a basic outline of how the analysis of variance for two population
+          variances using the F-distribution is conducted:</p>
+        <h3 style="margin-left:0px;"><strong>Null Hypothesis (H₀):</strong></h3>
+        <ul>
+          <li><span class="math-tex">\(H_0:\sigma_1^2 = \sigma_2^2\)</span>
+          </li>
+          <li>The null hypothesis assumes that the variances of the two populations
+            are equal.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Alternative Hypothesis (H₁):</strong></h3>
+        <ul>
+          <li><span class="math-tex">\(H_{\alpha}:\sigma_1^2 \ne \sigma_2^2\)</span>​
+            (two-tailed test) or&nbsp;<span class="math-tex">\(H_{\alpha}:\sigma_1^2 \gt \sigma_2^2\)</span>&nbsp;or&nbsp;
+            <span
+            class="math-tex">\(H_{\alpha}:\sigma_1^2 \lt \sigma_2^2\)</span>​ (one-tailed test)</li>
+          <li>The alternative hypothesis posits that the variances of the two populations
+            are not equal.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Test Statistic (F-ratio):</strong></h3>
+        <p style="margin-left:0px;"><span class="math-tex">\(F = \frac{s_1^2}{s_2^2}\)</span>
+        </p>
+        <ul>
+          <li>Where&nbsp;<span class="math-tex">\(s_1^2\)</span>​ is the sample variance
+            of the first population and&nbsp;<span class="math-tex">\(s_2^2\)</span>​
+            is the sample variance of the second population.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Degrees of Freedom:</strong></h3>
+        <ul>
+          <li>Degrees of freedom for the numerator (<span class="math-tex">\(df_1\)</span>)
+            is&nbsp;<span class="math-tex">\(n_1-1\)</span>, where&nbsp;<span class="math-tex">\(n_1\)</span>​
+            is the sample size of the first population.</li>
+          <li>Degrees of freedom for the denominator (<span class="math-tex">\(df_2\)</span>)
+            is&nbsp;<span class="math-tex">\(n_2 - 1\)</span>, where&nbsp;<span class="math-tex">\(n_2\)</span>​
+            is the sample size of the second population.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Decision Rule:</strong></h3>
+        <ul>
+          <li>If the calculated F-ratio is greater than the critical value from the
+            F-distribution table at a given significance level (commonly 0.05), you
+            reject the null hypothesis.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Interpretation:</strong></h3>
+        <ul>
+          <li>If the null hypothesis is rejected, it suggests that there is enough evidence
+            to conclude that the variances of the two populations are not equal.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Considerations:</strong></h3>
+        <ul>
+          <li>The F-test assumes that the populations are normally distributed.</li>
+          <li>The samples are independent.</li>
+          <li>The populations have the same variance.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Example:</strong></h3>
+        <p style="margin-left:0px;">Let's say you have two sets of data (sample variances&nbsp;<span class="math-tex">\(s_1^2\)</span>
+          <span
+          style="color:var(--text-primary);">​</span>and&nbsp;<span class="math-tex">\(s_2^2\)</span><span style="color:var(--text-primary);">​</span>),
+            and you want to test if the variances are equal. You calculate the F-ratio,
+            compare it to the critical value from the F-distribution, and make a decision
+            based on the significance level.</p>
+        <p style="margin-left:0px;">Keep in mind that this is a simplified explanation, and the actual calculation
+          might involve nuances depending on the specific details of your scenario.
+          Additionally, statistical software or statistical tables are often used
+          to find critical values and make decisions in practice.</p>
+        <p style="margin-left:0px;">&nbsp;</p>
+        <figure class="image">
+          <img src="Two%20Population%20Variances%20(F%20Distribution)/image.png">
+        </figure>
+        <figure class="image">
+          <img src="Two%20Population%20Variances%20(F%20Distribution)/1_image.png">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

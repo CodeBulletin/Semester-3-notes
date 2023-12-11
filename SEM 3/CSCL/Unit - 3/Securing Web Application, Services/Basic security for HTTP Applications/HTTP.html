@@ -1,0 +1,213 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>HTTP</h1>
+
+      <div class="ck-content">
+        <p>HTTP is a&nbsp;message-based&nbsp;(request, response),&nbsp;stateless&nbsp;protocol
+          comprised of&nbsp;headers&nbsp;(key-value pairs) and an optional&nbsp;body.
+          Three versions of HTTP have been released so far – HTTP/1.0 (released in
+          1996, rare usage), HTTP/1.1 (released in 1997, wide usage), and HTTP/2
+          (released in 2015, increasing usage).</p>
+        <p>The HTTP protocol works over the Transmission Control Protocol (TCP).
+          TCP is one of the core protocols within the Internet protocol suite and
+          it provides a reliable, ordered, and error-checked delivery of a stream
+          of data, making it ideal for HTTP. The default port for HTTP is 80, or
+          443 if you’re using HTTPS (an extension of HTTP over TLS).</p>
+        <p>HTTP is a&nbsp;line-based&nbsp;protocol, meaning that each header is represented
+          on its own line, with each line ending in a Carriage Return Line Feed (CRLF)
+          with a blank line separating the head from the optional body of the request
+          or response.</p>
+        <h2>HTTP Request</h2>
+        <p>In order to initiate an HTTP request, a client first establishes a TCP
+          connection to a specified web server on a specified port (80 or 443 by
+          default).</p>
+        <p>The request would start with an initial line known as a&nbsp;request line,
+          which contains a&nbsp;method &nbsp;a&nbsp;URL&nbsp;and the HTTP version.
+          We must send the host address. GET/http/1.1</p>
+        <p>Host <a href="https://www.example.com">www.example.com</a>
+        </p>
+        <p>The above is exactly what a web browser does when you type in&nbsp;http://www.example.com&nbsp;into
+          its URL bar.</p>
+        <figure class="table" style="width:613px;">
+          <table style="background-color:rgb(52, 53, 65);border:0px solid inherit;">
+            <thead>
+              <tr>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>HTTP Method</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border:1px solid rgb(217, 217, 227);padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Purpose</strong>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">GET</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Used to request data from a specified resource. GET requests should only
+                  retrieve data and have no other effect.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">POST</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Used to send data to the server to create/update a resource. The data
+                  sent to the server is stored in the request body of the HTTP request.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">PUT</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Used to send data to the server to create or update a resource. The difference
+                  between PUT and POST is that PUT requests are idempotent; that is, calling
+                  the same PUT request multiple times will always produce the same result.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">DELETE</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Used to delete the specified resource.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">HEAD</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Similar to GET, but asks for the response without the response body. This
+                  is useful for retrieving meta-information written in response headers,
+                  without having to transport the entire content.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">PATCH</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Used to apply partial modifications to a resource. Unlike PUT, PATCH is
+                  not idempotent, meaning successive identical patch requests may have different
+                  effects.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">OPTIONS</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Used to describe the communication options for the target resource. This
+                  method allows the client to determine the options and/or requirements associated
+                  with a resource, or the capabilities of a server, without implying a resource
+                  action.</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <figure class="table" style="width:613px;">
+          <table style="background-color:rgb(52, 53, 65);border:0px solid inherit;">
+            <thead>
+              <tr>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Status Code Range</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Category</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border:1px solid rgb(217, 217, 227);padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Meaning</strong>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">100 - 199</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Informational Responses</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">These codes indicate a provisional response and are used to transfer information
+                  about the request's processing status.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">200 - 299</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Success</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">These codes indicate that the client's request was successfully received,
+                  understood, and accepted.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">300 - 399</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Redirection</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">These codes indicate that further action needs to be taken by the client
+                  in order to complete the request.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">400 - 499</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Client Error</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">These codes indicate an error that the client made, such as a bad request
+                  or unauthorized access.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">500 - 599</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Server Error</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">These codes indicate an error on the server side, implying that the server
+                  failed to fulfill a valid request.</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <figure class="table" style="width:613px;">
+          <table style="background-color:rgb(52, 53, 65);border:0px solid inherit;">
+            <thead>
+              <tr>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Status Code</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border:1px solid rgb(217, 217, 227);padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Meaning</strong>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">200 OK</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">The request has succeeded. The information returned with the response
+                  is dependent on the method used in the request.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">301 Moved Permanently</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">This response code means that the URI of the requested resource has been
+                  changed permanently. Future requests should use one of the returned URIs.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">302 Found</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">This means that the resource is temporarily located at another URI. Since
+                  the redirection might be altered occasionally, the client should continue
+                  to use the Request-URI for future requests.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">304 Not Modified</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Indicates that the resource has not been modified since the last request.
+                  Typically used for caching purposes.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">400 Bad Request</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">The server cannot or will not process the request due to something that
+                  is perceived to be a client error (e.g., malformed request syntax).</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">401 Unauthorized</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Although the HTTP standard specifies "unauthorized", semantically this
+                  response means "unauthenticated". The client must authenticate itself to
+                  get the requested response.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">403 Forbidden</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">The client does not have access rights to the content; that is, it is
+                  unauthorized, so the server is refusing to give the requested resource.
+                  Unlike 401, the client's identity is known to the server.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">404 Not Found</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">The server can't find the requested resource. This code is often used
+                  when the server does not wish to reveal exactly why the request has been
+                  refused, or when no other response is applicable.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">500 Internal Server Error</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">The server has encountered a situation it doesn't know how to handle.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">503 Service Unavailable</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">The server is not ready to handle the request. Common causes are a server
+                  that is down for maintenance or that is overloaded.</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <figure class="image">
+          <img>
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

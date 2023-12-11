@@ -1,0 +1,131 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Activation functions</h1>
+
+      <div class="ck-content">
+        <p>Activation functions are a crucial element in neural networks, determining
+          how the weighted sum of the input is transformed into an output from a
+          node or nodes in a network. Essentially, they decide whether a neuron should
+          be activated or not by calculating a weighted sum and further adding bias
+          with it. The purpose of the activation function is to introduce non-linearity
+          into the output of a neuron.</p>
+        <p>Here are some commonly used activation functions:</p>
+        <p><strong>Linear or Identity Activation Function:</strong>
+        </p>
+        <ul>
+          <li>It’s a linear function where the activation is proportional to the input.</li>
+          <li><span class="math-tex">\(f(x)=x\)</span>
+          </li>
+          <li><span class="math-tex">\(f'(x) = 1\)</span>
+          </li>
+          <li>While not used in hidden layers, it’s useful for problems of regression.</li>
+          <li>
+            <img class="image_resized" style="width:25%;" src="Activation%20functions/4_image.png">
+          </li>
+        </ul>
+        <p><strong>Sigmoid or Logistic Activation Function:</strong>
+        </p>
+        <ul>
+          <li>It's a S-shaped curve that maps the input values between 0 and 1.</li>
+          <li><span class="math-tex">\(f(x) = &nbsp;\frac 1 {1+e^{-x}}\)</span>
+          </li>
+          <li><span class="math-tex">\(f'(x) = f(x)(1-f(x))\)</span>
+          </li>
+          <li>It's commonly used in binary classification problems.</li>
+          <li>
+            <img class="image_resized" style="width:25%;" src="Activation%20functions/3_image.png">
+          </li>
+        </ul>
+        <p><strong>Hyperbolic Tangent (tanh) Function:</strong>
+        </p>
+        <ul>
+          <li>Similar to the sigmoid but maps the input values between -1 and 1.</li>
+          <li><span class="math-tex">\(f(x) = \text{tanh}(x) = \frac {e^x-e^{-x}}{e^x+e^{-x}}\)</span>
+          </li>
+          <li><span class="math-tex">\(f'(x) = 1 -f(x)^2\)</span>
+          </li>
+          <li>It's useful in hidden layers of a neural network as it centers the data,
+            making it easier to learn.</li>
+          <li>
+            <img class="image_resized" style="width:25%;" src="Activation%20functions/2_image.png">
+          </li>
+        </ul>
+        <p><strong>Rectified Linear Unit (ReLU) Function:</strong>
+        </p>
+        <ul>
+          <li>Currently, the most popular activation function for deep neural networks.</li>
+          <li><span class="math-tex">\(f(x) = \text{max}(0, x)\)</span>
+          </li>
+          <li><span class="math-tex">\(\text{if } x\ge0 \text{ then } 1 \text{ else } 0\)</span>
+          </li>
+          <li>It's linear for all positive inputs and zero for all negative inputs,
+            making it computationally efficient and allowing the network to converge
+            faster.</li>
+          <li>
+            <img class="image_resized" style="width:25%;" src="Activation%20functions/1_image.png">
+          </li>
+        </ul>
+        <p><strong>Leaky Rectified Linear Unit (Leaky ReLU):</strong>
+        </p>
+        <ul>
+          <li>A variation of ReLU, it allows a small, non-zero gradient when the unit
+            is not active.</li>
+          <li><span class="math-tex">\(f(x) = \text{max}(0, x)+\alpha*\text{max}(0, -x)\)</span>where&nbsp;
+            <span
+            class="math-tex">\(\alpha\)</span>&nbsp;is a small constant.</li>
+          <li><span class="math-tex">\(f'(x) = \text{if } x\ge0 \text{ then } \alpha \text{ else } 0\)</span>
+          </li>
+          <li>This function addresses the problem of dying ReLUs (neurons that stop
+            responding to variations in error/input because they get stuck on the flat
+            zero portion of the function).</li>
+          <li>
+            <img class="image_resized" style="width:25%;" src="Activation%20functions/image.png">
+          </li>
+        </ul>
+        <p><strong>Softmax Function:</strong>
+        </p>
+        <ul>
+          <li>Often used in the output layer of a neural network for multi-class classification
+            problems.</li>
+          <li>It converts the output to a probability distribution proportional to the
+            exponentiation of the input numbers.</li>
+          <li><span class="math-tex">\(\sigma(\vec{z_i}) = \frac {e^{z_i}}{\sum_{j=0}^Ke^{z_j}}\)</span>
+          </li>
+        </ul>
+        <p><strong>Exponential Linear Unit (ELU):</strong>
+        </p>
+        <ul>
+          <li>Similar to ReLU but smoothens the zero gradient for negative values.</li>
+          <li><span class="math-tex">\(f(x) =\text{if } x \ge 0 \text{ then } x \text{ else } \alpha(e^x-1)\)</span>
+          </li>
+          <li><span class="math-tex">\(\text{if } x\ge0 \text{ then } 1 \text{ else } f(x)+\alpha\)</span>
+          </li>
+          <li>
+            <img class="image_resized" style="width:25%;" src="Activation%20functions/5_image.png">
+          </li>
+        </ul>
+        <p><strong>Swish Function:</strong>
+        </p>
+        <ul>
+          <li>A relatively newer function defined as&nbsp;<span class="math-tex">\(f(x) = x*\text{sigmoid}(x)\)</span>.</li>
+          <li><span class="math-tex">\(f'(x) = \text{sigmoid}(x) + x*\text{sigmoid}(x) *(1-\text{sigmoid}(x))\)</span>
+          </li>
+          <li>It has been found to sometimes outperform ReLU in deeper networks.</li>
+          <li>
+            <img class="image_resized" style="width:25%;" src="Activation%20functions/6_image.png">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

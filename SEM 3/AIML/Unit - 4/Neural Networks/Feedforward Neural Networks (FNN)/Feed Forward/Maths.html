@@ -1,0 +1,96 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Maths</h1>
+
+      <div class="ck-content">
+        <p>The mathematics of forward propagation in a neural network involves several
+          key steps. Let's break it down for a simple neural network with an input
+          layer, one hidden layer, and an output layer.</p>
+        <ol>
+          <li><strong>Notation</strong>:
+            <ul>
+              <li>Let&nbsp;<span class="math-tex">\(X\)</span>&nbsp;be the input data (a
+                matrix).</li>
+              <li>Let&nbsp;<span class="math-tex">\(W^{[1]}\)</span>&nbsp;and&nbsp;
+                <span
+                class="math-tex">\(W^{[2]}\)</span>&nbsp;be the weight matrices for the hidden layer and
+                  output layer, respectively.</li>
+              <li>Let&nbsp;<span class="math-tex">\(b^{[1]}\)</span>&nbsp;and&nbsp;
+                <span
+                class="math-tex">\(b^{[2]}\)</span>&nbsp;be the bias vectors for the hidden layer and output
+                  layer, respectively.</li>
+              <li>Let&nbsp;<span class="math-tex">\(g^{[1]}\)</span>&nbsp;and&nbsp;
+                <span
+                class="math-tex">\(g^{[2]}\)</span>&nbsp;be the activation functions for the hidden layer
+                  and output layer, respectively.</li>
+            </ul>
+          </li>
+          <li><strong>Input to the Hidden Layer</strong>:
+            <ul>
+              <li>The input to the hidden layer is the product of the input data and the
+                weights of the first layer, plus the bias:&nbsp;<span class="math-tex">\(Z^{[1]} = XW^{[1]} + b^{[1]}\)</span>
+              </li>
+              <li><span class="math-tex">\(Z^{[1]}\)</span>&nbsp;is a matrix where each
+                row represents the weighted input to the hidden layer for each example
+                in the batch.</li>
+            </ul>
+          </li>
+          <li><strong>Activation in the Hidden Layer</strong>:&nbsp;
+            <ul>
+              <li>The output of the hidden layer is obtained by applying the activation
+                function&nbsp;<span class="math-tex">\(g^{[1]}\)</span>&nbsp;to&nbsp;
+                <span
+                class="math-tex">\(Z^{[1]}\)</span>:&nbsp;<span class="math-tex">\(A^{[1]} = g^{[1]}(Z^{[1]})\)</span>
+              </li>
+              <li>Common choices for&nbsp;<span class="math-tex">\(g^{[1]}\)</span>&nbsp;include
+                sigmoid, ReLU, or tanh.</li>
+            </ul>
+          </li>
+          <li><strong>Input to the Output Layer</strong>:
+            <ul>
+              <li>Similarly, the input to the output layer is the product of the output
+                of the hidden layer and the weights of the second layer, plus the bias:&nbsp;
+                <span
+                class="math-tex">\(Z^{[2]} = A^{[1]}W^{[2]} + b^{[2]}\)</span>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Activation in the Output Layer</strong>:
+            <ul>
+              <li>The final output of the network is obtained by applying the activation
+                function&nbsp;<span class="math-tex">\(g^{[2]}\)</span>&nbsp;to&nbsp;
+                <span
+                class="math-tex">\(Z^{[2]}\)</span>:&nbsp;<span class="math-tex">\(A^{[2]} = g^{[2]}(Z^{[2]})\)</span>
+              </li>
+              <li>For classification tasks,&nbsp;<span class="math-tex">\(g^{[2]}\)</span>&nbsp;is
+                often a softmax function; for regression tasks, it might be a linear activation.</li>
+            </ul>
+          </li>
+          <li><strong>Final Output</strong>:
+            <ul>
+              <li>The matrix&nbsp;<span class="math-tex">\(A^{[2]}\)</span>&nbsp;represents
+                the output of the network, which could be a set of class probabilities
+                in classification or continuous values in regression.</li>
+            </ul>
+          </li>
+        </ol>
+        <p>In summary, forward propagation involves linear transformations (using
+          weights and biases) followed by non-linear activations at each layer. The
+          output of each layer becomes the input to the next layer, culminating in
+          the final output of the network. This process efficiently handles complex
+          relationships within the input data, making neural networks powerful tools
+          for a wide range of applications.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

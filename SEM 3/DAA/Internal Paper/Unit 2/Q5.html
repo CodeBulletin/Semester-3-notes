@@ -1,0 +1,62 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q5</h1>
+
+      <div class="ck-content">
+        <h2>(a) Examine Divide and Conquer paradigm of problem solving</h2>
+        <p style="margin-left:0px;">The Divide and Conquer approach is a problem-solving technique used in
+          various fields, including computer science, mathematics, and algorithms.
+          It involves breaking down a complex problem into smaller, more manageable
+          subproblems, solving those subproblems independently, and then combining
+          their solutions to solve the original problem. The key idea is to divide
+          a problem into smaller parts, conquer each part, and then combine the results.</p>
+        <p
+        style="margin-left:0px;">The Divide and Conquer approach typically consists of three main steps:</p>
+          <ol>
+            <li><strong>Divide</strong>: The problem is divided into smaller, often equal-sized,
+              subproblems. This division continues until the subproblems are simple enough
+              to be solved directly. The goal is to break the problem into smaller, more
+              manageable pieces.</li>
+            <li><strong>Conquer</strong>: Each subproblem is solved independently. This
+              can involve applying the same Divide and Conquer approach recursively to
+              further subdivide the subproblems until they become trivial to solve. In
+              some cases, the subproblems are solved using other techniques, such as
+              brute force or dynamic programming.</li>
+            <li><strong>Combine</strong>: The solutions to the subproblems are combined
+              to obtain a solution for the original problem. This step can involve aggregating
+              results, merging data, or performing additional computations as needed.</li>
+          </ol>
+          <p style="margin-left:0px;">The Divide and Conquer approach is widely used in algorithm design and
+            optimization. Common examples of algorithms that use this technique include
+            merge sort, quicksort, binary search, and many others. These algorithms
+            divide a problem into smaller parts, solve them independently, and then
+            combine the results to achieve efficient solutions. Divide and Conquer
+            is especially valuable for solving problems with a high time complexity
+            by reducing them to simpler problems with lower time complexities.</p><pre><code class="language-text-plain">DAC(p) {
+	if (small(p)) {
+	    solve(p)
+	}
+	else {
+	    Divide the problem into p1, p2, p3, ..., pk
+	    Apply DAC(p1), DAC(p2), DAC(p3), ... DAC(pk)
+		Combine DAC(p1), DAC(p2), DAC(p3), ... DAC(pk)
+	}
+}</code></pre>
+          <h2>For the Pattern P = "ababababca" prepare the index table for shifting using the pre-processing, algorithm of Knuth Morris Pratt Algorithm of string matching</h2>
+          <figure class="image">
+            <img src="Q5/image.jpg">
+          </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,110 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Automaton Method</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">String matching with finite automata is a technique used to search for
+          occurrences of a pattern (substring) within a larger text by constructing
+          a finite automaton that recognizes the pattern. This approach is efficient
+          and can be especially useful when you need to search for the same pattern
+          in multiple texts.</p>
+        <p style="margin-left:0px;">The steps involved in string matching with finite automata are as follows:</p>
+        <p
+        style="margin-left:0px;"><strong>Preprocessing Phase (Pattern to DFA):</strong>
+          </p>
+          <ul>
+            <li>Create a deterministic finite automaton (DFA) that recognizes the pattern.
+              This DFA is constructed based on the characters in the pattern.</li>
+            <li>The DFA has states and transitions between states, where each state represents
+              a certain state of the pattern matching process.</li>
+            <li>Transitions are determined by the characters in the pattern. For each
+              state, a transition is defined for each character that could come next
+              in the pattern.</li>
+            <li>The final state(s) of the DFA indicate a successful match of the pattern.</li>
+          </ul>
+          <p style="margin-left:0px;"><strong>Searching Phase (Text to DFA):</strong>
+          </p>
+          <ul>
+            <li>Start at the initial state of the DFA.</li>
+            <li>For each character in the text:
+              <ul>
+                <li>Follow the transition corresponding to that character in the DFA.</li>
+                <li>If a match is found (the automaton reaches a final state), report the
+                  position of the match in the text.</li>
+                <li>Continue to process the next character in the text.</li>
+              </ul>
+            </li>
+          </ul><pre><code class="language-text-plain">from dataclasses import dataclass
+
+# Data class for DFA
+@dataclass
+class automata:
+    inputs: list
+    states: list
+    transition: list
+    initial: list
+    final: list
+    state: list
+
+    def next(self, string):
+        if string in self.inputs:
+            self.state = self.transition[self.state][self.inputs.index(string)]
+            return self.state in self.final
+        else:
+            return False
+        
+    def reset(self):
+        self.state = self.initial
+
+
+def patteren_matching_dfa(string: str, pattern: str):
+    # Create DFA
+    DFA = automata(
+        inputs = list(set(pattern)),
+        states = list(range(len(pattern) + 1)),
+        transition = [],
+        initial = 0,
+        final = [len(pattern)],
+        state = 0
+    )
+
+    # Create transition table
+    for state in DFA.states:
+        DFA.transition.append([])
+        for char in DFA.inputs:
+            k = min(len(pattern) + 1, state + 2)
+            while True:
+                k = k - 1
+                if (pattern[:state] + char).endswith(pattern[:k]):
+                    break
+            DFA.transition[state].append(k)
+
+    # Check if string is accepted
+    out = [0 for i in range(len(string))]
+    for i, char in enumerate(string):
+        out[i] = DFA.next(char)
+
+    matched_at = []
+    for i, val in enumerate(out):
+        if val:
+            matched_at.append(i - len(pattern) + 1)
+
+    return matched_at
+
+print(patteren_matching_dfa("abbababba", "abba"))
+print(patteren_matching_dfa("011101010111", "101"))</code></pre>
+          <p>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

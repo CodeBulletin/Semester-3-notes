@@ -1,0 +1,85 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q9</h1>
+
+      <div class="ck-content">
+        <h2>(a) What is reducibility? State the necessary conditions for reducibility. Explain reducibility with an example.&nbsp;</h2>
+        <p>Reducibility in computational complexity theory refers to the method of
+          comparing the complexity of two problems by showing that one (the target
+          problem) can be transformed or "reduced" to the other (the source problem).
+          This concept is fundamental in classifying problems, particularly in demonstrating
+          NP-completeness.</p>
+        <h4>Necessary Conditions for Reducibility</h4>
+        <p><strong>Polynomial Time Transformation</strong>: The reduction from problem
+          A (source) to problem B (target) must be achievable in polynomial time.
+          This means there exists an algorithm that can transform any instance of
+          problem A into an instance of problem B in polynomial time.</p>
+        <p><strong>Solution Preservation</strong>: The transformation must preserve
+          solutions, meaning that solving the transformed instance of problem B should
+          give information about the solution to the original instance of problem
+          A.</p>
+        <h4>Example of Reducibility</h4>
+        <p>Consider the problem of the Boolean Satisfiability Problem (SAT) and the
+          problem of 3-SAT (a specific version of SAT where each clause has exactly
+          three literals).</p>
+        <ul>
+          <li><strong>SAT</strong>: Given a Boolean formula, determine if there is an
+            assignment of truth values to variables that makes the entire formula true.</li>
+          <li><strong>3-SAT</strong>: A special case of SAT where the formula is in
+            conjunctive normal form (CNF) and each clause has exactly three literals.</li>
+        </ul>
+        <p><strong>Reduction from SAT to 3-SAT</strong>:</p>
+        <ul>
+          <li>We can transform any instance of SAT into an instance of 3-SAT. This involves
+            rewriting the clauses in the SAT formula so that each clause has exactly
+            three literals, using logical equivalences and additional variables if
+            necessary.</li>
+          <li>This transformation can be done in polynomial time, and a solution to
+            the 3-SAT instance directly gives a solution to the original SAT instance.</li>
+        </ul>
+        <h2>(b) Explain the circuit satisfiability problem and show that it is an NP Complete problem.</h2>
+        <h4>Circuit Satisfiability Problem (Circuit-SAT)</h4>
+        <ul>
+          <li><strong>Definition</strong>: Given a combinational logic circuit (built
+            from AND, OR, NOT, etc., gates) with a single output and several inputs,
+            the Circuit-SAT problem asks whether there is a combination of inputs that
+            results in the output being true (1).</li>
+        </ul>
+        <h4>Showing Circuit-SAT is NP-Complete</h4>
+        <p><strong>Circuit-SAT is in NP</strong>:</p>
+        <ul>
+          <li>To prove that Circuit-SAT is in NP, we need to show that if we are given
+            a "certificate" (a specific input assignment), we can verify in polynomial
+            time whether this assignment makes the circuit output true. This is straightforward,
+            as evaluating a logic circuit with a given input is a polynomial-time task.</li>
+        </ul>
+        <p><strong>Reduction from a Known NP-Complete Problem</strong>:</p>
+        <ul>
+          <li>The usual approach to show that a problem is NP-Complete is by reducing
+            a known NP-Complete problem to it.</li>
+          <li>For Circuit-SAT, a common strategy is to reduce from 3-SAT (known to be
+            NP-Complete).</li>
+          <li>Each clause in a 3-SAT formula can be represented as a small circuit with
+            three inputs (the literals of the clause) and one output. These small circuits
+            can be combined in a way that the entire 3-SAT formula is represented by
+            a larger circuit.</li>
+          <li>This reduction can be done in polynomial time, and a 3-SAT formula is
+            satisfiable if and only if the corresponding circuit is satisfiable.</li>
+        </ul>
+        <p>Through this reduction, we've shown that Circuit-SAT is at least as hard
+          as 3-SAT, a known NP-Complete problem. Hence, Circuit-SAT is NP-Complete.</p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

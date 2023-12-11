@@ -1,0 +1,26 @@
+def fractional_knapsack(items, capacity):
+    # Calculate the value-to-weight ratio for each item
+    for item in items:
+        item['ratio'] = item['value'] / item['weight']
+
+    # Sort the items in descending order based on their value-to-weight ratio
+    sorted_items = sorted(items, key=lambda x: x['ratio'], reverse=True)
+
+    total_value = 0
+    knapsack = []
+
+    for item in sorted_items:
+        if item['weight'] <= capacity:
+            # Add the entire item to the knapsack
+            knapsack.append({'weight': item['weight'], 'value': item['value']})
+            total_value += item['value']
+            capacity -= item['weight']
+        else:
+            # Add a fraction of the item to the knapsack
+            fraction = capacity / item['weight']
+            knapsack.append({'weight': capacity, 'value': item['value'] * fraction})
+            total_value += item['value'] * fraction
+            capacity = 0
+            break
+
+    return total_value, knapsack

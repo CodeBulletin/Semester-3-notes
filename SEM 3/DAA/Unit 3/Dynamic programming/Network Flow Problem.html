@@ -1,0 +1,44 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Network Flow Problem</h1>
+
+      <div class="ck-content">
+        <p>The Network Flow Problem is a classic optimization problem that involves
+          finding the maximum flow that can be sent through a network from a source
+          node to a sink node. It models the flow of a commodity, such as water or
+          data, through a network of interconnected nodes and edges.</p>
+        <p>In this problem, the network is represented as a directed graph, where
+          each edge has a capacity that represents the maximum amount of flow that
+          can pass through it. The source node is the node where the flow originates,
+          and the sink node is the node where the flow is intended to reach.</p>
+        <p>The goal is to determine the maximum amount of flow that can be sent from
+          the source to the sink while respecting the capacity constraints of the
+          edges. The flow must also satisfy the conservation of flow principle, which
+          states that the total flow entering a node (excluding the source and sink)
+          must equal the total flow leaving that node.</p>
+        <p>To solve the Network Flow Problem, various algorithms can be used, with
+          the most well-known being the Ford-Fulkerson algorithm and its variants,
+          such as the Edmonds-Karp algorithm and the Dinic's algorithm. These algorithms
+          iteratively find augmenting paths in the residual graph, which is a modified
+          version of the original graph that reflects the remaining capacity of the
+          edges.</p>
+        <p>The time complexity of solving the Network Flow Problem depends on the
+          chosen algorithm. The Ford-Fulkerson algorithm has a worst-case time complexity
+          of O(EF), where E is the number of edges and F is the maximum flow value.
+          However, the Edmonds-Karp algorithm and Dinic's algorithm have better time
+          complexities of O(VE^2) and O(V^2E), respectively, where V is the number
+          of vertices.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

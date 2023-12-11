@@ -1,0 +1,53 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Overfitting and underfitting</h1>
+
+      <div class="ck-content">
+        <p>Overfitting and underfitting are two common problems that can occur when
+          building machine learning models. They relate to the model's ability to
+          generalize well to new, unseen data.</p>
+        <p><span class="text-big"><strong>Overfitting</strong></span>: Overfitting
+          occurs when a model learns the training data too well and captures the
+          noise or random fluctuations in the data. It happens when the model becomes
+          too complex or flexible, and it starts to memorize the training examples
+          instead of learning the underlying patterns. As a result, the model performs
+          very well on the training data but fails to generalize well to new data.</p>
+        <p>Signs of overfitting include a high accuracy or low error rate on the
+          training data, but a significantly lower accuracy or higher error rate
+          on the test or validation data. The model may be too specific to the training
+          data and may not capture the true underlying patterns in the data.</p>
+        <p><span class="text-big"><strong>Underfitting</strong></span>: Underfitting
+          occurs when a model is too simple or inflexible to capture the underlying
+          patterns in the data. It happens when the model is not able to learn the
+          complexities of the data and fails to fit the training data well. As a
+          result, the model performs poorly on both the training data and new, unseen
+          data.</p>
+        <p>Signs of underfitting include a low accuracy or high error rate on both
+          the training data and the test or validation data. The model may be too
+          generalized and may not capture the important patterns or relationships
+          in the data.</p>
+        <p>To address overfitting, techniques such as regularization, cross-validation,
+          and early stopping can be used. Regularization adds a penalty term to the
+          model's objective function to discourage complex or large coefficients.
+          Cross-validation helps in assessing the model's performance on unseen data
+          by splitting the data into multiple training and validation sets. Early
+          stopping stops the training process when the model's performance on the
+          validation data starts to deteriorate.</p>
+        <p>To address underfitting, techniques such as increasing the model's complexity,
+          adding more features, or using more advanced algorithms can be employed.
+          It is important to strike a balance between model complexity and simplicity
+          to achieve the best generalization performance.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

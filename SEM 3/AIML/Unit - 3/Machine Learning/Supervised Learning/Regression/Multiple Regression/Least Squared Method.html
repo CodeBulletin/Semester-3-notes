@@ -1,0 +1,66 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Least Squared Method</h1>
+
+      <div class="ck-content">
+        <p>In multilinear regression, where the model involves multiple explanatory
+          variables, the least squares method is used to fit a model of the form:&nbsp;
+          <span
+          class="math-tex">\(y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_n x_n + \epsilon\)</span>
+        </p>
+        <p>Here,&nbsp;<span class="math-tex">\(y\)</span>&nbsp;is the dependent variable,&nbsp;
+          <span
+          class="math-tex">\(x_1, x_2, \ldots, x_n\)</span>&nbsp;are the independent variables,&nbsp;
+            <span
+            class="math-tex">\(\beta_0, \beta_1, \ldots, \beta_n\)</span>&nbsp;are the coefficients
+              to be estimated, and&nbsp;<span class="math-tex">\(\epsilon\)</span>&nbsp;is
+              the error term.</p>
+        <p>The goal is to find the values of&nbsp;<span class="math-tex">\(\beta\)</span>&nbsp;coefficients
+          that minimize the sum of the squares of the residuals. In matrix notation,
+          this problem is often formulated as:</p>
+        <p><span class="math-tex">\(\mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon}\)</span>
+        </p>
+        <p>Where:
+          <br>-&nbsp;<span class="math-tex">\(\mathbf{Y}\)</span>&nbsp;is a vector of
+          observed values of the dependent variable.
+          <br>-&nbsp;<span class="math-tex">\(\mathbf{X}\)</span>&nbsp;is a matrix of
+          the observed values of the independent variables, with each column being
+          a different variable and each row being a different observation. This matrix
+          typically includes a column of ones to represent the intercept term&nbsp;
+          <span
+          class="math-tex">\(\beta_0\)</span>.
+            <br>-&nbsp;<span class="math-tex">\(\boldsymbol{\beta}\)</span>&nbsp;is a
+            vector of the coefficients&nbsp;<span class="math-tex">\((\beta_0, \beta_1, \ldots, \beta_n)\)</span>.
+            <br>-&nbsp;<span class="math-tex">\(\boldsymbol{\epsilon}\)</span>&nbsp;is
+            a vector of the errors or residuals.</p>
+        <p>The least squares estimate&nbsp;<span class="math-tex">\(\hat{\boldsymbol{\beta}}\)</span>&nbsp;is
+          given by the formula:</p>
+        <p><span class="math-tex">\(\hat{\boldsymbol{\beta}} = (\mathbf{X}^\top \mathbf{X})^{-1} \mathbf{X}^\top \mathbf{Y}\)</span>
+        </p>
+        <p>This formula involves:
+          <br>-&nbsp;<span class="math-tex">\(\mathbf{X}^\top\)</span>: the transpose
+          of matrix&nbsp;<span class="math-tex">\(\mathbf{X}\)</span>.
+          <br>-&nbsp;<span class="math-tex">\((\mathbf{X}^\top \mathbf{X})^{-1}\)</span>:
+          the inverse of the product of&nbsp;<span class="math-tex">\(\mathbf{X}^\top\)</span>&nbsp;and&nbsp;
+          <span
+          class="math-tex">\(\mathbf{X}\)</span>.
+            <br>-&nbsp;<span class="math-tex">\(\mathbf{X}^\top \mathbf{Y}\)</span>: the
+            product of&nbsp;<span class="math-tex">\(\mathbf{X}^\top\)</span>&nbsp;and
+            the vector&nbsp;<span class="math-tex">\(\mathbf{Y}\)</span>.</p>
+        <p>This approach allows for the estimation of the coefficients in a multiple
+          linear regression model, considering the influence of several independent
+          variables on a single dependent variable.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,153 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q5</h1>
+
+      <div class="ck-content">
+        <h2>What are disjoint sets? Give difference between link list &amp; forest implementation of disjoint sets. What is union by rank? Give functions for union, find-set and make-set operations for forest implementation by rank.</h2>
+        <p>Disjoint sets, also known as union-find data structures, are a way of
+          keeping track of a set of elements partitioned into a number of non-overlapping
+          (disjoint) subsets. They are particularly useful in network connectivity,
+          image processing, and various other applications where objects are grouped
+          into disjoint sets.</p>
+        <p>There are two common ways to implement disjoint sets: Linked Lists and
+          Forests (or trees). Here's a comparison between the two:</p>
+        <h3>Linked List Implementation</h3>
+        <p><strong>Structure</strong>: In the linked list implementation, each set
+          is represented as a linked list. Each element of the set is a node in the
+          linked list.</p>
+        <p><strong>Find Operation</strong>: To find which subset a particular element
+          is in, you traverse from the node to the head of the list. The head of
+          the list represents the identifier for the subset.</p>
+        <p><strong>Union Operation</strong>: To merge two subsets, you append the
+          list of one set to the other. This operation can be inefficient if not
+          managed properly, as it might require traversing the entire list.</p>
+        <p><strong>Efficiency</strong>: The linked list implementation can be less
+          efficient, particularly for the union operation which can take linear time
+          in the worst case.</p>
+        <h3>Forest (Tree) Implementation</h3>
+        <p><strong>Structure</strong>: In this method, each set is represented as
+          a tree. Each element is a node, and each tree represents one subset. The
+          root of each tree is the representative of the set.</p>
+        <p><strong>Find Operation</strong>: To find which subset an element is in,
+          you follow the parent nodes until you reach the root. The root node represents
+          the subset.</p>
+        <p><strong>Union Operation</strong>: To merge two subsets, you attach the
+          root of one tree to the root of the other. This operation is more efficient
+          than in the linked list implementation, especially when combined with techniques
+          like union by rank and path compression.</p>
+        <p><strong>Efficiency</strong>: The forest implementation, particularly with
+          optimizations like path compression and union by rank, provides very efficient
+          find and union operations, often nearly constant time.</p>
+        <h3>Key Differences</h3>
+        <p><strong>Data Structure</strong>: Linked list uses a linear structure for
+          each set, while forest uses a tree structure.</p>
+        <p><strong>Efficiency</strong>: Forest implementation is generally more efficient,
+          especially with path compression and union by rank optimizations.</p>
+        <p><strong>Union Operation</strong>: Union is simpler in a linked list but
+          more efficient in a forest.</p>
+        <p><strong>Complexity of Find Operation</strong>: The find operation is typically
+          faster in a forest, especially with path compression, as compared to a
+          linked list implementation.</p>
+        <p>In summary, while the linked list implementation of disjoint sets is conceptually
+          simpler, the forest implementation is generally preferred for its superior
+          efficiency, especially in scenarios involving large data sets and frequent
+          find and union operations.</p>
+        <h3>Union by Rank</h3>
+        <p>"Union by rank" is an optimization technique used in the forest (tree)
+          implementation of disjoint sets, particularly in the context of union-find
+          data structures. Its primary goal is to keep the trees as flat as possible,
+          which in turn keeps the time complexity of the 'find' operation low. Here's
+          how it works:</p>
+        <h3>Concept of Rank</h3>
+        <ul>
+          <li><strong>Rank</strong>: In this context, the "rank" of a tree is a rough
+            measure of its height. Initially, when each element forms its own set,
+            the rank of each tree is 0.</li>
+          <li><strong>Attaching Trees</strong>: When performing a 'union' operation
+            (merging two disjoint sets), the root of the tree with a lower rank is
+            attached to the root of the tree with a higher rank.</li>
+          <li><strong>Rank Update</strong>: If the ranks of both trees are equal, one
+            of them is chosen as the new root, and its rank is incremented by 1.</li>
+          <li><strong>Effect on Tree Height</strong>: By always attaching the shorter
+            tree to the root of the taller tree, union by rank minimizes the maximum
+            height of the trees. This is crucial because the time complexity of the
+            'find' operation is proportional to the height of the tree.</li>
+        </ul>
+        <h3>Benefits of Union by Rank</h3>
+        <p><strong>Efficiency</strong>: This method greatly improves the efficiency
+          of the union-find operations. With union by rank, the height of any tree
+          in the forest remains very small, ensuring that the 'find' operation, which
+          requires traversing from a node to the root of its tree, is very fast.</p>
+        <p><strong>Time Complexity</strong>: With union by rank (and especially when
+          combined with another optimization called path compression), the time complexity
+          for both 'find' and 'union' operations can be brought down to nearly constant
+          time, O(α(N))O(α(N)), where αα is the inverse Ackermann function, which
+          grows very slowly and is practically constant for all reasonably large
+          values of NN (number of elements).</p>
+        <p>In summary, union by rank is a key optimization in union-find data structures,
+          making them highly efficient for problems involving large sets and frequent
+          queries for determining the set to which an element belongs or merging
+          sets.</p><pre><code class="language-text-plain">class Node:
+    def __init__(self, val):
+        self.parent = None
+        self.rank = 0
+        self.val = val
+        
+def make_set(x):
+    node = Node(x)
+    node.parent = node
+    node.rank = 0
+    return node
+
+def find_set(x):
+    if x.val != x.parent.val:
+        x.parent = find_set(x.parent)  # Path compression
+    return x.parent
+
+def union(x, y):
+    root_x = find_set(x)
+    root_y = find_set(y)
+
+    if root_x == root_y:  # If both elements are in the same set, do nothing
+        return
+
+    # Attach the tree with lower rank to the tree with higher rank
+    if root_x.rank &lt; root_y.rank:
+        root_x.parent = root_y
+    elif root_x.rank &gt; root_y.rank:
+        root_y.parent = root_x
+    else:
+        root_y.parent = root_x
+        root_x.rank += 1
+        
+set1 = make_set(0)
+set2 = make_set(1)
+set3 = make_set(2)
+set4 = make_set(3)
+set5 = make_set(4)
+
+union(set1, set2)
+print(find_set(set1).val, find_set(set2).val)
+
+union(set3, set4)
+print(find_set(set3).val, find_set(set4).val)
+
+union(set3, set1)
+print(find_set(set1).val, find_set(set2).val)
+
+union(set5, set3)
+print(find_set(set5).val)</code></pre>
+      </div>
+    </div>
+  </body>
+
+</html>

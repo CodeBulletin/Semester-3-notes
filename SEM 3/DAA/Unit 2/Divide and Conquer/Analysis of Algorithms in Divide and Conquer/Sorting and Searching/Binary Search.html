@@ -1,0 +1,55 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Binary Search</h1>
+
+      <div class="ck-content"><pre><code class="language-text-plain">int binarySearch(const vector&lt;int&gt;&amp; arr, int target) {
+    int left = 0;            // Left boundary of the search range
+    int right = arr.size() - 1;  // Right boundary of the search range
+
+    while (left &lt;= right) {
+        int mid = left + (right - left) / 2;  // Calculate the middle index
+
+        if (arr[mid] == target) {
+            return mid;  // Element found, return its index
+        } else if (arr[mid] &lt; target) {
+            left = mid + 1;  // Target is in the right half
+        } else {
+            right = mid - 1;  // Target is in the left half
+        }
+    }
+
+    return -1;  // Element not found
+}</code></pre>
+        <h2><strong>Time Complexity:&nbsp;</strong></h2>
+        <h4><strong>Best Case:</strong></h4>
+        <p><strong>When element to be searched is in the middle</strong>
+        </p>
+        <p><span class="math-tex">\(T(n) = c \implies T(n) = O(1)\)</span>
+        </p>
+        <h4><strong>Worst Case:</strong></h4>
+        <p><strong>When element to be searched is in the leaf node</strong>
+        </p>
+        <p><span class="math-tex">\(T(n) = T(\frac{n}2) + c\)</span>
+        </p>
+        <p><span class="math-tex">\(\implies T(n) = T(\frac{n}{2^k}) + kc\)</span>
+        </p>
+        <p>now let,&nbsp;<span class="math-tex">\(\frac{n}{2^k} = 1 \implies n = 2^k \implies log_2(n) = k\)</span>
+        </p>
+        <p><span class="math-tex">\(\implies T(n) = T(1) + log_2(n) *c = c + c*log_2(n) = (c+1)*log_2(n)\)</span>
+        </p>
+        <p><span class="math-tex">\(T(n) = O(logn)\)</span>
+        </p>
+      </div>
+    </div>
+  </body>
+
+</html>

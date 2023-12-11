@@ -1,0 +1,70 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q4</h1>
+
+      <div class="ck-content">
+        <h2>(a) Write an algorithm to search an item x in a list of n items using the concept of binary search but dividing the list in THREE parts.</h2><pre><code class="language-text-plain">function ternarySearch(list, x, start, end):
+    if start &gt; end:
+        return -1
+    
+    size = (end - start + 1) / 3
+    mid1 = start + size - 1
+    mid2 = mid1 + size
+    
+    if list[mid1] == x:
+        return mid1
+    if list[mid2] == x:
+        return mid2
+    
+    if list[mid1] &gt; x:
+        return ternarySearch(list, x, start, mid1-1)
+    if list[mid2] &lt; x:
+        return ternarySearch(list, x, mid2+1, end)
+    
+    return ternarySearch(list, x, mid1+1, mid2-1)</code></pre>
+        <h2>(b) Write an algorithm to find union of two sets that may be disjoint or overlapping</h2><pre><code class="language-text-plain">function findUnion(set1, set2):
+    unionSet = set()
+    for element in set1:
+        unionSet.add(element)
+    for element in set2:
+        if element not in unionSet:
+            unionSet.add(element)
+    return unionSet</code></pre><pre><code class="language-text-plain">class DisjointSet:
+    def __init__(self, n):
+        # Initialize the disjoint set with 'n' elements.
+        self.parent = [i for i in range(n)]
+        self.rank = [0] * n
+
+    def find(self, element):
+        # Find the representative (root) of the set containing 'element' with path compression.
+        if self.parent[element] != element:
+            self.parent[element] = self.find(self.parent[element])
+        return self.parent[element]
+
+    def union(self, x, y):
+        # Union the sets containing elements 'x' and 'y' using rank to optimize the tree depth.
+        root_x = self.find(x)
+        root_y = self.find(y)
+
+        if root_x != root_y:
+            if self.rank[root_x] &lt; self.rank[root_y]:
+                self.parent[root_x] = root_y
+            elif self.rank[root_x] &gt; self.rank[root_y]:
+                self.parent[root_y] = root_x
+            else:
+                self.parent[root_y] = root_x
+                self.rank[root_x] += 1</code></pre>
+      </div>
+    </div>
+  </body>
+
+</html>

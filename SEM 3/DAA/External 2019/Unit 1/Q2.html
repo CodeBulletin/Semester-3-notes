@@ -1,0 +1,76 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q2</h1>
+
+      <div class="ck-content">
+        <h2>(a) Give the conditions where master method is not applicable supported by giving suitable examples.</h2>
+        <p><span class="text-big"><strong>Conditions Where Master Theorem Does Not Apply</strong></span>
+        </p>
+        <p><strong>If&nbsp;</strong><span class="math-tex">\(a&lt;1\)</span><strong>&nbsp;or&nbsp;</strong>
+          <span
+          class="math-tex">\(b \le 1\)</span>: The theorem assumes that the number of subproblems
+            and the reduction factor in the problem size are significant. If&nbsp;
+            <span
+            class="math-tex">\(a &lt; 1\)</span>, it implies there are less than one subproblem per
+              recursive call, which is non-sensical. If&nbsp;<span class="math-tex">\(b≤1\)</span>,
+              it means the problem size doesn't decrease, leading to infinite recursion.</p>
+        <p><strong>Non-Polynomial Difference between&nbsp;</strong><span class="math-tex">\(f(n)\)</span><strong>&nbsp;and&nbsp;</strong>
+          <span
+          class="math-tex">\(n ^ {log_{⁡b}(a)}\)</span>: If the function&nbsp;<span class="math-tex">\(f(n)\)</span>&nbsp;is
+            not polynomially smaller or larger than&nbsp;<span class="math-tex">\(n ^ {log_{⁡b}(a)}\)</span>,
+            the Master Theorem doesn't apply. For example, if&nbsp;<span class="math-tex">\(f(n)\)</span>&nbsp;is
+            in the form of exponential functions, factorial functions, or others that
+            don't have a polynomial relationship with&nbsp;<span class="math-tex">\(n ^ {log_{⁡b}(a)}\)</span>.</p>
+        <p><strong>Irregular Recurrence Relations</strong>: If the recurrence relation
+          has a non-standard form, i.e., it does not fit the form&nbsp;<span class="math-tex">\(aT(n/b)+f(n)\)</span>,
+          the Master Theorem cannot be applied. For example</p>
+        <p><strong>Non-Constant Parameters&nbsp;</strong><span class="math-tex">\(a\)</span><strong>&nbsp;and&nbsp;</strong>
+          <span
+          class="math-tex">\(b\)</span>: If&nbsp;<span class="math-tex">\(a\)</span>&nbsp;and&nbsp;
+            <span
+            class="math-tex">\(b\)</span>&nbsp;are not constants, but functions of&nbsp;<span class="math-tex">\(n\)</span>,
+              the Master Theorem is not applicable.</p>
+        <p><span class="text-big"><strong>Examples</strong></span>
+        </p>
+        <p><strong>Example Where&nbsp;</strong><span class="math-tex">\(a &lt; 1\)</span>:</p>
+        <ul>
+          <li><span class="math-tex">\(T(n)=0.5T(n/2)+n\)</span>
+          </li>
+          <li>Here, since&nbsp;<span class="math-tex">\(a &lt; 1\)</span>, the Master
+            Theorem does not apply.</li>
+        </ul>
+        <p><strong>Example with Non-Polynomial Difference</strong>:</p>
+        <ul>
+          <li><span class="math-tex">\(T(n)=2T(n/2)+2^n\)</span>.</li>
+          <li>Here,&nbsp;<span class="math-tex">\(f(n) = 2^n\)</span>&nbsp;is not polynomially
+            smaller or larger than&nbsp;<span class="math-tex">\(n ^ {log_{⁡b}(a)} = n\)</span>.</li>
+        </ul>
+        <p><strong>Non-Constant Parameters Example</strong>:</p>
+        <ul>
+          <li><span class="math-tex">\(T(n)=nT(\frac n {\sqrt n})+n\)</span>
+          </li>
+          <li>Here,&nbsp;<span class="math-tex">\(a = n\)</span>&nbsp;and&nbsp;
+            <span
+            class="math-tex">\(b = \sqrt n\)</span>&nbsp;are not constants.</li>
+        </ul>
+        <h2>(b) Solve the recurrences by any method except mater method.&nbsp;<br><span class="math-tex">\(T(n) =\)</span>&nbsp;&nbsp;<span class="math-tex">\(4T (\frac n 2) + cn\)</span><br><span class="math-tex">\(T(n) =\)</span>&nbsp;&nbsp;<span class="math-tex">\(2T (n-1) + c\)</span></h2>
+        <figure class="image">
+          <img src="Q2/1_image.jpg">
+        </figure>
+        <figure class="image">
+          <img src="Q2/image.jpg">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

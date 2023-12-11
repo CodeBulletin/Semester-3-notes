@@ -1,0 +1,83 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Relevance of the OSI 7 layer model to Computer Forensics</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The OSI (Open Systems Interconnection) 7-layer model is highly relevant
+          to computer forensics, providing a structured framework to understand and
+          analyze how data is transmitted and managed across a network. This model
+          is particularly useful in network forensics, a branch of digital forensics
+          focused on monitoring and analyzing network traffic. Each layer of the
+          OSI model offers different insights and data that can be crucial in a forensic
+          investigation. Here's how each layer is relevant:</p>
+        <p style="margin-left:0px;"><strong>Physical Layer (Layer 1)</strong>:</p>
+        <ul>
+          <li><strong>Forensic Relevance</strong>: Involves the physical equipment used
+            in networking, like cables, switches, and routers. Forensic investigation
+            at this level might include examining physical devices for tampering, intercepting
+            physical network traffic, or analyzing hardware configurations.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Data Link Layer (Layer 2)</strong>:</p>
+        <ul>
+          <li><strong>Forensic Relevance</strong>: Deals with protocols like Ethernet
+            and switches. Analyzing MAC (Media Access Control) addresses, which operate
+            at this layer, can be crucial in tracing a device's physical location or
+            identifying devices involved in an incident.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Network Layer (Layer 3)</strong>:</p>
+        <ul>
+          <li><strong>Forensic Relevance</strong>: This layer, where routing occurs,
+            is crucial for understanding how data travels across networks. Investigating
+            IP addresses and analyzing routing protocols and logs can help in tracing
+            the source or destination of network traffic.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Transport Layer (Layer 4)</strong>:</p>
+        <ul>
+          <li><strong>Forensic Relevance</strong>: Responsible for data transfer between
+            systems, this layer includes protocols like TCP and UDP. Analysis can reveal
+            details about communication sessions, such as ports used, sequence numbers,
+            and connection states, which can be vital in understanding the nature of
+            network communications.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Session Layer (Layer 5)</strong>:</p>
+        <ul>
+          <li><strong>Forensic Relevance</strong>: Manages sessions between applications.
+            Investigating this layer can provide insights into how and when different
+            applications on a network establish, manage, and terminate connections.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Presentation Layer (Layer 6)</strong>:</p>
+        <ul>
+          <li><strong>Forensic Relevance</strong>: This layer translates data between
+            the application and the network. Forensic analysis might focus on how data
+            is encrypted or formatted, aiding in understanding how data was transmitted
+            or stored and potentially uncovering hidden or obfuscated information.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Application Layer (Layer 7)</strong>:</p>
+        <ul>
+          <li><strong>Forensic Relevance</strong>: The layer closest to the user, involving
+            application-level protocols like HTTP, SMTP, and FTP. Analysis at this
+            level is critical in many forensic investigations, as it can provide a
+            wealth of information about user activities, data transactions, and application-specific
+            behaviors.</li>
+        </ul>
+        <p style="margin-left:0px;">Understanding the OSI model assists forensic investigators in pinpointing
+          where to look for evidence and understanding the nature of the data at
+          each layer. For instance, investigating a network intrusion might involve
+          examining IP addresses and TCP/UDP ports (Layers 3 and 4), while an email
+          scam investigation could focus on SMTP headers and message content (Layer
+          7). The OSI model provides a comprehensive framework to approach and dissect
+          these complex investigations methodically.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

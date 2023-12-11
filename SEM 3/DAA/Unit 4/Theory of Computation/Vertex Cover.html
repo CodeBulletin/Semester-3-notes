@@ -1,0 +1,50 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Vertex Cover</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">A Vertex Cover is a fundamental concept in graph theory and combinatorial
+          optimization. It is a subset of vertices in an undirected graph such that
+          every edge in the graph is incident to at least one vertex in the subset.
+          In other words, it's a set of vertices that "covers" all the edges in the
+          graph by including at least one endpoint of each edge.</p>
+        <p style="margin-left:0px;">Formally, for an undirected graph G = (V, E), a Vertex Cover is a subset
+          Vc ⊆ V such that for every edge (u, v) in E, at least one of u or v belongs
+          to Vc.</p>
+        <p style="margin-left:0px;">The Vertex Cover problem is to find the smallest possible vertex cover
+          for a given graph. This problem is often used in various applications,
+          such as network design, resource allocation, and optimization.</p>
+        <p style="margin-left:0px;">There are different approaches to finding a minimum vertex cover:</p>
+        <ol>
+          <li style="margin-left:0px;"><strong>Brute Force:</strong> Enumerating all possible subsets of vertices
+            and checking if they form a vertex cover. This method is exponential and
+            is only practical for small graphs.</li>
+          <li style="margin-left:0px;"><strong>Greedy Algorithms:</strong> There are several greedy algorithms
+            for approximating the minimum vertex cover. One common approach is to repeatedly
+            select the vertex with the highest degree (i.e., the vertex incident to
+            the most edges) until all edges are covered. This is known as the "Degree
+            Heuristic."</li>
+          <li style="margin-left:0px;"><strong>Optimization Algorithms:</strong> Integer Linear Programming (ILP)
+            and other optimization techniques can be used to find the minimum vertex
+            cover. These methods can find the exact solution but are often computationally
+            expensive for large graphs.</li>
+        </ol>
+        <p style="margin-left:0px;">The Vertex Cover problem is an NP-hard problem, which means that there
+          is no known polynomial-time algorithm to find the exact minimum vertex
+          cover for all graphs unless P = NP. As a result, many practical applications
+          focus on approximation algorithms that provide solutions close to the optimal
+          within a reasonable amount of time.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

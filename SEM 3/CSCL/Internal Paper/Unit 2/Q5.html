@@ -1,0 +1,95 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q5</h1>
+
+      <div class="ck-content">
+        <h2>(a) What is SQL injection? How is it executed? How Can we protect data from this attack</h2>
+        <h4>What is SQL Injection?</h4>
+        <p>SQL Injection is a code injection technique that exploits vulnerabilities
+          in an application's software by injecting malicious SQL statements into
+          an entry field for execution. This can allow attackers to access, modify,
+          or delete data, or even gain administrative access to a database.</p>
+        <h4>How is It Executed?</h4>
+        <ol>
+          <li><strong>Input Manipulation</strong>: Attackers input malicious SQL code
+            into vulnerable input fields (like login forms) where inputs are not properly
+            sanitized.</li>
+          <li><strong>Exploiting Vulnerabilities</strong>: The application then passes
+            this malicious input to the database, which executes the SQL command, compromising
+            the database's security.</li>
+        </ol>
+        <h4>Protection Measures</h4>
+        <ol>
+          <li><strong>Input Validation</strong>: Ensure that all user inputs are validated
+            for type, length, format, and range.</li>
+          <li><strong>Prepared Statements and Parameterized Queries</strong>: Use these
+            in the application code to separate SQL code from data.</li>
+          <li><strong>Stored Procedures</strong>: Employ stored procedures to encapsulate
+            the SQL logic.</li>
+          <li><strong>Regular Security Audits</strong>: Regularly audit and test the
+            applications for SQL injection vulnerabilities.</li>
+          <li><strong>Least Privilege</strong>: Assign the minimum necessary privileges
+            to database accounts.</li>
+          <li><strong>Web Application Firewalls (WAF)</strong>: Use WAFs to detect and
+            block SQL injection attacks.</li>
+        </ol>
+        <h2>(b) What are backdoors, and how do they have the potential to compromise the security and integrity of our system?</h2>
+        <h4>What are Backdoors?</h4>
+        <p>Backdoors are hidden entry points into a software, network, or system
+          that bypass normal authentication and security mechanisms. They are often
+          used for legitimate purposes, like providing system maintenance, but can
+          be exploited for malicious activities.</p>
+        <h4>Potential Compromises</h4>
+        <ol>
+          <li><strong>Unauthorized Access</strong>: Backdoors can allow attackers to
+            gain unauthorized access to a system.</li>
+          <li><strong>Data Theft and Manipulation</strong>: Once access is gained, data
+            can be stolen, manipulated, or destroyed.</li>
+          <li><strong>Surveillance</strong>: Attackers might use backdoors for continuous
+            monitoring of activities on the system.</li>
+          <li><strong>Spreading Malware</strong>: They can be used to spread malware
+            within a network.</li>
+        </ol>
+        <h2>(c) Elaborate DoS aftack. Classify various DoS attacks and Explain Flood attack, ping of death and SYN attack.</h2>
+        <h4>Elaboration on DoS Attack</h4>
+        <p>DoS attacks aim to make a machine or network resource unavailable to its
+          intended users, typically by temporarily or indefinitely disrupting services
+          of a host connected to the Internet.</p>
+        <h4>Classification and Explanation</h4>
+        <p><strong>Flood Attack</strong>:</p>
+        <ul>
+          <li>Mechanism: Overwhelming the target with excessive requests, making it
+            impossible for the server to respond to legitimate traffic.</li>
+          <li>Example: UDP flood attack.</li>
+        </ul>
+        <p><strong>Ping of Death</strong>:</p>
+        <ul>
+          <li>Mechanism: Involves sending malformed or oversized packets using the ICMP
+            protocol, causing systems to crash or reboot.</li>
+          <li>Vulnerability: Older and unpatched systems are particularly susceptible
+            to this attack.</li>
+        </ul>
+        <p><strong>SYN Attack</strong>:</p>
+        <ul>
+          <li>Mechanism: The attacker sends a flood of SYN requests to the target's
+            system in an attempt to overwhelm it, making it unable to respond to legitimate
+            connection requests.</li>
+          <li>Impact: Consumes server resources or fills the connection table, leading
+            to denial of service.</li>
+        </ul>
+        <p>Prevention and mitigation of DoS attacks typically involve network security
+          measures like firewalls, intrusion detection systems, and traffic filtering.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

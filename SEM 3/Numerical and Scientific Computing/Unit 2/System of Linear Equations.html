@@ -1,0 +1,74 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>System of Linear Equations</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">A system of linear equations is a collection of two or more linear equations
+          involving the same set of variables. These equations are typically written
+          in the form:</p>
+        <p style="margin-left:0px;">a₁x₁ + a₂x₂ + a₃x₃ + ... + aₙxₙ = b₁
+          <br>a₁'x₁ + a₂'x₂ + a₃'x₃ + ... + aₙ'xₙ = b₁'
+          <br>…
+          <br>a₁ₖx₁ + a₂ₖx₂ + a₃ₖx₃ + ... + aₙₖxₙ = bₖ</p>
+        <p style="margin-left:0px;">In this system of equations:</p>
+        <ul>
+          <li>x₁, x₂, x₃, ..., xₙ are the variables.</li>
+          <li>a₁, a₂, a₃, ..., aₙ are the coefficients of the variables in the first
+            equation.</li>
+          <li>a₁', a₂', a₃', ..., aₙ' are the coefficients of the variables in the second
+            equation, and so on for all k equations.</li>
+          <li>b₁, b₁', ..., bₖ are constants on the right-hand side of each equation.</li>
+        </ul>
+        <p style="margin-left:0px;">The goal in solving a system of linear equations is to find values for
+          the variables (x₁, x₂, ..., xₙ) that satisfy all the equations simultaneously.
+          These values are called the "solutions" to the system. If there is a unique
+          solution, then the system is said to be "consistent." If there are no solutions,
+          it is "inconsistent." If there are infinitely many solutions, it is "dependent"
+          or "underdetermined."</p>
+        <p style="margin-left:0px;">One common method for solving systems of linear equations is using techniques
+          like Gaussian elimination, matrix algebra, or substitution. These methods
+          help find the values of the variables that make all the equations true
+          at the same time. Systems of linear equations are widely used in various
+          fields, including mathematics, physics, engineering, economics, and more,
+          to model and solve real-world problems.</p>
+        <h2 style="margin-left:0px;">Well-Conditioned System</h2>
+        <ul>
+          <li>A well-conditioned system of equations is one where the matrix of coefficients
+            is such that small changes in the input data (e.g., the right-hand side
+            or coefficients of the equations) result in small changes in the solution.</li>
+          <li>Mathematically, a system is considered well-conditioned if its condition
+            number (usually denoted as κ) is relatively small. The condition number
+            measures how sensitive the solution is to changes in the input data. A
+            small condition number (κ ≈ 1) indicates good conditioning.</li>
+          <li>In practical terms, a well-conditioned system is one where the numerical
+            algorithms used for solving it (e.g., Gaussian elimination, iterative methods
+            like Gauss-Seidel) perform reliably and produce accurate results without
+            significant amplification of errors.</li>
+        </ul>
+        <h2 style="margin-left:0px;">Ill-Conditioned System</h2>
+        <ul>
+          <li>An ill-conditioned system of equations is one where small changes in the
+            input data lead to large changes in the solution. In other words, the numerical
+            solution is highly sensitive to perturbations in the input data.</li>
+          <li>Mathematically, an ill-conditioned system has a large condition number
+            (κ &gt;&gt; 1). A large condition number indicates poor conditioning and
+            suggests that the system is susceptible to numerical instability.</li>
+          <li>Solving ill-conditioned systems can be challenging because even small
+            errors in the input data or during the numerical solution process can lead
+            to significant inaccuracies in the computed solution. In extreme cases,
+            it may be impossible to obtain a reliable solution.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

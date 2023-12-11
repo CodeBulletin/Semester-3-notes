@@ -1,0 +1,88 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Count Sort</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">
+          <br>Counting Sort is a non-comparative sorting algorithm that works well for
+          sorting integers when you know the range of values in the input. It is
+          an efficient sorting algorithm with a time complexity of&nbsp;<span class="math-tex">\(O(n + k)\)</span>,
+          where "<span class="math-tex">\(n\)</span>" is the number of elements to
+          be sorted, and "<span class="math-tex">\(k\)</span>" is the range of input
+          values.</p>
+        <p style="margin-left:0px;">Here's how Counting Sort works:</p>
+        <ol>
+          <li><strong>Find the range of input values</strong>: Determine the minimum
+            and maximum values in the input array. This step is essential to define
+            the range of values that will be sorted.</li>
+          <li><strong>Create a counting array</strong>: Create an auxiliary array called
+            the counting array with a size of (max - min + 1), where "max" is the maximum
+            value in the input array, and "min" is the minimum value. This counting
+            array is used to store the count of each unique element in the input array.</li>
+          <li><strong>Count the occurrences</strong>: Traverse the input array and,
+            for each element, increment the corresponding index in the counting array.
+            The index is calculated as the value of the element minus the minimum value.</li>
+          <li><strong>Calculate cumulative counts</strong>: Modify the counting array
+            to store the cumulative counts. This means that each element in the counting
+            array will represent the count of elements less than or equal to the element
+            it corresponds to.</li>
+          <li><strong>Reconstruct the sorted array</strong>: Create a new array to store
+            the sorted output. Traverse the input array again, and for each element,
+            find its position in the counting array (the cumulative count), and place
+            it in the output array at that position. Then, decrement the count in the
+            counting array to account for duplicates.</li>
+          <li>The output array is now the sorted array.</li>
+        </ol>
+        <p style="margin-left:0px;">Counting Sort has several advantages, including its linear time complexity
+          and stability (preserving the relative order of equal elements). However,
+          it is only suitable for sorting non-negative integers and works best when
+          the range of values is not significantly larger than the number of elements
+          to be sorted.</p><pre><code class="language-text-plain">def counting_sort(arr):
+    if len(arr) == 0:
+        return arr
+
+    # Find the range of values in the array
+    min_val = min(arr)
+    max_val = max(arr)
+
+    # Create the counting array
+    count = [0] * (max_val - min_val + 1)
+
+    # Count the occurrences of each element
+    for num in arr:
+        count[num - min_val] += 1
+
+    # Calculate cumulative counts
+    for i in range(1, len(count)):
+        count[i] += count[i - 1]
+
+    # Create the output array
+    output = [0] * len(arr)
+
+    # Reconstruct the sorted array
+    for num in arr:
+        output[count[num - min_val] - 1] = num
+        count[num - min_val] -= 1
+
+    return output
+
+# Example usage:
+arr = [4, 2, 2, 8, 3, 3, 1]
+sorted_arr = counting_sort(arr)
+print(sorted_arr)</code></pre>
+        <p style="margin-left:auto;">&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

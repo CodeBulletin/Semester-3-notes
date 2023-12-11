@@ -1,0 +1,93 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Rabin-Karp Algorithm</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The core idea of the Rabin-Karp algorithm is to hash the pattern and compare
+          the hash value of the pattern with the hash values of substrings of the
+          text. If the hash values match, it means there is a potential match, and
+          the algorithm performs a character-by-character comparison to confirm the
+          match. If there is no match, the algorithm shifts the window one position
+          to the right and recalculates the hash value.</p>
+        <p style="margin-left:0px;">Here's how the Rabin-Karp algorithm works:</p>
+        <ol>
+          <li><strong>Preprocessing</strong>:
+            <ul>
+              <li>Compute the hash value of the pattern.</li>
+              <li>Create a rolling hash function that allows you to update the hash value
+                of a substring efficiently as you slide the window over the text. This
+                function should enable you to add the next character and remove the previous
+                character's contribution to the hash in constant time.</li>
+            </ul>
+          </li>
+          <li><strong>Searching</strong>:
+            <ul>
+              <li>Compute the hash value of the first window (substring) of the text that
+                is the same length as the pattern.</li>
+              <li>Compare the hash value of this window with the hash value of the pattern.</li>
+              <li>If the hash values match, perform a character-by-character comparison
+                to confirm the match.</li>
+              <li>If they don't match, slide the window one position to the right and recalculate
+                the hash value for the new window.</li>
+              <li>Repeat this process until you reach the end of the text or find a full
+                match of the pattern.</li>
+            </ul>
+          </li>
+        </ol>
+        <p style="margin-left:0px;">The Rabin-Karp algorithm's efficiency depends on the choice of hash function
+          and how you handle hash collisions. Collisions can occur if two different
+          substrings have the same hash value. To handle this, the algorithm should
+          recheck the character-by-character match in case of a collision.</p>
+        <p
+        style="margin-left:0px;">The Rabin-Karp algorithm is known for its average-case and worst-case
+          time complexity of O(n + m) in most scenarios, where n is the length of
+          the text and m is the length of the pattern. However, in the worst-case
+          scenario where hash collisions are frequent, it may degrade to O(n * m).
+          Despite this worst-case scenario, the Rabin-Karp algorithm can be quite
+          efficient for many practical applications.</p><pre><code class="language-text-plain">def rabin_karp(text, pattern):
+    # Define the base for the rolling hash (usually a prime number)
+    base = 256
+    # Define a prime number to avoid hash collisions
+    prime = 101
+
+    text_length = len(text)
+    pattern_length = len(pattern)
+    pattern_hash = 0
+    text_hash = 0
+
+    # Calculate the initial hash for the pattern and the first window of text
+    for i in range(pattern_length):
+        pattern_hash = (pattern_hash * base + ord(pattern[i])) % prime
+        text_hash = (text_hash * base + ord(text[i])) % prime
+
+    # Iterate through the text with a sliding window
+    for i in range(text_length - pattern_length + 1):
+        # If the hash values match, perform character-by-character comparison
+        if pattern_hash == text_hash:
+            if text[i:i + pattern_length] == pattern:
+                print(f"Pattern found at index {i}")
+
+        # Calculate the hash for the next window
+        if i &lt; text_length - pattern_length:
+            text_hash = (base * (text_hash - ord(text[i]) * (base**(pattern_length - 1))) + ord(text[i + pattern_length])) % prime
+            if text_hash &lt; 0:
+                text_hash += prime
+
+# Example usage:
+text = "ABABDABACDABABCABAB"
+pattern = "ABABCABAB"
+rabin_karp(text, pattern)</code></pre>
+      </div>
+    </div>
+  </body>
+
+</html>

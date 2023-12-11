@@ -1,0 +1,44 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Small Omega</h1>
+
+      <div class="ck-content">
+        <p>Small omega notation provides an lower bound that is not tight. It describes
+          a function's growth rate that is strictly greater than another function's
+          growth rate.</p>
+        <p>For a function&nbsp;<span class="math-tex">\(f(n)\)</span>,&nbsp;
+          <span
+          class="math-tex">\(\omega(g(n))\)</span>&nbsp;represents a condition where&nbsp;<span class="math-tex">\(f(n)\)</span>&nbsp;grows
+            significantly faster than&nbsp;<span class="math-tex">\(g(n)\)</span>&nbsp;as&nbsp;
+            <span
+            class="math-tex">\(n\)</span>&nbsp;approaches infinity. In other words, the growth of&nbsp;
+              <span
+              class="math-tex">\(f(n)\)</span>&nbsp;is asymptotically larger than&nbsp;<span class="math-tex">\(g(n)\)</span>.</p>
+        <p>Formally, for any positive constant&nbsp;<span class="math-tex">\(c &gt; 0\)</span>,
+          there exists an input size&nbsp;<span class="math-tex">\(n_0\)</span>&nbsp;such
+          that&nbsp;<span class="math-tex">\(f(n)\)</span>&nbsp;is bounded bellow
+          by&nbsp;<span class="math-tex">\(c*g(n) \space \forall \space n \ge n_0\)</span>
+        </p>
+        <p style="margin-left:0px;">Example: If&nbsp;<span class="math-tex">\(f(n) = n^2\)</span>&nbsp;and&nbsp;
+          <span
+          class="math-tex">\(g(n) = n\)</span>, then&nbsp;<span class="math-tex">\(f(n)\)</span>&nbsp;is&nbsp;
+            <span
+            class="math-tex">\(\omega(g(n))\)</span>&nbsp;because&nbsp;<span class="math-tex">\(n^2\)</span>&nbsp;grows
+              faster than&nbsp;<span class="math-tex">\(n\)</span>.</p>
+        <figure class="image">
+          <img src="Small%20O/image.png" alt="Analysis of algorithms | little o and little omega notations - GeeksforGeeks">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

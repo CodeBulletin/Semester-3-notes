@@ -1,0 +1,90 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>b) Explain the difference between the mean deviation and standard deviation. Justify your answer with suitable example.</h1>
+
+      <div class="ck-content">
+        <h2>Mean deviation</h2>
+        <p>Mean deviation is a measure of dispersion that quantifies the average
+          distance between each data point in a dataset and the mean or median of
+          that dataset. It provides information about the spread or variability of
+          the data.</p>
+        <h3>Mean Deviation with Mean</h3>
+        <p>Mean deviation with respect to the mean is a measure of dispersion that
+          quantifies the average distance between each data point in a dataset and
+          the mean of that dataset. It provides information about the spread or variability
+          of the data around the mean.</p>
+        <p>Formula:&nbsp;<span class="math-tex">\(MD_{\bar{x}} = \frac{\sum^C_{i=1}f_i|x_i-\bar{x}|}{\sum^C_{i=1}f_i}\)</span>
+        </p>
+        <h3>For example, let's consider the dataset: 5, 8, 10, 12, 16.</h3>
+        <ol>
+          <li>Calculate the mean: (5 + 8 + 10 + 12 + 16) / 5 = 10.2</li>
+          <li>Find the absolute difference between each data point and the mean: |5
+            - 10.2| = 4.8, |8 - 10.2| = 1.8, |10 - 10.2| = 0.2, |12 - 10.2| = 1.8,
+            |16 - 10.2| = 5.8</li>
+          <li>Sum up all the absolute differences: 4.8 + 1.8 + 0.2 + 1.8 + 5.8 = 14.4</li>
+          <li>Divide the sum by the total number of data points: 14.4 / 5 = 2.88</li>
+        </ol>
+        <h2>Mean Deviation with Median (Use this by default)</h2>
+        <p>Mean deviation with respect to the median is a measure of dispersion that
+          quantifies the average distance between each data point in a dataset and
+          the median of that dataset. It provides information about the spread or
+          variability of the data around the median</p>
+        <p>To calculate the mean deviation with respect to the median, you follow
+          similar steps as above, but instead of using the mean, you use the median.</p>
+        <p>Formula:&nbsp;<span class="math-tex">\(MD_{M} = \frac{\sum^C_{i=1}f_i|x_i-M|}{\sum^C_{i=1}f_i}\)</span>
+        </p>
+        <h3>For example, let's consider the dataset: 5, 8, 10, 12, 16.</h3>
+        <ol>
+          <li>Arrange the dataset in ascending order: 5, 8, 10, 12, 16.</li>
+          <li>Find the median: The median is 10.</li>
+          <li>Find the absolute difference between each data point and the median: |5
+            - 10| = 5 |8 - 10| = 2 |10 - 10| = 0 |12 - 10| = 2 |16 - 10| = 6</li>
+          <li>Sum up all the absolute differences: 5 + 2 + 0 + 2 + 6 = 15.</li>
+          <li>Divide the sum by the total number of data points: 15 / 5 = 3.</li>
+        </ol>
+        <h2 style="margin-left:0px;">The standard deviation</h2>
+        <p style="margin-left:0px;">The standard deviation (σ or s) is a widely used measure of dispersion
+          that calculates the average deviation of individual data points from the
+          mean of the dataset. It gives us an idea of how much the data points deviate
+          from the mean and how widely they are distributed. A smaller standard deviation
+          indicates that the data points are generally close to the mean, while a
+          larger standard deviation indicates greater variability and spread.</p>
+        <p
+        style="margin-left:0px;">The formula to calculate the sample standard deviation is</p>
+          <p style="margin-left:0px;"><span class="math-tex">\(s = \sqrt\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1} = \sqrt\frac{\sum_{i=1}^cf_i(x_i - \bar{x})^2}{(\sum_{i=1}^cf_i) - 1}\)</span>
+          </p>
+          <p style="margin-left:0px;">where,
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(s\)</span>&nbsp;is
+            the sample standard deviation
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(x_i\)</span>&nbsp;is
+            individual data point
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(\bar{x}\)</span>&nbsp;is
+            the sample mean
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(n\)</span>&nbsp;is
+            the size of sample</p>
+          <p style="margin-left:0px;">The formula to calculate the Population standard deviation is</p>
+          <p style="margin-left:0px;"><span class="math-tex">\(\sigma = \sqrt\frac{\sum_{i=1}^N(x_i - \mu)^2}{N} = \sqrt\frac{\sum_{i=1}^Cf_i(x_i - \mu)^2}{\sum_{i=1}^Cf_i}\)</span>
+          </p>
+          <p style="margin-left:0px;">where,
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(\sigma\)</span>&nbsp;is
+            the population standard deviation
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(x_i\)</span>&nbsp;is
+            individual data point
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(\mu\)</span>&nbsp;is
+            the sample mean
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(N\)</span>&nbsp;is
+            the size of population</p>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,65 @@
+class Graph:
+    def __init__(self, vertices):
+        self.graph = [[0 for column in range(vertices)] for row in range(vertices)]
+        self.V = vertices
+
+    def isSafe(self, v, pos, path):
+        # Check if current vertex and last vertex in path are adjacent
+        if self.graph[path[pos - 1]][v] == 0:
+            return False
+
+        # Check if vertex has already been included
+        if v in path:
+            return False
+
+        return True
+
+    def hamiltonianCircuitUtil(self, path, pos):
+        # Base case: All vertices are included in the path
+        if pos == self.V:
+            # And if there is an edge from the last included vertex to the first vertex
+            if self.graph[path[pos - 1]][path[0]] == 1:
+                return True
+            else:
+                return False
+
+        # Try different vertices as a next candidate
+        for v in range(1, self.V):
+            if self.isSafe(v, pos, path):
+                path[pos] = v
+                if self.hamiltonianCircuitUtil(path, pos + 1):
+                    return True
+
+                # Remove current vertex if it doesn't lead to a solution
+                path[pos] = -1
+
+        return False
+
+    def hamiltonianCircuit(self):
+        path = [-1] * self.V
+        path[0] = 0  # Start at the first vertex
+
+        if not self.hamiltonianCircuitUtil(path, 1):
+            print("No Hamiltonian Circuit exists")
+            return False
+
+        self.printSolution(path)
+        return True
+
+    def printSolution(self, path):
+        print("Hamiltonian Circuit exists:")
+        for vertex in path:
+            print(vertex, end=' -> ')
+        print(path[0], "\n")  # print the first vertex again to show the complete cycle
+
+# Example Usage
+g = Graph(5)
+g.graph = [[0, 1, 0, 1, 0],
+           [1, 0, 1, 1, 1],
+           [0, 1, 0, 0, 1],
+           [1, 1, 0, 0, 1],
+           [0, 1, 1, 1, 0]]
+g.hamiltonianCircuit()
+
+# output
+# 0 -> 1 -> 2 -> 4 -> 3 -> 0 

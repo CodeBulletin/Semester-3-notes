@@ -1,0 +1,74 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Finite Difference</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">
+          <br>Finite differences are a mathematical and numerical technique used to
+          approximate the derivatives of a function. They are particularly useful
+          when you have discrete data points or when you want to compute derivatives
+          for functions that are challenging to differentiate analytically.</p>
+        <p
+        style="margin-left:0px;">The basic idea behind finite differences is to estimate the derivative
+          of a function at a specific point by considering the differences in function
+          values at nearby points. There are three common types of finite differences:</p>
+          <p
+          style="margin-left:0px;"><strong>Forward Difference:</strong> The forward difference is used to
+            approximate the first derivative of a function at a point x₀. It is computed
+            as follows:</p>
+            <p style="margin-left:0px;">f'(x₀) ≈ (f(x₀ + h) - f(x₀)) / h</p>
+            <p style="margin-left:0px;">Here, h is a small step size or interval. As h approaches zero, the approximation
+              becomes more accurate and approaches the true derivative.</p>
+            <p style="margin-left:0px;"><strong>Backward Difference:</strong> The backward difference is another
+              way to approximate the first derivative, but it uses values from points
+              before the point x₀. It is computed as follows:</p>
+            <p style="margin-left:0px;">f'(x₀) ≈ (f(x₀) - f(x₀ - h)) / h</p>
+            <p style="margin-left:0px;">Like the forward difference, as h approaches zero, the backward difference
+              becomes a more accurate estimate of the derivative.</p>
+            <p style="margin-left:0px;"><strong>Central Difference:</strong> The central difference is often used
+              to approximate the first derivative as well, but it takes into account
+              values both before and after the point x₀. It is computed as follows:</p>
+            <p
+            style="margin-left:0px;">f'(x₀) ≈ (f(x₀ + h) - f(x₀ - h)) / (2h)</p>
+              <p style="margin-left:0px;">The central difference tends to provide a more accurate estimate than
+                the forward or backward difference for small values of h.</p>
+              <p style="margin-left:0px;">Higher-order finite differences can also be used to estimate higher-order
+                derivatives. For example, the second derivative can be approximated using
+                finite differences, which can be useful for solving differential equations
+                or optimizing functions.</p>
+              <p style="margin-left:0px;">Finite differences are extensively used in numerical analysis, scientific
+                computing, and various fields of engineering and science. They play a crucial
+                role in numerical methods for solving differential equations, approximating
+                integrals, and solving optimization problems when the analytical derivatives
+                of functions are not readily available or are too complex to compute.</p>
+              <h2
+              style="margin-left:0px;">Higher Order</h2>
+                <p style="margin-left:0px;"><strong>Second-Order (Central) Finite Difference for the Second Derivative:</strong>
+                </p>
+                <p style="margin-left:0px;">To approximate the second derivative f''(x₀) of a function at a point
+                  x₀ using central differences:</p>
+                <p style="margin-left:0px;">f''(x₀) ≈ (f(x₀ + h) - 2f(x₀) + f(x₀ - h)) / h²</p>
+                <p style="margin-left:0px;">This formula uses three data points: f(x₀ - h), f(x₀), and f(x₀ + h) to
+                  estimate the second derivative.</p>
+                <p style="margin-left:0px;"><strong>Third-Order Finite Difference for the Third Derivative:</strong>
+                </p>
+                <p style="margin-left:0px;">To approximate the third derivative f'''(x₀) using finite differences,
+                  you would use more data points and a more complex formula:</p>
+                <p style="margin-left:0px;">f'''(x₀) ≈ (f(x₀ - 2h) - 2f(x₀ - h) + 2f(x₀ + h) - f(x₀ + 2h)) / (2h³)</p>
+                <p
+                style="margin-left:0px;">This formula employs five data points: f(x₀ - 2h), f(x₀ - h), f(x₀), f(x₀
+                  + h), and f(x₀ + 2h).</p>
+      </div>
+    </div>
+  </body>
+
+</html>

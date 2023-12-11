@@ -1,0 +1,77 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Dynamic programming</h1>
+
+      <div class="ck-content">
+        <p>Dynamic programming is a problem-solving technique used in computer science
+          and mathematics to solve complex problems by breaking them down into smaller
+          overlapping subproblems. It is particularly useful for optimization problems
+          where the solution can be expressed as the optimal solution to a sequence
+          of smaller subproblems.</p>
+        <p>The key idea behind dynamic programming is to solve each subproblem only
+          once and store its solution in a table or memoization array. This way,
+          when the same subproblem is encountered again, its solution can be retrieved
+          in constant time, rather than recomputing it.</p>
+        <p>Dynamic programming typically involves three steps:</p>
+        <ol>
+          <li><strong>Characterizing the structure of an optimal solution</strong>:
+            This involves identifying the subproblems and defining the relationship
+            between the optimal solution of the original problem and the optimal solutions
+            of its subproblems.</li>
+          <li><strong>Defining the value of an optimal solution recursively</strong>:
+            This step involves formulating a recursive equation that expresses the
+            value of an optimal solution in terms of the values of smaller subproblems.</li>
+          <li><strong>Computing the value of an optimal solution</strong>: This is done
+            by solving the subproblems in a bottom-up manner, starting from the smallest
+            subproblems and gradually building up to the solution of the original problem.</li>
+        </ol>
+        <p>Dynamic programming is known for its efficiency and ability to solve problems
+          that would otherwise be computationally infeasible. It is widely used in
+          various fields, including computer science, operations research, economics,
+          and bioinformatics, to name a few.</p>
+        <h2>Principal of Optimality</h2>
+        <p>The Principle of Optimality, also known as Bellman's Principle of Optimality,
+          is a fundamental concept in dynamic programming. It states that an optimal
+          solution to a problem exhibits the property that every subpath of the solution
+          is also an optimal solution to its respective subproblem.</p>
+        <p>In simpler terms, the principle states that if a solution to a larger
+          problem can be divided into smaller subproblems, then the optimal solution
+          to the larger problem can be constructed from the optimal solutions of
+          the smaller subproblems.</p>
+        <p>This principle is crucial in dynamic programming because it allows us
+          to solve a problem by breaking it down into smaller subproblems and solving
+          them independently. By solving the subproblems optimally, we can then combine
+          their solutions to obtain the optimal solution to the original problem.</p>
+        <p>The Principle of Optimality helps in avoiding redundant computations by
+          storing the solutions to subproblems in a table or memoization array. This
+          way, when a subproblem is encountered again, its solution can be retrieved
+          in constant time, rather than recomputing it.</p>
+        <p>Overall, the Principle of Optimality is a guiding principle in dynamic
+          programming that enables us to solve complex problems efficiently by exploiting
+          the optimal substructure property.</p>
+        <p>&nbsp;</p>
+        <p>Example: Fibonaci</p><pre><code class="language-text-plain">table = {
+	0: 0,
+	1: 1,
+	2: 1
+}
+
+def fibtable(n):
+    if n in table:
+        return table[n]
+    table[n] = fibtable(n-1) + fibtable(n-2)
+    return table[n]</code></pre>
+      </div>
+    </div>
+  </body>
+
+</html>

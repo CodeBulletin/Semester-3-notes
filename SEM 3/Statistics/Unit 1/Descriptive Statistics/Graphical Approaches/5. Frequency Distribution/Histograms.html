@@ -1,0 +1,250 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Histograms</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">A histogram is a graphical representation of the distribution of numerical
+          data. It displays data in intervals or "bins" and illustrates the frequency
+          (or sometimes relative frequency) of data points falling within each interval.
+          Histograms are particularly useful for showing the underlying distribution
+          of a continuous data set and revealing patterns, central tendencies, and
+          variations.</p>
+        <h2 style="margin-left:0px;">Here's how a histogram works</h2>
+        <ol>
+          <li><strong>Data Binning</strong>: The data range is divided into intervals,
+            or bins, that cover the entire range of data values. Each bin represents
+            a specific range of values.</li>
+          <li><strong>Frequency Count</strong>: The number of data points falling within
+            each bin is counted. This count is known as the frequency of that bin.</li>
+          <li><strong>Bar Height</strong>: The height of each bar in the histogram corresponds
+            to the frequency of the bin it represents. The taller the bar, the higher
+            the frequency of data points in that range.</li>
+          <li><strong>Bar Width</strong>: The width of each bar is determined by the
+            width of the interval it represents. The bars in a histogram are adjacent
+            and typically touch each other.</li>
+        </ol>
+        <h2 style="margin-left:0px;">Advantages of Histograms</h2>
+        <ol>
+          <li><strong>Distribution Visualization</strong>: Histograms offer a clear
+            visualization of the data distribution, revealing patterns, central tendencies
+            (like the mean or median), and variations.</li>
+          <li><strong>Continuous Data</strong>: They are particularly useful for displaying
+            the distribution of continuous data, as opposed to discrete data.</li>
+          <li><strong>Binned Data</strong>: Histograms group data into bins, which can
+            help simplify complex data distributions.</li>
+          <li><strong>Comparison</strong>: Histograms allow for easy comparison between
+            different data sets, or between the same data set under different conditions.</li>
+          <li><strong>Identifying Outliers</strong>: Outliers and extreme values are
+            clearly visible in histograms, helping to identify data points that significantly
+            differ from the rest.</li>
+        </ol>
+        <h2 style="margin-left:0px;">Disadvantages of Histograms</h2>
+        <ol>
+          <li><strong>Binning Sensitivity</strong>: The appearance of a histogram can
+            vary based on the choice of bin width and starting point, potentially influencing
+            the interpretation.</li>
+          <li><strong>Limited to Data Distribution</strong>: Histograms don't show individual
+            data points; they focus on data distribution within intervals.</li>
+          <li><strong>Subjectivity</strong>: The interpretation of histograms can be
+            subjective, and different viewers might derive slightly different insights
+            from the same data.</li>
+          <li><strong>Data Scale Impact</strong>: Histograms can look different when
+            data scales change, impacting their interpretation.</li>
+        </ol>
+        <h2>Types of Histograms</h2>
+        <figure class="table" style="width:461px;">
+          <table style="background-color:rgb(68, 70, 84);border:0px solid inherit;">
+            <thead>
+              <tr>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Aspect</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Frequency Histograms</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border:1px solid rgb(217, 217, 227);padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Relative Frequency Histograms</strong>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Representation</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Displays the frequency of data points in each bin.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Displays the relative frequency (proportion) of data points in each bin.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Vertical Axis</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Represents the frequency (count) of data points.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Represents the relative frequency (proportion) of data points, often as
+                  percentages.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Purpose</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Emphasizes the actual count of data points in each bin.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Focuses on the proportion of data points in relation to the whole data
+                  set.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Scale</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">The scale on the vertical axis is based on the frequency count.</td>
+                <td
+                style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">The scale on the vertical axis is based on relative frequencies (usually
+                  in percentages).</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Total Area</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">The total area under the histogram is the total count of data points.</td>
+                <td
+                style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">The total area under the histogram is always equal to 100% or 1, representing
+                  the entire data set.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Calculation of Heights</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Heights of bars are determined by the frequency counts.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Heights of bars are calculated by dividing the frequency counts by the
+                  total number of data points (relative frequency).</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Normalization</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Frequency histograms are not normalized.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Relative frequency histograms are normalized to represent proportions.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Comparability</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Comparing histograms of different sample sizes might be challenging as
+                  the frequency counts differ.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Comparing histograms of different sample sizes is easier since relative
+                  frequencies allow for direct comparison.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Insights</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Useful when you want to understand the actual count of data points in
+                  each bin.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Useful when you want to understand the proportion of data points in each
+                  bin relative to the entire data set.</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <h2>Difference B/w Histograms and Bar Plots</h2>
+        <figure class="table" style="width:461px;">
+          <table style="background-color:rgb(68, 70, 84);border:0px solid inherit;">
+            <thead>
+              <tr>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Aspect</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Histograms</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border:1px solid rgb(217, 217, 227);padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Bar Plots</strong>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>&nbsp;<strong>Visualize</strong>
+                </td>
+                <td>&nbsp;Must show All the classes</td>
+                <td>&nbsp;Can omit some classes</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Data Type</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Typically used for displaying continuous data.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Can be used for both categorical and numerical data.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Intervals/Bins</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Data is grouped into intervals (bins).</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">No specific requirement for grouping data.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>X-Axis</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Represents the ranges or intervals of data.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Represents individual categories or groups.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Y-Axis</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Represents the frequency of data points within each bin.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Represents values, frequencies, or proportions depending on the data type.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Bar Appearance</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Bars in a histogram are often adjacent, with no gaps between them.</td>
+                <td
+                style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Bars can be separated or have gaps between them.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Bar Width</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Bar width varies based on the bin width and data distribution.</td>
+                <td
+                style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Bar width is consistent and not influenced by data distribution.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Continuity</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Histograms are suitable for displaying continuous data with intervals.</td>
+                <td
+                style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Bar plots can represent both continuous and categorical data.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Distribution</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Histograms show data distribution patterns, central tendencies, and variations.</td>
+                <td
+                style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Bar plots are more suitable for comparing individual values or categories.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Data Complexity</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Useful for displaying the distribution of complex data sets.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Suitable for displaying data with various levels of complexity.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Comparison</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Comparing the distribution of data is easier due to binning.</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Suitable for comparing individual values or categories directly.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Normalization</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Histograms can be normalized to create probability density histograms.</td>
+                <td
+                style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Bar plots can be normalized, but it's less common.</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>Common Usage</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Commonly used in statistical analysis and data visualization.</td>
+                <td
+                style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Frequently used for displaying categorical data or simple comparisons.</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

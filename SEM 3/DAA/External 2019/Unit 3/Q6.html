@@ -1,0 +1,82 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q6</h1>
+
+      <div class="ck-content">
+        <h2>(a) Given 4 matrices A1, A2, A3 &amp; A4 with dimensions p as (20, 5, 10, 2, 4}. Find the best way of multiplying these 4 matrices. Draw tables for min cost m[i. j]. and the best value of k.</h2>
+        <p><span class="math-tex">\(DIMS = \{d_0:20, d_1:5, d_2:10, d_3:2, d_4:4\}\)</span>
+        </p>
+        <p><span class="math-tex">\(\binom{A_1}{20 *5}\)</span><span class="math-tex">\(\binom{A_2}{5 * 10}\)</span>
+          <span
+          class="math-tex">\(\binom{A_3}{10 * 2}\)</span><span class="math-tex">\(\binom{A_4}{2 * 4}\)</span>
+        </p>
+        <figure class="image image-style-align-left">
+          <img src="Q6/image.jpg">
+        </figure>
+        <h2>(b) What is the difference between dynamic programming (D.P) and recursion? State the necessary conditions for D.P. to be applicable.</h2>
+        <p>Dynamic Programming (DP) and recursion are both programming techniques
+          used to solve complex problems by breaking them down into simpler subproblems.
+          However, there are key differences between them, as well as specific conditions
+          under which dynamic programming is applicable.</p>
+        <h3>Differences Between Dynamic Programming and Recursion</h3>
+        <p><strong>Recursion</strong>:</p>
+        <ul>
+          <li><strong>Basic Concept</strong>: In recursion, a problem is solved by breaking
+            it down into smaller instances of the same problem. A recursive function
+            calls itself with a smaller subset of the original problem.</li>
+          <li><strong>Memory Usage</strong>: Recursion can be memory-intensive since
+            each recursive call adds a new layer to the stack. If the recursion is
+            too deep, it might lead to a stack overflow.</li>
+          <li><strong>Efficiency</strong>: Recursive solutions can be less efficient,
+            especially if they involve recalculating the same subproblems multiple
+            times. This issue is known as overlapping subproblems.</li>
+          <li><strong>Simplicity</strong>: Recursive solutions are often simpler and
+            more intuitive to write.</li>
+        </ul>
+        <p><strong>Dynamic Programming</strong>:</p>
+        <ul>
+          <li><strong>Basic Concept</strong>: DP is an optimization technique that solves
+            complex problems by breaking them down into simpler subproblems, storing
+            the results of these subproblems, and reusing these results in similar
+            subproblems.</li>
+          <li><strong>Memory Usage</strong>: DP requires additional memory to store
+            the results of subproblems (memoization in top-down approach or tabulation
+            in bottom-up approach).</li>
+          <li><strong>Efficiency</strong>: DP is more efficient for problems with overlapping
+            subproblems because it ensures that each subproblem is solved only once.</li>
+          <li><strong>Complexity</strong>: Implementing DP solutions can be more complex
+            compared to simple recursive solutions.</li>
+        </ul>
+        <h3>Necessary Conditions for Dynamic Programming</h3>
+        <p>For dynamic programming to be applicable and effective, the problem typically
+          needs to satisfy two main properties:</p>
+        <p><strong>Optimal Substructure</strong>:</p>
+        <ul>
+          <li>This means that an optimal solution to the problem can be constructed
+            efficiently from optimal solutions to its subproblems.</li>
+          <li>Example: In the shortest path problem, the shortest path from A to C via
+            B is the shortest path from A to B combined with the shortest path from
+            B to C.</li>
+        </ul>
+        <p><strong>Overlapping Subproblems</strong>:</p>
+        <ul>
+          <li>This occurs when the problem can be broken down into subproblems which
+            are reused several times.</li>
+          <li>Example: In the Fibonacci sequence, to calculate <code>Fib(n)</code>, you
+            need <code>Fib(n-1)</code> and <code>Fib(n-2)</code>, both of which in turn
+            require the calculation of smaller Fibonacci numbers.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

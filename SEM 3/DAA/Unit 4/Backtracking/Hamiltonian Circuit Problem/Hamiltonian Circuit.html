@@ -1,0 +1,56 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Hamiltonian Circuit</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">A Hamiltonian circuit is a concept in graph theory, a branch of mathematics.
+          It refers to a circuit that visits every vertex of a graph exactly once
+          and returns to the starting vertex, forming a closed path.</p>
+        <p style="margin-left:0px;">In simpler terms, a Hamiltonian circuit is a path that starts and ends
+          at the same vertex and includes all the other vertices of the graph without
+          revisiting any vertex. If such a circuit exists in a graph, the graph is
+          said to be Hamiltonian.</p>
+        <p style="margin-left:0px;">A related concept is a Hamiltonian path, which is a path that visits each
+          vertex exactly once but may not necessarily return to the starting vertex.</p>
+        <p
+        style="margin-left:0px;">Determining whether a Hamiltonian circuit or path exists in a given graph
+          is a well-known problem in graph theory and is known to be NP-complete,
+          meaning there is no known efficient algorithm to solve it for all possible
+          cases. However, for certain types of graphs, specific conditions or algorithms
+          may help identify the presence or absence of Hamiltonian circuits.</p>
+          <p
+          style="margin-left:0px;">&nbsp;</p>
+            <p style="margin-left:0px;"><strong>Complete Bipartite Graphs:</strong> A complete bipartite graph&nbsp;
+              <span
+              class="math-tex">\(K_{m,n}\)</span>​ (where m and n are both greater than or equal to 2)
+                does not have a Hamiltonian circuit. These graphs have two disjoint sets
+                of vertices, and there are no edges between vertices within the same set.</p>
+            <p
+            style="margin-left:0px;"><strong>Disconnected Graphs:</strong> If a graph is disconnected (meaning
+              it consists of two or more disconnected components), and at least one of
+              the components has an odd number of vertices, then the entire graph cannot
+              have a Hamiltonian circuit. This is because a Hamiltonian circuit must
+              visit each vertex exactly once, and if there is an odd component, the circuit
+              cannot return to the starting vertex.</p>
+              <p style="margin-left:0px;"><strong>Graphs with "Choke Points":</strong> Some graphs have vertices
+                with relatively high degrees compared to the rest of the graph, creating
+                "choke points" that may prevent the existence of a Hamiltonian circuit.
+                This is related to the conditions mentioned in Dirac's and Ore's theorems,
+                where high-degree vertices increase the likelihood of a Hamiltonian circuit.</p>
+              <p
+              style="margin-left:0px;"><strong>Graphs With Pendant Nodes: </strong>Some graphs have nodes with
+                1 degree these type of graphs do not have a Hamiltonian circuit</p>
+      </div>
+    </div>
+  </body>
+
+</html>

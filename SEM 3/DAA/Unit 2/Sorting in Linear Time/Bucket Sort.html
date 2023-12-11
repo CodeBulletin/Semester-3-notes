@@ -1,0 +1,79 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Bucket Sort</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Bucket Sort is a sorting algorithm that is particularly useful when you
+          have a set of uniformly distributed input values over a known range. It
+          divides the input array into a fixed number of "buckets," each of which
+          is then sorted individually, either using another sorting algorithm or
+          by recursively applying bucket sort. The sorted buckets are then concatenated
+          to produce the final sorted output.</p>
+        <p style="margin-left:0px;">Here's a high-level overview of the Bucket Sort algorithm:</p>
+        <ol>
+          <li><strong>Determine the range</strong>: Find the minimum and maximum values
+            in the input array to determine the range of values.</li>
+          <li><strong>Create buckets</strong>: Divide the range of values into a fixed
+            number of equally sized buckets. The number of buckets and their size may
+            vary depending on the specific implementation and the characteristics of
+            the input data.</li>
+          <li><strong>Scatter the elements</strong>: Iterate through the input array
+            and place each element into the appropriate bucket. To determine the correct
+            bucket for each element, you can use a simple formula like <strong>(value - min) / bucket_size</strong>,
+            where "value" is the value of the element, "min" is the minimum value in
+            the input, and "bucket_size" is the size of each bucket.</li>
+          <li><strong>Sort each bucket</strong>: For each non-empty bucket, sort its
+            elements using a suitable sorting algorithm. This can be done recursively
+            using bucket sort or by using another sorting method like insertion sort.</li>
+          <li><strong>Concatenate the sorted buckets</strong>: After sorting each bucket,
+            concatenate them in order to obtain the final sorted array.</li>
+        </ol>
+        <p style="margin-left:0px;">Bucket Sort has an average-case time complexity of&nbsp;<span class="math-tex">\(O(n+\frac{n^2}k+k)\)</span>,
+          where "<span class="math-tex">\(n\)</span>" is the number of elements,
+          "<span class="math-tex">\(k\)</span>" is the number of buckets, and the
+          term&nbsp;<span class="math-tex">\(\frac {n^2} k\)</span>&nbsp;represents
+          the time it takes to sort each bucket. The algorithm can perform quite
+          well when the input data is evenly distributed among the buckets, and the
+          number of buckets is chosen appropriately.</p><pre><code class="language-text-plain">def bucket_sort(arr, num_buckets):
+    if len(arr) == 0:
+        return arr
+
+    min_val, max_val = min(arr), max(arr)
+    bucket_range = (max_val - min_val) / num_buckets
+
+    # Create empty buckets
+    buckets = [[] for _ in range(num_buckets)]
+
+    # Scatter the elements into buckets
+    for num in arr:
+        index = int((num - min_val) / bucket_range)
+        buckets[index].append(num)
+
+    sorted_buckets = []
+    
+    # Sort each bucket (you can use another sorting algorithm)
+    for bucket in buckets:
+        if bucket:
+            sorted_buckets.extend(sorted(bucket))
+
+    return sorted_buckets
+
+# Example usage:
+arr = [4, 2, 2, 8, 3, 3, 1]
+num_buckets = 5
+sorted_arr = bucket_sort(arr, num_buckets)
+print(sorted_arr)</code></pre>
+      </div>
+    </div>
+  </body>
+
+</html>

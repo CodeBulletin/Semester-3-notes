@@ -1,0 +1,59 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Disjoint Sets</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Disjoint sets, often referred to as disjoint sets or disjoint set data
+          structures, are a fundamental concept in computer science and data structure
+          theory. They are used to manage a collection of sets such that no element
+          belongs to more than one set within the collection. The primary operations
+          associated with disjoint sets are:</p>
+        <ol>
+          <li><strong>MakeSet(x):</strong> This operation creates a new set containing
+            element x. Initially, each element is in its own individual set.</li>
+          <li><strong>Union(x, y):</strong> This operation combines two sets that contain
+            elements x and y, respectively, into a single set, effectively merging
+            them. The two original sets become subsets of the new, larger set.&nbsp;
+            <br>Time Complexity:&nbsp;<span class="math-tex">\(O(log n)\)</span>
+          </li>
+          <li><strong>Find(x):</strong> This operation is used to determine which set
+            an element x belongs to. It returns a representative element of the set
+            containing x, which is often used to identify and compare sets.
+            <br>Time Complexity:&nbsp;<span class="math-tex">\(O(logn)\)</span>
+          </li>
+        </ol>
+        <p style="margin-left:0px;">Disjoint sets are used in various algorithms and applications, including:</p>
+        <ol>
+          <li><strong>Kruskal's Minimum Spanning Tree Algorithm:</strong> Disjoint sets
+            are used to keep track of the connected components of a graph and to efficiently
+            find edges that do not form cycles in the minimum spanning tree.</li>
+          <li><strong>Connected Components in Graphs:</strong> Disjoint sets help find
+            connected components in a graph quickly, making it possible to determine
+            which nodes are in the same connected component.</li>
+          <li><strong>Dynamic Equivalence Relations:</strong> Disjoint sets can be used
+            to maintain equivalence relations among elements. For example, in a set
+            of elements, you can use disjoint sets to determine if two elements are
+            in the same equivalence class or not.</li>
+          <li><strong>Set Partitioning:</strong> Disjoint sets are used to partition
+            a set into non-overlapping subsets or clusters, which can be useful in
+            various clustering algorithms.</li>
+        </ol>
+        <p style="margin-left:0px;">The data structure and algorithms for disjoint sets are designed to be
+          efficient, with various optimizations such as path compression and union
+          by rank to ensure fast execution. Disjoint set data structures can be implemented
+          using arrays, linked lists, or trees, depending on the specific algorithm
+          and requirements.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

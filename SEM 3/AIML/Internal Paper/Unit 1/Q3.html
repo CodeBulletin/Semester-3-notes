@@ -1,0 +1,206 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q3</h1>
+
+      <div class="ck-content">
+        <h2>(a) Analyze the Travelling Salesman Problem (TSP) with respect to the seven problem characteristics.&nbsp;</h2>
+        <p style="margin-left:0px;">The Traveling Salesman Problem (TSP) is a well-known combinatorial optimization
+          problem in the field of computer science and mathematics. In its classic
+          form, the problem can be described as follows:</p>
+        <p style="margin-left:0px;"><strong>Problem Statement:</strong> Given a list of cities and the distances
+          between each pair of cities, the TSP asks for the shortest possible route
+          that visits each city exactly once and returns to the starting city.</p>
+        <ol>
+          <li>Is the problem decomposable into the smaller problem - <strong>No</strong>
+            <ul>
+              <li><strong>Reason</strong>: The Traveling Salesperson Problem (TSP) is not
+                easily decomposable into smaller subproblems because it is an NP-hard problem.
+                This means that there is no known efficient algorithm to break it down
+                into smaller, independent subproblems that can be solved separately and
+                then easily combined to find the optimal solution for the entire problem</li>
+            </ul>
+          </li>
+          <li>can solution steps be ignored or undone - <strong>No</strong>
+            <ul>
+              <li><strong>Reason</strong>: in the context of the Traveling Salesperson Problem
+                (TSP), once you have taken a solution step (e.g., visiting a city), it
+                cannot be easily ignored or undone. TSP is a problem where you must find
+                the most efficient route that visits all cities exactly once and returns
+                to the starting city. Each step in the solution builds upon the previous
+                steps, and there is no straightforward way to backtrack or undo a step
+                without reconsidering the entire solution. To improve or change the solution,
+                you typically need to explore different permutations or heuristics from
+                scratch.</li>
+            </ul>
+          </li>
+          <li>is the universe of the problem predictable - <strong>No</strong>
+            <ul>
+              <li><strong>Reason</strong>: the universe of the Traveling Salesperson Problem
+                (TSP) is not predictable in the sense that there is no known efficient
+                algorithm to predict or determine the optimal solution for a large number
+                of cities in polynomial time.</li>
+            </ul>
+          </li>
+          <li>is a good solution to the problem absolute or relative - <strong>Relative</strong>
+            <ul>
+              <li><strong>Reason</strong>: A good solution to the Traveling Salesperson
+                Problem (TSP) is relative rather than absolute. In TSP, the goal is to
+                find a tour that visits all cities exactly once and returns to the starting
+                city while minimizing the total distance or cost of the tour. However,
+                what is considered a "good" solution can vary depending on the specific
+                instance of the problem, the available computational resources, and the
+                specific requirements or constraints of the problem.
+                <br>There may be instances of TSP where it is impossible to find the absolute
+                optimal solution due to the combinatorial nature of the problem, and in
+                such cases, a good solution is relative to the algorithms and heuristics
+                used to solve it.</li>
+            </ul>
+          </li>
+          <li>is the problem to the solution state or a path - <strong>path</strong>
+            <ul>
+              <li><strong>Reason</strong>: The Traveling Salesperson Problem (TSP) is a
+                problem related to finding the optimal path or tour that visits all cities
+                exactly once and returns to the starting city while minimizing the total
+                distance or cost of the tour.</li>
+            </ul>
+          </li>
+          <li>Is their need of knowledge in solving this problem using ai - <strong>Yes</strong>
+            <ul>
+              <li><strong>Problem Representation:</strong> You need knowledge to represent
+                the TSP problem correctly.</li>
+              <li><strong>Algorithm Selection:</strong> Choosing the right AI algorithm or
+                technique for solving TSP requires knowledge of the strengths and weaknesses
+                of different approaches.&nbsp;</li>
+              <li><strong>Data Preprocessing</strong>
+              </li>
+              <li><strong>Parameter Tuning:</strong>
+              </li>
+              <li><strong>Result Evaluation</strong>
+              </li>
+              <li><strong>Algorithm Adaptation</strong>
+              </li>
+            </ul>
+          </li>
+          <li>Does the task of solving this problem requires human intervention - <strong>No</strong>
+            <ul>
+              <li><strong>Reason</strong>: TSP is a mathematical and computational problem,
+                and there are various algorithms and techniques that can be applied to
+                solve it without direct human involvement</li>
+            </ul>
+          </li>
+        </ol>
+        <h2>(b) Define state spaces in AI. Why are they useful? Write state space for any suitable problem of your choice.&nbsp;</h2>
+        <p style="margin-left:0px;">In artificial intelligence, a state space represents the set of all possible
+          states that a problem-solving agent can encounter while trying to reach
+          a goal or solve a particular problem. It is a fundamental concept in various
+          AI techniques, especially in search algorithms and problem-solving domains.
+          The state space defines the environment or problem in terms of its possible
+          configurations, and agents navigate through this space to find a solution
+          or make decisions.</p>
+        <p style="margin-left:0px;">State spaces are useful in AI for several reasons:</p>
+        <ol>
+          <li><strong>Problem Representation</strong>: State spaces provide a structured
+            and organized way to represent complex problems, making them easier to
+            analyze and solve.</li>
+          <li><strong>Search and Planning</strong>: State spaces are crucial for search
+            algorithms like breadth-first search, depth-first search, A* search, and
+            more. Agents can systematically explore the state space to find a solution.</li>
+          <li><strong>Problem Solving</strong>: By defining the state space, AI systems
+            can break down a problem into manageable states and transitions, allowing
+            for step-by-step problem solving.</li>
+          <li><strong>Decision-Making</strong>: State spaces help in modeling decision-making
+            processes in AI, enabling agents to make informed choices by evaluating
+            the consequences of different actions.</li>
+          <li><strong>Heuristic Evaluation</strong>: In many AI applications, state
+            spaces are used in conjunction with heuristics to estimate the distance
+            or cost to the goal state. This guides the search process efficiently.</li>
+        </ol>
+        <p style="margin-left:0px;">Now, let's define a simple state space for the "8-Puzzle" problem as an
+          example:</p>
+        <p style="margin-left:0px;"><strong>Problem:</strong> The 8-Puzzle is a classic puzzle game consisting
+          of a 3x3 grid with eight numbered tiles and one blank space. The objective
+          is to rearrange the tiles to reach a target configuration, usually starting
+          from a scrambled initial state.</p>
+        <p style="margin-left:0px;"><strong>State Space Representation:</strong>
+        </p>
+        <ul>
+          <li>Each state in the state space represents a unique arrangement of the 8
+            puzzle tiles (numbers 1 through 8) and one empty space.</li>
+          <li>The state space can be represented as a 3x3 grid, where each cell can
+            contain either a tile (numbered 1-8) or be empty (represented as blank).</li>
+        </ul>
+        <p style="margin-left:0px;">Here's an example of an initial state and a target (goal) state:</p>
+        <p
+        style="margin-left:0px;"><strong>Initial State:</strong>
+          </p>
+          <figure class="table">
+            <table>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>&nbsp;</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>7</td>
+                  <td>6</td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+          <p style="margin-left:0px;"><strong>Goal State:</strong>
+          </p>
+          <figure class="table">
+            <table>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>&nbsp;</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+          <p style="margin-left:0px;">In this example, the state space consists of all possible configurations
+            of the 8-Puzzle that can be reached through legal tile moves (up, down,
+            left, or right). Agents can use various search algorithms to navigate this
+            state space to find a sequence of moves that transform the initial state
+            into the goal state.</p>
+          <h2>(c) Trace the constraint satisfaction procedure to solve the following cryptarithmetic problem:</h2>
+          <p>&nbsp; &nbsp;CROSS
+            <br>+ROADS
+            <br>DANGER</p>
+          <figure class="image">
+            <img src="Q3/image.png">
+          </figure>
+          <p>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

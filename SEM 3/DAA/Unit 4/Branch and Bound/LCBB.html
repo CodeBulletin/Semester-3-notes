@@ -1,0 +1,67 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>LCBB</h1>
+
+      <div class="ck-content">
+        <p>The Least Cost Branch and Bound method, often just referred to as "Least
+          Cost Branch and Bound," is a specific variation of the Branch and Bound
+          algorithm. It's particularly used in optimization problems where the goal
+          is to find a solution with the least cost, such as in routing or scheduling
+          problems. The method prioritizes exploration of the solution space based
+          on a cost function, aiming to find the least costly solution.</p>
+        <h3>Key Concepts:</h3>
+        <p><strong>Cost Function:</strong>
+        </p>
+        <ul>
+          <li>Each node (or state) in the solution space has an associated cost.</li>
+          <li>This cost represents the cumulative cost of reaching that state from the
+            starting point.</li>
+        </ul>
+        <p><strong>Priority Queue:</strong>
+        </p>
+        <ul>
+          <li>The algorithm uses a priority queue to store and retrieve nodes.</li>
+          <li>Nodes are prioritized based on their cost, with the least costly nodes
+            being explored first.</li>
+        </ul>
+        <h3>Algorithm Overview:</h3>
+        <p><strong>Initialization:</strong>
+        </p>
+        <ul>
+          <li>Start with a root node representing the initial state.</li>
+          <li>Initialize the best-known solution to infinity (or the worst possible
+            cost).</li>
+        </ul>
+        <p><strong>Iterative Process:</strong>
+        </p>
+        <ul>
+          <li>Expand the least costly node from the priority queue.</li>
+          <li>If the expanded node is a solution and its cost is less than the current
+            best solution, update the best solution.</li>
+          <li>If the node is not a solution, generate its child nodes (branching), calculate
+            their costs, and add them to the priority queue.</li>
+          <li>Continue this process until the priority queue is empty or an acceptable
+            solution is found.</li>
+        </ul>
+        <p><strong>Pruning:</strong>
+        </p>
+        <ul>
+          <li>If the cost of a node exceeds the best-known solution, it is not explored
+            further (pruned).</li>
+          <li>This pruning step is crucial for reducing the search space and improving
+            efficiency.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

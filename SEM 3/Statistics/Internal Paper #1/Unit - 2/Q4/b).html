@@ -1,0 +1,42 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>b)</h1>
+
+      <div class="ck-content">
+        <p>Consider a binomial experiment with n = 10 and p = 0.10</p>
+        <p><span class="text-big"><strong>(I) Compute f(0)</strong></span>
+        </p>
+        <p><span class="math-tex">\(f(0) = &nbsp;{10 \choose 0}p^0(1-p)^{10} = 1 * 0.9^{10} = &nbsp;0.3486\)</span>
+        </p>
+        <p><span class="text-big"><strong>(II) Compute f(2)</strong></span>
+        </p>
+        <p><span class="math-tex">\(f(2) = &nbsp;{10 \choose 2}p^2(1-p)^{8} = 45 * 0.01*0.43 = 0.1935\)</span>
+        </p>
+        <p><span class="text-big"><strong>(III) P(x ≤ 2)</strong></span>
+        </p>
+        <p><span class="math-tex">\(P(x \le 2) = f(0) + f(1) + f(2) = 0.3486 + {10 \choose 1}p(1-p)^9+0.1935 = 0.3486 + 0.3874+0.1935 = 0.9295\)</span>
+        </p>
+        <p><span class="text-big"><strong>(IV) P(X ≥ 1)</strong></span>
+        </p>
+        <p><span class="math-tex">\(P(x &gt;=1) = 1 -P(x=0) = 1 - 0.3486 = 0.6514\)</span>
+        </p>
+        <p><span class="text-big"><strong>(V) E(x), Var(x) and Sigma</strong></span>
+        </p>
+        <p><span class="math-tex">\(E(x) = n * p = 1\)</span>
+          <br><span class="math-tex">\(Var(x) = n * p (1- p) = 0.9\)</span>
+          <br><span class="math-tex">\(\sigma = \sqrt{Var(x)} = \sqrt{0.9} =0.9487\)</span>
+        </p>
+      </div>
+    </div>
+  </body>
+
+</html>

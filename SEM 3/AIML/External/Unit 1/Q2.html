@@ -1,0 +1,90 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q2</h1>
+
+      <div class="ck-content">
+        <h2>a) Explain the following search algorithms with example:&nbsp;<br>I) MEA<br>ii) AO*</h2>
+        <h4>i) MEA (Means-Ends Analysis)</h4>
+        <p><strong>MEA</strong> is a problem-solving technique used in AI that involves
+          breaking down the difference between the current state and the goal state
+          into smaller, more manageable differences, creating sub-goals to address
+          these differences. It's a way of guiding the search in problem-solving
+          by identifying the "ends" to be achieved and finding the "means" to achieve
+          them.</p>
+        <p><strong>Example</strong>: Consider the problem of solving a Rubik's Cube.
+          The goal state is a cube where each face is a single color. The current
+          state is a mixed-up cube. MEA would involve:</p>
+        <ol>
+          <li>Identifying the largest discrepancy between the current and goal states
+            (e.g., a specific face not being completed).</li>
+          <li>Creating a sub-goal to address this (e.g., aligning one face completely).</li>
+          <li>Finding the moves (means) that reduce the discrepancy between the current
+            state and the sub-goal.</li>
+          <li>Repeating the process until the goal state is reached.</li>
+        </ol>
+        <h4>ii) AO* (And-Or Graph Search Algorithm)</h4>
+        <p><strong>AO</strong>* is an algorithm used in AI for searching graph structures
+          that contain "and" nodes and "or" nodes. It's particularly useful for problems
+          where actions have multiple outcomes (the and-nodes) and there are multiple
+          actions available (the or-nodes).</p>
+        <p><strong>Example</strong>: Consider a scenario in game development where
+          a character needs to find a treasure in a dungeon. The dungeon has rooms
+          (or-nodes) with multiple paths and certain conditions (and-nodes) like
+          fighting a monster or finding a key. The AO* algorithm would:</p>
+        <ol>
+          <li>Start at the initial state (entering the dungeon).</li>
+          <li>Explore paths (or-nodes) while dealing with conditions (and-nodes).</li>
+          <li>Keep track of the best path (least cost or most reward) to the treasure.</li>
+          <li>Backtrack and explore alternate paths if a dead-end or too costly path
+            is encountered, until the treasure is found.</li>
+        </ol>
+        <h2>b) Difference between AI, ML and Deep Learning? Give Suitable Example.</h2>
+        <ul>
+          <li><strong>Artificial Intelligence (AI)</strong>: AI is a broad field of
+            computer science concerned with building smart machines capable of performing
+            tasks that typically require human intelligence. It's the overarching discipline
+            that encompasses everything from rule-based systems to learning algorithms.</li>
+        </ul>
+        <p style="margin-left:80px;"><strong>Example</strong>: A smart thermostat system that learns your preferences
+          and adjusts the temperature based on the time of day, weather, and your
+          presence.</p>
+        <ul>
+          <li><strong>Machine Learning (ML)</strong>: ML is a subset of AI. It refers
+            to the methods that enable machines to improve at tasks with experience.
+            ML algorithms use statistical methods to enable machines to improve with
+            data.</li>
+        </ul>
+        <p style="margin-left:80px;"><strong>Example</strong>: A recommendation system on a streaming platform
+          like Netflix, which suggests movies or TV shows based on your viewing history.</p>
+        <ul>
+          <li><strong>Deep Learning</strong>: Deep Learning is a subset of ML, primarily
+            concerned with algorithms inspired by the structure and function of the
+            brain called artificial neural networks. It's particularly powerful for
+            tasks involving large amounts of data and complex patterns.</li>
+        </ul>
+        <p style="margin-left:80px;"><strong>Example</strong>: Voice assistants like Siri or Alexa, which use
+          deep neural networks for natural language processing and understanding
+          human speech.</p>
+        <p>In summary:</p>
+        <ul>
+          <li><strong>AI</strong> is the broadest concept, involving machines that can
+            perform tasks smartly.</li>
+          <li><strong>ML</strong> is a subset of AI with algorithms that learn from and
+            make predictions or decisions based on data.</li>
+          <li><strong>Deep Learning</strong> is a subset of ML focused on neural networks
+            and is particularly adept at learning from large datasets.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

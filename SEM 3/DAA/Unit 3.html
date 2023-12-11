@@ -1,0 +1,82 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Unit 3</h1>
+
+      <div class="ck-content">
+        <p><strong>Greedy Algorithms</strong>: General Concept, Applications, Activity
+          Selection Problem, Fractional Knapsack problem, Job Sequencing with Deadlines,
+          Huffman Coding, Analysis and Correctness of Prim’s, Kruskal Algorithm and
+          Dijkstra Algorithm.</p>
+        <p><strong>Dynamic Programming</strong>: General Concept, Matrix-Chain Multiplication
+          Problem, Longest Common Subsequence Problem, Bellman-Ford Algorithm,
+          <span
+          style="background-color:hsl(150,75%,60%);color:hsl(0,0%,0%);">Analysis and Correctness of Floyd-Warshall Algorithm, Optimal Binary Search
+            Trees, 0/1 Knapsack Problem, Network Flow Problem.</span>
+        </p>
+        <figure class="table" style="width:956.667px;">
+          <table style="background-color:rgb(30, 31, 42);border:0px solid inherit;">
+            <thead>
+              <tr>
+                <th style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Criteria</th>
+                <th style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Greedy Algorithm</th>
+                <th style="background-color:var(--background);border:0px solid var(--border-primary);padding:0.5rem 0.75rem;">Dynamic Programming</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Approach</td>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Makes locally optimal choices at each step without considering the overall
+                  solution</td>
+                <td style="background-color:var(--background);border:0px solid var(--border-primary);padding:0.5rem 0.75rem;">Solves subproblems and builds up to the overall solution</td>
+              </tr>
+              <tr>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Optimal Solution</td>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">May or may not guarantee the optimal solution</td>
+                <td style="background-color:var(--background);border:0px solid var(--border-primary);padding:0.5rem 0.75rem;">Guarantees the optimal solution</td>
+              </tr>
+              <tr>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Subproblem Overlapping</td>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Does not consider subproblem overlapping</td>
+                <td style="background-color:var(--background);border:0px solid var(--border-primary);padding:0.5rem 0.75rem;">Exploits subproblem overlapping by storing solutions in a table/memoization
+                  array</td>
+              </tr>
+              <tr>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Time Complexity</td>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Often faster than dynamic programming due to its greedy nature</td>
+                <td
+                style="background-color:var(--background);border:0px solid var(--border-primary);padding:0.5rem 0.75rem;">Can have higher time complexity depending on the problem and subproblem
+                  structure</td>
+              </tr>
+              <tr>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Space Complexity</td>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Generally requires less space</td>
+                <td style="background-color:var(--background);border:0px solid var(--border-primary);padding:0.5rem 0.75rem;">Can require more space due to the need to store solutions for subproblems</td>
+              </tr>
+              <tr>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Problem Types</td>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Suitable for problems where a greedy choice at each step leads to the
+                  optimal solution</td>
+                <td style="background-color:var(--background);border:0px solid var(--border-primary);padding:0.5rem 0.75rem;">Suitable for problems with overlapping subproblems and optimal substructure</td>
+              </tr>
+              <tr>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Examples</td>
+                <td style="background-color:var(--background);border-bottom-width:0px;border-color:var(--border-primary);border-left-width:0px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.5rem 0.75rem;">Fractional Knapsack, Dijkstra's algorithm</td>
+                <td style="background-color:var(--background);border:0px solid var(--border-primary);padding:0.5rem 0.75rem;">Fibonacci sequence, Longest Common Subsequence, Shortest Path in a Graph</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,72 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Backtracking</h1>
+
+      <div class="ck-content">
+        <p>Backtracking is a systematic method for generating all (or some) possible
+          configurations of a given problem. It's widely used in the design and analysis
+          of algorithms. The key features of backtracking include:</p>
+        <p><strong>Recursive Approach</strong>: Backtracking is typically implemented
+          using recursion, where the algorithm explores each possibility until it
+          finds a solution or concludes that no solution exists.</p>
+        <p><strong>State Space Tree</strong>: The set of all possible states of the
+          problem forms a state space tree. Each node represents a partial solution.
+          The root is an initial state, and the leaves are final states (solutions
+          or failures).</p>
+        <p><strong>Depth-First Search (DFS)</strong>: Backtracking algorithms perform
+          a depth-first search of the state space tree, exploring one branch to its
+          fullest before backtracking and trying another.</p>
+        <p><strong>Pruning</strong>: The algorithm prunes branches from the tree
+          as soon as it determines they cannot possibly lead to a valid solution.
+          This pruning is based on constraints and conditions defined for the problem,
+          making backtracking more efficient than a naive brute-force approach.</p>
+        <p><strong>Applications</strong>: Backtracking is used in various problems
+          like solving puzzles (e.g., Sudoku, N-Queens), combinatorial problems (e.g.,
+          generating permutations, subsets), and in some cases, optimization problems.</p>
+        <p><strong>Time Complexity</strong>: The time complexity of backtracking
+          algorithms can be high because they might explore the entire solution space
+          in the worst case. However, effective pruning can significantly reduce
+          the number of configurations that need to be examined.</p><pre><code class="language-text-plain">function backtrack(State current_state):
+    if is_solution(current_state):
+        report_solution(current_state)
+        return
+
+    for each option in available_options(current_state):
+        if is_valid(option, current_state):
+            apply_option(option, current_state)
+            backtrack(current_state)
+            undo_option(option, current_state)
+
+initial_state = setup_initial_conditions()
+backtrack(initial_state)</code></pre>
+        <p>In this pseudo code:</p>
+        <ul>
+          <li><strong>is_solution</strong>: This function checks whether the current
+            state is a solution to the problem.</li>
+          <li><strong>report_solution</strong>: If a solution is found, this function
+            processes or prints the solution.</li>
+          <li><strong>available_options</strong>: This function generates all possible
+            options or moves from the current state.</li>
+          <li><strong>is_valid</strong>: This function checks whether an option is valid
+            under the problem constraints.</li>
+          <li><strong>apply_option</strong>: This function modifies the current state
+            by applying an option.</li>
+          <li><strong>undo_option</strong>: After backtracking, this function undoes
+            the changes made by the last applied option.</li>
+          <li><strong>setup_initial_conditions</strong>: This sets up the initial state
+            of the problem.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

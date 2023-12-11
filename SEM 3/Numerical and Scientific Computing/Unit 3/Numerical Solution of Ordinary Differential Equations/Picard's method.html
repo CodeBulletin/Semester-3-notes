@@ -1,0 +1,46 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Picard&#39;s method</h1>
+
+      <div class="ck-content">
+        <p>Picard's method, also known as the Picard iteration or the method of successive
+          approximations, is an iterative technique used to solve ordinary differential
+          equations (ODEs) numerically. It is based on the idea of approximating
+          the solution by repeatedly refining an initial guess.</p>
+        <p>The method is named after the French mathematician Charles Émile Picard,
+          who introduced it in the late 19th century. Picard's method is particularly
+          useful for solving initial value problems, where the solution is sought
+          for a given initial condition.</p>
+        <p>Here's how Picard's method works:</p>
+        <ol>
+          <li>Start with an initial guess for the solution. This guess can be any function
+            that satisfies the given initial condition.</li>
+          <li>Use the initial guess to construct an integral equation, known as the
+            Picard integral equation. This equation involves integrating the right-hand
+            side of the ODE with respect to the independent variable, using the initial
+            guess as the upper limit of integration.</li>
+          <li>Solve the Picard integral equation to obtain an improved approximation
+            of the solution. This can be done analytically if the integral equation
+            is solvable, or numerically using numerical integration techniques.</li>
+          <li>Repeat steps 2 and 3, using the improved approximation as the new initial
+            guess. Iterate this process until the solution converges to a desired level
+            of accuracy.</li>
+        </ol>
+        <p>The convergence of Picard's method relies on the Lipschitz condition,
+          which guarantees the uniqueness and existence of the solution. If the Lipschitz
+          condition is satisfied, the method will converge to the true solution of
+          the ODE.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

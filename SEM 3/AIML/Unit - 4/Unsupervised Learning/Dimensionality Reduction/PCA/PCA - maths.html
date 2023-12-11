@@ -1,0 +1,76 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>PCA - maths</h1>
+
+      <div class="ck-content">
+        <p>Principal Component Analysis (PCA) involves several steps, and its implementation
+          can be understood as a series of mathematical operations. Here's a simplified
+          outline of the key formulas and calculations involved in PCA:</p>
+        <p>1. <strong>Standardization (optional, but often recommended)</strong>:</p>
+        <p
+        style="margin-left:40px;">Standardize the data for each feature (variable) so that they have a mean
+          of 0 and a standard deviation of 1.
+          <br><span class="math-tex">\(z = \frac{x - \mu}{\sigma}\)</span>
+          <br>where&nbsp;<span class="math-tex">\(x\)</span>&nbsp;is the original value,&nbsp;
+          <span
+          class="math-tex">\(\mu\)</span>&nbsp;is the mean, and&nbsp;<span class="math-tex">\(\sigma\)</span>&nbsp;is
+            the standard deviation of the feature.</p>
+            <p>2. <strong>Covariance Matrix Calculation</strong>:</p>
+            <p style="margin-left:40px;">Compute the covariance matrix to understand how each variable relates
+              with the others. The covariance of two variables&nbsp;<span class="math-tex">\(X\)</span>&nbsp;and&nbsp;
+              <span
+              class="math-tex">\(Y\)</span>&nbsp;is calculated as:
+                <br><span class="math-tex">\(\text{Cov}(X, Y) = \frac{1}{n-1}\sum_{i=1}^{n}(X_i - \overline{X})(Y_i - \overline{Y})\)</span>
+                <br>where&nbsp;<span class="math-tex">\(n\)</span>&nbsp;is the number of data
+                points,&nbsp;<span class="math-tex">\(X_i\)</span>&nbsp;and&nbsp;
+                <span
+                class="math-tex">\(Y_i\)</span>&nbsp;are the individual sample points, and&nbsp;<span class="math-tex">\(\overline{X}\)</span>&nbsp;and&nbsp;
+                  <span
+                  class="math-tex">\(\overline{Y}\)</span>&nbsp;are the mean values of&nbsp;<span class="math-tex">\(X\)</span>&nbsp;and&nbsp;
+                    <span
+                    class="math-tex">\(Y\)</span>.</p>
+            <p>3. <strong>Eigenvalue Decomposition</strong>:</p>
+            <p style="margin-left:40px;">Decompose the covariance matrix to find its eigenvalues and eigenvectors.
+              <br>This involves solving the characteristic equation of the covariance matrix&nbsp;
+              <span
+              class="math-tex">\(\Sigma\)</span>:&nbsp;<span class="math-tex">\(\text{det}(\Sigma - \lambda I) = 0\)</span>
+                <br>where&nbsp;<span class="math-tex">\(\lambda\)</span>&nbsp;represents the
+                eigenvalues and&nbsp;<span class="math-tex">\(I\)</span>&nbsp;is the identity
+                matrix.
+                <br>The eigenvectors are then found for each eigenvalue&nbsp;<span class="math-tex">\(\lambda\)</span>.</p>
+            <p>4. <strong>Selecting Principal Components</strong>:</p>
+            <p style="margin-left:40px;">Rank the eigenvalues from highest to lowest and choose the top&nbsp;
+              <span
+              class="math-tex">\(k\)</span>&nbsp;eigenvalues. These correspond to the&nbsp;<span class="math-tex">\(k\)</span>&nbsp;principal
+                components.
+                <br>The principal components (PCs) are the eigenvectors associated with these
+                top&nbsp;<span class="math-tex">\(k\)</span>&nbsp;eigenvalues.</p>
+            <p>5. <strong>Transformation to New Feature Space:</strong>
+            </p>
+            <p style="margin-left:40px;">Transform the original data matrix&nbsp;<span class="math-tex">\(X\)</span>&nbsp;into
+              the new feature space using the selected eigenvectors.
+              <br><span class="math-tex">\(Y = X \times P\)</span>
+              <br>where&nbsp;<span class="math-tex">\(Y\)</span>&nbsp;is the matrix of transformed
+              features,&nbsp;<span class="math-tex">\(X\)</span>&nbsp;is the original
+              data matrix, and&nbsp;<span class="math-tex">\(P\)</span>&nbsp;is the matrix
+              of the selected eigenvectors (principal components).</p>
+            <p>In this formulaic approach, PCA essentially involves transforming the
+              original, possibly correlated variables into a new set of uncorrelated
+              variables (principal components) that capture the most variance in the
+              dataset. The number of principal components \( k \) is a parameter that
+              can be chosen based on the desired level of dimensionality reduction or
+              the cumulative variance that these components should explain.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

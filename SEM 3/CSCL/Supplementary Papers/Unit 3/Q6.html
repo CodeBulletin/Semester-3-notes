@@ -1,0 +1,103 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q6</h1>
+
+      <div class="ck-content">
+        <h2>(a) Elaborate the purpose of firewall. How can we classify firewalls according to different OSI Layers? Contrast and compare stateful and stateless firewall.</h2>
+        <p>A firewall is a network security device that acts as a barrier between
+          an internal network and external networks, such as the internet. Its primary
+          purpose is to monitor and control incoming and outgoing network traffic
+          based on predetermined security rules. Here are some key purposes of a
+          firewall:</p>
+        <ol>
+          <li><strong>Network Security</strong>: Firewalls help protect a network from
+            unauthorized access, malicious activities, and potential threats by filtering
+            and blocking unwanted traffic. They act as a first line of defense against
+            external attacks.</li>
+          <li><strong>Access Control</strong>: Firewalls enforce access control policies
+            by allowing or denying network traffic based on predefined rules. This
+            helps prevent unauthorized users or malicious entities from gaining access
+            to sensitive resources.</li>
+          <li><strong>Traffic Monitoring</strong>: Firewalls monitor network traffic
+            and log information about incoming and outgoing connections. This allows
+            network administrators to analyze and identify potential security breaches
+            or suspicious activities.</li>
+        </ol>
+        <p><strong>Classification of Firewalls according to OSI Layers</strong>:</p>
+        <p>Firewalls can be classified into different types based on the OSI (Open
+          Systems Interconnection) model layers they operate on:</p>
+        <ol>
+          <li><strong>Network Layer (Layer 3) Firewalls</strong>: These firewalls operate
+            at the network layer and examine IP addresses, ports, and protocols to
+            make filtering decisions. Examples include packet-filtering firewalls and
+            network address translation (NAT) firewalls.</li>
+          <li><strong>Transport Layer (Layer 4) Firewalls</strong>: These firewalls
+            operate at the transport layer and can inspect data packets beyond IP addresses
+            and ports. They can analyze the contents of packets to make filtering decisions.
+            Examples include stateful firewalls and circuit-level gateways.</li>
+          <li><strong>Application Layer (Layer 7) Firewalls</strong>: These firewalls
+            operate at the application layer and can inspect the content of data packets
+            at the application level. They can make filtering decisions based on specific
+            application protocols. Examples include proxy firewalls and application-level
+            gateways.</li>
+        </ol>
+        <p>Contrasting and Comparing Stateful and Stateless Firewalls:</p>
+        <ol>
+          <li><strong>Stateful Firewall</strong>: A stateful firewall, also known as
+            a dynamic packet-filtering firewall, keeps track of the state of network
+            connections. It maintains a record of established connections and allows
+            incoming packets that are part of an existing connection. Stateful firewalls
+            can make filtering decisions based on the connection state, such as allowing
+            response packets to return to the original sender.</li>
+          <li><strong>Stateless Firewall</strong>: A stateless firewall, also known
+            as a static packet-filtering firewall, examines each packet individually
+            without considering the context or state of the connection. It filters
+            packets based on predetermined rules, such as source and destination IP
+            addresses, ports, and protocols. Stateless firewalls do not maintain connection
+            state information.</li>
+        </ol>
+        <p>The main difference between stateful and stateless firewalls is that stateful
+          firewalls have the ability to track and manage the state of network connections,
+          allowing them to make more sophisticated filtering decisions. Stateless
+          firewalls, on the other hand, only consider individual packets and do not
+          maintain connection state information.</p>
+        <h2>(b) Enlist web application vulnerabilities. Elaborate Cross site scripting And Cross site request forgery with suitable examples.</h2>
+        <p>Web applications can be vulnerable to various security flaws that can
+          be exploited by attackers. Some common web application vulnerabilities
+          include:</p>
+        <ol>
+          <li><strong>Cross-Site Scripting</strong> (XSS): XSS occurs when an attacker
+            injects malicious scripts into a web application, which are then executed
+            by unsuspecting users. This allows the attacker to steal sensitive information,
+            such as login credentials or session cookies, or manipulate the content
+            displayed to users. For example, an attacker could inject a script into
+            a comment section of a website, and when other users view the comments,
+            the script gets executed in their browsers.</li>
+          <li><strong>Cross-Site Request Forgery</strong> (CSRF): CSRF involves tricking
+            a user's browser into making unintended and unauthorized requests to a
+            web application on behalf of the attacker. This can lead to actions being
+            performed without the user's knowledge or consent. For example, an attacker
+            could send a malicious link to a victim, and if the victim clicks on it
+            while authenticated to a vulnerable website, the attacker can perform actions
+            on the victim's behalf, such as changing their password or making unauthorized
+            transactions.</li>
+        </ol>
+        <p>To protect against these vulnerabilities, web developers can implement
+          security measures such as input validation and sanitization, output encoding,
+          and implementing proper authentication and authorization mechanisms. Regular
+          security testing and patching of vulnerabilities are also crucial to ensure
+          the security of web applications.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

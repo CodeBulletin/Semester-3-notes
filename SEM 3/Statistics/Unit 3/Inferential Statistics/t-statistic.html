@@ -1,0 +1,88 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>t-statistic</h1>
+
+      <div class="ck-content">
+        <p>the t-statistic is a measure that helps assess the statistical significance
+          of the difference between the means of two groups. It is often used in
+          hypothesis testing to determine whether there is a significant difference
+          between the sample means or between a sample mean and a known value</p>
+        <p><span class="math-tex">\(t_{calc} = \frac{\bar X - \mu}{SE(\bar X)}\)</span>
+        </p>
+        <p><strong>For Single Mean</strong>
+        </p>
+        <p><span class="math-tex">\(df = n - 1\)</span>
+          <br><span class="math-tex">\(SE(\bar X) = \frac{s}{\sqrt n}\)</span>
+        </p>
+        <p><strong>For Two Mean</strong>
+        </p>
+        <p><span class="math-tex">\(df = n_1 + n_2 &nbsp;- 2\)</span>
+        </p>
+        <ol>
+          <li>when&nbsp;<span class="math-tex">\(s_1 = s_2\)</span>&nbsp;(Pooled)
+            <br><span class="math-tex">\(s_p^2 = \frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{df}\)</span>
+            <br><span class="math-tex">\(SE_p(\bar X) = s_p\sqrt{\frac1{n_1}+\frac1{n_2}}\)</span>
+          </li>
+          <li>when&nbsp;<span class="math-tex">\(s_1 \ne s_2\)</span>&nbsp;(Unpooled
+            / Welch)
+            <br><span class="math-tex">\(SE_w(\bar X) = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}\)</span>
+          </li>
+        </ol>
+        <h2 style="margin-left:0px;">Hypothesis testing</h2>
+        <p style="margin-left:0px;">Null Hypothesis&nbsp;<span class="math-tex">\(H_0: \mu = k\)</span>
+        </p>
+        <p style="margin-left:0px;"><span class="text-big"><strong>Two Tailed</strong></span>
+          <br>Alternate Hypothesis&nbsp;<span class="math-tex">\(H_{\alpha} : \mu \ne k\)</span>
+        </p>
+        <p style="margin-left:0px;"><strong>using t-critical</strong>:
+          <br>find&nbsp;<span class="math-tex">\(t_{\alpha/2, df}\)</span>&nbsp;from
+          the table</p>
+        <p style="margin-left:0px;">if&nbsp;<span class="math-tex">\(|t| \ge t_{\alpha/2, df}\)</span>&nbsp;then
+          reject null hypothesis
+          <br>else accept null hypothesis</p>
+        <p style="margin-left:0px;"><strong>using p value</strong>:
+          <br>if&nbsp;<span class="math-tex">\(pvalue = 2(p(t \le -|t_{calc}|)) \ge \alpha\)</span>&nbsp;then
+          &nbsp;accept null hypothesis
+          <br>else accept null hypothesis</p>
+        <p style="margin-left:0px;"><span class="text-big"><strong>Single Tailed</strong></span>
+          <br>Alternate Hypothesis&nbsp;<span class="math-tex">\(H_{\alpha} : \mu \gt k\)</span>
+        </p>
+        <p style="margin-left:0px;"><strong>using t-critical</strong>:
+          <br>find&nbsp;<span class="math-tex">\(t_{\alpha, df}\)</span>&nbsp;from the
+          table</p>
+        <p style="margin-left:0px;">if&nbsp;<span class="math-tex">\(|t| \ge t_{\alpha, df}\)</span>&nbsp;then
+          reject null hypothesis
+          <br>else accept null hypothesis</p>
+        <p style="margin-left:0px;"><strong>using p value</strong>:
+          <br>if&nbsp;<span class="math-tex">\(pvalue = p(t \le -|t_{calc}|) \ge \alpha\)</span>&nbsp;then
+          &nbsp;accept null hypothesis
+          <br>else accept null hypothesis</p>
+        <h2 style="margin-left:0px;">Confidence Interval</h2>
+        <p style="margin-left:0px;"><span class="math-tex">\(\bar X \pm t_{\alpha/2, df} SE(\bar X)\)</span>
+        </p>
+        <h2 style="margin-left:0px;">Terms</h2>
+        <p style="margin-left:0px;"><span class="math-tex">\(t_{calc} = student \space distribution \space value\)</span>
+          <br><span class="math-tex">\(\mu = population \space mean\)</span>
+          <br><span class="math-tex">\(\sigma = population \space sd\)</span>
+          <br><span class="math-tex">\(\bar X = sample \space mean\)</span>
+          <br><span class="math-tex">\(s = sample \space sd\)</span>
+          <br><span class="math-tex">\(n = sample \space size\)</span>
+          <br><span class="math-tex">\(df = degree \space of \space freedom\)</span>
+          <br><span class="math-tex">\(sd &nbsp;= standered \space deviation\)</span>
+          <br><span class="math-tex">\(\alpha = level \space of \space significance\)</span>
+          <br><span class="math-tex">\(t_{\alpha/2, df} = tcritical \space for \space df, \alpha\)</span>
+        </p>
+      </div>
+    </div>
+  </body>
+
+</html>

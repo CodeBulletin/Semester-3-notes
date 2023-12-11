@@ -1,0 +1,75 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Recurrences</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">In the context of time complexity analysis in computer science and algorithms,
+          a recurrence, or recurrence relation, is a mathematical equation or formula
+          that describes the time complexity of an algorithm or the behavior of a
+          recursive function. Recurrences are commonly used to analyze the time complexity
+          of algorithms, especially when the algorithm's time complexity depends
+          on the size of the input or the number of recursive calls it makes.</p>
+        <p
+        style="margin-left:0px;">Recurrences are particularly useful for expressing and solving algorithms
+          with recursive structures, such as divide-and-conquer algorithms (e.g.,
+          merge sort, quicksort), recursive functions, and data structures (e.g.,
+          binary trees).</p>
+          <p style="margin-left:0px;">Here's how recurrences work and why they are important:</p>
+          <ol>
+            <li><strong>Defining the Relation</strong>: Recurrences define a relation
+              between the time complexity of a problem of a certain size and the time
+              complexity of smaller instances of the same problem. In other words, they
+              express how the time required to solve a problem of size n is related to
+              the time required to solve smaller instances of the same problem.</li>
+            <li><strong>Base Case</strong>: A recurrence relation typically includes a
+              base case or termination condition. This base case describes the time complexity
+              for the smallest possible problem instances, which can be solved directly
+              without further recursion.</li>
+            <li><strong>Recursive Case</strong>: The recurrence relation also describes
+              how the time complexity for a problem of size n depends on the time complexities
+              of smaller instances of the same problem. This is often expressed in a
+              recursive formula.</li>
+            <li><strong>Solving the Recurrence</strong>: Solving a recurrence means finding
+              a closed-form solution for the time complexity of the algorithm or function
+              in terms of the input size. Solving the recurrence often involves mathematical
+              techniques, such as substitution, master theorem, or iterative expansion,
+              depending on the form of the recurrence.</li>
+            <li><strong>Analyzing Time Complexity</strong>: Once the recurrence is solved,
+              you can analyze the time complexity of the algorithm or function for any
+              input size. This analysis provides insights into how the algorithm's time
+              requirements grow with the input size.</li>
+          </ol>
+          <p style="margin-left:0px;">For example, consider the recurrence relation for the time complexity
+            of the merge sort algorithm:</p>
+          <p style="margin-left:0px;"><span class="math-tex">\(T(n) = 2T(\frac{n}2)+O(n)\)</span>
+          </p>
+          <p style="margin-left:0px;">In this recurrence, T(n) represents the time required to sort an array
+            of size n. The relation states that to sort an array of size n, the algorithm
+            recursively sorts two subarrays of size n/2 and then combines them, which
+            takes O(n) time. This recurrence can be solved to determine that merge
+            sort has a time complexity of O(n log n).</p>
+          <p style="margin-left:0px;">Recurrence relations are a powerful tool for characterizing and understanding
+            the time complexity of recursive algorithms. They allow you to express
+            and analyze the efficiency of algorithms in a precise and mathematical
+            way, which is essential for designing and optimizing algorithms for various
+            applications.</p>
+          <figure class="image">
+            <img src="Recurrences/image.png">
+          </figure>
+          <figure class="image">
+            <img src="Recurrences/1_image.png">
+          </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,36 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Example</h1>
+
+      <div class="ck-content">
+        <h3 style="margin-left:0px;"><strong>Example of a CSRF Attack:</strong></h3>
+        <p style="margin-left:0px;">Imagine a web application where users can change their email address via
+          a form that sends a POST request. A typical request might look like this:</p><pre><code class="language-text-x-mysql">POST /changeEmail
+Host: example.com
+Content-Type: application/x-www-form-urlencoded
+Cookie: sessionid=abc123
+
+email=newemail@example.com</code></pre>
+        <p>An attacker can craft a malicious website with a form like this:</p><pre><code class="language-text-x-mysql">&lt;form action="http://example.com/changeEmail" method="POST"&gt;
+  &lt;input type="hidden" name="email" value="attacker@example.com" /&gt;
+&lt;/form&gt;
+&lt;script&gt;document.forms[0].submit();&lt;/script&gt;</code></pre>
+        <p>If a user who is logged into example.com visits this malicious site, the
+          script automatically submits the form, sending a request to example.com
+          to change the user's email to the attacker's email. Since the user's browser
+          automatically includes the session cookie for example.com, the application
+          considers it a legitimate request.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

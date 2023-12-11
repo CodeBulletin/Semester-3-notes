@@ -1,0 +1,61 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Reducibility </h1>
+
+      <div class="ck-content">
+        <p>Reducibility, in the context of computational complexity theory, is a
+          concept that allows us to compare the computational difficulty of different
+          problems. It involves transforming one problem into another problem in
+          such a way that the solution to the second problem can be used to solve
+          the first problem.</p>
+        <p>Formally, a problem A is said to be reducible to problem B if there exists
+          a polynomial-time algorithm that can transform instances of problem A into
+          instances of problem B, such that the solution to the transformed instance
+          of problem B can be used to obtain the solution to the original instance
+          of problem A.</p>
+        <p>The reduction is typically done in two steps:</p>
+        <ol>
+          <li><strong>Transformation</strong>: The algorithm takes an instance of problem
+            A and transforms it into an instance of problem B. This transformation
+            should preserve the solution, meaning that if the transformed instance
+            of problem B has a solution, it should correspond to a solution of the
+            original instance of problem A.</li>
+          <li><strong>Solution Extraction</strong>: Once the transformed instance of
+            problem B is obtained, the algorithm extracts the solution to problem A
+            from the solution to problem B. This step ensures that solving problem
+            B can be used to solve problem A.</li>
+        </ol>
+        <p>The reduction is required to be polynomial-time, meaning that the transformation
+          and solution extraction steps should be computable in polynomial time.
+          This ensures that the reduction itself does not introduce significant additional
+          computational complexity.</p>
+        <p>Reducibility is a powerful tool in computational complexity theory because
+          it allows us to classify problems based on their computational difficulty.
+          If problem A is reducible to problem B, and problem B is known to be difficult
+          (e.g., NP-complete), then problem A is also at least as difficult as problem
+          B. This allows us to establish relationships between different problems
+          and understand their relative complexity.</p>
+        <p>The concept of reducibility is widely used in complexity theory to prove
+          the hardness or completeness of problems. For example, many problems have
+          been shown to be NP-complete by demonstrating polynomial-time reductions
+          from known NP-complete problems.</p>
+        <p>In summary, reducibility is a concept in computational complexity theory
+          that allows us to compare the computational difficulty of different problems.
+          It involves transforming one problem into another problem in such a way
+          that the solution to the second problem can be used to solve the first
+          problem. Reducibility is an important tool for understanding the complexity
+          of problems and establishing relationships between them.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

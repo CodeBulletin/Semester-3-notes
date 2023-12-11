@@ -1,0 +1,67 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>NP-Completeness proof</h1>
+
+      <div class="ck-content">
+        <p>
+          <br>Proving that a problem is NP-complete involves two main steps: demonstrating
+          that the problem is in the class NP and showing that it is NP-hard by reducing
+          a known NP-complete problem to it. Here is a general outline of the process:</p>
+        <p><strong>Step 1:</strong> Proving the problem is in NP To show that a problem
+          is in NP, you need to demonstrate that given a potential solution, it can
+          be verified in polynomial time. This typically involves constructing a
+          polynomial-time verifier algorithm that checks the validity of the solution.</p>
+        <p><strong>Step 2: </strong>Reducing a known NP-complete problem to the problem
+          To establish NP-hardness, you need to reduce a known NP-complete problem
+          to the problem you are trying to prove as NP-complete. This reduction should
+          be done in polynomial time and should preserve the solution, meaning that
+          a solution to the original problem can be obtained from a solution to the
+          reduced problem.</p>
+        <p>Here is a step-by-step breakdown of the process:</p>
+        <ol>
+          <li><strong>Choose a known NP-complete problem</strong>: Start by selecting
+            a problem that is already known to be NP-complete. Common examples include
+            the Boolean satisfiability problem (SAT), the traveling salesman problem
+            (TSP), or the knapsack problem.</li>
+          <li><strong>Define the reduction</strong>: Define a mapping from instances
+            of the known NP-complete problem to instances of the problem you want to
+            prove as NP-complete. This mapping should be computable in polynomial time.</li>
+          <li><strong>Prove correctness</strong>: Prove that the reduction is correct
+            by showing that a solution to the original problem can be obtained from
+            a solution to the reduced problem. This typically involves demonstrating
+            that the reduction preserves the solution, meaning that if the reduced
+            problem has a solution, it corresponds to a solution of the original problem.</li>
+          <li><strong>Analyze the complexity</strong>: Analyze the complexity of the
+            reduction to ensure that it can be done in polynomial time. This is important
+            to maintain the polynomial-time requirement for NP-completeness.</li>
+          <li><strong>Conclude NP-completeness</strong>: Once you have shown that the
+            problem is in NP and that it is NP-hard by reducing a known NP-complete
+            problem to it, you can conclude that the problem is NP-complete.</li>
+        </ol>
+        <p>It's worth noting that proving NP-completeness requires careful reasoning
+          and often involves intricate details. It is a challenging task that requires
+          a deep understanding of both the problem being studied and the known NP-complete
+          problems. Many NP-complete problems have been established through years
+          of research and the cumulative efforts of many researchers.</p>
+        <p>In practice, there are established NP-complete problems and reduction
+          techniques that can be used as building blocks for proving the NP-completeness
+          of new problems. These techniques include reductions from SAT, 3-SAT, and
+          other well-known NP-complete problems.</p>
+        <p>Overall, proving NP-completeness involves demonstrating that a problem
+          is in NP and showing its NP-hardness by reducing a known NP-complete problem
+          to it. It is a fundamental process in computational complexity theory and
+          helps in understanding the inherent difficulty of computational problems.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

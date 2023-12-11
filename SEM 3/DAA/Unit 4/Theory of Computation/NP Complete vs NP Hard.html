@@ -1,0 +1,78 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>NP Complete vs NP Hard</h1>
+
+      <div class="ck-content">
+        <p>The concepts of NP-Complete and NP-Hard are fundamental in computational
+          complexity theory, a branch of theoretical computer science. They are used
+          to classify problems based on their difficulty and the nature of their
+          solutions. Here's a comparison:</p>
+        <h3>NP-Complete</h3>
+        <p><strong>Definition</strong>: A problem is NP-Complete if it satisfies
+          two conditions:</p>
+        <ul>
+          <li>It is in NP (Nondeterministic Polynomial time): The problem can be verified
+            in polynomial time by a nondeterministic Turing machine.</li>
+          <li>It is as hard as any problem in NP: Any problem in NP can be reduced to
+            this problem in polynomial time.</li>
+        </ul>
+        <p><strong>Characteristics</strong>:</p>
+        <ul>
+          <li>These problems are both hard to solve and easy to check.</li>
+          <li>If one NP-Complete problem can be solved in polynomial time, all problems
+            in NP can be solved in polynomial time.</li>
+        </ul>
+        <p><strong>Examples</strong>:</p>
+        <ul>
+          <li>The Travelling Salesman Problem.</li>
+          <li>Boolean satisfiability problem (SAT).</li>
+          <li>Hamiltonian Path Problem.</li>
+          <li>Subset Sum Problem.</li>
+        </ul>
+        <p><strong>Significance</strong>: Finding a polynomial-time solution for
+          any NP-Complete problem would prove that P=NP, a major unsolved question
+          in computer science.</p>
+        <h3>NP-Hard</h3>
+        <p><strong>Definition</strong>: A problem is NP-Hard if it is at least as
+          hard as the hardest problems in NP. It may or may not be in NP itself.</p>
+        <p><strong>Characteristics</strong>:</p>
+        <ul>
+          <li>These problems are hard to solve, and they may or may not be easy to check.</li>
+          <li>They encompass a broader class of problems than NP-Complete because they
+            are not required to be in NP.</li>
+          <li>Solving an NP-Hard problem in polynomial time does not necessarily imply
+            P=NP, as the problem might not be in NP.</li>
+        </ul>
+        <p><strong>Examples</strong>:</p>
+        <ul>
+          <li>The Halting Problem.</li>
+          <li>Decision versions of many optimization problems.</li>
+          <li>Some types of integer programming.</li>
+        </ul>
+        <p><strong>Significance</strong>: NP-Hard problems are used to demonstrate
+          the difficulty of solving certain problems, often used in proofs by reduction
+          to show that other problems are also hard.</p>
+        <h3>Key Differences</h3>
+        <ul>
+          <li><strong>Scope</strong>: All NP-Complete problems are a subset of NP-Hard
+            problems. NP-Complete problems are in NP, whereas NP-Hard problems may
+            or may not be.</li>
+          <li><strong>Solvability Implications</strong>: Solving an NP-Complete problem
+            efficiently (in polynomial time) implies P=NP, but solving an NP-Hard problem
+            does not necessarily have this implication, especially if the problem is
+            not in NP.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

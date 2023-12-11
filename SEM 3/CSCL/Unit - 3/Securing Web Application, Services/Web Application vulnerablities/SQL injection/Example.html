@@ -1,0 +1,37 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Example</h1>
+
+      <div class="ck-content">
+        <h3 style="margin-left:0px;"><strong>Example of SQL Injection:</strong></h3>
+        <p style="margin-left:0px;">Suppose a website has a login form where users enter their username and
+          password. The website checks the credentials by running an SQL query:</p><pre><code class="language-text-x-mysql">SELECT * FROM users WHERE username = '[username]' AND password = '[password]';</code></pre>
+        <p
+        style="margin-left:0px;">Here, <strong>[username]</strong> and <strong>[password]</strong> are placeholders
+          for the user-supplied input. An attacker can exploit this by entering a
+          username that includes an SQL fragment:</p>
+          <p style="margin-left:0px;">Input:</p>
+          <ul>
+            <li>Username: <strong>admin' --</strong>
+            </li>
+            <li>Password: (any or blank)</li>
+          </ul>
+          <p style="margin-left:0px;">This changes the query to:</p><pre><code class="language-text-x-mysql">SELECT * FROM users WHERE username = 'admin' --' AND password = '';</code></pre>
+          <p
+          style="margin-left:0px;">The <strong>--</strong> sequence is a comment in SQL, so everything after
+            the <strong>admin'</strong> is ignored. If the <strong>admin</strong> user
+            exists, the attacker gains access without needing a password.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

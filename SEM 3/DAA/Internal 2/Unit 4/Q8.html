@@ -1,0 +1,123 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q8</h1>
+
+      <div class="ck-content">
+        <h2>(a) Describe the algorithm for Hamiltonian cycles and determine the order of magnitude of the worst-case computing time for the backtracking procedure that Finds all Hamiltonian cycles.</h2>
+        <p>The algorithm for finding all Hamiltonian cycles in a graph typically
+          involves backtracking, which is a form of exhaustive search. A Hamiltonian
+          cycle is a cycle in a graph that visits each vertex exactly once and returns
+          to the starting vertex. Here's a general description of the algorithm:</p>
+        <h3>Algorithm for Finding Hamiltonian Cycles</h3>
+        <p><strong>Initialize</strong>: Start at an arbitrary vertex as the beginning
+          of the cycle.</p>
+        <p><strong>Recursive Backtracking</strong>:</p>
+        <ul>
+          <li>For the current vertex, try to extend the path to each of its neighbors.</li>
+          <li>If a neighbor has not been visited yet, make a recursive call from that
+            neighbor.</li>
+          <li>If a neighbor is the starting vertex and all vertices have been visited,
+            a Hamiltonian cycle is found.</li>
+        </ul>
+        <p><strong>Backtracking Step</strong>:</p>
+        <ul>
+          <li>If it's not possible to extend the path (either no unvisited neighbors
+            or no way back to the starting vertex without repeating), backtrack and
+            try a different path.</li>
+        </ul>
+        <p><strong>Continue</strong>:</p>
+        <ul>
+          <li>Continue this process until all possible paths have been explored.</li>
+        </ul>
+        <h3>Order of Magnitude of Worst-Case Computing Time</h3>
+        <p>The worst-case time complexity for this backtracking algorithm to find
+          all Hamiltonian cycles is O(N!), where N is the number of vertices in the
+          graph. This is because, in the worst case, the algorithm might need to
+          explore every possible permutation of the vertices to find all Hamiltonian
+          cycles.</p>
+        <ul>
+          <li><strong>Reasoning</strong>: The backtracking algorithm, at each step,
+            chooses a next vertex from the remaining unvisited vertices. There are
+            N choices for the first step, N-1 for the second, and so on, leading to
+            N! (N factorial) permutations.</li>
+          <li><strong>Worst-Case Scenario</strong>: The worst case occurs in a complete
+            graph, where every pair of distinct vertices is connected by a unique edge.
+            In such a graph, the number of Hamiltonian cycles is maximized, and the
+            algorithm must explore each possibility.</li>
+        </ul>
+        <h2>(b) What is NP hard problem? How it is differ from NP problem?</h2>
+        <p><strong>NP-Hard Problems</strong>
+        </p>
+        <p>NP-hard (Non-deterministic Polynomial-time hard) problems are a class
+          of problems in computational complexity theory. They are as hard as the
+          hardest problems in NP, meaning that an algorithm that solves an NP-hard
+          problem in polynomial time could be used to solve any problem in NP in
+          polynomial time. However, NP-hard problems are not necessarily in NP themselves,
+          and they might not even be decision problems (problems with a yes/no answer).</p>
+        <p>Key characteristics of NP-hard problems:</p>
+        <ul>
+          <li><strong>Not Necessarily Solvable in Polynomial Time</strong>: No known
+            algorithm can solve all NP-hard problems in polynomial time.</li>
+          <li><strong>Reduction</strong>: A problem is NP-hard if every problem in NP
+            can be reduced to it in polynomial time.</li>
+          <li><strong>Generalization of NP</strong>: NP-hard includes both NP problems
+            and possibly harder problems.</li>
+        </ul>
+        <p><strong>NP Problems</strong>
+        </p>
+        <p>NP (Non-deterministic Polynomial-time) problems are a class of decision
+          problems for which a "yes" answer can be verified in polynomial time given
+          the right information or a "witness." In other words, if you're given a
+          solution to an NP problem, you can check that it's correct relatively quickly.</p>
+        <p>Key characteristics of NP problems:</p>
+        <ul>
+          <li><strong>Verification in Polynomial Time</strong>: A solution to an NP
+            problem can be verified in polynomial time.</li>
+          <li><strong>Decision Problems</strong>: All NP problems are decision problems
+            (i.e., their answer is either "yes" or "no").</li>
+          <li><strong>Not Necessarily Solvable in Polynomial Time</strong>: While solutions
+            can be verified quickly, finding the solution itself is not guaranteed
+            to be quick.</li>
+        </ul>
+        <p><strong>Differences Between NP and NP-Hard</strong>
+        </p>
+        <p><strong>Type of Problems</strong>:</p>
+        <ul>
+          <li>NP problems are always decision problems.</li>
+          <li>NP-hard problems can be decision problems, optimization problems, search
+            problems, etc.</li>
+        </ul>
+        <p><strong>Relationship with Polynomial Time</strong>:</p>
+        <ul>
+          <li>NP problems have solutions that can be verified in polynomial time.</li>
+          <li>NP-hard problems are at least as hard as the hardest problems in NP, but
+            there's no requirement regarding the verification time of a solution.</li>
+        </ul>
+        <p><strong>Inclusion in NP</strong>:</p>
+        <ul>
+          <li>All NP problems are in NP by definition.</li>
+          <li>Not all NP-hard problems are in NP. Some might be harder or not even be
+            decision problems.</li>
+        </ul>
+        <p><strong>Completeness</strong>:</p>
+        <ul>
+          <li>A problem is NP-complete if it is in both NP and NP-hard. This means it's
+            as hard as the hardest problems in NP and has a solution verifiable in
+            polynomial time.</li>
+          <li>NP-hard problems are not necessarily NP-complete because they might not
+            be in NP.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

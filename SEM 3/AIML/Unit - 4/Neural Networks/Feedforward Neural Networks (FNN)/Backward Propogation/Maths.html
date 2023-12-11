@@ -1,0 +1,89 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Maths</h1>
+
+      <div class="ck-content">
+        <p>The mathematics of backward propagation (backpropagation) in neural networks
+          involves the application of the chain rule from calculus to compute the
+          gradient (or derivative) of the loss function with respect to each weight
+          in the network. This process is essential for learning, as it guides how
+          the weights are adjusted during training.</p>
+        <p>Here's a general outline of the mathematical process, assuming a simple
+          network with an input layer, one hidden layer, and an output layer:</p>
+        <ol>
+          <li><strong>Notation</strong>:
+            <ul>
+              <li>Let&nbsp;<span class="math-tex">\(L\)</span>&nbsp;be the loss function.</li>
+              <li><span class="math-tex">\(W^{[1]}\)</span>&nbsp;and&nbsp;<span class="math-tex">\(W^{[2]}\)</span>&nbsp;are
+                the weights for the first (hidden) and second (output) layer, respectively.</li>
+              <li><span class="math-tex">\(b^{[1]}\)</span>&nbsp;and&nbsp;<span class="math-tex">\(b^{[2]}\)</span>&nbsp;are
+                the biases for the first and second layer, respectively.</li>
+              <li><span class="math-tex">\(A^{[1]}\)</span>&nbsp;and&nbsp;<span class="math-tex">\(A^{[2]}\)</span>&nbsp;are
+                the activations from the first and second layer, respectively.</li>
+            </ul>
+          </li>
+          <li><strong>Loss Function Gradient</strong>:
+            <ul>
+              <li>After the forward pass, compute the derivative of the loss function with
+                respect to the output of the network&nbsp;<span class="math-tex">\(A^{[2]}\)</span>:&nbsp;
+                <span
+                class="math-tex">\(\frac{\partial L}{\partial A^{[2]}}\)</span>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Gradient at the Output Layer</strong>:
+            <ul>
+              <li>Compute the gradient of the loss with respect to the weights&nbsp;
+                <span
+                class="math-tex">\(W^{[2]}\)</span>&nbsp;and biases&nbsp;<span class="math-tex">\(b^{[2]}\)</span>&nbsp;in
+                  the output layer:
+                  <br><span class="math-tex">\(\frac{\partial L}{\partial W^{[2]}} = \frac{\partial L}{\partial A^{[2]}} \cdot \frac{\partial A^{[2]}}{\partial Z^{[2]}} \cdot \frac{\partial Z^{[2]}}{\partial W^{[2]}}\)</span>
+                  <br><span class="math-tex">\(\frac{\partial L}{\partial b^{[2]}} = \frac{\partial L}{\partial A^{[2]}} \cdot \frac{\partial A^{[2]}}{\partial Z^{[2]}} \cdot \frac{\partial Z^{[2]}}{\partial b^{[2]}}\)</span>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Backpropagation to Hidden Layer</strong>:
+            <ul>
+              <li>Compute the gradient of the loss with respect to the weights&nbsp;
+                <span
+                class="math-tex">\(W^{[1]}\)</span>&nbsp;and biases&nbsp;<span class="math-tex">\(b^{[1]}\)</span>&nbsp;in
+                  the hidden layer. This requires backpropagating the gradient through the
+                  output layer to the hidden layer:
+                  <br><span class="math-tex">\(\frac{\partial L}{\partial W^{[1]}} = \left( \frac{\partial L}{\partial A^{[2]}} \cdot \frac{\partial A^{[2]}}{\partial Z^{[2]}} \cdot \frac{\partial Z^{[2]}}{\partial A^{[1]}} \right) \cdot \frac{\partial A^{[1]}}{\partial Z^{[1]}} \cdot \frac{\partial Z^{[1]}}{\partial W^{[1]}}\)</span>
+                  <br><span class="math-tex">\(\frac{\partial L}{\partial b^{[1]}} = \left( \frac{\partial L}{\partial A^{[2]}} \cdot \frac{\partial A^{[2]}}{\partial Z^{[2]}} \cdot \frac{\partial Z^{[2]}}{\partial b^{[2]}} \right) \cdot \frac{\partial A^{[1]}}{\partial Z^{[1]}} \cdot\frac{\partial Z^{[1]}}{\partial b^{[1]}}\)</span>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Update Weights and Biases</strong>:
+            <ul>
+              <li>Update the weights and biases in the direction that reduces the loss.
+                This is often done using gradient descent or a variant of it:
+                <br><span class="math-tex">\(W^{[l]} = W^{[l]} - \alpha \frac{\partial L}{\partial W^{[l]}}\)</span>
+                <br><span class="math-tex">\(b^{[l]} = b^{[l]} - \alpha \frac{\partial L}{\partial b^{[l]}}\)</span>
+              </li>
+              <li>Here,&nbsp;<span class="math-tex">\(\alpha\)</span>&nbsp;is the learning
+                rate, a small positive number that determines the size of the update step.</li>
+            </ul>
+          </li>
+          <li><strong>Iterate</strong>: Repeat the forward and backward passes for many
+            iterations, updating the weights and biases each time.</li>
+        </ol>
+        <p>In summary, backpropagation computes the gradient of the loss function
+          with respect to each weight and bias in the network by applying the chain
+          rule, and then adjusts these parameters in a way that minimizes the loss.
+          This is a fundamental process allowing neural networks to learn from their
+          errors.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

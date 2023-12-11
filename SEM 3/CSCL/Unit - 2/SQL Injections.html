@@ -1,0 +1,63 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>SQL Injections</h1>
+
+      <div class="ck-content">
+        <p>SQL Injection is a type of web application vulnerability that allows an
+          attacker to manipulate or inject malicious SQL (Structured Query Language)
+          code into an application's database query. It occurs when user-supplied
+          input is not properly validated or sanitized before being used in an SQL
+          statement.</p>
+        <p>Here's how SQL Injection works:</p>
+        <ol>
+          <li><strong>User input</strong>: An application accepts user input, such as
+            form fields, search queries, or URL parameters, and uses it to construct
+            an SQL query.</li>
+          <li><strong>Malicious input</strong>: An attacker submits specially crafted
+            input that includes SQL code as part of the user input. This can be done
+            by manipulating form fields, modifying URL parameters, or using other techniques.</li>
+          <li><strong>Injection point</strong>: The attacker's input is not properly
+            validated or sanitized by the application, allowing the malicious SQL code
+            to be included in the query.</li>
+          <li><strong>Execution</strong>: The application constructs the SQL query using
+            the user input, including the injected SQL code. The database executes
+            the query, treating the injected code as legitimate SQL commands.</li>
+          <li><strong>Impact</strong>: The injected SQL code can perform various malicious
+            actions, such as retrieving, modifying, or deleting data from the database,
+            bypassing authentication mechanisms, or even gaining unauthorized access
+            to the underlying server.</li>
+        </ol>
+        <p>SQL Injection can have serious consequences, including unauthorized access
+          to sensitive data, data manipulation or deletion, and potential compromise
+          of the entire application or system.</p>
+        <p>To prevent SQL Injection attacks, it is important to follow secure coding
+          practices:</p>
+        <ol>
+          <li><strong>Input validation and sanitization</strong>: Validate and sanitize
+            all user input before using it in SQL queries. Use parameterized queries
+            or prepared statements with placeholders to separate the SQL code from
+            the user input.</li>
+          <li><strong>Least privilege principle</strong>: Ensure that database accounts
+            used by the application have the minimum necessary privileges to limit
+            the potential impact of an SQL Injection attack.</li>
+          <li><strong>Principle of least exposure</strong>: Avoid exposing detailed
+            error messages or stack traces to users, as they can provide valuable information
+            to attackers.</li>
+          <li><strong>Regular updates and patches</strong>: Keep the application and
+            its dependencies up to date with the latest security patches to address
+            any known vulnerabilities.</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

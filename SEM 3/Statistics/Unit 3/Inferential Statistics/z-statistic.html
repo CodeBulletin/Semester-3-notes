@@ -1,0 +1,92 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>z-statistic</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The z-statistic, also known as the z-score, is a measure that quantifies
+          how many standard deviations a particular data point is from the mean in
+          a normal distribution. It is often used in statistics for estimating population
+          parameters, such as the population mean, when you have a sample from that
+          population.</p>
+        <p style="margin-left:0px;"><span class="math-tex">\(Z = \frac{\bar X - \mu}{SE(\bar X)}\)</span>
+        </p>
+        <p style="margin-left:0px;"><strong>For Single Mean</strong>
+        </p>
+        <p style="margin-left:0px;"><span class="math-tex">\(SE(\bar X) = \frac{\sigma|s}{\sqrt n}\)</span>
+        </p>
+        <p style="margin-left:0px;"><strong>For Two Mean</strong>
+        </p>
+        <ol>
+          <li>When&nbsp;<span class="math-tex">\(\sigma\)</span>&nbsp;is know
+            <br><span class="math-tex">\(SE(\bar X) = \sigma \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}\)</span>
+          </li>
+          <li>When&nbsp;<span class="math-tex">\(\sigma\)</span>&nbsp;is unknown
+            <ol>
+              <li>when&nbsp;<span class="math-tex">\(s_1 = s_2\)</span>
+                <br><span class="math-tex">\(SE(\bar X) = \sqrt{\frac{s_1^2}{n_2} + \frac{s_2^2}{n_1}}\)</span>
+              </li>
+              <li>when&nbsp;<span class="math-tex">\(s_1 \ne s_2\)</span>
+                <br><span class="math-tex">\(SE(\bar X) = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}\)</span>
+              </li>
+            </ol>
+          </li>
+        </ol>
+        <h2 style="margin-left:0px;">Hypothesis testing</h2>
+        <p style="margin-left:0px;">Null Hypothesis&nbsp;<span class="math-tex">\(H_0: \mu = k\)</span>
+        </p>
+        <p style="margin-left:0px;"><span class="text-big"><strong>Two Tailed</strong></span>
+          <br>Alternate Hypothesis&nbsp;<span class="math-tex">\(H_{\alpha} : \mu \ne k\)</span>
+        </p>
+        <p style="margin-left:0px;"><strong>using z-critical</strong>:
+          <br>find&nbsp;<span class="math-tex">\(Z_{\alpha/2}\)</span>&nbsp;from the
+          table</p>
+        <p style="margin-left:0px;">if&nbsp;<span class="math-tex">\(|Z| \ge Z_{\alpha/2}\)</span>&nbsp;then
+          reject null hypothesis
+          <br>else accept null hypothesis</p>
+        <p style="margin-left:0px;"><strong>using p value</strong>:
+          <br>if&nbsp;<span class="math-tex">\(pvalue = 2(p(z \le -|Z|)) \ge \alpha\)</span>&nbsp;then
+          &nbsp;accept null hypothesis
+          <br>else accept null hypothesis</p>
+        <p style="margin-left:0px;"><span class="text-big"><strong>Single Tailed</strong></span>
+          <br>Alternate Hypothesis&nbsp;<span class="math-tex">\(H_{\alpha} : \mu \gt k\)</span>
+        </p>
+        <p style="margin-left:0px;"><strong>using z-critical</strong>:
+          <br>find&nbsp;<span class="math-tex">\(Z_{\alpha}\)</span>&nbsp;from the table</p>
+        <p
+        style="margin-left:0px;">if&nbsp;<span class="math-tex">\(|Z| \ge Z_{\alpha}\)</span>&nbsp;then
+          reject null hypothesis
+          <br>else accept null hypothesis</p>
+          <p style="margin-left:0px;"><strong>using p value</strong>:
+            <br>if&nbsp;<span class="math-tex">\(pvalue = p(z \le -|Z|) \ge \alpha\)</span>&nbsp;then
+            &nbsp;accept null hypothesis
+            <br>else accept null hypothesis</p>
+          <h2 style="margin-left:0px;">Confidence Interval</h2>
+          <p style="margin-left:0px;"><span class="math-tex">\(\bar X \pm Z_{\alpha/2} SE(\bar X)\)</span>
+          </p>
+          <h2 style="margin-left:0px;">Terms</h2>
+          <p style="margin-left:0px;"><span class="math-tex">\(Z = standerd \space normal \space value(z-score)\)</span>
+            <br><span class="math-tex">\(\mu = population \space mean\)</span>
+            <br><span class="math-tex">\(\sigma = population \space sd\)</span>
+            <br><span class="math-tex">\(\bar X = sample \space mean\)</span>
+            <br><span class="math-tex">\(s = sample \space sd\)</span>
+            <br><span class="math-tex">\(n = sample \space size\)</span>
+            <br><span class="math-tex">\(sd &nbsp;= standered \space deviation\)</span>
+            <br><span class="math-tex">\(\alpha = level \space of \space significance\)</span>
+          </p>
+          <p style="margin-left:0px;">Type 2 error prob:
+            <img src="z-statistic/image.png">
+          </p>
+      </div>
+    </div>
+  </body>
+
+</html>

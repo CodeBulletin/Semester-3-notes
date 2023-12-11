@@ -1,0 +1,28 @@
+def isSubsetSum(arr, n, sum, subset=[]):
+    # Base Cases
+    if sum == 0:
+        return True, subset
+    if n == 0:
+        return False, []
+
+    # If last element is greater than sum, then ignore it
+    if arr[n-1] > sum:
+        return isSubsetSum(arr, n-1, sum, subset)
+
+    # Check with including the last element
+    res, with_last = isSubsetSum(arr, n-1, sum-arr[n-1], subset + [arr[n-1]])
+    if res:
+        return True, with_last
+
+    # Check without including the last element
+    return isSubsetSum(arr, n-1, sum, subset)
+
+# Example usage
+arr = [3, 34, 4, 12, 5, 2]
+sum = 9
+n = len(arr)
+found, subset = isSubsetSum(arr, n, sum)
+if found:
+    print("Found a subset with given sum:", subset)
+else:
+    print("No subset with given sum")

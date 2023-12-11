@@ -1,0 +1,71 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Recommender Systems</h1>
+
+      <div class="ck-content">
+        <p>Recommender systems are a class of information filtering systems designed
+          to predict the "rating" or "preference" a user would give to an item. They
+          are widely used in various industries, most notably in e-commerce and content
+          providers like online retail, movie streaming, and music services. The
+          primary goal of recommender systems is to present users with items or content
+          that they are likely to be interested in, enhancing user experience and
+          engagement.</p>
+        <p>There are several types of recommender systems, each with its own approach:</p>
+        <p><strong>Collaborative Filtering</strong>: This method makes automatic
+          predictions (filtering) about the interests of a user by collecting preferences
+          from many users (collaborating). The underlying assumption is that if a
+          person A has the same opinion as a person B on an issue, A is more likely
+          to have B's opinion on a different issue than that of a random person.
+          There are two types of collaborative filtering:</p>
+        <ul>
+          <li><strong>User-Based</strong>: Recommends items by finding similar users.
+            For example, if user X likes items 1, 2, 3, and another user Y likes items
+            2, 3, 4, they have similar interests. Hence, the system can recommend item
+            4 to user X.</li>
+          <li><strong>Item-Based</strong>: Recommends items by finding similar items.
+            If many users like both items A and B, the system can infer that they are
+            similar. Therefore, if someone likes item A, the system can recommend item
+            B.</li>
+        </ul>
+        <p><strong>Content-Based Filtering</strong>: This method uses item features
+          to recommend additional items similar to what the user likes, based on
+          their previous actions or explicit feedback. For instance, if a user has
+          watched many action movies, the system might recommend action movies.</p>
+        <p><strong>Hybrid Approaches</strong>: These combine collaborative and content-based
+          filtering. They can be implemented in various ways: by making predictions
+          separately with each approach and combining them, by adding collaborative
+          and content-based features into a single model, or by unifying the models
+          into one model.</p>
+        <p><strong>Knowledge-Based Systems</strong>: These recommend items based
+          on explicit knowledge about users and items. They are particularly useful
+          when user ratings or behavior data are sparse and can't provide enough
+          information for collaborative or content-based approaches. For example,
+          in a real estate recommendation system, the system might use knowledge
+          about the user's needs (e.g., location preference, budget) and the properties
+          (e.g., size, price) to make recommendations.</p>
+        <p><strong>Utility-Based Systems</strong>: These systems suggest products
+          based on a utility function, which captures the usefulness of an item to
+          a particular user. For example, a travel recommendation system might consider
+          factors like cost, distance, weather, etc., to recommend travel destinations.</p>
+        <p><strong>Demographic-Based Systems</strong>: These systems provide recommendations
+          based on a user’s demographic profile. Demographic data might include age,
+          gender, income level, etc. For example, a movie recommender system might
+          suggest animated movies to a younger demographic.</p>
+        <p>Recommender systems are a powerful tool for increasing user satisfaction
+          and loyalty, and they are an essential component of many modern digital
+          services. They handle large volumes of data and often employ sophisticated
+          machine learning algorithms to predict user preferences accurately.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

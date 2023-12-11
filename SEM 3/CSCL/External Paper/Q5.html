@@ -1,0 +1,81 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q5</h1>
+
+      <div class="ck-content">
+        <h2>(a) Suppose that you have a message consisting of 1024 bits. Design a method that will extend a key that is 64 bits long into a string of. 1024 bits, so that. the resulting 1024 bits can be XORed with the message, &nbsp;just like a one-time pad. Is the resulting cipher as secure as a one-time pad? Is it possible for any such cipher to be as secure as a one-time pad?</h2>
+        <h4>Designing the Method</h4>
+        <p>To extend a 64-bit key into a 1024-bit string for XORing with a 1024-bit
+          message, a common approach would be to use a pseudorandom number generator
+          (PRNG) seeded with the 64-bit key. This PRNG would generate a stream of
+          bits that repeats every 64 bits to achieve the length of 1024 bits.</p>
+        <ol>
+          <li><strong>Seed the PRNG with the 64-bit Key</strong>: Initialize the PRNG
+            with the given key.</li>
+          <li><strong>Generate Bits</strong>: Use the PRNG to generate a bitstream until
+            it reaches 1024 bits in length.</li>
+          <li><strong>XOR Operation</strong>: XOR this 1024-bit extended key with the
+            original message.</li>
+        </ol>
+        <h4>Security Analysis</h4>
+        <ul>
+          <li><strong>Comparison with One-Time Pad</strong>: A true one-time pad (OTP)
+            requires the key to be as long as the message, completely random, and used
+            only once. In this case, since the key is shorter than the message and
+            extended via a deterministic process (PRNG), the resulting cipher is not
+            as secure as a one-time pad.</li>
+          <li><strong>Predictability</strong>: Given the repetitive nature of the extended
+            key (every 64 bits), it becomes more predictable and vulnerable to cryptanalysis,
+            unlike the OTP which is completely random and provides perfect secrecy.</li>
+          <li><strong>Practical Security</strong>: While this method can provide a certain
+            level of security, it is vulnerable to attacks that are not a concern with
+            a one-time pad.</li>
+          <li><strong>Inherent Limitation</strong>: No cipher that reuses a key or generates
+            a key stream from a smaller key can be as secure as a one-time pad, as
+            the fundamental strength of an OTP lies in its key being random, as long
+            as the message, and never reused.</li>
+        </ul>
+        <h2>(b) What is cryptography and also explain Symmetric-key cryptography and Asymmetric cryptography?</h2>
+        <h4>What is Cryptography?</h4>
+        <p>Cryptography is the practice and study of techniques for securing communication
+          and information from adversaries. It involves creating written or generated
+          codes that allow information to be kept secret.</p>
+        <h4>Symmetric-key Cryptography</h4>
+        <ul>
+          <li><strong>Definition</strong>: Symmetric-key cryptography uses the same
+            key for both encryption and decryption.</li>
+          <li><strong>Operation</strong>: The sender and receiver must both possess
+            the secret key and keep it confidential.</li>
+          <li><strong>Examples</strong>: AES (Advanced Encryption Standard) and DES
+            (Data Encryption Standard).</li>
+          <li><strong>Use-Case</strong>: It's widely used for its efficiency in encrypting
+            large amounts of data and is commonly employed in everyday security protocols
+            like SSL/TLS for internet communications.</li>
+        </ul>
+        <h4>Asymmetric Cryptography</h4>
+        <ul>
+          <li><strong>Definition</strong>: Asymmetric cryptography, also known as public-key
+            cryptography, uses two different keys – a public key and a private key.</li>
+          <li><strong>Operation</strong>: The public key is available to everyone and
+            is used for encrypting messages. The private key is secret and is used
+            to decrypt the messages.</li>
+          <li><strong>Examples</strong>: RSA (Rivest–Shamir–Adleman) and ECC (Elliptic
+            Curve Cryptography).</li>
+          <li><strong>Use-Case</strong>: It is essential for establishing secure communications
+            over an insecure medium like the Internet, used in digital signatures,
+            and for secure key exchange mechanisms.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

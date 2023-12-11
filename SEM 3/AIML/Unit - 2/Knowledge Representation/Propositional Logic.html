@@ -1,0 +1,206 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Propositional Logic</h1>
+
+      <div class="ck-content">
+        <h2><span class="math-tex">\(And (\Lambda)\)</span></h2>
+        <p><span class="math-tex">\(P \space \Lambda \space Q\)</span>
+        </p>
+        <p>can be written as P and Q in English</p>
+        <p>Truth Table:</p>
+        <figure class="table">
+          <table>
+            <tbody>
+              <tr>
+                <td><span class="math-tex">\(P\)</span>
+                </td>
+                <td><span class="math-tex">\(Q\)</span>
+                </td>
+                <td><span class="math-tex">\(P \space \Lambda \space Q\)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>F</td>
+                <td>F</td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td>T</td>
+                <td>F</td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td>F</td>
+                <td>F</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <h2><span class="math-tex">\(Or(V)\)</span></h2>
+        <p><span class="math-tex">\(P \space V \space Q\)</span>
+        </p>
+        <p>can be written as P or Q in English</p>
+        <p>Truth Table:</p>
+        <figure class="table">
+          <table>
+            <tbody>
+              <tr>
+                <td><span class="math-tex">\(P\)</span>
+                </td>
+                <td><span class="math-tex">\(Q\)</span>
+                </td>
+                <td><span class="math-tex">\(P \space V \space Q\)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>F</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td>T</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td>F</td>
+                <td>F</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <h2><span class="math-tex">\(Not({\displaystyle \neg })\)</span></h2>
+        <p><span class="math-tex">\({\displaystyle \neg }P\)</span>
+        </p>
+        <p>can be written as not P in English</p>
+        <p>Truth Table:</p>
+        <figure class="table">
+          <table>
+            <tbody>
+              <tr>
+                <td><span class="math-tex">\(P\)</span>
+                </td>
+                <td><span class="math-tex">\({\displaystyle \neg }P\)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>F</td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td>T</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <h2><span class="math-tex">\(Implies(\rightarrow)\)</span></h2>
+        <p><span class="math-tex">\(P \rightarrow Q\)</span>
+        </p>
+        <p>can be written in multiple forms in English as
+          <br>If P then Q
+          <br>Q when P
+          <br>P implies Q</p>
+        <p>Truth Table:</p>
+        <figure class="table">
+          <table>
+            <tbody>
+              <tr>
+                <td><span class="math-tex">\(P\)</span>
+                </td>
+                <td><span class="math-tex">\(Q\)</span>
+                </td>
+                <td><span class="math-tex">\(P \rightarrow Q\)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>F</td>
+                <td>F</td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td>T</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td>F</td>
+                <td>T</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <h2><span class="math-tex">\(Equivalance(\leftrightarrow)\)</span></h2>
+        <p><span class="math-tex">\(P \leftrightarrow Q\)</span>
+        </p>
+        <p>can be written in multiple forms in English as
+          <br>P if and only if Q
+          <br>if P the Q and vice versa
+          <br>P is equivalent Q</p>
+        <p>Truth Table:</p>
+        <figure class="table">
+          <table>
+            <tbody>
+              <tr>
+                <td><span class="math-tex">\(P\)</span>
+                </td>
+                <td><span class="math-tex">\(Q\)</span>
+                </td>
+                <td><span class="math-tex">\(P \leftrightarrow Q\)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>F</td>
+                <td>F</td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td>T</td>
+                <td>F</td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td>F</td>
+                <td>T</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

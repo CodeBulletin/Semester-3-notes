@@ -1,0 +1,48 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Time Complexity</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The N Queens Problem is a classic problem in computer science and combinatorics,
+          where the task is to place N chess queens on an N×N chessboard in such
+          a way that no two queens threaten each other. One common approach to solving
+          this problem is by using backtracking.</p>
+        <p style="margin-left:0px;">The time complexity of the N Queens Problem using backtracking is typically
+          expressed as O(N!), where N is the size of the chessboard (number of rows
+          and columns). This is because, in the worst case, the algorithm needs to
+          explore all possible combinations of queen placements.</p>
+        <p style="margin-left:0px;">Here's a brief explanation of why the time complexity is&nbsp;<span class="math-tex">\(O(n!)\)</span>:</p>
+        <ol>
+          <li>In the first row, you have&nbsp;<span class="math-tex">\(n\)</span>&nbsp;choices
+            for placing the queen.</li>
+          <li>In the second row, you have (<span class="math-tex">\(n-1\)</span>) choices
+            (since you cannot place a queen in the same column or in a directly threatened
+            diagonal).</li>
+          <li>In the third row, you have (<span class="math-tex">\(n-2\)</span>) choices,
+            and so on.</li>
+        </ol>
+        <p style="margin-left:0px;">The total number of possibilities is&nbsp;<span class="math-tex">\(n * (n-1) * (n-2) * ... * 1\)</span>,
+          which is&nbsp;<span class="math-tex">\(n!\)</span>
+        </p>
+        <p style="margin-left:0px;">It's important to note that although&nbsp;<span class="math-tex">\(n!\)</span>&nbsp;is
+          a tight upper bound, the actual number of possibilities explored during
+          backtracking may be significantly less due to the pruning of search space
+          based on constraints and heuristics.</p>
+        <p style="margin-left:0px;">In practice, the performance of the backtracking algorithm for the N Queens
+          Problem can be quite good for small to moderate values of N, but it becomes
+          impractical for larger values of N due to the exponential growth in the
+          number of possibilities.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

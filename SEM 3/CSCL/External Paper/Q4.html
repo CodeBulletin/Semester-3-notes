@@ -1,0 +1,88 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q4</h1>
+
+      <div class="ck-content">
+        <h2>(a) What are Cyber Security Vulnerabilities and what are the common types of Cyber Security Vulnerabilities?</h2>
+        <h4>What are Cyber Security Vulnerabilities?</h4>
+        <p>Cyber security vulnerabilities refer to weaknesses or flaws in a system's
+          design, implementation, operation, or management that can be exploited
+          by cybercriminals to gain unauthorized access, cause damage, or disrupt
+          operations.</p>
+        <h4>Common Types of Cyber Security Vulnerabilities</h4>
+        <ol>
+          <li><strong>Software Flaws</strong>: Bugs or errors in software that can be
+            exploited, like buffer overflows or unvalidated input.</li>
+          <li><strong>Unpatched Software</strong>: Software that hasn’t been updated
+            with the latest security patches, leaving known vulnerabilities open to
+            exploitation.</li>
+          <li><strong>Weak Authentication</strong>: Poorly implemented authentication
+            mechanisms that make it easy to intercept or guess user credentials.</li>
+          <li><strong>Misconfigurations</strong>: Incorrect system or security settings
+            that leave systems vulnerable to attack.</li>
+          <li><strong>Insecure Interfaces and APIs</strong>: Poorly designed or unprotected
+            application programming interfaces (APIs) that can be exploited to gain
+            unauthorized access or information.</li>
+          <li><strong>Outdated or Weak Encryption</strong>: Using obsolete or weak cryptographic
+            standards that can be easily broken.</li>
+          <li><strong>Phishing and Social Engineering</strong>: Tactics used to deceive
+            individuals into divulging confidential or personal information that may
+            be used for fraudulent purposes.</li>
+          <li><strong>Insider Threats</strong>: Threats from individuals within the
+            organization who may have malicious intent or inadvertently cause harm
+            due to negligence.</li>
+          <li><strong>Physical Security Breaches</strong>: Failure to secure physical
+            access to critical hardware and infrastructure.</li>
+        </ol>
+        <h2>(b) How to Prevent an SQL Injection and How is an SQL Injection attack performed?</h2>
+        <h4>How to Prevent SQL Injection</h4>
+        <ol>
+          <li><strong>Use Prepared Statements</strong>: Using parameterized queries
+            or prepared statements with placeholders for data ensures that the input
+            is treated as data and not as part of the SQL command.</li>
+          <li><strong>Sanitize Input</strong>: Validate and sanitize user input to ensure
+            it doesn’t contain malicious SQL.</li>
+          <li><strong>Use Stored Procedures</strong>: They can encapsulate the SQL logic
+            and prevent exposure of underlying SQL syntax.</li>
+          <li><strong>Least Privilege</strong>: Ensure that database accounts used by
+            applications have the least privilege necessary, limiting the data they
+            can access and modify.</li>
+          <li><strong>Regularly Update and Patch</strong>: Keep software and dependencies
+            up-to-date with the latest security patches.</li>
+          <li><strong>Web Application Firewalls (WAFs)</strong>: Deploy WAFs to detect
+            and block SQL injection attempts.</li>
+          <li><strong>Error Handling</strong>: Implement proper error handling that
+            doesn’t expose sensitive information in error messages.</li>
+        </ol>
+        <h4>How SQL Injection Attacks are Performed</h4>
+        <ol>
+          <li><strong>Exploiting Input Fields</strong>: Attackers input malicious SQL
+            code into fields like login forms, search boxes, or URL parameters where
+            user input is expected.</li>
+          <li><strong>Manipulating SQL Queries</strong>: The attacker's input is designed
+            to alter the SQL query being executed by the application. For example,
+            appending a <code>OR 1=1</code> statement to a login query to bypass authentication.</li>
+          <li><strong>Exfiltrating Data</strong>: Successful SQL injection can allow
+            attackers to view, modify, or delete data in the database, depending on
+            their complexity and the database’s configuration.</li>
+          <li><strong>Elevating Privileges</strong>: Advanced SQL injection techniques
+            can be used to escalate privileges and perform administrative operations
+            on the database.</li>
+        </ol>
+        <p>SQL injection attacks exploit vulnerabilities in web application software
+          when user input is not correctly checked or sanitized before being incorporated
+          into SQL statements.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

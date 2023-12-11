@@ -1,0 +1,93 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q5</h1>
+
+      <div class="ck-content">
+        <h2>(a) Elaborate DoS attack. Explain Flood attack, Smurf attack and teardrop attack in DOS. Compare DDos with PDOS.</h2>
+        <p>A DoS attack is a malicious attempt to disrupt the normal functioning
+          of a computer system, network, or service by overwhelming it with a flood
+          of illegitimate requests or by exploiting vulnerabilities. Here are three
+          types of DoS attacks:</p>
+        <ol>
+          <li><strong>Flood Attack</strong>: In a flood attack, the attacker floods
+            the target system or network with a massive volume of traffic, overwhelming
+            its resources and causing it to become unresponsive or crash. This can
+            be achieved by sending a large number of requests or by exploiting vulnerabilities
+            that allow amplification of the attack traffic.</li>
+          <li><strong>Smurf Attack</strong>: In a smurf attack, the attacker spoofs
+            the source IP address and sends ICMP (Internet Control Message Protocol)
+            echo request packets to a network's broadcast address. The network then
+            responds to these requests, flooding the target system with a large volume
+            of ICMP echo reply packets, causing it to become overwhelmed and unresponsive.</li>
+          <li><strong>Teardrop Attack</strong>: A teardrop attack exploits a vulnerability
+            in the way a target system reassembles fragmented IP packets. The attacker
+            sends IP packets with overlapping fragments that the target system cannot
+            properly reassemble. This can cause the system to crash or become unstable.</li>
+        </ol>
+        <p>Comparing DDoS with PDOS:</p>
+        <ol>
+          <li><strong>DDoS (Distributed Denial of Service) Attac</strong>k: In a DDoS
+            attack, multiple compromised computers, known as a botnet, are used to
+            flood the target system or network with a massive volume of traffic. The
+            distributed nature of the attack makes it difficult to mitigate as the
+            traffic comes from multiple sources, making it harder to block or filter.</li>
+          <li><strong>PDOS (Permanent Denial of Service) Attack</strong>: PDOS, also
+            known as "bricking," aims to permanently disable a target system or device
+            by exploiting vulnerabilities in its firmware or software. The attack renders
+            the system or device inoperable, requiring physical repair or replacement.
+            Unlike DDoS attacks, PDOS attacks focus on causing permanent damage rather
+            than temporary disruption.</li>
+        </ol>
+        <h2>(b) What is SQL injection? How is it executed? How can we protect data from this attack?</h2>
+        <p>SQL injection is a type of web application vulnerability where an attacker
+          inserts malicious SQL code into a web application's input fields or parameters.
+          The goal is to manipulate the application's database queries and gain unauthorized
+          access to or control over the database.</p>
+        <p>Execution of SQL Injection:</p>
+        <ol>
+          <li><strong>Malicious Input</strong>: The attacker identifies a vulnerable
+            input field or parameter in a web application, such as a login form or
+            search box.</li>
+          <li><strong>SQL Code Injection</strong>: The attacker inserts malicious SQL
+            code into the input field, taking advantage of improper input validation
+            or lack of parameterization in the application's code.</li>
+          <li><strong>Database Manipulation</strong>: When the application processes
+            the input, the malicious SQL code is executed by the database server. This
+            can lead to unauthorized access, data manipulation, or even the execution
+            of arbitrary commands on the database server.</li>
+        </ol>
+        <p>Protecting Data from SQL Injection:</p>
+        <p>To protect data from SQL injection attacks, consider the following measures:</p>
+        <ol>
+          <li><strong>Input Validation</strong>: Implement strict input validation and
+            sanitization techniques to ensure that user-supplied data is properly validated
+            and does not contain any malicious code.</li>
+          <li><strong>Parameterized Queries</strong>: Use parameterized queries or prepared
+            statements in your application's code. This helps separate the SQL code
+            from the user-supplied data, preventing the injection of malicious code.</li>
+          <li><strong>Least Privilege Principle</strong>: Ensure that the database user
+            account used by the application has the least privileges necessary to perform
+            its tasks. This limits the potential damage an attacker can cause if a
+            SQL injection vulnerability is exploited.</li>
+          <li><strong>Regular Updates and Patching</strong>: Keep your web application
+            and database management system up to date with the latest security patches
+            and updates. This helps protect against known vulnerabilities that attackers
+            may exploit.</li>
+          <li><strong>Web Application Firewall (WAF)</strong>: Implement a WAF that
+            can detect and block SQL injection attempts. A WAF can analyze incoming
+            requests and filter out malicious SQL code before it reaches the application.</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

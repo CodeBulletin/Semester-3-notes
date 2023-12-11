@@ -1,0 +1,37 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>SQL injection</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">SQL Injection (SQLi) is a type of attack that takes advantage of vulnerabilities
+          in the way a website processes SQL queries. It occurs when an attacker
+          is able to insert or "inject" a malicious SQL query into the input fields
+          of a web application, which is then executed by the database server. This
+          can lead to various harmful consequences, such as data theft, data loss,
+          or complete control over the database.</p>
+        <h3 style="margin-left:0px;"><strong>How SQL Injection Works:</strong></h3>
+        <ol>
+          <li style="margin-left:0px;"><strong>User Input Handling</strong>: In a vulnerable application, user
+            input (like form data) is directly used in constructing SQL queries.</li>
+          <li
+          style="margin-left:0px;"><strong>Injection of Malicious SQL</strong>: An attacker provides SQL
+            code as part of the input data, which gets concatenated with the SQL query
+            in the application code.</li>
+            <li style="margin-left:0px;"><strong>Execution of Malicious Query</strong>: The database server executes
+              the modified query, which may include unauthorized data access, data manipulation,
+              or administrative operations.</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

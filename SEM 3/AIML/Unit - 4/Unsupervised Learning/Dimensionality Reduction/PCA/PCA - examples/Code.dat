@@ -1,0 +1,105 @@
+import matplotlib.pyplot as plt
+import numpy
+import pandas
+
+data = pandas.read_csv('pca_clusters_dataset.csv')
+data = data.drop(['Cluster'], axis=1)
+
+# print(data.head())
+
+
+# visualize the first 3 dimensions of the data
+def visualize_data(data):
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+    ax.scatter(data['Feature_1'], data['Feature_2'], data['Feature_3'])
+    ax.set_title("Original Data")
+    plt.show()
+
+
+visualize_data(data)
+
+
+def NormalizeData(data):
+    return (data - data.mean()) / data.std()
+
+for i in range(1, 6):
+    data['Feature_' + str(i)] = NormalizeData(data['Feature_' + str(i)])
+
+def CovarianceMatrix(data):
+    data = data.T
+    mean = [i.mean() for i in data]
+    cov = numpy.zeros((len(data), len(data)))
+    for i in range(len(data)):
+        for j in range(len(data)):
+            for k in range(len(data[i])):
+                cov[i][j] += (data[i][k] - mean[i]) * (data[j][k] - mean[j])
+            cov[i][j] /= (len(data[i])-1)
+    return cov
+
+covariance_matrix = CovarianceMatrix(data.to_numpy())
+print("Covariance Matrix:")
+print(covariance_matrix)
+
+
+def EigenValuesAndVectors(covariance_matrix):
+    eigen_values, eigen_vectors = numpy.linalg.eig(covariance_matrix)
+    return eigen_values, eigen_vectors
+
+eigen_values, eigen_vectors = EigenValuesAndVectors(covariance_matrix)
+
+# print(eigen_values)
+# print(eigen_vectors)
+
+
+def SortEigenValuesAndVectors(eigen_values, eigen_vectors):
+    idx = eigen_values.argsort()[::-1]
+    eigen_values = eigen_values[idx]
+    eigen_vectors = eigen_vectors[:, idx]
+    return eigen_values, eigen_vectors
+
+eigen_values, eigen_vectors = SortEigenValuesAndVectors(eigen_values, eigen_vectors)
+
+print("Eigen Values:")
+print(eigen_values)
+
+print("Eigen Vectors:")
+print(eigen_vectors)
+
+
+def TransformData(data, eigen_vectors):
+    return numpy.matmul(data, eigen_vectors)
+
+transformed_data = TransformData(data.to_numpy(), eigen_vectors)
+# print(transformed_data)
+
+# Visualize the first 3 dimensions of the transformed data
+
+def visualize_transformed_data(data):
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+    ax.scatter(data[:, 0], data[:, 1], data[:, 2])
+    ax.set_title("Transformed Data")
+    plt.show()
+
+visualize_transformed_data(transformed_data)
+
+
+# draw Scree plot
+def draw_scree_plot(eigen_values):
+    percentages = []
+    for i in range(len(eigen_values)):
+        percentages.append(eigen_values[i] / eigen_values.sum())
+    
+    # bar charts with precentages printed on top
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    ax.bar(range(len(percentages)), percentages)
+    ax.set_title("Scree Plot")
+    ax.set_xlabel("Principal Component")
+    ax.set_ylabel("Percentage")
+    for i in range(len(percentages)):
+        ax.text(i, percentages[i], str(round(percentages[i], 2)))
+    plt.show()
+
+draw_scree_plot(eigen_values)

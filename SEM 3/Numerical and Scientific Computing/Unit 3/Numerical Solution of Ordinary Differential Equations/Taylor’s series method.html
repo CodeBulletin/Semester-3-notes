@@ -1,0 +1,49 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Taylor’s series method</h1>
+
+      <div class="ck-content">
+        <p>
+          <br>Taylor's series method is a numerical technique used to solve ordinary
+          differential equations (ODEs) by approximating the solution as a power
+          series expansion. It is based on Taylor's theorem, which states that a
+          function can be represented as an infinite sum of its derivatives evaluated
+          at a particular point.</p>
+        <p>The Taylor's series method involves the following steps:</p>
+        <ol>
+          <li>Choose a point (often denoted as "a") around which the Taylor series expansion
+            will be centered.</li>
+          <li>Assume that the solution to the ODE can be expressed as a power series
+            expansion around the chosen point:
+            <br>y(x) = y(a) + (x - a)y'(a) + (x - a)^2/2! y''(a) + (x - a)^3/3! y'''(a)
+            + …
+            <br>Here, y(x) represents the unknown solution, y(a) is the value of the solution
+            at the chosen point, and y'(a), y''(a), y'''(a), etc., represent the derivatives
+            of the solution evaluated at the chosen point.</li>
+          <li>Substitute the power series expansion into the ODE and equate the coefficients
+            of each power of (x - a) to zero. This will result in a system of equations
+            involving the derivatives of the solution evaluated at the chosen point.</li>
+          <li>Solve the system of equations to determine the values of the derivatives
+            at the chosen point.</li>
+          <li>Substitute the values of the derivatives back into the power series expansion
+            to obtain an approximation of the solution.</li>
+        </ol>
+        <p>The accuracy of the Taylor's series method depends on the number of terms
+          included in the expansion. Including more terms will result in a more accurate
+          approximation, but it may also increase the computational complexity. In
+          practice, the expansion is often truncated after a certain number of terms
+          to balance accuracy and efficiency.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

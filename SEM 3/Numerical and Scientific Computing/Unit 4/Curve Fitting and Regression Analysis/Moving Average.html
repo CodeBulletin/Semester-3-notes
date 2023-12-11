@@ -1,0 +1,84 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Moving Average</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;"><strong>Moving Average (MA)</strong> is a statistical calculation used
+          to analyze data over a certain time period. It is often employed in time
+          series analysis to smooth out short-term fluctuations and highlight longer-term
+          trends or cycles. The basic idea is to calculate the average of a set of
+          data points within a moving window that shifts through the data.</p>
+        <h2
+        style="margin-left:0px;"><strong>Types of Moving Averages</strong>
+          </h2>
+          <h3 style="margin-left:0px;"><strong>Simple Moving Average</strong></h3>
+          <p>a simple moving average (<span class="math-tex">\(SMA\)</span>) is the
+            unweighted mean of the previous&nbsp;<span class="math-tex">\(k\)</span>&nbsp;data-points</p>
+          <p><span class="math-tex">\(SMA_k = \frac{p_{n-k+1} +p_{n-k+2}+...+p_n}{k}\)</span>
+          </p>
+          <p><span class="math-tex">\(SMA_{k, next} = SMA_{k, prev} + \frac{1}{k}(p_{n+1}-p_{n-k+1})\)</span>
+          </p>
+          <h3><strong>Cumulative Average</strong></h3>
+          <p>In a cumulative average (<span class="math-tex">\(CA\)</span>), the data
+            arrive in an ordered datum stream, and the user would like to get the average
+            of all of the data up until the current datum. For example, an investor
+            may want the average price of all of the stock transactions for a particular
+            stock up until the current time. As each new transaction occurs, the average
+            price at the time of the transaction can be calculated for all of the transactions
+            up&nbsp;</p>
+          <p><span class="math-tex">\(CA_n = \frac{p_1+p_2+...+p_n}{n}\)</span>
+          </p>
+          <p><span class="math-tex">\(CA_{n+1} = CA_n + \frac{x_{n+1} - CA_n}{n+1}\)</span>
+          </p>
+          <h3><strong>Weighted moving average</strong></h3>
+          <p>A weighted average is an average that has multiplying factors to give
+            different weights to data at different positions in the sample window.
+            Mathematically, the weighted moving average is the convolution of the data
+            with a fixed weighting function. One application is removing pixelization
+            from a digital graphical image</p>
+          <p>In an&nbsp;<span class="math-tex">\(n\)</span>-day&nbsp;<span class="math-tex">\(WMA\)</span>&nbsp;the
+            latest day has weight&nbsp;<span class="math-tex">\(n\)</span>, the second
+            latest&nbsp;<span class="math-tex">\(n-1\)</span>, etc., down to one</p>
+          <p><span class="math-tex">\(WMA_M = \frac{np_M + (n-1)p_{M-1} + {n-2}p_{M-2} + ... 2p_{M-n+2} +p_{M-n+1}}{n + (n-1) + (n-2) + ... + 2 + 1}\)</span>
+          </p>
+          <p>&nbsp;</p>
+          <p><span class="math-tex">\(\)</span><span class="math-tex">\(T_{M+1} = T_M + p_{M+1}-P_{M-n+1}\)</span>
+          </p>
+          <p><span class="math-tex">\(N_{M+1} = N_M + np_{M+1} -T_M\)</span>
+          </p>
+          <p><span class="math-tex">\(WMA_{M+1} = \frac{T_{M+1}}{n + (n-1) + (n-2) + ... + 2 + 1}\)</span>
+          </p>
+          <h3><strong>Exponential moving average</strong></h3>
+          <p>Exponential smoothing or exponential moving average (<span class="math-tex">\(EMA\)</span>)
+            is a rule of thumb technique for smoothing time series data using the exponential
+            window function. Whereas in the simple moving average the past observations
+            are weighted equally, exponential functions are used to assign exponentially
+            decreasing weights over time. It is an easily learned and easily applied
+            procedure for making some determination based on prior assumptions by the
+            user, such as seasonality. Exponential smoothing is often used for analysis
+            of time-series data.</p>
+          <p><span class="math-tex">\(s_0 = x_0\)</span>
+          </p>
+          <p><span class="math-tex">\(s_t = \alpha x_t + (1-\alpha)s_{t-1}, \space t &gt; 0\)</span>
+          </p>
+          <p>where&nbsp;<span class="math-tex">\(\alpha\)</span>&nbsp;is the smoothing
+            factor,&nbsp;<span class="math-tex">\(0 &lt; \alpha &lt; 1\)</span>
+          </p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

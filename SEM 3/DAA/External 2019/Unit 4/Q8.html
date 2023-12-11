@@ -1,0 +1,85 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q8</h1>
+
+      <div class="ck-content">
+        <h2>(b) Differentiate between P, NP, NP hard and NP complete problems.</h2>
+        <p>The concepts of P, NP, NP-hard, and NP-complete are central to computational
+          complexity theory, a branch of computer science that deals with the efficiency
+          and feasibility of solving problems. These classifications help us understand
+          the difficulty of solving various computational problems and whether solutions
+          can be efficiently verified. Here's a differentiation among them:</p>
+        <h3>P (Polynomial Time)</h3>
+        <ul>
+          <li><strong>Definition</strong>: P stands for "Polynomial Time" and refers
+            to the class of problems that can be solved by a deterministic Turing machine
+            in polynomial time.</li>
+          <li><strong>Characteristics</strong>: Problems in P are those for which an
+            efficient solution exists. "Efficient" here means the running time of the
+            algorithm is a polynomial function of the size of the input.</li>
+          <li><strong>Examples</strong>: Problems like sorting, binary search, or finding
+            the shortest path in a graph using Dijkstra's algorithm.</li>
+        </ul>
+        <h3>NP (Non-deterministic Polynomial Time)</h3>
+        <ul>
+          <li><strong>Definition</strong>: NP stands for "Non-deterministic Polynomial
+            Time." It's a class of problems for which a proposed solution can be verified
+            in polynomial time by a deterministic Turing machine.</li>
+          <li><strong>Characteristics</strong>: Problems in NP are those where it's
+            not necessarily known how to find a solution efficiently, but if given
+            a solution, it can be checked quickly.</li>
+          <li><strong>Relation with P</strong>: All problems in P are also in NP (since
+            if a solution can be found quickly, it can also be verified quickly). However,
+            it's an open question in computer science (the famous "P vs NP" problem)
+            whether all problems in NP are also in P.</li>
+          <li><strong>Examples</strong>: Problems like the Hamiltonian Cycle problem,
+            the subset sum problem, etc.</li>
+        </ul>
+        <h3>NP-Hard</h3>
+        <ul>
+          <li><strong>Definition</strong>: NP-Hard are problems that are at least as
+            hard as the hardest problems in NP. It doesn't matter if they are in NP
+            or not.</li>
+          <li><strong>Characteristics</strong>: If any NP-hard problem can be solved
+            in polynomial time, then every problem in NP can also be solved in polynomial
+            time (which would mean P = NP). However, such an algorithm has not been
+            discovered yet. NP-hard problems may not even be decision problems (with
+            a yes/no answer).</li>
+          <li><strong>Examples</strong>: Problems like the traveling salesman problem,
+            decision version of Sudoku, etc.</li>
+        </ul>
+        <h3>NP-Complete</h3>
+        <ul>
+          <li><strong>Definition</strong>: NP-Complete problems are those that are both
+            in NP and NP-Hard.</li>
+          <li><strong>Characteristics</strong>: These are the most difficult problems
+            in NP. If any NP-complete problem can be solved in polynomial time, then
+            every problem in NP can be solved in polynomial time (P = NP). They are
+            a subset of NP and serve as a benchmark for the complexity of other NP
+            problems.</li>
+          <li><strong>Examples</strong>: Problems like the Boolean satisfiability problem
+            (SAT), the clique problem, etc.</li>
+        </ul>
+        <p>In summary:</p>
+        <ul>
+          <li><strong>P</strong>: Problems solvable efficiently (in polynomial time).</li>
+          <li><strong>NP</strong>: Problems for which a solution can be verified efficiently.</li>
+          <li><strong>NP-Hard</strong>: Problems at least as hard as the hardest problems
+            in NP.</li>
+          <li><strong>NP-Complete</strong>: The intersection of NP and NP-Hard, representing
+            the most challenging known problems in NP.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

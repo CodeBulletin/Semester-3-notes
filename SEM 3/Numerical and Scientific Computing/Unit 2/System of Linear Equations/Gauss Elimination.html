@@ -1,0 +1,38 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Gauss Elimination</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Gaussian elimination, also known as Gaussian elimination method or row
+          reduction, is a widely used technique for solving systems of linear equations
+          and finding the solutions for the variables. It's named after the German
+          mathematician Carl Friedrich Gauss but was independently discovered by
+          other mathematicians as well.</p>
+        <p style="margin-left:0px;">The primary goal of Gaussian elimination is to transform a system of linear
+          equations into an equivalent, simpler system (using row or column operations)that
+          is easier to solve.</p>
+        <p style="margin-left:0px;"><span class="math-tex">\(\begin{bmatrix} a_{11} &amp; a_{12} &amp; a_{13} \\ a_{21} &amp; a_{22} &amp; a_{23} \\ a_{31} &amp; a_{32} &amp; a_{33}\end{bmatrix} &nbsp;\rightarrow &nbsp;\begin{bmatrix} 1 &amp; b_{12} &amp; b_{13} \\ 0 &amp; 1 &amp; b_{23} \\ 0 &amp; 0 &amp; 1\end{bmatrix}\)</span>
+        </p>
+        <h2 style="margin-left:0px;">What is partial pivoting and what is its use</h2>
+        <p style="margin-left:0px;">when solving systems of linear equations. It involves selecting the pivot
+          element (the leading coefficient) in each step of the elimination process
+          to ensure that it has the largest absolute value among the coefficients
+          in its column. The pivot element is the element that is used as a multiplier
+          to eliminate other elements below it in the matrix during the row reduction
+          process.</p>
+        <p style="margin-left:0px;">The primary purpose of partial pivoting is to improve the numerical stability
+          and accuracy of the Gaussian elimination method.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

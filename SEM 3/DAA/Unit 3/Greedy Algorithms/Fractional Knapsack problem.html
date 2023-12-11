@@ -1,0 +1,49 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Fractional Knapsack problem</h1>
+
+      <div class="ck-content">
+        <p>The Fractional Knapsack problem is a classic optimization problem that
+          involves selecting items with maximum total value to fit into a knapsack
+          with a limited capacity. Unlike the 0/1 Knapsack problem, in the Fractional
+          Knapsack problem, items can be divided (fractional) to maximize the total
+          value.</p>
+        <p>Here's a step-by-step approach to solving the Fractional Knapsack problem:</p>
+        <ol>
+          <li>Calculate the value-to-weight ratio for each item by dividing the value
+            of the item by its weight.</li>
+          <li>Sort the items in descending order based on their value-to-weight ratio.</li>
+          <li>Initialize the total value and remaining capacity of the knapsack to 0.</li>
+          <li>Iterate through the sorted items and do the following:
+            <ul>
+              <li>If the weight of the current item is less than or equal to the remaining
+                capacity of the knapsack, add the entire item to the knapsack. Update the
+                total value and remaining capacity accordingly.</li>
+              <li>If the weight of the current item is greater than the remaining capacity,
+                add a fraction of the item to the knapsack to fill the remaining capacity.
+                Update the total value and remaining capacity accordingly.</li>
+            </ul>
+          </li>
+          <li>Return the total value as the maximum achievable value.</li>
+        </ol>
+        <p>The time complexity of this algorithm is dominated by the sorting step,
+          which is&nbsp;<span class="math-tex">\(O(n \space log \space ⁡n)\)</span>,
+          where&nbsp;<span class="math-tex">\(n\)</span>&nbsp;is the number of items.</p>
+        <figure
+        class="image">
+          <img src="Fractional%20Knapsack%20problem/image.png">
+          </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,157 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q8</h1>
+
+      <div class="ck-content">
+        <h2>(a) Form a network for 4 inputs, 2 hidden neurons and 1 output for neural network. Explain the activation function.&nbsp;</h2><pre><code class="language-text-plain">import numpy as np
+
+class SimpleNeuralNetwork:
+    def __init__(self, input_size, hidden_size, output_size):
+        # Initialize weights and biases
+        self.input_size = input_size
+        self.hidden_size = hidden_size
+        self.output_size = output_size
+
+        self.weights_input_hidden = np.random.randn(input_size, hidden_size)
+        self.bias_hidden = np.zeros((1, hidden_size))
+        self.weights_hidden_output = np.random.randn(hidden_size, output_size)
+        self.bias_output = np.zeros((1, output_size)
+
+    def forward(self, inputs):
+        # Forward pass
+        self.inputs = inputs
+        self.hidden_input = np.dot(inputs, self.weights_input_hidden) + self.bias_hidden
+        self.hidden_output = 1 / (1 + np.exp(-self.hidden_input))  # Sigmoid activation
+        self.output = np.dot(self.hidden_output, self.weights_hidden_output) + self.bias_output
+        return self.output
+
+# Create a neural network with 4 inputs, 2 hidden neurons, and 1 output
+input_size = 4
+hidden_size = 2
+output_size = 1
+network = SimpleNeuralNetwork(input_size, hidden_size, output_size)
+
+# Example usage
+inputs = np.array([0.1, 0.2, 0.3, 0.4])
+output = network.forward(inputs)
+print("Output:", output)</code></pre>
+        <p>An activation function, in the context of artificial neural networks,
+          is a mathematical function that determines the output of a neuron or node
+          in a neural network based on its input. It is a key component of a neural
+          network as it introduces non-linearity into the model. Activation functions
+          enable neural networks to learn complex patterns and make them capable
+          of approximating any continuous function</p>
+        <h2>(b) Explain different recommender systems with example.&nbsp;</h2>
+        <p style="margin-left:0px;">Recommender systems are a class of machine learning algorithms that provide
+          personalized recommendations to users based on their historical preferences,
+          behavior, or explicit feedback. There are several types of recommender
+          systems, each with its own approach to making recommendations. Here are
+          three common types of recommender systems along with examples:</p>
+        <p style="margin-left:0px;"><strong>Collaborative Filtering:</strong>
+        </p>
+        <ul>
+          <li>Collaborative filtering methods make recommendations by leveraging the
+            behavior and preferences of a large number of users. It assumes that users
+            who have interacted or rated items similarly in the past will continue
+            to have similar preferences.</li>
+          <li>Example: Movie Recommendations
+            <ul>
+              <li>Suppose User A and User B have both rated several movies similarly. If
+                User A has watched and liked movies X, Y, and Z, and User B has also liked
+                X, Y, and Z, then a collaborative filtering system would recommend other
+                movies liked by User B but not yet watched by User A.</li>
+            </ul>
+          </li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Content-Based Filtering:</strong>
+        </p>
+        <ul>
+          <li>Content-based filtering recommends items to users based on their profile
+            and the attributes of the items. It takes into account the features of
+            items and the user's preferences.</li>
+          <li>Example: News Article Recommendations
+            <ul>
+              <li>If a user has shown an interest in political news articles, a content-based
+                recommender system would recommend more political news articles based on
+                the content, keywords, or topics of the articles. It considers the user's
+                profile and the content features of the articles.</li>
+            </ul>
+          </li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Hybrid Recommender Systems:</strong>
+        </p>
+        <ul>
+          <li>Hybrid recommender systems combine multiple recommendation techniques
+            to provide more accurate and diverse recommendations. These systems can
+            take advantage of both collaborative and content-based methods.</li>
+          <li>Example: Music Recommendations
+            <ul>
+              <li>In a music recommendation system, a hybrid approach might combine collaborative
+                filtering by considering what other users with similar tastes are listening
+                to. It can also use content-based filtering by analyzing the audio features,
+                lyrics, and genres of songs to make recommendations. By blending these
+                methods, the system can offer a more comprehensive music discovery experience.</li>
+            </ul>
+          </li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Matrix Factorization (Factorization Machines):</strong>
+        </p>
+        <ul>
+          <li>Matrix factorization models factorize user-item interaction matrices into
+            lower-dimensional matrices to capture latent factors. These models are
+            used in collaborative filtering to predict missing values.</li>
+          <li>Example: E-commerce Product Recommendations
+            <ul>
+              <li>In an e-commerce context, a matrix factorization-based recommender system
+                might factorize a user-product interaction matrix, where users have rated
+                or purchased products. By doing this, it learns latent factors like user
+                preferences and product characteristics and can recommend products based
+                on those factors.</li>
+            </ul>
+          </li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Context-Aware Recommender Systems:</strong>
+        </p>
+        <ul>
+          <li>Context-aware recommender systems take into account additional contextual
+            information when making recommendations. This context can include user
+            location, time, device, or any other relevant data.</li>
+          <li>Example: Restaurant Recommendations
+            <ul>
+              <li>If a user is searching for a restaurant on a mobile device and the system
+                knows their current location, it can recommend nearby restaurants. This
+                context-aware recommendation considers the user's location as an additional
+                factor in making the recommendation.</li>
+            </ul>
+          </li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Association Rules-Based Recommender Systems:</strong>
+        </p>
+        <ul>
+          <li>Association rules are used to identify relationships between items frequently
+            purchased or viewed together. Recommender systems based on association
+            rules recommend items that are frequently associated with what the user
+            has chosen or viewed.</li>
+          <li>Example: Online Retail Recommendations
+            <ul>
+              <li>If a user adds a digital camera to their shopping cart, an association
+                rules-based system might recommend memory cards, camera bags, or other
+                camera-related accessories based on the historical purchase patterns of
+                other customers.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

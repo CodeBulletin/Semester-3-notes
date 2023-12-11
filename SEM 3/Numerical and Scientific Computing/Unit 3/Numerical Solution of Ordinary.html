@@ -1,0 +1,43 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Numerical Solution of Ordinary Differential Equations</h1>
+
+      <div class="ck-content">
+        <p>Numerical methods are commonly used to solve ordinary differential equations
+          (ODEs) when an analytical solution is not available or difficult to obtain.
+          There are several numerical techniques that can be employed, such as Euler's
+          method, the Runge-Kutta methods, and the finite difference methods.</p>
+        <p>Euler's method is a simple and straightforward approach. It approximates
+          the solution by taking small steps along the derivative of the function
+          at each point. The method is based on the first-order Taylor series expansion
+          and can be prone to accumulating errors over time.</p>
+        <p>The Runge-Kutta methods are more accurate and widely used. The most commonly
+          used variant is the fourth-order Runge-Kutta (RK4) method. It involves
+          evaluating the derivative at multiple points within each step and using
+          a weighted average to update the solution. RK4 is known for its accuracy
+          and stability, making it a popular choice for solving ODEs numerically.</p>
+        <p>Finite difference methods discretize the domain and approximate the derivatives
+          using finite differences. The most common finite difference schemes are
+          the forward difference, backward difference, and central difference methods.
+          These methods can be used to convert the ODE into a system of algebraic
+          equations, which can then be solved using various techniques like Gaussian
+          elimination or iterative methods.</p>
+        <p>It's important to note that the choice of numerical method depends on
+          the specific problem and its characteristics. Some ODEs may require specialized
+          techniques, such as stiff ODE solvers for problems with widely varying
+          time scales. Additionally, adaptive step size control can be employed to
+          improve accuracy and efficiency.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,74 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Newton&#39;s Interpolation</h1>
+
+      <div class="ck-content">
+        <p>Newton's interpolation, specifically Newton's divided difference interpolation,
+          is another mathematical method for constructing a polynomial that approximates
+          a function based on a given set of data points. Like Lagrange interpolation,
+          it is used in numerical analysis and mathematics to estimate values between
+          known data points. Newton's interpolation, however, is often favored for
+          its simplicity and computational efficiency.</p>
+        <p style="margin-left:0px;">Newton's divided difference interpolation has some advantages over Lagrange
+          interpolation. It is particularly well-suited for situations where you
+          want to add additional data points without having to completely recompute
+          the interpolating polynomial. You can simply update the divided differences
+          based on the new data points.</p>
+        <p style="margin-left:0px;">While Newton's interpolation is a useful technique, it shares the potential
+          issue of high-degree polynomials with Lagrange interpolation, which can
+          lead to numerical instability for a large number of data points. In practice,
+          it's important to consider the specific characteristics of your data and
+          the desired accuracy when choosing between interpolation methods.</p>
+        <p
+        style="margin-left:0px;">Suppose you have a set of data points&nbsp;<span class="math-tex">\((x_0, y_0),(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)\)</span>,
+          where each&nbsp;<span class="math-tex">\((x_i, y_i)\)</span>&nbsp;represents
+          a data point.</p>
+          <h2 style="margin-left:0px;">Divided Difference</h2>
+          <p style="margin-left:0px;">Here's how Newton's divided difference interpolation works:</p>
+          <p style="margin-left:0px;"><span class="math-tex">\(p_n(x) = a_0 + a_1(x - x_0) + a_2(x-x_0)(x - x_1) + ... + a_n\prod_{i=0}^{n-1}(x-x_i)\)</span>
+          </p>
+          <p style="margin-left:0px;">where,
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(a_0 = f(x_0)\)</span>
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(a_1 = f(x_0, x_1)\)</span>
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(a_2 = f(x_0, x_1, x_2)\)</span>
+            <br>&nbsp; &nbsp; &nbsp; ….
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(a_n = f(x_0, x_1, x_2, ..., x_n)\)</span>&nbsp;</p>
+          <p
+          style="margin-left:0px;">where again,
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(f(x_i) = y_i\)</span>
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(f(x_i, x_{i+1}, x_{i+2}, ..., x_{n+1}) = \frac{f(x_{i+1}, x_{i+2}, x_{i+3}, ..., x_{n+1}) - f(x_i, x_{i+1}, x_{i+2}, ..., x_n)}{x_{n+1} - x_i}\)</span>
+            </p>
+            <h3 style="margin-left:0px;">Forward Difference (Equidistant)(near&nbsp;<span class="math-tex">\(x_0\)</span>)</h3>
+            <p style="margin-left:0px;"><span class="math-tex">\(p_n(x) = y_0 + \frac{x - x_0}{h^11!}\Delta y_0 + \frac{(x-x_0)(x - x_0 -1)}{h^22!}\Delta^2 y_0 + \frac{(x - x_0)(x-x_0-1)(x-x_0-2)}{h^33!}\Delta^3 y_0 + ... + \frac{\prod_{i=0}^{n-1}(x -x_0 - i)}{h^nn!}\Delta^n y_0\)</span>
+            </p>
+            <p style="margin-left:0px;">where,
+              <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(\Delta^ky_0\)</span>&nbsp;
+              is k<sup>th</sup> forward difference of&nbsp;<span class="math-tex">\(y_0\)</span>
+              <br>&nbsp; &nbsp; &nbsp; assume&nbsp;<span class="math-tex">\(u = \frac{x - x_0}{h}\)</span>&nbsp;for
+              easier calculations then&nbsp;<span class="math-tex">\(p_n(x) = y_0 + \sum_{i=1}^{n}\frac{\prod_{j=0}^{i-1}(u - j)}{i!}\Delta^i y_0\)</span>
+            </p>
+            <h3 style="margin-left:0px;">Backward Difference (Equidistant)(near&nbsp;<span class="math-tex">\(x_n\)</span>)</h3>
+            <p style="margin-left:0px;"><span class="math-tex">\(p_n(x) = y_n + \frac{x - x_n}{h^11!}\nabla y_n + \frac{(x-x_n)(x - x_n +1)}{h^22!}\nabla^2 y_n + \frac{(x - x_n)(x-x_n+1)(x-x_n+2)}{h^33!}\nabla^3 y_n + ... + \frac{\prod_{i=0}^{n-1}(x -x_n + i)}{h^nn!}\nabla^n y_n\)</span>
+            </p>
+            <p style="margin-left:0px;">where,
+              <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(\nabla^ky_n\)</span>&nbsp;
+              is k<sup>th</sup> backward difference of&nbsp;<span class="math-tex">\(y_n\)</span>
+              <br>&nbsp; &nbsp; &nbsp; assume&nbsp;<span class="math-tex">\(u = \frac{x - x_n}{h}\)</span>&nbsp;for
+              easier calculations then&nbsp;<span class="math-tex">\(p_n(x) = y_n + \sum_{i=1}^{n}\frac{\prod_{j=0}^{i-1}(u + j)}{i!}\nabla^i y_n\)</span>
+            </p>
+            <p style="margin-left:0px;">
+              <br>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

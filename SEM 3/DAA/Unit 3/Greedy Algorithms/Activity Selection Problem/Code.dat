@@ -1,0 +1,9 @@
+def ActivitySelectionProblem(intervals):
+    intervals.sort(key = lambda x: x[1])
+    selected_set = {intervals[0][2]}
+    selected_activity = intervals[0]
+    for i in intervals[1:]:
+        if i[0] > selected_activity[1]:
+            selected_activity = i
+            selected_set.add(i[2])
+    return selected_set

@@ -1,0 +1,53 @@
+class DisjointSet:
+    def __init__(self, vertices):
+        self.parent = {}
+        self.rank = {}
+        for v in vertices:
+            self.parent[v] = v
+            self.rank[v] = 0
+
+    def find(self, v):
+        if self.parent[v] != v:
+            self.parent[v] = self.find(self.parent[v])
+        return self.parent[v]
+
+    def union(self, v1, v2):
+        root1 = self.find(v1)
+        root2 = self.find(v2)
+        if root1 != root2:
+            if self.rank[root1] < self.rank[root2]:
+                self.parent[root1] = root2
+            elif self.rank[root1] > self.rank[root2]:
+                self.parent[root2] = root1
+            else:
+                self.parent[root2] = root1
+                self.rank[root1] += 1
+
+def kruskal(graph):
+    mst = []
+    edges = []
+    for v in graph:
+        for neighbor, weight in graph[v]:
+            edges.append((weight, v, neighbor))
+    edges.sort()
+
+    disjoint_set = DisjointSet(graph.keys())
+
+    for edge in edges:
+        weight, v1, v2 = edge
+        if disjoint_set.find(v1) != disjoint_set.find(v2):
+            disjoint_set.union(v1, v2)
+            mst.append(edge)
+
+    return mst
+
+graph = {
+    'A': [('B', 5), ('C', 1)],
+    'B': [('A', 5), ('C', 2), ('D', 1)],
+    'C': [('A', 1), ('B', 2), ('D', 4), ('E', 8)],
+    'D': [('B', 1), ('C', 4), ('E', 3)],
+    'E': [('C', 8), ('D', 3)]
+}
+
+minimum_spanning_tree = kruskal(graph)
+print(minimum_spanning_tree)

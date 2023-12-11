@@ -1,0 +1,105 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Branch and Bound</h1>
+
+      <div class="ck-content">
+        <p>Branch and Bound is a popular algorithmic technique used in optimization
+          problems, particularly in operations research and computer science, to
+          solve combinatorial problems which are NP-hard. The main idea of branch
+          and bound is to divide a problem into smaller subproblems (branching) and
+          efficiently explore the solution space (bounding) to find the optimal solution.</p>
+        <h3>Key Concepts:</h3>
+        <p><strong>Branching:</strong>
+        </p>
+        <ul>
+          <li>The original problem is divided into smaller subproblems. Each subproblem
+            represents a portion of the solution space of the original problem.</li>
+          <li>This is often represented as a tree, where each node is a subproblem and
+            the branches represent decisions that lead to further subdivisions.</li>
+        </ul>
+        <p><strong>Bounding:</strong>
+        </p>
+        <ul>
+          <li>For each subproblem, a bound (usually an upper or lower limit on the objective
+            function) is computed.</li>
+          <li>These bounds are used to determine whether a subproblem can potentially
+            contain an optimal solution or should be discarded (pruned).</li>
+        </ul>
+        <p><strong>Pruning:</strong>
+        </p>
+        <ul>
+          <li>If a bound on a subproblem indicates that it cannot possibly contain a
+            better solution than the best one found so far, that subproblem is not
+            further explored. This process is known as pruning.</li>
+          <li>Pruning reduces the number of subproblems that need to be explored, thereby
+            reducing the computational load.</li>
+        </ul>
+        <h3>Types of Problems Solved:</h3>
+        <ul>
+          <li><strong>Optimization Problems:</strong> Branch and Bound is used to find
+            the optimal solution, such as in integer programming, the traveling salesman
+            problem, and the knapsack problem.</li>
+          <li><strong>Decision Problems:</strong> It can also be used for decision problems
+            by finding the feasibility of a solution under given constraints.</li>
+        </ul>
+        <h3>Algorithm Steps:</h3>
+        <ol>
+          <li><strong>Initialization:</strong> Start with the original problem and an
+            initial bound.</li>
+          <li><strong>Branching:</strong> Divide the problem into subproblems.</li>
+          <li><strong>Calculate Bounds:</strong> Determine the bounds for each subproblem.</li>
+          <li><strong>Check for Pruning:</strong> Decide whether to prune a subproblem
+            based on its bound.</li>
+          <li><strong>Solution Update:</strong> If a subproblem leads to a better solution
+            than the current best, update the best solution.</li>
+          <li><strong>Iteration:</strong> Continue this process, exploring subproblems
+            and updating bounds, until the best solution is found or all subproblems
+            are pruned.</li>
+        </ol>
+        <h3>Characteristics:</h3>
+        <ul>
+          <li><strong>Systematic Exploration:</strong> It explores the solution space
+            in a structured way, ensuring that the optimal solution is found.</li>
+          <li><strong>Efficiency:</strong> By pruning suboptimal subproblems, it often
+            requires exploring fewer possibilities than brute-force methods.</li>
+          <li><strong>Flexibility:</strong> The method is applicable to a wide range
+            of problems, and different bounding techniques can be applied depending
+            on the problem's nature.</li>
+        </ul>
+        <h3>Conclusion:</h3>
+        <p>Branch and Bound is a powerful technique for finding optimal solutions
+          to complex combinatorial problems. Its effectiveness lies in its ability
+          to reduce the solution space that needs to be explored while ensuring that
+          the optimal solution is not missed. However, the performance of a branch
+          and bound algorithm can vary significantly depending on the problem, the
+          method of branching and bounding, and the efficiency of the pruning strategy.</p><pre><code class="language-text-plain">Algorithm BranchAndBound
+
+1. Initialize:
+   - Create a priority queue (or a similar structure) to store subproblems.
+   - Define an initial bound on the solution (could be ∞ or -∞ based on the problem).
+   - Add the initial problem state to the queue.
+
+2. Loop until the queue is empty:
+   2.1. Extract a subproblem from the queue.
+   2.2. If the subproblem cannot yield a better solution than the current best (based on the bound), skip it (prune).
+   2.3. If the subproblem is a promising candidate:
+       2.3.1. If the subproblem is a solution and better than the current best, update the best solution.
+       2.3.2. Else, branch the subproblem into smaller subproblems.
+       2.3.3. Calculate bounds for each of these new subproblems.
+       2.3.4. Add these new subproblems to the queue.
+
+3. Return the best solution found.</code></pre>
+      </div>
+    </div>
+  </body>
+
+</html>

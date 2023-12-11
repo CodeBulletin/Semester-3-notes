@@ -1,0 +1,83 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>PCA</h1>
+
+      <div class="ck-content">
+        <p>Principal Component Analysis (PCA) is a statistical procedure that uses
+          an orthogonal transformation to convert a set of observations of possibly
+          correlated variables into a set of values of linearly uncorrelated variables
+          called principal components. This technique is widely used in fields such
+          as machine learning, data mining, and statistics for exploratory data analysis
+          and dimensionality reduction. Here's a detailed look at PCA:</p>
+        <p><strong>Goal of PCA:</strong>
+        </p>
+        <ul>
+          <li>The main objective of PCA is to identify patterns in data and express
+            the data in such a way as to highlight their similarities and differences.</li>
+          <li>Since patterns can be hard to find in data of high dimension (where the
+            number of variables is very large), PCA helps by reducing the number of
+            dimensions, without much loss of information.</li>
+        </ul>
+        <p><strong>How PCA Works:</strong>
+        </p>
+        <ul>
+          <li><strong>Standardization:</strong> The first step is often to standardize
+            the data so that each dimension contributes equally to the analysis.</li>
+          <li><strong>Covariance Matrix Calculation:</strong> PCA computes the covariance
+            matrix of the data to understand how the variables in the dataset are correlated.</li>
+          <li><strong>Eigenvalue Decomposition:</strong> The covariance matrix is then
+            decomposed into its eigenvalues and eigenvectors. The eigenvectors represent
+            the directions of maximum variance (principal components), and the eigenvalues
+            determine their magnitude.</li>
+          <li><strong>Select Principal Components:</strong> The principal components
+            are selected in order of their corresponding eigenvalues, starting with
+            the highest. Each principal component is orthogonal (i.e., independent)
+            to each other.</li>
+        </ul>
+        <p><strong>Dimensionality Reduction:</strong>
+        </p>
+        <ul>
+          <li>In dimensionality reduction, PCA is used to simplify the complexity in
+            high-dimensional data while retaining trends and patterns.</li>
+          <li>This is achieved by transforming the original variables into a new set
+            of variables, the principal components, which are uncorrelated, and which
+            ideally represent most of the information in the original dataset.</li>
+        </ul>
+        <p><strong>Applications:</strong>
+        </p>
+        <ul>
+          <li>PCA is used in various applications including market research, image compression,
+            genetics, and in the field of finance and risk management.</li>
+          <li>It's particularly useful for visualizing high-dimensional datasets.</li>
+        </ul>
+        <p><strong>Benefits and Limitations:</strong>
+        </p>
+        <ul>
+          <li><strong>Benefits:</strong> PCA can reduce the dimensions of a dataset with
+            minimal loss of information. It simplifies the dataset and may reveal hidden
+            patterns.</li>
+          <li><strong>Limitations:</strong> PCA is a linear method and may not interpret
+            complex polynomial relationships between features. It also assumes that
+            the principal components are orthogonal.</li>
+        </ul>
+        <p><strong>Interpretation of Components:</strong>
+        </p>
+        <ul>
+          <li>The principal components themselves are often not easily interpretable
+            in terms of the original features. They are abstract dimensions that represent
+            directions of maximum variance in the data.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

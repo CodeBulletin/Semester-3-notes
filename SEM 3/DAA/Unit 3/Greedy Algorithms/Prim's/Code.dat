@@ -1,0 +1,39 @@
+import heapq
+
+def prim(graph):
+    # Select a starting vertex
+    start_vertex = list(graph.keys())[0]
+    
+    # Initialize the minimum spanning tree and visited set
+    mst = []
+    visited = set([start_vertex])
+    
+    # Initialize the heap with edges from the starting vertex
+    heap = [(cost, start_vertex, neighbor) for neighbor, cost in graph[start_vertex]]
+    heapq.heapify(heap)
+    
+    while heap:
+        # Get the edge with the minimum cost
+        cost, u, v = heapq.heappop(heap)
+        
+        if v not in visited:
+            # Add the edge to the minimum spanning tree
+            mst.append((u, v, cost))
+            visited.add(v)
+            
+            # Add the edges from the newly visited vertex to the heap
+            for neighbor, cost in graph[v]:
+                if neighbor not in visited:
+                    heapq.heappush(heap, (cost, v, neighbor))
+    
+    return mst
+
+graph = {
+    'A': [('B', 2), ('C', 3)],
+    'B': [('A', 2), ('C', 4), ('D', 1)],
+    'C': [('A', 3), ('B', 4), ('D', 2)],
+    'D': [('B', 1), ('C', 2)]
+}
+
+mst = prim(graph)
+print(mst)

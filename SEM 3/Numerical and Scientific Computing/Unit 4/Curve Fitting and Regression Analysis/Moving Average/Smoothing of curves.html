@@ -1,0 +1,51 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Smoothing of curves</h1>
+
+      <div class="ck-content">
+        <p>Smoothing of curves refers to the process of reducing the noise or variability
+          in a dataset to reveal the underlying trend or pattern. This is commonly
+          done in data analysis and visualization to make patterns more apparent
+          and to simplify the interpretation of the data. Smoothing is often applied
+          to curves or time series data to highlight long-term trends while minimizing
+          the impact of short-term fluctuations.</p>
+        <p>There are various methods for smoothing curves, and the choice of method
+          depends on the characteristics of the data and the goals of analysis. Here
+          are a few common smoothing techniques:</p>
+        <ol>
+          <li><strong>Moving Average</strong>: This involves calculating the average
+            of a set of data points within a moving window. Each data point in the
+            smoothed curve is the average of the values within its window. This is
+            effective in reducing noise and emphasizing trends.</li>
+          <li><strong>Loess (Locally Weighted Scatterplot Smoothing)</strong>: Loess
+            is a non-parametric regression method that fits a curve to the data based
+            on locally weighted linear regression. It assigns different weights to
+            data points based on their proximity to the point where the curve is being
+            estimated. This allows the method to capture both local and global trends.</li>
+          <li><strong>Exponential Smoothing</strong>: Exponential smoothing assigns
+            exponentially decreasing weights to past observations. It is often used
+            in time series analysis to give more importance to recent data points while
+            still considering older observations.</li>
+          <li><strong>Spline Interpolation</strong>: Splines are smooth curves that
+            interpolate between data points. Cubic splines, in particular, are commonly
+            used for smoothing. They involve fitting a cubic polynomial between each
+            pair of adjacent data points, ensuring smoothness at the connection points.</li>
+          <li><strong>Kernel Smoothing</strong>: Kernel smoothing, also known as kernel
+            density estimation, involves placing a kernel (a smoothing function) at
+            each data point and summing them to estimate a smooth curve. This method
+            is often used for estimating probability density functions.</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

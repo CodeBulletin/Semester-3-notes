@@ -1,0 +1,48 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Huffman Coding</h1>
+
+      <div class="ck-content">
+        <p>Huffman coding is a lossless data compression algorithm that assigns variable-length
+          codes to characters based on their frequency of occurrence in the input
+          data. It is widely used in various applications, including file compression,
+          data transmission, and encryption.</p>
+        <p>Here's a step-by-step explanation of how Huffman coding works:</p>
+        <ol>
+          <li>Calculate the frequency of each character in the input data.</li>
+          <li>Create a priority queue (min-heap) of nodes, where each node represents
+            a character and its frequency.</li>
+          <li>Initialize the priority queue with the nodes corresponding to the characters
+            and their frequencies.</li>
+          <li>While there is more than one node in the priority queue:
+            <ul>
+              <li>Remove the two nodes with the lowest frequencies from the priority queue.</li>
+              <li>Create a new node with a frequency equal to the sum of the frequencies
+                of the two removed nodes. Make the two removed nodes its left and right
+                children.</li>
+              <li>Insert the new node back into the priority queue.</li>
+            </ul>
+          </li>
+          <li>The remaining node in the priority queue is the root of the Huffman tree.</li>
+          <li>Traverse the Huffman tree from the root, assigning a '0' to the left child
+            and a '1' to the right child at each step.</li>
+          <li>Assign the resulting binary codes to the corresponding characters.</li>
+          <li>Encode the input data using the generated Huffman codes.</li>
+          <li>Decode the encoded data using the Huffman tree.</li>
+        </ol>
+        <p><span class="math-tex">\(Time \space Complexity = O(n \space log \space n)\)</span>
+        </p>
+      </div>
+    </div>
+  </body>
+
+</html>

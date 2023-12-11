@@ -1,0 +1,219 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q7</h1>
+
+      <div class="ck-content">
+        <h2>(a) State single source shortest problem? Explain what will be the better choice (Greedy or dynamic) for solving this problem. Justify your answer?</h2>
+        <p>The Single Source Shortest Path (SSSP) problem is a classic problem in
+          computer science and graph theory. It involves finding the shortest paths
+          from a given source vertex to all other vertices in a weighted graph. The
+          graph can be either directed or undirected, and the weights on the edges
+          can represent various quantities like distance, cost, or time.</p>
+        <p>When choosing between a greedy algorithm and dynamic programming to solve
+          the SSSP problem, the decision largely depends on the nature of the graph
+          and the specific requirements of the problem.</p>
+        <h3>Greedy Algorithms for SSSP:</h3>
+        <p><strong>Dijkstra's Algorithm</strong>:</p>
+        <ul>
+          <li>Best for: Graphs with non-negative edge weights.</li>
+          <li>How it works: It repeatedly selects the vertex with the smallest tentative
+            distance, updates the distance of its adjacent vertices, and marks it as
+            visited.</li>
+          <li>Why it's effective: It efficiently finds the shortest path by making the
+            optimal choice at each step.</li>
+        </ul>
+        <p><strong>Bellman-Ford Algorithm</strong>:</p>
+        <ul>
+          <li>Best for: Graphs with negative edge weights but no negative cycles.</li>
+          <li>How it works: It relaxes the edges of the graph repeatedly to find the
+            shortest path from the source vertex to every other vertex.</li>
+          <li>Why it's effective: Unlike Dijkstra, it can handle graphs with negative
+            edge weights.</li>
+        </ul>
+        <h3>Dynamic Programming in SSSP:</h3>
+        <p>Dynamic programming is more commonly used in SSSP problems when the graph
+          has certain properties, like having overlapping subproblems and optimal
+          substructure, which are key characteristics for dynamic programming to
+          be effective. However, in the context of SSSP:</p>
+        <p><strong>Bellman-Ford Algorithm</strong> can also be seen as a form of dynamic
+          programming because it calculates the shortest paths in a bottom-up manner,
+          solving smaller subproblems first and using their solutions to build up
+          solutions to larger subproblems.</p>
+        <p><strong>Floyd-Warshall Algorithm</strong>:</p>
+        <ul>
+          <li>Best for: Finding the shortest paths between all pairs of vertices in
+            a graph (not strictly a single-source algorithm, but can be used for SSSP
+            by fixing one vertex as the source).</li>
+          <li>How it works: It incrementally improves the estimate of the shortest distance
+            between two vertices, considering each vertex as an intermediate point
+            in these paths.</li>
+          <li>Why it's effective: It's a dynamic programming approach that captures
+            the essence of the problem through overlapping subproblems.</li>
+        </ul>
+        <h3>Best Choice for SSSP:</h3>
+        <p><strong>Greedy Approach (Dijkstra's Algorithm)</strong>: This is often
+          the better choice for SSSP problems in graphs with non-negative weights.
+          It is more efficient in terms of time complexity compared to the Bellman-Ford
+          algorithm in most cases. It's particularly effective for real-world applications
+          like mapping and routing where graphs typically have non-negative weights.</p>
+        <p><strong>Dynamic Programming (Bellman-Ford Algorithm)</strong>: This approach
+          is suitable for graphs with negative weights but no negative cycles. It's
+          a robust solution in scenarios where Dijkstra's algorithm may fail or give
+          incorrect results.</p>
+        <h3>Justification:</h3>
+        <p><strong>Efficiency</strong>: Dijkstra's algorithm is generally faster
+          than the Bellman-Ford algorithm, especially for sparse graphs. It has a
+          time complexity of O(V^2) (or O(V + E log V) with a priority queue), while
+          Bellman-Ford has a time complexity of O(VE), making Dijkstra more suitable
+          for large graphs.</p>
+        <p><strong>Applicability</strong>: If the graph has negative weight edges
+          and no negative cycles, the Bellman-Ford algorithm is the necessary choice,
+          as Dijkstra's algorithm does not handle negative weights correctly.</p>
+        <p><strong>Simplicity and Practicality</strong>: Dijkstra’s algorithm is
+          often simpler to implement and is widely used in practical applications
+          for graphs with non-negative weights.</p>
+        <p>In summary, the choice between a greedy approach and dynamic programming
+          for solving the SSSP problem depends on the specific characteristics of
+          the graph and the requirements of the problem. For most practical and real-world
+          applications with non-negative edge weights, a greedy approach like Dijkstra's
+          algorithm is preferred for its efficiency and simplicity.</p>
+        <h2>(b) Use an algorithm for greedy strategies for the knapsack to find an optimal solution to the knapsack instance n=7,m=15,(p1,p2….,p7)=(10,5,15,7,6,18,3), and (w1,w2,…w7)= (2, 3, 5, 7, 1, 4, 1).</h2>
+        <figure class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>Price</th>
+                <td>10</td>
+                <td>5</td>
+                <td>15</td>
+                <td>7</td>
+                <td>6</td>
+                <td>18</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th>Weight</th>
+                <td>2</td>
+                <td>3</td>
+                <td>5</td>
+                <td>7</td>
+                <td>1</td>
+                <td>4</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <p>Calculating Price to weight Ratio</p>
+        <figure class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>Price</th>
+                <td>10</td>
+                <td>5</td>
+                <td>15</td>
+                <td>7</td>
+                <td>6</td>
+                <td>18</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th>Weight</th>
+                <td>2</td>
+                <td>3</td>
+                <td>5</td>
+                <td>7</td>
+                <td>1</td>
+                <td>4</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>P/W Ratio</th>
+                <td>5</td>
+                <td>1.66</td>
+                <td>3</td>
+                <td>1</td>
+                <td>6</td>
+                <td>4.5</td>
+                <td>3</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <p>Sorting in Descending Order using price to weight ratio</p>
+        <figure class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>Price</th>
+                <td>6</td>
+                <td>10</td>
+                <td>18</td>
+                <td>15</td>
+                <td>3</td>
+                <td>5</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <th>Weight</th>
+                <td>1</td>
+                <td>2</td>
+                <td>4</td>
+                <td>5</td>
+                <td>1</td>
+                <td>3</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <th>P/W Ratio</th>
+                <td>6</td>
+                <td>5</td>
+                <td>4.5</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1.66</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <p><strong>Step 1</strong>: Select the element with highest P/W Ratio and
+          add it to the bag(whole if there is enough capacity else partial), and
+          subtract the weight left from the bag
+          <br><span class="math-tex">\(m = m-1 \implies m = 14\)</span>, &nbsp; &nbsp;
+          &nbsp;<span class="math-tex">\(p = p+6 \implies p =6\)</span>&nbsp;&nbsp;</p>
+        <p><strong>Step 2</strong>: Continue Selecting the items till bag is not
+          full
+          <br><span class="math-tex">\(m = m-2 \implies m = 12\)</span>, &nbsp; &nbsp;
+          &nbsp;<span class="math-tex">\(p = p+10 \implies p = 16\)</span>&nbsp;&nbsp;</p>
+        <p><strong>Step 3</strong>:&nbsp;<span class="math-tex">\(m = m-4 \implies m = 8\)</span>,
+          &nbsp; &nbsp; &nbsp;<span class="math-tex">\(p = p+18 \implies p = 34\)</span>
+        </p>
+        <p><strong>Step 4</strong>:&nbsp;<span class="math-tex">\(m = m-5 \implies m = 3\)</span>,
+          &nbsp; &nbsp; &nbsp;<span class="math-tex">\(p = p+15 \implies p = 49\)</span>
+        </p>
+        <p><strong>Step 4</strong>:&nbsp;<span class="math-tex">\(m = m-1 \implies m = 2\)</span>,
+          &nbsp; &nbsp; &nbsp;<span class="math-tex">\(p = p+3 \implies p = 52\)</span>
+        </p>
+        <p><strong>Step 5</strong>:&nbsp;<span class="math-tex">\(m = m-2 \implies m = 0\)</span>,
+          &nbsp; &nbsp; &nbsp;<span class="math-tex">\(p = p+ \frac 5 3 *2 \implies p = 55.3\bar 3\)</span>
+        </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

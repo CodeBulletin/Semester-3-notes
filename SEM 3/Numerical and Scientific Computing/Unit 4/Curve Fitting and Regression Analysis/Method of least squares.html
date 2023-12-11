@@ -1,0 +1,75 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Method of least squares</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The method of least squares is a mathematical approach used in regression
+          analysis and curve fitting to find the best-fitting line (or curve) through
+          a set of data points. The goal is to minimize the sum of the squares of
+          the vertical distances (residuals) between the observed data points and
+          the points predicted by the model.</p>
+        <p style="margin-left:0px;">Here's a simplified explanation of how the method of least squares works,
+          focusing on linear regression:</p>
+        <p style="margin-left:0px;"><strong>Define the Model:</strong>
+        </p>
+        <ul>
+          <li>In linear regression, the model is typically represented as a straight
+            line:&nbsp;<span class="math-tex">\(y = mx + b\)</span>, where&nbsp;
+            <span
+            class="math-tex">\(y\)</span>&nbsp;is the dependent variable,&nbsp;<span class="math-tex">\(x\)</span>&nbsp;is
+              the independent variable,&nbsp;<span class="math-tex">\(m\)</span>&nbsp;is
+              the slope of the line, and&nbsp;<span class="math-tex">\(b\)</span>&nbsp;is
+              the y-intercept.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Calculate Residuals:</strong>
+        </p>
+        <ul>
+          <li>For each data point, calculate the vertical distance (residual) between
+            the observed&nbsp;<span class="math-tex">\(y\)</span>-value and the&nbsp;
+            <span
+            class="math-tex">\(y\)</span>-value predicted by the model. The residual is the difference
+              between the observed and predicted values.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Square the Residuals:</strong>
+        </p>
+        <ul>
+          <li>Square each of the residuals obtained in step 2. Squaring is done to ensure
+            that the positive and negative residuals do not cancel each other out when
+            summing them up.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Minimize the Sum of Squared Residuals:</strong>
+        </p>
+        <ul>
+          <li>Find the values of&nbsp;<span class="math-tex">\(m\)</span>&nbsp;and&nbsp;
+            <span
+            class="math-tex">\(b\)</span>&nbsp;that minimize the sum of the squared residuals. This
+              is often done by taking the partial derivatives of the sum of squared residuals
+              with respect to&nbsp;<span class="math-tex">\(m\)</span>&nbsp;and&nbsp;
+              <span
+              class="math-tex">\(b\)</span>, setting them equal to zero, and solving the resulting system
+                of equations.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Coefficients and Best-Fitting Line:</strong>
+        </p>
+        <ul>
+          <li>The values of&nbsp;<span class="math-tex">\(m\)</span>&nbsp;and&nbsp;
+            <span
+            class="math-tex">\(b\)</span>&nbsp;obtained in step 4 are the coefficients of the best-fitting
+              line. This line represents the relationship between the variables that
+              minimizes the overall squared differences between observed and predicted
+              values.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

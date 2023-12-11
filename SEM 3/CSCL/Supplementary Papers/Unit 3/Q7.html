@@ -1,0 +1,83 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q7</h1>
+
+      <div class="ck-content">
+        <h2>(a) Discuss different types of Intrusion detection system. How is Intrusion detection system different from Intrusion prevention system? Identify purpose of SNORT.</h2>
+        <p>Different Types of Intrusion Detection Systems (IDS):</p>
+        <ol>
+          <li><strong>Network-based IDS (NIDS)</strong>: NIDS monitors network traffic
+            and analyzes it for suspicious patterns or anomalies. It operates at the
+            network level and can detect attacks such as port scanning, DoS attacks,
+            and network-based exploits.</li>
+          <li><strong>Host-based IDS (HIDS)</strong>: HIDS is installed on individual
+            hosts or servers and monitors their activities and system logs. It can
+            detect attacks that target specific hosts, such as unauthorized access
+            attempts, file modifications, or malicious software installations.</li>
+          <li><strong>Anomaly-based IDS</strong>: Anomaly-based IDS compares the current
+            behavior of a system or network to a baseline of normal behavior. It detects
+            deviations from the expected patterns and raises alerts for potential intrusions
+            or abnormal activities.</li>
+          <li><strong>Signature-based IDS</strong>: Signature-based IDS uses a database
+            of known attack patterns or signatures to identify malicious activities.
+            It compares network traffic or system logs against these signatures and
+            generates alerts when a match is found.</li>
+        </ol>
+        <p>Intrusion Detection System (IDS) vs. Intrusion Prevention System (IPS):</p>
+        <p>An IDS is designed to detect and alert about potential intrusions or security
+          breaches. It monitors network traffic or system activities, analyzes them
+          for suspicious patterns, and generates alerts for further investigation.
+          However, it does not actively block or prevent the detected attacks.</p>
+        <p>On the other hand, an Intrusion Prevention System (IPS) not only detects
+          intrusions but also takes proactive measures to prevent them. It can automatically
+          block or mitigate the detected attacks by modifying firewall rules, blocking
+          IP addresses, or terminating suspicious connections.</p>
+        <p>Purpose of SNORT:</p>
+        <p>SNORT is an open-source network intrusion detection and prevention system.
+          Its purpose is to monitor network traffic, analyze it for potential threats
+          or attacks, and generate alerts. SNORT uses a combination of signature-based
+          and anomaly-based detection methods to identify malicious activities. It
+          is highly customizable and widely used for network security monitoring
+          and threat detection.</p>
+        <h2>(b) What do you mean by access management? Explain all 3 access control models and elaborate with suitable examples.</h2>
+        <p>Access management refers to the process of controlling and managing user
+          access to resources within a system or organization. It involves defining
+          and enforcing policies, procedures, and technologies to ensure that users
+          have appropriate access privileges based on their roles and responsibilities.</p>
+        <p>There are three commonly used access control models:</p>
+        <ol>
+          <li><strong>Discretionary Access Control (DAC)</strong>: In DAC, access control
+            is based on the discretion of the resource owner. The owner determines
+            who can access the resource and what level of access they have. For example,
+            in a file system with DAC, the owner of a file can set permissions to allow
+            specific users or groups to read, write, or execute the file.</li>
+          <li><strong>Mandatory Access Control (MAC)</strong>: MAC is a more rigid access
+            control model where access decisions are based on predefined security labels
+            and rules. The system administrator or security policy defines the access
+            controls, and users have limited control over access permissions. MAC is
+            commonly used in high-security environments, such as government or military
+            systems.</li>
+          <li><strong>Role-Based Access Control (RBAC)</strong>: RBAC assigns access
+            permissions based on predefined roles. Users are assigned roles based on
+            their job functions, and access rights are associated with these roles.
+            For example, in an RBAC system, a user with the role of "manager" may have
+            access to certain resources and privileges that are not available to a
+            user with the role of "employee."</li>
+        </ol>
+        <p>Each access control model provides a different level of granularity and
+          control over access permissions. The choice of model depends on the specific
+          security requirements and organizational needs.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

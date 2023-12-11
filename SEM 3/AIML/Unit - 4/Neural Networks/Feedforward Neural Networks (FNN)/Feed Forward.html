@@ -1,0 +1,49 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Feed Forward</h1>
+
+      <div class="ck-content">
+        <p><strong>Layered Structure</strong>: Feedforward neural networks are composed
+          of layers of nodes (or neurons) which include an input layer, one or more
+          hidden layers, and an output layer. Each layer is fully connected to the
+          next layer in the network.</p>
+        <p><strong>Data Flow</strong>: Data flows in one direction – from the input
+          layer through the hidden layers (if any) to the output layer. There is
+          no cycling or looping back of data, which is why it's called "feedforward."</p>
+        <p><strong>Input Processing</strong>: In the input layer, each node represents
+          an individual feature of the input data. For instance, in image recognition,
+          each input neuron could represent a pixel value.</p>
+        <p><strong>Weights and Biases</strong>: Each connection between nodes has
+          an associated weight, and each node in the hidden and output layers has
+          a bias. These weights and biases are adjustable parameters of the network.</p>
+        <p><strong>Activation Functions</strong>: Nodes in the hidden and output
+          layers usually apply an activation function to the weighted sum of their
+          inputs. Common activation functions include sigmoid, ReLU (Rectified Linear
+          Unit), and tanh (hyperbolic tangent).</p>
+        <p><strong>Computation in Nodes</strong>: Each node in the hidden and output
+          layers calculates the weighted sum of its inputs (from the previous layer)
+          and then applies an activation function. This process determines the node's
+          output, which becomes the input for the next layer.</p>
+        <p><strong>Output Generation</strong>: The final layer's output represents
+          the network's prediction or decision. In a classification task, for instance,
+          the output layer might use a softmax function to represent probabilities
+          of different classes.</p>
+        <p><strong>Learning Process</strong>: While the feedforward process describes
+          how data is processed, learning in the network involves adjusting the weights
+          and biases to reduce the difference between the network output and the
+          desired output. This is typically done using backpropagation and a gradient
+          descent optimization algorithm.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

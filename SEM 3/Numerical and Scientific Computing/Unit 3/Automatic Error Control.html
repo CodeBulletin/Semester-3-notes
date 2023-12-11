@@ -1,0 +1,53 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Automatic Error Control</h1>
+
+      <div class="ck-content">
+        <p>Automatic error monitoring, also known as error control or adaptive step
+          size control, is a technique used in numerical methods for solving ordinary
+          differential equations (ODEs) to ensure accurate and efficient approximation
+          of the solution. It involves dynamically adjusting the step size during
+          the numerical integration process based on the estimated error.</p>
+        <p>In numerical methods like Euler's method or the Runge-Kutta methods, the
+          step size determines the distance between consecutive points in the approximation.
+          A smaller step size generally leads to a more accurate solution, but it
+          also increases the computational cost. On the other hand, a larger step
+          size reduces computational cost but may introduce larger errors.</p>
+        <p>Automatic error monitoring addresses this trade-off by continuously monitoring
+          the error during the integration process and adjusting the step size accordingly.
+          The goal is to maintain a balance between accuracy and efficiency.</p>
+        <p>Here's how automatic error monitoring typically works:</p>
+        <ol>
+          <li>Start with an initial step size, denoted as "h₀."</li>
+          <li>Perform a numerical integration step using the chosen method and the current
+            step size.</li>
+          <li>Estimate the error in the approximation by comparing the results obtained
+            with two different step sizes, such as "h" and "h/2." This can be done
+            by comparing the solution obtained with the smaller step size to the solution
+            obtained with the larger step size.</li>
+          <li>Compare the estimated error to a predefined tolerance or error threshold.
+            If the estimated error is within the desired tolerance, the current step
+            size is considered appropriate, and the integration continues.</li>
+          <li>If the estimated error exceeds the tolerance, the step size is adjusted.
+            Common strategies include reducing the step size to increase accuracy or
+            increasing the step size to improve efficiency.</li>
+          <li>Repeat steps 2 to 5 until the desired range or number of points is reached.</li>
+        </ol>
+        <p>By continuously monitoring the error and adjusting the step size accordingly,
+          automatic error monitoring allows for adaptive control of the numerical
+          integration process. This helps to ensure that the solution is accurate
+          while minimizing unnecessary computational effort.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

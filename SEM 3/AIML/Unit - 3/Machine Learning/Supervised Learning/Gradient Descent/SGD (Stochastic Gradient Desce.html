@@ -1,0 +1,38 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>SGD (Stochastic Gradient Descent)</h1>
+
+      <div class="ck-content">
+        <p>SGD stands for Stochastic Gradient Descent. It is a variant of the gradient
+          descent optimization algorithm commonly used in machine learning. While
+          traditional gradient descent updates the model parameters using the gradients
+          computed over the entire training dataset, stochastic gradient descent
+          updates the parameters using the gradients computed on a single randomly
+          selected training instance or a small batch of instances.</p>
+        <p>The main advantage of SGD is that it can be computationally more efficient
+          than traditional gradient descent, especially when dealing with large datasets.
+          By randomly selecting a single instance or a small batch of instances,
+          SGD performs more frequent updates to the model parameters, which can lead
+          to faster convergence.</p>
+        <p>In each iteration of SGD, the algorithm randomly selects a training instance
+          or a batch of instances, computes the gradients of the cost function with
+          respect to the parameters based on that instance(s), and updates the parameters
+          in the direction of the negative gradient, scaled by a learning rate.</p>
+        <p>The learning rate in SGD plays a crucial role in determining the step
+          size taken in each update. It needs to be carefully chosen to balance between
+          convergence speed and stability. A learning rate that is too large can
+          cause the algorithm to overshoot the minimum of the cost</p>
+      </div>
+    </div>
+  </body>
+
+</html>

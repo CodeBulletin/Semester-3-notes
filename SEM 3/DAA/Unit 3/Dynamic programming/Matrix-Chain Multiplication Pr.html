@@ -1,0 +1,53 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Matrix-Chain Multiplication Problem</h1>
+
+      <div class="ck-content">
+        <p>The Matrix Chain Multiplication problem is a classic optimization problem
+          in computer science. It involves finding the most efficient way to multiply
+          a chain of matrices.</p>
+        <p>Given a sequence of matrices, the goal is to determine the order of multiplication
+          that minimizes the total number of scalar multiplications required. The
+          order of multiplication is important because matrix multiplication is not
+          commutative, meaning the product of matrices A and B is not necessarily
+          the same as the product of matrices B and A.</p>
+        <p>For example, given matrices A, B, C, and D, the order of multiplication
+          can be represented as (A(BC))D or ((AB)C)D. The goal is to find the order
+          that requires the fewest scalar multiplications.</p>
+        <p>The Matrix Chain Multiplication problem can be solved using dynamic programming.
+          The key idea is to break down the problem into smaller subproblems and
+          build up to the optimal solution.</p>
+        <p>The dynamic programming approach involves constructing a table, often
+          referred to as a matrix chain order table, to store the optimal costs of
+          multiplying different subchains of matrices. By filling in this table using
+          bottom-up computation, the optimal order of multiplication and the minimum
+          number of scalar multiplications can be determined.</p>
+        <p>The time complexity of solving the Matrix Chain Multiplication problem
+          using dynamic programming is&nbsp;<span class="math-tex">\(O(n^3)\)</span>,
+          where&nbsp;<span class="math-tex">\(n\)</span>&nbsp;is the number of matrices
+          in the chain. This makes it an efficient approach for solving the problem.</p>
+        <p>The Matrix Chain Multiplication problem has applications in various fields,
+          including computer graphics, optimization, and algorithm design. It is
+          a classic example of how dynamic programming can be used to solve optimization
+          problems efficiently.</p>
+        <p><span class="math-tex">\(C[i, j] = &nbsp;i \le k \lt j \space min\{C[i, k] + C[k+1, j] + d_{i-1}*d_k*d_j\}\)</span>
+        </p>
+        <p><span class="math-tex">\(total \space number \space of \space matrix \space chain \space multipication = \frac{\binom{2n-2}{n-1}}{n}\)</span>
+        </p>
+        <figure class="image">
+          <img src="Matrix-Chain%20Multiplication%20Problem/photo_6303001576922527800_y.jp">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,107 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q9</h1>
+
+      <div class="ck-content">
+        <h2>(a) What is backtracking? Explain why backtracking is defined as a default procedure of last resort for solving problems.&nbsp;</h2>
+        <p>Backtracking is a systematic method for solving problems by trying out
+          different solutions and eliminating those that fail to satisfy the constraints
+          of the problem at any point in time. It's a kind of depth-first search
+          (DFS) that involves recursion and is used particularly for problems where
+          a sequence of objects is to be decided upon from a given set.</p>
+        <h3>How Backtracking Works</h3>
+        <ol>
+          <li><strong>Choose</strong>: Select a potential solution step or path from
+            the current state.</li>
+          <li><strong>Constrain</strong>: Apply constraints or rules to check if this
+            current step or path leads towards a potential solution.</li>
+          <li><strong>Goal Check</strong>: Check if the current state or path has led
+            to a solution.</li>
+          <li><strong>Backtrack</strong>: If the current path does not lead to a solution
+            (either violates constraints or does not achieve the goal), then backtrack
+            to the previous step and try a different path or solution.</li>
+        </ol>
+        <p>This process continues until either a solution is found, or all possibilities
+          are exhausted.</p>
+        <h3>Characteristics of Backtracking</h3>
+        <ul>
+          <li><strong>Systematic Exploration</strong>: It explores all potential solutions
+            systematically.</li>
+          <li><strong>Pruning</strong>: It prunes paths that are clearly not leading
+            to a solution, reducing the search space.</li>
+          <li><strong>Recursive</strong>: It is generally implemented using recursion,
+            making the code simpler to read and write.</li>
+        </ul>
+        <h3>Why Backtracking is a Last Resort</h3>
+        <p>Backtracking is often considered a last resort for several reasons:</p>
+        <p><strong>Inefficiency on Large Scale</strong>: Backtracking can be very
+          inefficient for large-scale problems. It can lead to exploring a huge number
+          of potential solutions, most of which may not work.</p>
+        <p><strong>Exponential Time Complexity</strong>: Many problems solved by
+          backtracking have exponential time complexity (like O(2^n), O(n!)), making
+          them impractical for large n.</p>
+        <p><strong>Lack of Optimization</strong>: It does not necessarily find the
+          most optimal solution; it just finds a solution that satisfies the constraints.</p>
+        <p><strong>No Heuristics</strong>: Unlike other algorithms that use heuristics
+          to improve efficiency, backtracking is a brute-force method that tries
+          all possibilities.</p>
+        <p><strong>Space Complexity</strong>: The recursive nature of backtracking
+          can lead to a high space complexity, especially for deep recursion trees.</p>
+        <h2>(b) Formulate the n-city travelling salesman problem and design the space tree for 4-city TSP.</h2>
+        <p>The Travelling Salesman Problem (TSP) is a classic problem in combinatorial
+          optimization and computer science. The n-city Travelling Salesman Problem
+          can be formulated as follows:</p>
+        <h3>Problem Statement</h3>
+        <p>Given a list of cities and the distances between each pair of cities,
+          find the shortest possible route that visits each city exactly once and
+          returns to the origin city.</p>
+        <h3>Formal Description</h3>
+        <p><strong>Input</strong>:</p>
+        <ul>
+          <li>A set of cities&nbsp;<span class="math-tex">\(C=\{c_1,c_2,...,c_n\}\)</span>,
+            where&nbsp;<span class="math-tex">\(n\)</span>&nbsp;is the number of cities.</li>
+          <li>A distance matrix&nbsp;<span class="math-tex">\(D\)</span>, where&nbsp;
+            <span
+            class="math-tex">\(D[i][j]\)</span>&nbsp;represents the distance from city&nbsp;<span class="math-tex">\(c_i\)</span>&nbsp;to
+              city&nbsp;<span class="math-tex">\(c_j\)</span>​. The matrix is typically
+              symmetric (since the distance from&nbsp;<span class="math-tex">\(c_i\)</span>​
+              to&nbsp;<span class="math-tex">\(c_j\)</span>​ is the same as from&nbsp;
+              <span
+              class="math-tex">\(c_j\)</span>​ to&nbsp;<span class="math-tex">\(c_i\)</span>​), and the
+                diagonal elements are zero (since the distance from a city to itself is
+                zero).</li>
+        </ul>
+        <p><strong>Objective</strong>:</p>
+        <ul>
+          <li>To find a permutation of the cities&nbsp;<span class="math-tex">\(P=(p1,p2,...,pn)\)</span>&nbsp;that
+            minimizes the total distance traveled.</li>
+          <li>The total distance for a given permutation PP is calculated as&nbsp;
+            <span
+            class="math-tex">\(\sum_{i=1}^{n-1} D[p_i][p_{i+1}] + D[p_n][p_1]\)</span>, where&nbsp;
+              <span
+              class="math-tex">\(D[p_i][p_{i+1}]\)</span>&nbsp;is the distance from city&nbsp;<span class="math-tex">\(p_i\)</span>​
+                to city&nbsp;<span class="math-tex">\(p_i+1\)</span>, and&nbsp;<span class="math-tex">\(D[p_n][p_1]\)</span>&nbsp;is
+                the distance from the last city back to the first city.</li>
+        </ul>
+        <p><strong>Constraints</strong>:</p>
+        <ul>
+          <li>Each city must be visited exactly once.</li>
+          <li>The tour must start and end at the same city.</li>
+        </ul>
+        <figure class="image">
+          <img src="Q9/image.jpg">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

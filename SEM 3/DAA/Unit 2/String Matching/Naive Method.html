@@ -1,0 +1,65 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Naive Method</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The Naive String-Matching Algorithm, also known as the Brute-Force String-Matching
+          Algorithm, is one of the simplest and most straightforward methods for
+          finding occurrences of a pattern within a text. This algorithm compares
+          the pattern to the text character by character, starting from the beginning
+          of the text and sliding the pattern one character at a time until a match
+          is found or the end of the text is reached.</p>
+        <p style="margin-left:0px;"><strong>Here's a step-by-step description of the Naive String-Matching Algorithm</strong>:</p>
+        <ul>
+          <li>Start at the beginning of the text and slide the pattern over it.</li>
+          <li>At each position, compare each character of the pattern with the corresponding
+            character in the text.</li>
+          <li>If all characters match, you've found an occurrence of the pattern.</li>
+          <li>If the characters don't match, slide the pattern one position to the right
+            and repeat the comparison.</li>
+          <li>Continue this process until you either find a match or reach the end of
+            the text.</li>
+          <li>If you reach the end of the text without finding a match, the algorithm
+            reports that there are no occurrences of the pattern in the text.</li>
+        </ul>
+        <p style="margin-left:0px;">The Naive String-Matching Algorithm is simple to implement and easy to
+          understand, making it a good starting point for learning about string matching.
+          However, it is not the most efficient algorithm for large texts because
+          it has a worst-case time complexity of&nbsp;<span class="math-tex">\(O((n-m+1)m)\)</span>&nbsp;where:</p>
+        <ul>
+          <li>"n" is the length of the text.</li>
+          <li>"m" is the length of the pattern.</li>
+        </ul>
+        <p style="margin-left:0px;">This means that in the worst case, it may need to perform a large number
+          of character comparisons.</p><pre><code class="language-text-plain">def naive_string_match(text, pattern):
+    n = len(text)  # Length of the text
+    m = len(pattern)  # Length of the pattern
+
+    # Loop through the text
+    for i in range(n - m + 1):
+        j = 0
+        while j &lt; m and text[i + j] == pattern[j]:
+            j += 1
+
+        # If the inner loop ran to completion (j reached m), we found a match
+        if j == m:
+            print(f"Pattern found at index {i}")
+
+# Example usage:
+text = "ABABDABACDABABCABAB"
+pattern = "ABABC"
+naive_string_match(text, pattern)</code></pre>
+      </div>
+    </div>
+  </body>
+
+</html>

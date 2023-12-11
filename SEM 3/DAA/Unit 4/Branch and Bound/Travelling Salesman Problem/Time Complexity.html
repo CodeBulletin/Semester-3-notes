@@ -1,0 +1,33 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Time Complexity</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The time complexity of the provided code is O(n!), where n is the number
+          of vertices in the graph.</p>
+        <p style="margin-left:0px;">Here's why:</p>
+        <ol>
+          <li style="margin-left:0px;">The code generates all permutations of the vertices (excluding the source
+            vertex). The number of permutations of n items is n!, hence the O(n!) time
+            complexity.</li>
+          <li style="margin-left:0px;">For each permutation, the code calculates the total weight of the path.
+            This operation is O(n) for each permutation, but since it's done for each
+            of the n! permutations, it doesn't change the overall time complexity.</li>
+        </ol>
+        <p style="margin-left:0px;">So, the overall time complexity remains O(n!). This is quite high, so
+          this approach is only suitable for small graphs. For larger graphs, a more
+          efficient algorithm would be needed.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

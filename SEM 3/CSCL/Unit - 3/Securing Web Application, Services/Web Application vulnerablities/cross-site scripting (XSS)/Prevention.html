@@ -1,0 +1,38 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Prevention</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">To prevent XSS attacks, developers should follow secure coding practices,
+          such as:</p>
+        <ol>
+          <li><strong>Input Validation:</strong> Validate and sanitize user input to
+            ensure that it does not contain malicious scripts.</li>
+          <li><strong>Output Encoding:</strong> Encode user input when displaying it
+            in the HTML to prevent the browser from interpreting it as executable code.</li>
+          <li><strong>Content Security Policy (CSP):</strong> Implement a Content Security
+            Policy to restrict the types of content that can be loaded and executed
+            on a web page.</li>
+          <li><strong>HTTPOnly and Secure Flags for Cookies:</strong> Use the HTTPOnly
+            flag for cookies to prevent them from being accessed through JavaScript,
+            and use the Secure flag to ensure that cookies are transmitted over secure
+            (HTTPS) connections only.</li>
+        </ol>
+        <p style="margin-left:0px;">By incorporating these practices, developers can significantly reduce
+          the risk of XSS vulnerabilities in their web applications. Security awareness
+          and regular security audits are also crucial for identifying and addressing
+          potential vulnerabilities.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

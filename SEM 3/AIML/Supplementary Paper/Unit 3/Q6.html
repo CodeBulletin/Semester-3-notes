@@ -1,0 +1,92 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q6</h1>
+
+      <div class="ck-content">
+        <h2>(a) Describe underfitting and overfitting problems in Machine Learning.</h2>
+        <p>Underfitting and overfitting are common problems in machine learning that
+          occur when a model fails to generalize well to new, unseen data. Here's
+          a description of each problem:</p>
+        <p><strong>Underfitting</strong>: Underfitting occurs when a machine learning
+          model is too simple or lacks the capacity to capture the underlying patterns
+          in the data. It typically happens when the model is not complex enough
+          to learn the relationships between the input features and the target variable.
+          As a result, the model performs poorly not only on the training data but
+          also on new, unseen data.</p>
+        <p>Signs of underfitting include high training and testing errors, low accuracy,
+          and poor performance on both the training and testing datasets. Underfitting
+          can be addressed by using a more complex model, increasing the model's
+          capacity, or adding more relevant features to the dataset.</p>
+        <p><strong>Overfitting</strong>: Overfitting occurs when a machine learning
+          model becomes too complex and starts to memorize the noise or random fluctuations
+          in the training data instead of learning the underlying patterns. The model
+          becomes overly specialized to the training data and fails to generalize
+          well to new data. In other words, it "overfits" the training data.</p>
+        <p>Signs of overfitting include very low training error but high testing
+          error, high variance, and a large gap between the model's performance on
+          the training and testing datasets. Overfitting can be mitigated by using
+          techniques such as regularization, cross-validation, early stopping, or
+          reducing the complexity of the model.</p>
+        <p>Balancing between underfitting and overfitting is crucial in machine learning.
+          The goal is to find the right level of model complexity that allows it
+          to generalize well to unseen data while still capturing the underlying
+          patterns in the training data. This is often achieved through techniques
+          like hyperparameter tuning and model evaluation using validation datasets.</p>
+        <h2>(b) Explain multiple linear regression. Formulate total sum of square, least square.</h2>
+        <p>Multiple regression is a statistical modeling technique used to analyze
+          the relationship between a dependent variable and multiple independent
+          variables. It extends the concept of simple regression, where only one
+          independent variable is considered, to include multiple predictors.</p>
+        <p>The formula for multiple regression can be expressed as:</p>
+        <p>Y = β₀ + β₁X₁ + β₂X₂ + ... + βₚXₚ + ε</p>
+        <p>Where:</p>
+        <ul>
+          <li>Y represents the dependent variable (the variable being predicted or explained).</li>
+          <li>X₁, X₂, ..., Xₚ represent the independent variables (the predictors or
+            explanatory variables).</li>
+          <li>β₀ represents the y-intercept, which is the value of Y when all independent
+            variables are equal to zero.</li>
+          <li>β₁, β₂, ..., βₚ represent the coefficients or weights associated with
+            each independent variable, indicating the change in Y for a unit change
+            in each respective independent variable.</li>
+          <li>ε represents the error term, which accounts for the variability or noise
+            in the relationship that is not explained by the model.</li>
+        </ul>
+        <p>In multiple regression, the goal is to estimate the values of β₀, β₁,
+          β₂, ..., βₚ that best fit the data and minimize the sum of squared errors
+          between the predicted values and the actual values of the dependent variable.</p>
+        <p>The multiple regression model allows for the analysis of the combined
+          effect of multiple independent variables on the dependent variable. It
+          helps to understand the individual contributions and the overall significance
+          of each independent variable in explaining the variation in the dependent
+          variable.</p>
+        <p><span class="text-big"><strong>The Total Sum of Squares (TSS)</strong></span>:
+          it is a statistical measure used to quantify the total variation or dispersion
+          in a dataset. It is commonly used in regression analysis to assess the
+          total variability of the dependent variable.</p>
+        <p>The TSS is calculated by summing the squared differences between each
+          data point and the mean of the dependent variable. The formula for TSS
+          is:</p>
+        <p><span class="math-tex">\(TSS = \sum(y_t-\bar{y})^2\)</span>
+        </p>
+        <p>where&nbsp;<span class="math-tex">\(\bar{y}\)</span>&nbsp;represents the
+          mean of the dependent variable and&nbsp;<span class="math-tex">\(y_t\)</span>&nbsp;represents
+          the true values</p>
+        <p>The formula for the <span class="text-big"><strong>least squares</strong></span> estimate
+          of the coefficients in linear regression is:</p>
+        <p><span class="math-tex">\(\beta = (X^T X)^{-1} X^T y\)</span>
+        </p>
+      </div>
+    </div>
+  </body>
+
+</html>

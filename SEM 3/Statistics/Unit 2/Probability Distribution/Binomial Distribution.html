@@ -1,0 +1,55 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Binomial Distribution </h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The binomial distribution is a probability distribution that describes
+          the number of successes in a fixed number of independent Bernoulli trials
+          or experiments. Each trial has only two possible outcomes: success (usually
+          denoted as "S") or failure (usually denoted as "F"). The binomial distribution
+          is named after the mathematician Jacob Bernoulli.</p>
+        <p style="margin-left:0px;">Key characteristics of the binomial distribution:</p>
+        <ol>
+          <li><strong>Binary Outcomes:</strong> In each trial, there are only two possible
+            outcomes, often referred to as "success" and "failure." These outcomes
+            are mutually exclusive.</li>
+          <li><strong>Fixed Number of Trials:</strong> The binomial distribution models
+            a fixed number of independent trials or experiments, denoted as "n." Each
+            trial is identical in nature.</li>
+          <li><strong>Constant Probability:</strong> The probability of success in each
+            trial is the same and is denoted as "p." The probability of failure is
+            therefore (1 - p).</li>
+          <li><strong>Independence:</strong> The trials are assumed to be independent
+            of each other, meaning that the outcome of one trial does not affect the
+            outcome of any other trial.</li>
+        </ol>
+        <p><span class="math-tex">\(P(x) = {n \choose x}p^xq^{n-x}\)</span>
+        </p>
+        <p><span class="math-tex">\({n \choose x} = \frac{n!}{x!(n-x)!}\)</span>
+        </p>
+        <p><span class="math-tex">\(p + q = 1\)</span>
+        </p>
+        <p><span class="math-tex">\(mean(\mu) = n*p\)</span>
+        </p>
+        <p><span class="math-tex">\(var = n*p(1-p)\)</span>
+        </p>
+        <p>Binomial to Normal:</p>
+        <p><span class="math-tex">\(\frac{x - n*p}{\sqrt{n*p(1-p)}}\)</span>
+        </p>
+        <figure class="image">
+          <img src="Binomial%20Distribution/image.png">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

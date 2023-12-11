@@ -1,0 +1,76 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>m Coloring Decision Problem</h1>
+
+      <div class="ck-content">
+        <p>The "m Coloring Decision Problem" is a specific form of the Graph Coloring
+          Problem. It's a decision problem (a problem with a yes or no answer) that
+          asks the following question:</p>
+        <p><strong>Given a graph G and a number m, can the vertices of G be colored using at most m different colors such that no two adjacent vertices have the same color?</strong>
+        </p>
+        <p>Here's a bit more detail on the m Coloring Decision Problem:</p>
+        <h3>Key Aspects</h3>
+        <p><strong>Input:</strong>
+        </p>
+        <ul>
+          <li>A graph&nbsp;<span class="math-tex">\(G\)</span>&nbsp;(which can be either
+            directed or undirected).</li>
+          <li>An integer&nbsp;<span class="math-tex">\(m\)</span>&nbsp;representing
+            the number of colors.</li>
+        </ul>
+        <p><strong>Objective:</strong>
+        </p>
+        <ul>
+          <li>The goal is to determine whether it's possible to assign one of the mm
+            colors to each vertex of&nbsp;<span class="math-tex">\(m\)</span>&nbsp;so
+            that no two adjacent vertices (vertices connected by an edge) have the
+            same color.</li>
+        </ul>
+        <p><strong>Output:</strong>
+        </p>
+        <ul>
+          <li>The answer is a simple "yes" or "no".</li>
+          <li>"Yes" if there is a way to color the graph using mm colors according to
+            the rules.</li>
+          <li>"No" if it is impossible to do so.</li>
+        </ul>
+        <h3>Computational Complexity</h3>
+        <ul>
+          <li>The m Coloring Decision Problem is a classic example of an NP-complete
+            problem when&nbsp;<span class="math-tex">\(m \ge 3\)</span>. This means
+            that for a general graph, there is no known polynomial-time algorithm to
+            solve the problem.</li>
+          <li>For specific types of graphs or lower values of&nbsp;<span class="math-tex">\(m\)</span>&nbsp;(like&nbsp;
+            <span
+            class="math-tex">\(m = 2\)</span>), the problem can be polynomial-time solvable. For example,
+              a 2-coloring decision problem is equivalent to determining if a graph is
+              bipartite, which can be done in polynomial time.</li>
+        </ul>
+        <h3>Practical Significance</h3>
+        <ul>
+          <li>This problem has practical applications in various fields, including scheduling,
+            register allocation in compilers, frequency assignment in mobile radio
+            networks, and solving puzzles like Sudoku.</li>
+          <li>It also serves as a fundamental problem for exploring and understanding
+            the theory of NP-completeness and computational complexity.</li>
+        </ul>
+        <h3>Algorithms</h3>
+        <ul>
+          <li>Different algorithms, such as backtracking, greedy algorithms, and approximation
+            algorithms, are used to approach this problem, especially for specific
+            types of graphs or for providing approximate solutions.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

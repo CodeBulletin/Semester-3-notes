@@ -1,0 +1,91 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q6</h1>
+
+      <div class="ck-content">
+        <h2>(a) A motorist wishing to ride from city A to B. Formulate greedy based algorithms to generate shortest path. Explain with an example</h2>
+        <p>To solve the problem of finding the shortest path from City A to B using
+          a greedy algorithm, you can use Dijkstra's algorithm. This algorithm is
+          a classic example of a greedy approach, where the decision made at each
+          step is the best at that moment and doesn't consider the future consequences.</p>
+        <h3>Dijkstra's Algorithm:</h3>
+        <p><strong>Initialization</strong>:</p>
+        <ul>
+          <li>Mark all nodes unvisited. Create a set of all the unvisited nodes called
+            the unvisited set.</li>
+          <li>Assign to every node a tentative distance value: set it to zero for the
+            initial node (City A) and to infinity for all other nodes.</li>
+        </ul>
+        <p><strong>Main Loop</strong>:</p>
+        <ul>
+          <li>Select the unvisited node with the smallest tentative distance. Initially,
+            this will be City A.</li>
+          <li>For the current node, consider all of its unvisited neighbors and calculate
+            their tentative distances through the current node. Compare the newly calculated
+            tentative distance to the current assigned value and assign the smaller
+            one. For example, if the current node (A) is marked with a distance of
+            6, and the edge connecting it with a neighbor (B) is 2, then the distance
+            to B through A will be 6 + 2 = 8. If B was previously marked with a distance
+            greater than 8 then change it to 8. If less, leave it as is.</li>
+          <li>Once we have considered all of the unvisited neighbors of the current
+            node, mark the current node as visited. A visited node will not be checked
+            again.</li>
+          <li>If the destination node (City B) has been marked visited or if the smallest
+            tentative distance among the nodes in the unvisited set is infinity (which
+            happens when there is no connection between the nodes left in the unvisited
+            set and the set of visited nodes), then stop. The algorithm has finished.</li>
+          <li>Otherwise, select the unvisited node with the smallest tentative distance
+            and return to step 3.</li>
+        </ul>
+        <p><strong>Path Reconstruction</strong>:</p>
+        <ul>
+          <li>Starting from City B, you can reconstruct the shortest path by tracing
+            the lowest tentative distances back to City A.</li>
+        </ul>
+        <h2>(b) Describe a pattern matching algorithm that is based on automata.</h2>
+        <p style="margin-left:0px;">String matching with finite automata is a technique used to search for
+          occurrences of a pattern (substring) within a larger text by constructing
+          a finite automaton that recognizes the pattern. This approach is efficient
+          and can be especially useful when you need to search for the same pattern
+          in multiple texts.</p>
+        <p style="margin-left:0px;">The steps involved in string matching with finite automata are as follows:</p>
+        <p
+        style="margin-left:0px;"><strong>Preprocessing Phase (Pattern to DFA):</strong>
+          </p>
+          <ul>
+            <li>Create a deterministic finite automaton (DFA) that recognizes the pattern.
+              This DFA is constructed based on the characters in the pattern.</li>
+            <li>The DFA has states and transitions between states, where each state represents
+              a certain state of the pattern matching process.</li>
+            <li>Transitions are determined by the characters in the pattern. For each
+              state, a transition is defined for each character that could come next
+              in the pattern.</li>
+            <li>The final state(s) of the DFA indicate a successful match of the pattern.</li>
+          </ul>
+          <p style="margin-left:0px;"><strong>Searching Phase (Text to DFA):</strong>
+          </p>
+          <ul>
+            <li>Start at the initial state of the DFA.</li>
+            <li>For each character in the text:
+              <ul>
+                <li>Follow the transition corresponding to that character in the DFA.</li>
+                <li>If a match is found (the automaton reaches a final state), report the
+                  position of the match in the text.</li>
+                <li>Continue to process the next character in the text.</li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

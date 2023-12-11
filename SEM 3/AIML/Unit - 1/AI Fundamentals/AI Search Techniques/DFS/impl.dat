@@ -1,0 +1,10 @@
+void DFS(struct Graph* graph, int currentNode) {
+    printf("%d ", currentNode);
+    graph->visited[currentNode] = true;
+
+    for (int i = 0; i < graph->numNodes; i++) {
+        if (graph->adjacencyMatrix[currentNode][i] == 1 && !graph->visited[i]) {
+            DFS(graph, i);
+        }
+    }
+}

@@ -1,0 +1,45 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Example</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Sure, let's look at an example to understand how Cross-Site Scripting
+          (XSS) can occur. Consider a simple web application that has a feature allowing
+          users to post comments. The server displays these comments on a webpage
+          without any filtering or escaping of HTML characters.</p>
+        <h3 style="margin-left:0px;"><strong>Example of a Stored XSS Attack:</strong></h3>
+        <ol>
+          <li><strong>User Input</strong>: Suppose an attacker writes a comment on the
+            website, embedding a malicious script within it. The comment might look
+            like this:</li>
+        </ol><pre><code class="language-application-javascript-env-frontend">Great post! &lt;script&gt;alert('Hacked!');&lt;/script&gt;</code></pre>
+        <ol
+        start="2">
+          <li><strong>Storing the Comment</strong>: The web application stores this
+            comment in its database without any sanitization.</li>
+          <li><strong>Displaying the Comment</strong>: Later, when another user visits
+            the page where comments are displayed, the web application retrieves the
+            comment and includes it in the HTML of the page.</li>
+          <li><strong>Execution of the Script</strong>: When the user's browser renders
+            the HTML, the embedded <strong>&lt;script&gt;</strong> tag is treated as
+            a legitimate script and executed. The user sees an alert box with the message
+            'Hacked!'.</li>
+          </ol>
+          <p style="margin-left:0px;">This is a classic example of a stored XSS attack, where the malicious
+            script is stored on the server and executed by any user who views the infected
+            page.</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

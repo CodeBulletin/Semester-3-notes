@@ -1,0 +1,55 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Single Variable Least Squared Method</h1>
+
+      <div class="ck-content">
+        <p>The formula for the least squares method, particularly in the context
+          of linear regression, involves finding the best-fitting line through a
+          set of data points. This line is typically represented as&nbsp;<span class="math-tex">\(y = mx + b\)</span>,
+          where&nbsp;<span class="math-tex">\(y\)</span>&nbsp;is the dependent variable,&nbsp;
+          <span
+          class="math-tex">\(x\)</span>&nbsp;is the independent variable,&nbsp;<span class="math-tex">\(m\)</span>&nbsp;is
+            the slope of the line, and&nbsp;<span class="math-tex">\(b\)</span>&nbsp;is
+            the y-intercept.</p>
+        <p>The goal is to find the values of&nbsp;<span class="math-tex">\(m\)</span>&nbsp;and&nbsp;
+          <span
+          class="math-tex">\(b\)</span>&nbsp;that minimize the sum of the squares of the residuals
+            (the differences between the observed values and the values predicted by
+            the model).</p>
+        <p>The formulas to calculate&nbsp;<span class="math-tex">\(m\)</span>&nbsp;(slope)
+          and&nbsp;<span class="math-tex">\(b\)</span>&nbsp;(y-intercept) are derived
+          from the principles of calculus and are as follows:</p>
+        <p>1. <strong>Slope (m):</strong>
+          <br><span class="math-tex">\(m = \frac{N \sum(xy) - \sum x \sum y}{N \sum(x^2) - (\sum x)^2}\)</span>
+          <br>where&nbsp;<span class="math-tex">\(N\)</span>&nbsp;is the number of data
+          points,&nbsp;<span class="math-tex">\(\sum(xy)\)</span>&nbsp;is the sum
+          of the product of x and y values,&nbsp;<span class="math-tex">\(\sum x\)</span>&nbsp;and&nbsp;
+          <span
+          class="math-tex">\(\sum y\)</span>&nbsp;are the sums of x and y values respectively, and&nbsp;
+            <span
+            class="math-tex">\(\sum(x^2)\)</span>&nbsp;is the sum of the square of x values.</p>
+        <p>2. <strong>Y-intercept (b):</strong>
+          <br><span class="math-tex">\(b = \frac{\sum y - m \sum x}{N}\)</span>
+          <br>where&nbsp;<span class="math-tex">\(\sum y\)</span>&nbsp;is the sum of
+          y values,&nbsp;<span class="math-tex">\(m\)</span>&nbsp;is the slope calculated
+          as above,&nbsp;<span class="math-tex">\(\sum x\)</span>&nbsp;is the sum
+          of x values, and&nbsp;<span class="math-tex">\(N\)</span>&nbsp;is the number
+          of data points.</p>
+        <p>These equations are the core of the least squares method in the context
+          of a simple linear regression. For more complex models, like multiple linear
+          regression, the calculation extends to more variables, and often matrix
+          notation and operations are used to solve the least squares problem.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

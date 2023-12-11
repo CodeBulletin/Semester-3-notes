@@ -1,0 +1,73 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>AVL Tree</h1>
+
+      <div class="ck-content">
+        <figure class="image">
+          <img src="AVL%20Tree/262px-AVL-tree-wBalance_K.svg." alt="AVL tree - Wikipedia">
+        </figure>
+        <p style="margin-left:0px;">An AVL tree is a self-balancing binary search tree that ensures the tree
+          remains balanced to maintain efficient operations such as searching, insertion,
+          and deletion. The name "AVL" stands for the initials of the inventors,
+          Adelson-Velsky and Landis.</p>
+        <p style="margin-left:0px;">In an AVL tree, each node has a balance factor associated with it, which
+          is the difference between the heights of its left and right subtrees. The
+          balance factor can be either -1, 0, or 1. The tree is considered balanced
+          if the balance factor of every node is in the range of -1 to 1.</p>
+        <p style="margin-left:0px;">Whenever an insertion or deletion operation is performed that may disturb
+          the balance of the tree, AVL trees employ rotation operations to rebalance
+          the tree. Rotations are applied to adjust the heights of the subtrees and
+          maintain the balance factor of each node.</p>
+        <p style="margin-left:0px;">The self-balancing property of AVL trees ensures that the height of the
+          tree remains logarithmic in the number of nodes, resulting in efficient
+          operations with a time complexity of O(log n), where n is the number of
+          elements in the tree.</p>
+        <p style="margin-left:0px;">The balance factor calculation and rotation operations make AVL trees
+          slightly more complex than regular binary search trees, but they provide
+          a guaranteed balanced structure that offers consistent performance for
+          various operations.</p>
+        <p style="margin-left:0px;">An AVL tree has several important properties:</p>
+        <ol>
+          <li><strong>Balanced Structure</strong>: In an AVL tree, the heights of the
+            left and right subtrees of any node differ by at most 1. This ensures a
+            balanced structure and guarantees that the tree remains relatively shallow,
+            resulting in efficient operations.</li>
+          <li><strong>Balance Factor</strong>: Each node in an AVL tree stores a balance
+            factor, which is the difference between the height of its left subtree
+            and the height of its right subtree. The balance factor can be -1, 0, or
+            1. By maintaining balance factors, AVL trees can determine when and where
+            rotations are needed to restore balance.</li>
+          <li><strong>Self-Balancing Operations</strong>: Whenever an insertion or deletion
+            operation is performed that may disrupt the balance of the tree, AVL trees
+            employ rotation operations to restore balance. There are four rotation
+            operations: Left-Left (LL), Right-Right (RR), Left-Right (LR), and Right-Left
+            (RL). These rotations adjust the heights of subtrees and maintain the balance
+            factor of each node.</li>
+          <li><strong>Efficient Search, Insertion, and Deletion</strong>: Due to their
+            balanced nature, AVL trees provide efficient search, insertion, and deletion
+            operations with a time complexity of O(log n), where n is the number of
+            nodes in the tree. This time complexity remains consistent regardless of
+            the distribution of the data.</li>
+          <li><strong>Unique Key Values</strong>: AVL trees are typically used for storing
+            unique key-value pairs, where each key in the tree is unique. If a duplicate
+            key is attempted to be inserted into an AVL tree, it would either be rejected
+            or an appropriate action can be taken based on the specific implementation.</li>
+          <li><strong>Additional Memory Overhead</strong>: AVL trees require extra memory
+            to store the balance factors for each node, in addition to the key and
+            value. This additional memory overhead compared to regular binary search
+            trees is necessary to maintain the self-balancing property.</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

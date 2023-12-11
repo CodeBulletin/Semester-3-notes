@@ -1,0 +1,94 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Mean Deviation</h1>
+
+      <div class="ck-content">
+        <p>Mean deviation is a measure of dispersion that quantifies the average
+          distance between each data point in a dataset and the mean or median of
+          that dataset. It provides information about the spread or variability of
+          the data.</p>
+        <h3>Mean Deviation with Mean</h3>
+        <p>Mean deviation with respect to the mean is a measure of dispersion that
+          quantifies the average distance between each data point in a dataset and
+          the mean of that dataset. It provides information about the spread or variability
+          of the data around the mean.</p>
+        <p>To calculate the mean deviation with respect to the mean, you follow these
+          steps:</p>
+        <ol>
+          <li>Calculate the mean of the dataset.</li>
+          <li>Find the absolute difference between each data point and the mean.</li>
+          <li>Sum up all the absolute differences.</li>
+          <li>Divide the sum by the total number of data points.</li>
+        </ol>
+        <p>Formula:&nbsp;<span class="math-tex">\(MD_{\bar{x}} = \frac{\sum^C_{i=1}f_i|x_i-\bar{x}|}{\sum^C_{i=1}f_i}\)</span>
+        </p>
+        <h3>For example, let's consider the dataset: 5, 8, 10, 12, 16.</h3>
+        <ol>
+          <li>Calculate the mean: (5 + 8 + 10 + 12 + 16) / 5 = 10.2</li>
+          <li>Find the absolute difference between each data point and the mean: |5
+            - 10.2| = 4.8, |8 - 10.2| = 1.8, |10 - 10.2| = 0.2, |12 - 10.2| = 1.8,
+            |16 - 10.2| = 5.8</li>
+          <li>Sum up all the absolute differences: 4.8 + 1.8 + 0.2 + 1.8 + 5.8 = 14.4</li>
+          <li>Divide the sum by the total number of data points: 14.4 / 5 = 2.88</li>
+        </ol>
+        <p>Therefore, the mean deviation with respect to the mean for this dataset
+          is 2.88.</p>
+        <h2>Mean Deviation with Median (Use this by default)</h2>
+        <p>Mean deviation with respect to the median is a measure of dispersion that
+          quantifies the average distance between each data point in a dataset and
+          the median of that dataset. It provides information about the spread or
+          variability of the data around the median</p>
+        <p>To calculate the mean deviation with respect to the median, you follow
+          similar steps as above, but instead of using the mean, you use the median.</p>
+        <p>Formula:&nbsp;<span class="math-tex">\(MD_{M} = \frac{\sum^C_{i=1}f_i|x_i-M|}{\sum^C_{i=1}f_i}\)</span>
+        </p>
+        <h3>For example, let's consider the dataset: 5, 8, 10, 12, 16.</h3>
+        <ol>
+          <li>Arrange the dataset in ascending order: 5, 8, 10, 12, 16.</li>
+          <li>Find the median: The median is 10.</li>
+          <li>Find the absolute difference between each data point and the median: |5
+            - 10| = 5 |8 - 10| = 2 |10 - 10| = 0 |12 - 10| = 2 |16 - 10| = 6</li>
+          <li>Sum up all the absolute differences: 5 + 2 + 0 + 2 + 6 = 15.</li>
+          <li>Divide the sum by the total number of data points: 15 / 5 = 3.</li>
+        </ol>
+        <p>Therefore, the mean deviation with respect to the median for this dataset
+          is 3.</p>
+        <p>In both cases, the mean deviation provides a measure of the average distance
+          between each data point and the central tendency (mean or median) of the
+          dataset. It helps to understand the dispersion or variability of the data
+          points.</p>
+        <h2>The coefficient of mean deviation with respect to the mean and median</h2>
+        <p>The coefficient of mean deviation with respect to the mean and median
+          is a measure that allows for the comparison of the mean deviations of different
+          datasets, regardless of their scales or units. It provides a standardized
+          measure of dispersion.</p>
+        <h3>Coefficient of Mean Deviation with Mean</h3>
+        <p>To calculate the coefficient of mean deviation with respect to the mean,
+          you divide the mean deviation with the mean of the dataset.</p>
+        <p>Coefficient of Mean Deviation with Mean = (Mean Deviation with Mean /
+          Mean)</p>
+        <h3>Coefficient of Mean Deviation with Median</h3>
+        <p>To calculate the coefficient of mean deviation with respect to the median,
+          you divide the mean deviation with the median of the dataset.</p>
+        <p>Coefficient of Mean Deviation with Median = (Mean Deviation with Median
+          / Median)</p>
+        <p>The coefficient of mean deviation provides a relative measure of dispersion
+          that allows for the comparison of datasets with different scales or units.
+          A smaller coefficient indicates a lower relative dispersion, while a larger
+          coefficient suggests a higher relative dispersion. It helps in comparing
+          the variability of datasets and understanding the relative spread of data
+          points around the mean or median.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

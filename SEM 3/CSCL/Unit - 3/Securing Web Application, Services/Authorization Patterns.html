@@ -1,0 +1,61 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Authorization Patterns </h1>
+
+      <div class="ck-content">
+        <p>Authorization patterns, also known as authorization models or access control
+          patterns, are commonly used approaches to implementing access control in
+          software systems. These patterns provide guidelines and best practices
+          for managing and enforcing authorization rules to ensure that users have
+          the appropriate permissions to access resources or perform specific actions.</p>
+        <p>Here are some commonly used authorization patterns:</p>
+        <ol>
+          <li><strong>Role-Based Access Control (RBAC)</strong>: RBAC is a widely used
+            authorization pattern that assigns permissions to roles and then associates
+            roles with users. Users are granted access based on their assigned roles,
+            simplifying access management and reducing administrative overhead. RBAC
+            is effective for managing access in large systems with complex user roles
+            and permissions.</li>
+          <li><strong>Attribute-Based Access Control (ABAC)</strong>: ABAC is an authorization
+            pattern that grants access based on attributes associated with users, resources,
+            and environmental conditions. It uses policies that evaluate attributes
+            to determine access rights. ABAC provides fine-grained access control and
+            dynamic decision-making based on contextual information, such as user attributes,
+            resource properties, and environmental factors.</li>
+          <li><strong>Rule-Based Access Control (RBAC)</strong>: RBAC is an authorization
+            pattern that uses rules to determine access rights. Rules are defined based
+            on conditions and actions, and access decisions are made by evaluating
+            these rules. RBAC allows for flexible access control based on specific
+            conditions or combinations of conditions.</li>
+          <li><strong>Permission-Based Access Control</strong>: Permission-based access
+            control is a simple authorization pattern where access is granted based
+            on explicit permissions assigned to users or user groups. Each resource
+            or action is associated with a set of permissions, and users are granted
+            access based on their assigned permissions. This pattern is commonly used
+            in smaller systems with a limited number of users and resources.</li>
+          <li><strong>Mandatory Access Control (MAC)</strong>: MAC is an authorization
+            pattern commonly used in high-security environments. It enforces access
+            control based on predefined security labels or classifications assigned
+            to users and resources. Access decisions are made based on the security
+            labels and a set of predefined rules or policies. MAC provides strong access
+            control but requires careful configuration and management.</li>
+          <li><strong>Discretionary Access Control (DAC)</strong>: DAC is an authorization
+            pattern where access control decisions are left to the discretion of the
+            resource owner. The resource owner determines who can access the resource
+            and what level of access is granted. DAC provides flexibility but can lead
+            to inconsistent access control if not properly managed.</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

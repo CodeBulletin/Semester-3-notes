@@ -1,0 +1,110 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Standard Deviation</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The standard deviation (σ or s) is a widely used measure of dispersion
+          that calculates the average deviation of individual data points from the
+          mean of the dataset. It gives us an idea of how much the data points deviate
+          from the mean and how widely they are distributed. A smaller standard deviation
+          indicates that the data points are generally close to the mean, while a
+          larger standard deviation indicates greater variability and spread.</p>
+        <p
+        style="margin-left:0px;">The formula to calculate the sample standard deviation is</p>
+          <p style="margin-left:0px;"><span class="math-tex">\(s = \sqrt\frac{\sum_{i=1}^n(x_i - \bar{x})^2}{n-1} = \sqrt\frac{\sum_{i=1}^cf_i(x_i - \bar{x})^2}{(\sum_{i=1}^cf_i) - 1}\)</span>
+          </p>
+          <p style="margin-left:0px;">where,
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(s\)</span>&nbsp;is
+            the sample standard deviation
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(x_i\)</span>&nbsp;is
+            individual data point
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(\bar{x}\)</span>&nbsp;is
+            the sample mean
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(n\)</span>&nbsp;is
+            the size of sample</p>
+          <p style="margin-left:0px;">The formula to calculate the Population standard deviation is</p>
+          <p style="margin-left:0px;"><span class="math-tex">\(\sigma = \sqrt\frac{\sum_{i=1}^N(x_i - \mu)^2}{N} = \sqrt\frac{\sum_{i=1}^Cf_i(x_i - \mu)^2}{\sum_{i=1}^Cf_i}\)</span>
+          </p>
+          <p style="margin-left:0px;">where,
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(\sigma\)</span>&nbsp;is
+            the population standard deviation
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(x_i\)</span>&nbsp;is
+            individual data point
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(\mu\)</span>&nbsp;is
+            the sample mean
+            <br>&nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(N\)</span>&nbsp;is
+            the size of population</p>
+          <p style="margin-left:0px;">It's important to note that the standard deviation is sensitive to outliers,
+            meaning that if there are extreme values in the dataset, they can significantly
+            impact the calculated standard deviation. This property makes the standard
+            deviation a good measure of spread when dealing with symmetric and roughly
+            bell-shaped distributions. However, in cases where the data distribution
+            is skewed or contains outliers, other measures of dispersion like the interquartile
+            range (IQR) might be more appropriate.</p>
+          <h2 style="margin-left:0px;">Coefficient of Standard Deviation</h2>
+          <p style="margin-left:0px;">As Standard Deviation is an absolute measure of dispersion, one cannot
+            use it for comparing the variability of two or more series when they are
+            expressed in different units. Therefore, in order to compare the variability
+            of two or more series with different units it is essential to determine
+            the relative measure of Standard Deviation. Two of the relative measures
+            of Standard Deviation are Coefficient of Standard Deviation and Coefficient
+            of Variation.</p>
+          <p style="margin-left:0px;">Coefficient of Standard Deviation is a relative measure of Standard Deviation
+            and is determined by dividing Standard Deviation by the Mean of the given
+            data set. It is also known as the <strong>Standard Coefficient of Dispersion</strong>
+          </p>
+          <p style="margin-left:0px;">CSD =&nbsp;<span class="math-tex">\(\frac{\sigma}{\bar{x}}\)</span>
+          </p>
+          <h2 style="margin-left:0px;">What is Coefficient of Variation?</h2>
+          <p style="margin-left:0px;">As Standard Deviation is an absolute measure of dispersion, one cannot
+            use it for comparing the variability of two or more series when they are
+            expressed in different units. Therefore, in order to compare the variability
+            of two or more series with different units it is essential to determine
+            the relative measure of Standard Deviation. Two of the relative measures
+            of Standard Deviation are Coefficient of Standard Deviation and Coefficient
+            of Variation.</p>
+          <p style="margin-left:0px;">Coefficient of Variation is a relative measure through which two or more
+            groups of similar data are compared with respect to stability or homogeneity
+            or consistency. It is the most appropriate measure and indicates the relationship
+            between the standard deviation and the arithmetic mean of the given distributions/series.
+            Coefficient of Variation is expressed in terms of percentage and can be
+            determined using the following formula:</p>
+          <p style="margin-left:0px;">Coefficient of Variation CV =&nbsp;<span class="math-tex">\((CSD * 100)\%\)</span>
+          </p>
+          <h2 style="margin-left:0px;">For example, let's consider the sample dataset: 5, 8, 10, 12, 15.</h2>
+          <ol>
+            <li>Find&nbsp;<span class="math-tex">\(\bar{x}\)</span>&nbsp;=&nbsp;
+              <span
+              class="math-tex">\(\frac{5 + 8 + 10 + 12 + 15}{5} = 10\)</span>
+            </li>
+            <li>Calculate&nbsp;<span class="math-tex">\((x-\bar{x})\)</span>, (5 - 10)
+              = -5, (8 - 10) = -2, (10 - 10) = 0, (12 - 10) = 2</li>
+            <li>Calculate&nbsp;<span class="math-tex">\((x-\bar{x})^2\)</span>, 25, 4,
+              0, 4, 25&nbsp;</li>
+            <li>Calculate&nbsp;<span class="math-tex">\(\sum_{i=1}^n(x-\bar{x})^2\)</span>&nbsp;=
+              25 + 4 + 0 + 4 + 25 = 58</li>
+            <li>Calculate&nbsp;<span class="math-tex">\(s^2 = \frac{\sum_{i=1}^n(x-\bar{x})^2}{n-1}\)</span>&nbsp;=&nbsp;
+              <span
+              class="math-tex">\(\frac{58}4\)</span>&nbsp;= 14.5</li>
+            <li>Find&nbsp;<span class="math-tex">\(s = \sqrt{s^2}\)</span>&nbsp;=&nbsp;
+              <span
+              class="math-tex">\(\sqrt{14.5}\)</span>&nbsp;= 3.808</li>
+            <li>Find CSD =&nbsp;<span class="math-tex">\(\frac{s}{\bar{x}} = \frac{3.808}{10} = 0.3808\)</span>
+            </li>
+            <li>Find CV =&nbsp;<span class="math-tex">\(CSD * 100 = 38.08\%\)</span>
+            </li>
+          </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

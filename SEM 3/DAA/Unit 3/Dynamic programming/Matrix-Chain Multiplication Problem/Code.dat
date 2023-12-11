@@ -1,0 +1,42 @@
+def matrix_chain_multiplication(dims, names):
+    n = len(dims) - 1
+    dp = [[float('inf')] * n for _ in range(n)]
+    s = [[0] * n for _ in range(n)]
+
+    for i in range(n):
+        dp[i][i] = 0
+
+    for chain_length in range(2, n + 1):
+        for i in range(n - chain_length + 1):
+            j = i + chain_length - 1
+            for k in range(i, j):
+                cost = dp[i][k] + dp[k + 1][j] + dims[i] * dims[k + 1] * dims[j + 1]
+                if cost < dp[i][j]:
+                    dp[i][j] = cost
+                    s[i][j] = k + 1
+
+    return dp[0][n - 1], Construct(s, [0, n-1], names)
+
+def Construct(s, k, names):
+    x = s[k[0]][k[1]]
+    if k[1] < 0:
+        return ""
+    if k[0] - k[1] == 0:
+        return names[k[0]]
+    else:
+        L = "(" + Construct(s, [k[0], x-1], names) + ")"
+        if len(L) == 3:
+            L = L[1]
+        R = "(" + Construct(s, [x, k[1]], names) + ")"
+        if len(R) == 3:
+            R = R[1]
+        return L + R
+
+dims = [10, 20, 30, 40, 1]
+result = matrix_chain_multiplication(dims, ['A', 'B', 'C', 'D'])
+print("Minimum number of multiplications:", result[0])
+print("Matrix: ", result[1]) 
+
+# output:
+# Minimum number of multiplications: 2000
+# Matrix Chain: A(B(CD))

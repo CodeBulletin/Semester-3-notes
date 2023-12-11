@@ -1,0 +1,184 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q4</h1>
+
+      <div class="ck-content">
+        <h2>(a) Translate each of the following sentence into First Order Logic (FOL).</h2>
+        <p><strong>1. Every connected and circuit-free graph is a tree.</strong>
+          <br><span class="math-tex">\(∀x[(conn(x)∧ ¬cir(x)) →tree(x)]\)</span>
+        </p>
+        <p><strong>2. Not all that glitters is gold</strong>
+          <br><span class="math-tex">\(∃x(glitter(x) ∧ ¬gold(x))\)</span>
+        </p>
+        <p><strong>3. Some numbers are not real.</strong>
+          <br><span class="math-tex">\(∃x¬Real(x)\)</span>
+        </p>
+        <p>4. There is a barber who shaves all men in the town who do not shave themselves.
+          -&nbsp;
+          <br><span class="math-tex">\(∃x[Barber(x)∧ ∀y[man(y)∧ ¬shaves(y, y)] →shaves(x, y)]\)</span>
+        </p>
+        <p>5. Someone has visited every country in the world except Libya.
+          <br>&nbsp;<span class="math-tex">\(∃x [person(x) ∧ ∀y (country(y) → [notvisited(x, y) ↔ (y = Libya)])]\)</span>
+        </p>
+        <h2>(b) Check the validity of the following implications via truth table.<br><span class="math-tex">\(P→ (Q→R) \equiv (P → Q) → (P → R)\)</span></h2>
+        <figure class="table">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="math-tex">\(P\)</span>
+                </th>
+                <th><span class="math-tex">\(Q\)</span>
+                </th>
+                <th><span class="math-tex">\(R\)</span>
+                </th>
+                <th><span class="math-tex">\(P \rightarrow Q\)</span>
+                </th>
+                <th><span class="math-tex">\(P\rightarrow R\)</span>
+                </th>
+                <th><span class="math-tex">\(Q\rightarrow R\)</span>
+                </th>
+                <th><span class="math-tex">\(P\rightarrow (Q\rightarrow R)\)</span>
+                </th>
+                <th><span class="math-tex">\((P → Q) → (P → R)\)</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>F</td>
+                <td>F</td>
+                <td>F</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td>F</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td>T</td>
+                <td>F</td>
+                <td>T</td>
+                <td>T</td>
+                <td>F</td>
+                <td>T</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>F</td>
+                <td>F</td>
+                <td>F</td>
+                <td>F</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>F</td>
+                <td>T</td>
+                <td>F</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>T</td>
+                <td>F</td>
+                <td>T</td>
+                <td>F</td>
+                <td>F</td>
+                <td>F</td>
+                <td>F</td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+                <td>T</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <h2>(c) What are forward and backward search planning? Explain with the help of example.</h2>
+        <p>Forward and backward search are two approaches used in planning and problem-solving,
+          each with its unique method of exploring the solution space.</p>
+        <h3>Forward Search Planning</h3>
+        <p>Forward search planning starts from the initial state and moves towards
+          the goal state. It explores the solution space by considering the actions
+          that can be taken from the current state, and then moves to the next state
+          that results from these actions. This process continues until the goal
+          state is reached.</p>
+        <p><strong>Example:</strong> Imagine a puzzle game where you start with an
+          initial arrangement of pieces and need to reach a specific arrangement
+          (the goal state). Forward search would involve moving the pieces step by
+          step according to the rules of the game, gradually transforming the initial
+          arrangement into the goal arrangement.</p>
+        <h3>Backward Search Planning</h3>
+        <p>Backward search planning, on the other hand, starts from the goal state
+          and works backwards to the initial state. It looks at the goal and considers
+          what actions could have resulted in this state, then moves to the state
+          before the goal, and continues this process in reverse until it reaches
+          the initial state.</p>
+        <p><strong>Example:</strong> Using the same puzzle game, backward search would
+          involve starting from the goal arrangement and thinking backwards: "What
+          move could have led to this arrangement?" You would then move a piece to
+          reverse that action, gradually deconstructing the goal arrangement until
+          you revert back to the initial arrangement.</p>
+        <h3>Comparison and Use Cases</h3>
+        <ul>
+          <li><strong>Complexity</strong>: Forward search can become complex in scenarios
+            with a large number of possible actions at each step, as it needs to explore
+            many paths. Backward search can be more efficient in cases where the goal
+            state significantly constrains the possible preceding actions.</li>
+          <li><strong>Applicability</strong>: Forward search is often used in scenarios
+            where the path to the goal is as important as the goal itself (like in
+            robotics), while backward search is common in problems where the goal is
+            well-defined but the path is not (like in certain types of puzzles or in
+            some AI applications).</li>
+          <li><strong>Limitations</strong>: Each method has limitations depending on
+            the problem structure. Forward search might face challenges in problems
+            with vast solution spaces, while backward search can be problematic when
+            the goal state does not sufficiently constrain the possible previous states.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

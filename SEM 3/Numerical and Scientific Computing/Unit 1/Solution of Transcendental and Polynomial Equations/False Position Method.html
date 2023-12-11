@@ -1,0 +1,72 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>False Position Method</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The False Position Method, also known as the Regula Falsi Method or the
+          Linear Interpolation Method, is a root-finding algorithm used in numerical
+          analysis to approximate the roots of a continuous function. Similar to
+          the Bisection Method, it operates on an interval where the function changes
+          sign, aiming to refine the estimate of the root with each iteration. However,
+          the False Position Method employs linear interpolation to make a more informed
+          estimate of the root compared to the simple bisection approach.</p>
+        <p style="margin-left:0px;">Here's how the False Position Method works:</p>
+        <ol>
+          <li>Start with an interval [a, b] where the function changes sign. Calculate
+            the function values f(a) and f(b).</li>
+          <li>Compute the point x that corresponds to the intersection of the straight
+            line connecting the points (a, f(a)) and (b, f(b)) with the x-axis. This
+            point is given by:
+            <br><span class="math-tex">\(x= \frac{af(b) - bf(a)}{f(b) -f(a)}\)</span>
+          </li>
+          <li>Calculate the function value f(x) at the newly computed point x.</li>
+          <li>Determine whether the root lies between a and x or between x and b based
+            on the signs of f(a) and f(x).</li>
+          <li>Update the interval [a, b] to [a, x] or [x, b], depending on the location
+            of the root.</li>
+          <li>Repeat the process iteratively, calculating new values of x and updating
+            the interval until a desired level of accuracy is achieved.</li>
+        </ol>
+        <p style="margin-left:0px;">The False Position Method shares some similarities with the Bisection
+          Method, as both methods work with an interval that contains the root and
+          narrow it down with each iteration. However, the False Position Method
+          typically converges faster than the Bisection Method because it incorporates
+          more information about the function's behavior by using linear interpolation.</p>
+        <h2
+        style="margin-left:0px;">Order of Convergence</h2>
+          <p style="margin-left:0px;">
+            <br>The Order of convergence of the Regula Falsi (False Position) Method is
+            linear. This means that, similar to the Bisection Method, the error decreases
+            by a constant factor with each iteration. However, compared to the Bisection
+            Method, the linear convergence of the Regula Falsi Method is generally
+            faster, since it uses linear interpolation to estimate the root and incorporates
+            more information about the function's behavior.</p>
+          <p style="margin-left:0px;">In mathematical terms, the Order of convergence can be expressed as follows:</p>
+          <p
+          style="margin-left:0px;"><span class="math-tex">\(|e_{n+1}| = C * |e_n|^k\)</span>
+            </p>
+            <p style="margin-left:0px;">Where:</p>
+            <ul>
+              <li><span class="math-tex">\(e_{n+1}\)</span>&nbsp;is the error in the (n+1)-th
+                iteration.</li>
+              <li><span class="math-tex">\(e_n\)</span>&nbsp;is the error in the n-th iteration.</li>
+              <li>C is a constant factor less than 1.</li>
+              <li>k is order of Convergence for Regula Falsi Method it is 1</li>
+            </ul>
+            <p style="margin-left:0px;">The Regula Falsi Method has a slightly faster convergence rate compared
+              to the Bisection Method because it uses linear interpolation to estimate
+              the root, which takes into account the local behavior of the function.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

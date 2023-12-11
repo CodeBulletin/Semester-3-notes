@@ -1,0 +1,80 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q8</h1>
+
+      <div class="ck-content">
+        <h2>(a) Why Dimensionality Reduction is important? Explain with suitable example?</h2>
+        <p>Dimensionality reduction is crucial in machine learning and data analysis
+          for several reasons, often illustrated best with suitable examples:</p>
+        <p><strong>Reducing Overfitting</strong>: High-dimensional data can lead
+          to overfitting in machine learning models, where the model learns noise
+          in the training data instead of the actual pattern. By reducing the number
+          of features, dimensionality reduction helps in creating simpler models
+          that generalize better to new data.</p>
+        <p><strong>Example</strong>: In image recognition, raw images can have thousands
+          of pixels (features). Many of these pixels may not contribute to the predictive
+          accuracy and can lead to overfitting. Dimensionality reduction can help
+          identify and retain the most significant pixels, reducing the chances of
+          overfitting.</p>
+        <p><strong>Computational Efficiency</strong>: High-dimensional data can be
+          computationally intensive to process and analyze. Dimensionality reduction
+          can significantly reduce computational costs by lowering the number of
+          features that need to be processed.</p>
+        <p><strong>Example</strong>: In text analysis, documents are often represented
+          as vectors in a very high-dimensional space (each word is a dimension).
+          Reducing this dimensionality can make computations like similarity checking
+          and clustering much faster and less resource-intensive.</p>
+        <p><strong>Data Visualization</strong>: It's challenging to visualize high-dimensional
+          data. Dimensionality reduction techniques can reduce data to two or three
+          dimensions, making it possible to visualize and understand complex patterns
+          in the data.</p>
+        <p><strong>Example</strong>: In customer segmentation, customer data might
+          include numerous features. Using dimensionality reduction (like t-SNE or
+          PCA), we can project this data into a 2D or 3D space to visualize different
+          customer groups or patterns.</p>
+        <p><strong>Removing Redundancy</strong>: Many real-world datasets have redundant
+          or correlated features. Dimensionality reduction helps in removing these
+          redundancies, resulting in a more concise and interpretable set of features.</p>
+        <p><strong>Example</strong>: In sensor data, multiple sensors might record
+          correlated data due to overlapping sensing areas. Dimensionality reduction
+          can help identify and remove these redundancies.</p>
+        <h2>(b) What is activation function? Why it is important in Machine Learning?</h2>
+        <p>An activation function in machine learning, particularly in neural networks,
+          is a mathematical function that adds non-linearity to the model. It decides
+          whether a neuron should be activated or not, based on whether each neuron's
+          input is relevant for the model's prediction.</p>
+        <p><strong>Importance of Activation Functions</strong>:</p>
+        <p><strong>Introducing Non-Linearity</strong>: Without non-linearity, a neural
+          network, regardless of how many layers it has, behaves like a single-layer
+          perceptron because summing these layers would give you just another linear
+          function. Non-linear functions allow neural networks to learn complex patterns
+          in the data.</p>
+        <p><strong>Enabling Backpropagation</strong>: They allow backpropagation
+          as they have a derivative function which is used in updating the weights
+          of the neural inputs.</p>
+        <p><strong>Decision Making</strong>: Activation functions like the sigmoid
+          or softmax make it easy to classify the outputs into different classes
+          and make decisions.</p>
+        <p><strong>Control of Neural Network Behavior</strong>: Different activation
+          functions control the neural network behavior in different ways. For example,
+          the ReLU (Rectified Linear Unit) activation function allows models to converge
+          quickly and perform better because it does not activate all neurons at
+          the same time.</p>
+        <p><strong>Variety of Functions for Different Purposes</strong>: There are
+          different activation functions (like sigmoid, tanh, ReLU, Leaky ReLU) each
+          suitable for different scenarios and types of neural networks (binary classification,
+          regression, etc.).</p>
+      </div>
+    </div>
+  </body>
+
+</html>

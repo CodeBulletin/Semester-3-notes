@@ -1,0 +1,19 @@
+def floyd_warshall(graph):
+    # Number of vertices in the graph
+    n = len(graph)
+    
+    # Create a copy of the graph to store the shortest distances
+    dist = [[float('inf')] * n for _ in range(n)]
+    
+    # Initialize the distance matrix with the weights of the edges
+    for i in range(n):
+        for j in range(n):
+            dist[i][j] = graph[i][j]
+    
+    # Find the shortest path between all pairs of vertices
+    for k in range(n):
+        for i in range(n):
+            for j in range(n):
+                dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
+    
+    return dist

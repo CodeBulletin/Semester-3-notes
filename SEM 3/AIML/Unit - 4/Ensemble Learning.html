@@ -1,0 +1,83 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Ensemble Learning</h1>
+
+      <div class="ck-content">
+        <p>Ensemble learning is a machine learning paradigm where multiple models
+          (often referred to as "weak learners") are trained to solve the same problem
+          and combined to get better results. The main principle behind ensemble
+          methods is that a group of weak learners can come together to form a strong
+          learner, thereby increasing the accuracy of the model.</p>
+        <p>Here are some key points about ensemble learning:</p>
+        <p><strong>Types of Ensemble Methods:</strong>
+        </p>
+        <ul>
+          <li><strong>Bagging (Bootstrap Aggregating):</strong> It involves training
+            multiple models in parallel, each on a random subset of the data. An example
+            is the Random Forest algorithm, where many decision trees are trained on
+            different subsets and their results are averaged.</li>
+          <li><strong>Boosting:</strong> This method trains models sequentially, where
+            each new model focuses on the errors of the previous ones. Examples include
+            AdaBoost and Gradient Boosting.</li>
+          <li><strong>Stacking:</strong> In stacking, different models are trained independently,
+            and a new model is trained to aggregate their predictions.</li>
+        </ul>
+        <p><strong>Key Concepts:</strong>
+        </p>
+        <ul>
+          <li><strong>Diversity:</strong> Ensemble methods rely on the diversity among
+            the base learners. The idea is that different models will make different
+            errors, and combining them can help to reduce the total error.</li>
+          <li><strong>Error Reduction:</strong> Ensemble methods can reduce error from
+            three aspects - bias (the error due to oversimplifying the problem), variance
+            (error due to model's sensitivity to small fluctuations in the training
+            set), and noise (random error in the data).</li>
+        </ul>
+        <p><strong>Advantages:</strong>
+        </p>
+        <ul>
+          <li><strong>Improved Accuracy:</strong> Combining multiple models generally
+            leads to better performance than a single model.</li>
+          <li><strong>Reduced Overfitting:</strong> Ensemble methods, especially bagging,
+            can reduce the risk of overfitting.</li>
+          <li><strong>Flexibility:</strong> Ensembles can combine different types of
+            models, leading to a potentially more robust system.</li>
+        </ul>
+        <p><strong>Challenges:</strong>
+        </p>
+        <ul>
+          <li><strong>Increased Complexity:</strong> Ensemble methods are generally more
+            complex and computationally expensive than individual models.</li>
+          <li><strong>Interpretability:</strong> Models like random forests or gradient
+            boosting machines can be harder to interpret than simpler models.</li>
+        </ul>
+        <p><strong>Applications:</strong>
+        </p>
+        <ul>
+          <li>Ensemble learning is widely used in various real-world applications, such
+            as classification and regression tasks, anomaly detection, and more.</li>
+        </ul>
+        <p>In summary, ensemble learning is a powerful technique in machine learning
+          that combines multiple models to improve the overall performance, robustness,
+          and accuracy of predictions.</p>
+        <figure class="image">
+          <img src="Ensemble%20Learning/1zTgGBTQIMlASWm5QuS2UpA.jpeg" alt="Ensemble Learning: Bagging &amp; Boosting | by Fernando López | Towards Data  Science">
+        </figure>
+        <p>Stacking:</p>
+        <figure class="image">
+          <img src="Ensemble%20Learning/1T-JHq4AK3dyRNi7gpn9-Xw.png" alt="Stacking in Machine Learning. What is stacking? | by Supun Setunga | Medium">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

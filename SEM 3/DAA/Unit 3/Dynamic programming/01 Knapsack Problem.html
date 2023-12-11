@@ -1,0 +1,45 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>0/1 Knapsack Problem</h1>
+
+      <div class="ck-content">
+        <p>The 0/1 Knapsack Problem is a classic optimization problem in computer
+          science and mathematics. It involves selecting a subset of items from a
+          given set, each with its own weight and value, to maximize the total value
+          while keeping the total weight within a given capacity.</p>
+        <p>Here's a high-level overview of the 0/1 Knapsack Problem:</p>
+        <ol>
+          <li>Given a set of items, each with a weight and value, and a knapsack with
+            a maximum weight capacity.</li>
+          <li>The goal is to select a subset of items to maximize the total value while
+            ensuring that the total weight does not exceed the knapsack's capacity.</li>
+          <li>Each item can either be included (1) or excluded (0) in the knapsack.
+            Hence, it is called the 0/1 Knapsack Problem because each item has a binary
+            choice.</li>
+          <li>The problem can be solved using dynamic programming, where a table is
+            constructed to store the maximum value that can be achieved for different
+            subproblems.</li>
+          <li>The table is filled in a bottom-up manner, considering each item and each
+            possible weight capacity.</li>
+          <li>The final entry in the table represents the maximum value that can be
+            achieved with the given items and knapsack capacity.</li>
+        </ol>
+        <p><span class="math-tex">\(V[i, j] = max\{V[i-1, j], V[i-1, j-w[i]]+p[i]\}\)</span>
+        </p>
+        <figure class="image">
+          <img src="01%20Knapsack%20Problem/photo_6305253376736213221_y.jp">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

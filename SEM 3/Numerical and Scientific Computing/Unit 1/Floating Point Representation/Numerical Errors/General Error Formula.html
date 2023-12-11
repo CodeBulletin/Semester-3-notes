@@ -1,0 +1,44 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>General Error Formula</h1>
+
+      <div class="ck-content">
+        <p><strong>General Error Formula</strong>
+        </p>
+        <p>Let&nbsp;<span class="math-tex">\(u = f(x_1, x_2, x_3, ..., x_n)\)</span>
+        </p>
+        <p>then the error&nbsp;<span class="math-tex">\(\Delta u\)</span>&nbsp;in&nbsp;
+          <span
+          class="math-tex">\(u\)</span>&nbsp;is</p>
+        <p><span class="math-tex">\(\Delta u = \frac{\delta u}{\delta x_1}\Delta x_1 + \frac{\delta u}{\delta x_2}\Delta x_2 + \frac{\delta u}{\delta x_3}\Delta x_3 +... + \frac{\delta u}{\delta x_n}\Delta x_n\)</span>
+        </p>
+        <p>Then the relative error will be</p>
+        <p><span class="math-tex">\(E_r = \frac{\Delta u}{u}\)</span>
+        </p>
+        <p><strong>Example</strong>
+        </p>
+        <p>Given that&nbsp;<span class="math-tex">\(u = \frac{7xy}{z^3}\)</span>&nbsp;and&nbsp;
+          <span
+          class="math-tex">\(\Delta x = \Delta y = \Delta z = 0.001\)</span>
+        </p>
+        <p>take <strong>log</strong> on both sides</p>
+        <p><span class="math-tex">\(log(u) = log(7) + log(x) + log(y) - 3log(z)\)</span>
+        </p>
+        <p><span class="math-tex">\((\frac{\delta u}{u})_{max} = |(\frac{1}{x})\delta x| + |(\frac{1}{y})\delta y| + |(\frac{3}{z})\delta z|\)</span>
+        </p>
+        <p><span class="math-tex">\((\frac{\Delta u}{u})_{max} = 0.001 + 0.001 + 0.003 = 0.005\)</span>
+        </p>
+      </div>
+    </div>
+  </body>
+
+</html>

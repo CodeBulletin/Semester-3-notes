@@ -1,0 +1,80 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>A0*</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">A0* (pronounced "A-zero-star") is a variant of the A* (A-star) algorithm
+          designed to handle cases where the heuristic function (h-cost) is not admissible,
+          meaning it may overestimate the true cost to reach the goal. In A* search,
+          an admissible heuristic guarantees that the algorithm will find the optimal
+          solution. However, in some scenarios, finding an admissible heuristic can
+          be challenging or impossible. A0* relaxes the admissibility requirement
+          to accommodate such situations.</p>
+        <p style="margin-left:0px;">Here's how the A0* algorithm works:</p>
+        <p style="margin-left:0px;">Initialization:</p>
+        <ul>
+          <li>Start with an initial node, often called the "start" node, and a goal
+            node.</li>
+          <li>Create an open set and a closed set. Initially, the open set contains
+            only the start node, and the closed set is empty.</li>
+          <li>Assign a cost of 0 to the start node and an estimated cost (heuristic)
+            from the start node to the goal node.</li>
+        </ul>
+        <p style="margin-left:0px;">Main Loop:</p>
+        <ul>
+          <li>While the open set is not empty:
+            <ul>
+              <li>Select the node from the open set with the lowest total cost, which is
+                the sum of the cost to reach the node from the start node (g-cost) and
+                the estimated cost from that node to the goal (h-cost).</li>
+              <li>Remove the selected node from the open set and add it to the closed set.</li>
+            </ul>
+          </li>
+        </ul>
+        <p style="margin-left:0px;">Expand Neighbors:</p>
+        <ul>
+          <li>For each neighbor of the current node that is not in the closed set:
+            <ul>
+              <li>Calculate the cost to reach that neighbor from the start node (g-cost).</li>
+              <li>Calculate the estimated cost from that neighbor to the goal (h-cost).</li>
+              <li>Calculate the total cost (f-cost) as the sum of g-cost and h-cost.</li>
+              <li>If the neighbor is not in the open set or if the new f-cost is lower than
+                the previous f-cost for that neighbor, update the neighbor's g-cost, h-cost,
+                and f-cost values.</li>
+              <li>Add the neighbor to the open set if it's not already there.</li>
+            </ul>
+          </li>
+        </ul>
+        <p style="margin-left:0px;">Termination:</p>
+        <ul>
+          <li>When the goal node is added to the closed set or the open set becomes
+            empty (indicating that no path to the goal is possible), the algorithm
+            terminates.</li>
+        </ul>
+        <p style="margin-left:0px;">Path Reconstruction:</p>
+        <ul>
+          <li>If a path to the goal node is found (i.e., the goal node is in the closed
+            set), the algorithm can backtrack from the goal node to the start node
+            using the parent pointers stored in each node to reconstruct a path.</li>
+        </ul>
+        <p style="margin-left:0px;">The key difference between A* and A0* lies in the treatment of the heuristic
+          function. While A* requires an admissible heuristic (one that underestimates
+          or is equal to the true cost), A0* can handle heuristics that are not admissible
+          (i.e., overestimating the true cost). As a result, A0* may not always find
+          the optimal solution, but it can still be useful in scenarios where finding
+          an admissible heuristic is difficult or impossible. However, when using
+          A0*, it's essential to be aware that the solution it finds may not be optimal.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

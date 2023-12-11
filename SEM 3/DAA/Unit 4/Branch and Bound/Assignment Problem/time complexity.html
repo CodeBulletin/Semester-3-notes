@@ -1,0 +1,44 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>time complexity</h1>
+
+      <div class="ck-content">
+        <p>The time complexity of the Branch and Bound algorithm for the assignment
+          problem can vary significantly based on the specific instance of the problem
+          and the efficiency of the bounding technique used. However, in the worst
+          case, the time complexity can be exponential, specifically O(n!)O(n!).</p>
+        <p>Here's why:</p>
+        <ol>
+          <li><strong>Branching</strong>: In the worst case, each level of the recursion
+            tree corresponds to assigning one of&nbsp;<span class="math-tex">\(n\)</span>&nbsp;items
+            to a task. For the first item, there are&nbsp;<span class="math-tex">\(n\)</span>&nbsp;choices,
+            for the second item, there are&nbsp;<span class="math-tex">\(n-1\)</span>&nbsp;choices,
+            and so on, down to&nbsp;<span class="math-tex">\(1\)</span>&nbsp;choice
+            for the last item.</li>
+          <li><strong>Bounding</strong>: The bounding step helps to prune the search
+            space. However, in the worst case, where bounding does not effectively
+            reduce the number of branches to be explored, the algorithm will need to
+            examine almost every possible permutation of assignments.</li>
+          <li><strong>Recursion Depth</strong>: The depth of the recursive call stack
+            will be&nbsp;<span class="math-tex">\(n\)</span>, as each level of recursion
+            corresponds to an assignment for one of the&nbsp;<span class="math-tex">\(n\)</span>&nbsp;items.</li>
+        </ol>
+        <p>Therefore, in the worst-case scenario, the time complexity is&nbsp;
+          <span
+          class="math-tex">\(O(n!)\)</span>, as the algorithm potentially explores all permutations
+            of assignments. However, with effective bounding, the practical runtime
+            for many instances can be significantly lower than this worst-case bound.</p>
+      </div>
+    </div>
+  </body>
+
+</html>
