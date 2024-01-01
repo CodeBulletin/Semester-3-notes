@@ -12,6 +12,76 @@
        <h1>One Way Anova</h1>
 
       <div class="ck-content">
+        <p style="margin-left:0px;">One-way ANOVA (Analysis of Variance) is a statistical method used to compare
+          the means of three or more independent (unrelated) groups to determine
+          if there are any statistically significant differences between them. It's
+          called "one-way" because it analyzes the effect based on just one factor
+          or independent variable.</p>
+        <h3 style="margin-left:0px;"><strong>Key Concepts of One-way ANOVA:</strong></h3>
+        <p style="margin-left:0px;"><strong>Purpose</strong>: The primary aim of one-way ANOVA is to test
+          for differences among at least three groups, based on one categorical independent
+          variable.</p>
+        <p style="margin-left:0px;"><strong>Independent and Dependent Variables</strong>:</p>
+        <ul>
+          <li><strong>Independent Variable</strong>: A categorical variable (factor)
+            with two or more levels (groups).</li>
+          <li><strong>Dependent Variable</strong>: A continuous variable.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Hypotheses</strong>:</p>
+        <ul>
+          <li><strong>Null Hypothesis (H0)</strong>: All group means are equal. There
+            are no significant differences among the group means.</li>
+          <li><strong>Alternative Hypothesis (H1)</strong>: At least one group mean
+            is different from the others.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>ANOVA Test Statistic</strong>:</p>
+        <ul>
+          <li>ANOVA partitions the total variance observed in the data into two parts:
+            variance between groups and variance within groups.</li>
+          <li>The F-statistic is used, calculated by dividing the mean square between
+            groups (variance due to the treatment effect) by the mean square within
+            groups (variance due to individual differences).</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Assumptions</strong>:</p>
+        <ul>
+          <li><strong>Independence of Observations</strong>: Each group sample is drawn
+            independently of the others.</li>
+          <li><strong>Normality</strong>: The distribution of the residuals (not the
+            variables themselves) should be approximately normally distributed.</li>
+          <li><strong>Homogeneity of Variances</strong>: The variance among the groups
+            should be approximately equal (homoscedasticity).</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Procedure</strong>:</p>
+        <ul>
+          <li><strong>Step 1</strong>: Formulate the hypotheses.</li>
+          <li><strong>Step 2</strong>: Conduct the ANOVA test, typically using statistical
+            software.</li>
+          <li><strong>Step 3</strong>: Analyze the F-statistic and corresponding p-value.</li>
+          <li><strong>Step 4</strong>: If the null hypothesis is rejected, post-hoc
+            tests (like Tukey's HSD) are often used to determine which specific groups
+            are significantly different from each other.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Interpretation</strong>:</p>
+        <ul>
+          <li><strong>Reject H0</strong>: There is a significant difference between
+            at least two group means.</li>
+          <li><strong>Fail to Reject H0</strong>: There is not enough evidence to say
+            the group means are different.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Applications:</strong></h3>
+        <ul>
+          <li><strong>Medical Research</strong>: Comparing the efficacy of different
+            treatments.</li>
+          <li><strong>Business</strong>: Testing different marketing strategies.</li>
+          <li><strong>Agriculture</strong>: Comparing crop yields using different fertilizers.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Limitations:</strong></h3>
+        <ul>
+          <li>It can indicate that at least one group is different, but it doesn’t specify
+            which groups are different.</li>
+          <li>Susceptible to Type I errors if multiple comparisons are made without
+            adjustments.</li>
+        </ul>
         <figure class="image">
           <img src="One%20Way%20Anova/image.png">
         </figure>

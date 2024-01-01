@@ -1,0 +1,67 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>HCP proof</h1>
+
+      <div class="ck-content">
+        <h3 style="margin-left:0px;"><strong>1. Hamiltonian Circuit is in NP</strong></h3>
+        <p style="margin-left:0px;">To show that the Hamiltonian Circuit problem is in NP, we need to demonstrate
+          that a given solution (a cycle in this case) can be verified in polynomial
+          time. Given a sequence of vertices, we can check in polynomial time if
+          it forms a cycle that visits each vertex exactly once and returns to the
+          starting vertex.</p>
+        <h3 style="margin-left:0px;"><strong>2. Hamiltonian Circuit is NP-hard</strong></h3>
+        <p style="margin-left:0px;">To prove NP-hardness, we need to reduce a known NP-complete problem to
+          the Hamiltonian Circuit problem. We use the Hamiltonian Path problem for
+          this reduction. Here’s how the reduction works:</p>
+        <p style="margin-left:0px;"><strong>Step 1:</strong> Take an instance of the Hamiltonian Path problem,
+          represented by a graph&nbsp;<span class="math-tex">\(G\)</span>.</p>
+        <p
+        style="margin-left:0px;"><strong>Step 2:</strong> Create a new graph&nbsp;<span class="math-tex">\(G'\)</span>&nbsp;based
+          on&nbsp;<span class="math-tex">\(G\)</span>&nbsp;for the Hamiltonian Circuit
+          problem. To do this, add a new vertex&nbsp;<span class="math-tex">\(v'\)</span>&nbsp;to&nbsp;
+          <span
+          class="math-tex">\(G\)</span>&nbsp;and connect&nbsp;<span class="math-tex">\(v'\)</span>&nbsp;to
+            all vertices in&nbsp;<span class="math-tex">\(G\)</span>. This forms the
+            new graph&nbsp;<span class="math-tex">\(G'\)</span>.</p>
+            <p style="margin-left:0px;"><strong>Step 3:</strong> Analyze the equivalence:</p>
+            <ul>
+              <li>If&nbsp;<span class="math-tex">\(G\)</span>&nbsp;has a Hamiltonian Path,
+                then&nbsp;<span class="math-tex">\(G'\)</span>&nbsp;will have a Hamiltonian
+                Circuit. The path in&nbsp;<span class="math-tex">\(G\)</span>&nbsp;can
+                be extended to a circuit in&nbsp;<span class="math-tex">\(G'\)</span>&nbsp;by
+                starting at&nbsp;<span class="math-tex">\(v'\)</span>, traversing the path
+                in&nbsp;<span class="math-tex">\(G\)</span>, and returning to&nbsp;
+                <span
+                class="math-tex">\(v'\)</span>.</li>
+              <li>Conversely, if&nbsp;<span class="math-tex">\(G'\)</span>&nbsp;has a Hamiltonian
+                Circuit, then&nbsp;<span class="math-tex">\(G\)</span>&nbsp;must have a
+                Hamiltonian Path. Since every vertex in&nbsp;<span class="math-tex">\(G\)</span>&nbsp;is
+                connected to&nbsp;<span class="math-tex">\(v'\)</span>&nbsp;in&nbsp;
+                <span
+                class="math-tex">\(G'\)</span>, the circuit must pass through&nbsp;<span class="math-tex">\(v'\)</span>&nbsp;exactly
+                  once, and the remaining part of the circuit forms a path in&nbsp;
+                  <span
+                  class="math-tex">\(G\)</span>&nbsp;that visits every vertex exactly once.</li>
+            </ul>
+            <p style="margin-left:0px;">This transformation can be done in polynomial time. Since we've shown
+              that any instance of the Hamiltonian Path problem (an NP-complete problem)
+              can be reduced to the Hamiltonian Circuit problem, and we can verify a
+              solution to the Hamiltonian Circuit problem in polynomial time, it follows
+              that the Hamiltonian Circuit problem is NP-complete.</p>
+            <p style="margin-left:0px;">This proof highlights the computational complexity of finding a Hamiltonian
+              Circuit in a graph, a fundamental problem with implications in various
+              fields such as logistics, network design, and computational biology.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

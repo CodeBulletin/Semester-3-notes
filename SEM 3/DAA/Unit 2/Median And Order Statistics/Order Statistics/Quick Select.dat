@@ -1,0 +1,24 @@
+function quickSelect(arr, left, right, k)
+    if left == right
+        return arr[left]
+
+    pivotIndex = partition(arr, left, right)
+
+    if k == pivotIndex
+        return arr[k]
+    else if k < pivotIndex
+        return quickSelect(arr, left, pivotIndex - 1, k)
+    else
+        return quickSelect(arr, pivotIndex + 1, right, k)
+
+function partition(arr, left, right)
+    pivot = arr[right]
+    pivotIndex = left
+
+    for i from left to right-1
+        if arr[i] <= pivot
+            swap arr[i] with arr[pivotIndex]
+            pivotIndex++
+
+    swap arr[pivotIndex] with arr[right]
+    return pivotIndex

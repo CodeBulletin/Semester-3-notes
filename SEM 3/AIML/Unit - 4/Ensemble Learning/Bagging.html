@@ -12,69 +12,35 @@
        <h1>Bagging</h1>
 
       <div class="ck-content">
-        <p>Bagging, short for Bootstrap Aggregating, is an ensemble learning technique
-          used to improve the stability and accuracy of machine learning algorithms.
-          It reduces variance and helps to avoid overfitting. Unlike boosting, which
-          builds models sequentially and focuses on correcting the errors of previous
-          models, bagging builds models independently and combines their outputs
-          through averaging or voting. Here's an overview of how bagging works:</p>
-        <p><strong>Bootstrap Sampling:</strong>
-        </p>
-        <ul>
-          <li>Bagging involves creating multiple datasets from the original dataset
-            using bootstrap sampling. In bootstrap sampling, datasets are created by
-            randomly selecting observations with replacement, meaning the same observation
-            can appear more than once in a dataset.</li>
-          <li>Each of these datasets is then used to train a separate model.</li>
-        </ul>
-        <p><strong>Training Multiple Models:</strong>
-        </p>
-        <ul>
-          <li>Multiple models (often of the same type) are trained in parallel, each
-            on a different bootstrapped dataset.</li>
-          <li>These models can be any machine learning algorithm, but decision trees
-            are commonly used, particularly in the case of the Random Forest algorithm.</li>
-        </ul>
-        <p><strong>Aggregating Outputs:</strong>
-        </p>
-        <ul>
-          <li>After training, the predictions from all models are combined. This combination
-            is typically done by averaging in the case of regression problems, or by
-            majority voting in the case of classification problems.</li>
-          <li>The aggregate prediction is often more robust and accurate than any of
-            the individual models.</li>
-        </ul>
-        <p><strong>Advantages of Bagging:</strong>
-        </p>
-        <ul>
-          <li><strong>Reduces Variance:</strong> By averaging the results of multiple
-            models, bagging can significantly reduce variance without increasing bias.</li>
-          <li><strong>Improves Stability:</strong> It makes the model less sensitive
-            to fluctuations in the training data.</li>
-          <li><strong>Prevents Overfitting:</strong> Especially effective with models
-            that have high variance (like decision trees).</li>
-        </ul>
-        <p><strong>Popular Bagging Algorithms:</strong>
-        </p>
-        <ul>
-          <li><strong>Random Forest:</strong> Perhaps the most famous bagging algorithm,
-            it uses a collection of decision trees.</li>
-          <li><strong>Bagged Decision Trees:</strong> Multiple decision trees are trained
-            on bootstrapped datasets and their predictions are averaged.</li>
-        </ul>
-        <p><strong>Challenges:</strong>
-        </p>
-        <ul>
-          <li><strong>Increased Computational Cost:</strong> Training multiple models
-            can be computationally intensive.</li>
-          <li><strong>Model Interpretability:</strong> While individual decision trees
-            are interpretable, a collection of such trees (as in a random forest) is
-            not as easy to interpret.</li>
-        </ul>
-        <p>In summary, bagging is a powerful ensemble technique used to improve the
-          performance of machine learning models, particularly by reducing variance
-          and preventing overfitting. It's particularly effective with high-variance
-          models and is a staple technique in many data scientists' toolkits.</p>
+        <p style="margin-left:0px;">Bagging, or Bootstrap Aggregating, is an ensemble learning technique enhancing
+          the stability and accuracy of machine learning algorithms by reducing variance
+          and preventing overfitting. It differs from boosting by independently building
+          models and combining their outputs. Key aspects include:</p>
+        <ol>
+          <li><strong>Bootstrap Sampling:</strong> Creates multiple datasets from the
+            original data using random selection with replacement, forming the basis
+            for training separate models.</li>
+          <li><strong>Training Multiple Models:</strong> Trains models in parallel on
+            different bootstrapped datasets, often using decision trees (e.g., Random
+            Forest).</li>
+          <li><strong>Aggregating Outputs:</strong> Combines model predictions, typically
+            by averaging for regression or voting for classification, leading to more
+            robust and accurate predictions.</li>
+          <li><strong>Advantages:</strong>
+            <ul>
+              <li><strong>Reduces Variance:</strong> Averages out results, lowering variance.</li>
+              <li><strong>Improves Stability:</strong> Less sensitive to training data fluctuations.</li>
+              <li><strong>Prevents Overfitting:</strong> Especially effective with high-variance
+                models like decision trees.</li>
+            </ul>
+          </li>
+          <li><strong>Popular Algorithms:</strong> Includes Random Forest and Bagged
+            Decision Trees.</li>
+          <li><strong>Challenges:</strong> Higher computational cost and reduced interpretability,
+            particularly in algorithms like Random Forest.</li>
+        </ol>
+        <p style="margin-left:0px;">In summary, bagging improves machine learning model performance, particularly
+          useful for high-variance models, and is widely used in data science.</p>
       </div>
     </div>
   </body>

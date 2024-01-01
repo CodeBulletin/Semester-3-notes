@@ -1,0 +1,82 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Proof</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">
+          <br>To prove that the Vertex Cover problem is NP-complete, we can use a reduction
+          from the Clique problem, which is already known to be NP-complete. The
+          Vertex Cover problem involves determining whether a given graph contains
+          a vertex cover (a set of vertices such that each edge in the graph is incident
+          to at least one vertex in the set) of a certain size.</p>
+        <p style="margin-left:0px;">Here's the structure of the proof:</p>
+        <h3 style="margin-left:0px;"><strong>1. Vertex Cover is in NP</strong></h3>
+        <p style="margin-left:0px;">To show that the Vertex Cover problem is in NP, we need to demonstrate
+          that given a set of vertices, we can verify in polynomial time whether
+          it forms a vertex cover of the required size. Verifying a vertex cover
+          involves checking if each edge in the graph is incident to at least one
+          vertex in the set, which can be done in polynomial time.</p>
+        <h3 style="margin-left:0px;"><strong>2. Vertex Cover is NP-hard</strong></h3>
+        <p style="margin-left:0px;">The more challenging part is proving that Vertex Cover is NP-hard. This
+          is achieved by reducing the Clique problem to the Vertex Cover problem
+          in polynomial time. The reduction goes as follows:</p>
+        <p style="margin-left:0px;"><strong>Step 1:</strong> Start with an instance of the Clique problem,
+          a graph&nbsp;<span class="math-tex">\(G\)</span>&nbsp;and an integer&nbsp;
+          <span
+          class="math-tex">\(k\)</span>, where the task is to find out if there's a clique of size&nbsp;
+            <span
+            class="math-tex">\(k\)</span>&nbsp;in&nbsp;<span class="math-tex">\(G\)</span>.</p>
+        <p style="margin-left:0px;"><strong>Step 2:</strong> Construct a new graph&nbsp;<span class="math-tex">\(G'\)</span>&nbsp;based
+          on&nbsp;<span class="math-tex">\(G\)</span>&nbsp;for the Vertex Cover problem.
+          The graph&nbsp;<span class="math-tex">\(G'\)</span>&nbsp;is the complement
+          of&nbsp;<span class="math-tex">\(G\)</span>, which means&nbsp;<span class="math-tex">\(G'\)</span>&nbsp;contains
+          all the edges that are not present in&nbsp;<span class="math-tex">\(G\)</span>&nbsp;and
+          vice versa.</p>
+        <p style="margin-left:0px;"><strong>Step 3:</strong> Set the size of the vertex cover to be searched
+          for in&nbsp;<span class="math-tex">\(G'\)</span>&nbsp;as&nbsp;<span class="math-tex">\(n-k\)</span>,
+          where&nbsp;<span class="math-tex">\(n\)</span>&nbsp;is the number of vertices
+          in&nbsp;<span class="math-tex">\(G\)</span>&nbsp;(and&nbsp;<span class="math-tex">\(G'\)</span>).</p>
+        <p
+        style="margin-left:0px;"><strong>Step 4:</strong> Analyze the equivalence:</p>
+          <ul>
+            <li>If there is a clique of size&nbsp;<span class="math-tex">\(k\)</span>&nbsp;in&nbsp;
+              <span
+              class="math-tex">\(G\)</span>, then there are&nbsp;<span class="math-tex">\(k\)</span>&nbsp;vertices
+                all connected to each other. In&nbsp;<span class="math-tex">\(G'\)</span>,
+                these&nbsp;<span class="math-tex">\(k\)</span>&nbsp;vertices are not connected
+                to each other, meaning the rest of the&nbsp;<span class="math-tex">\(n-k\)</span>&nbsp;vertices
+                must cover all edges in&nbsp;<span class="math-tex">\(G'\)</span>, forming
+                a vertex cover.</li>
+            <li>Conversely, if there is a vertex cover of size&nbsp;<span class="math-tex">\(n-k\)</span>&nbsp;in&nbsp;
+              <span
+              class="math-tex">\(G'\)</span>, then the remaining&nbsp;<span class="math-tex">\(k\)</span>&nbsp;vertices
+                form a clique in&nbsp;<span class="math-tex">\(G\)</span>. This is because
+                these&nbsp;<span class="math-tex">\(k\)</span>&nbsp;vertices are not part
+                of the vertex cover, implying no edges between them are in&nbsp;<span class="math-tex">\(G'\)</span>,
+                which means all edges between them are in&nbsp;<span class="math-tex">\(G\)</span>.</li>
+          </ul>
+          <figure class="image">
+            <img src="Proof/image.png">
+          </figure>
+          <p style="margin-left:0px;">This transformation can be done in polynomial time. Since we've transformed
+            an instance of the Clique problem (an NP-complete problem) into an instance
+            of the Vertex Cover problem, and we can verify a solution to the Vertex
+            Cover problem in polynomial time, it follows that the Vertex Cover problem
+            is NP-complete.</p>
+          <p style="margin-left:0px;">This proof is significant in computational complexity and has practical
+            implications in various fields such as network theory, where finding minimal
+            vertex covers is a common problem.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

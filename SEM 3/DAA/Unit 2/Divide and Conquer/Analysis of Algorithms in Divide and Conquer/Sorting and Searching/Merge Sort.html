@@ -14,43 +14,40 @@
       <div class="ck-content">
         <h3 style="margin-left:0px;"><strong>Pros of Merge Sort:</strong></h3>
         <ol>
-          <li style="margin-left:0px;"><strong>Stable Sorting</strong>: Merge Sort is a stable sorting algorithm,
+          <li><strong>Stable Sorting</strong>: Merge Sort is a stable sorting algorithm,
             meaning it preserves the relative order of equal elements. This makes it
             useful when sorting records or objects with multiple attributes, where
             you want to maintain the existing order of records with equal key values.</li>
-          <li
-          style="margin-left:0px;"><strong>Guaranteed Worst-Case Performance</strong>: Merge Sort has a consistent
+          <li><strong>Guaranteed Worst-Case Performance</strong>: Merge Sort has a consistent
             worst-case time complexity of O(n*log(n)), regardless of the initial order
             of the elements. This makes it a reliable choice for sorting large datasets,
             as it does not suffer from worst-case scenarios like Quick Sort.</li>
-            <li
-            style="margin-left:0px;"><strong>External Sorting</strong>: Merge Sort is suitable for external
-              sorting, which involves sorting data that does not fit entirely in memory.
-              It can efficiently sort data stored on external storage devices like hard
-              drives or tapes.</li>
-              <li style="margin-left:0px;"><strong>Predictable and Consistent</strong>: Merge Sort consistently provides
-                good performance and is not dependent on the distribution of the data.
-                This predictability is important in applications where worst-case performance
-                cannot be tolerated.</li>
-              <li style="margin-left:0px;"><strong>Divide and Conquer</strong>: Merge Sort's divide-and-conquer approach
-                is easy to understand and implement. It breaks the sorting problem into
-                smaller subproblems, making it a good educational example.</li>
+          <li><strong>External Sorting</strong>: Merge Sort is suitable for external
+            sorting, which involves sorting data that does not fit entirely in memory.
+            It can efficiently sort data stored on external storage devices like hard
+            drives or tapes.</li>
+          <li><strong>Predictable and Consistent</strong>: Merge Sort consistently provides
+            good performance and is not dependent on the distribution of the data.
+            This predictability is important in applications where worst-case performance
+            cannot be tolerated.</li>
+          <li><strong>Divide and Conquer</strong>: Merge Sort's divide-and-conquer approach
+            is easy to understand and implement. It breaks the sorting problem into
+            smaller subproblems, making it a good educational example.</li>
         </ol>
         <h3 style="margin-left:0px;"><strong>Cons of Merge Sort:</strong></h3>
         <ol>
-          <li style="margin-left:0px;"><strong>Space Complexity</strong>: Merge Sort typically requires additional
+          <li><strong>Space Complexity</strong>: Merge Sort typically requires additional
             memory space to merge subarrays, which can be a drawback when sorting large
             datasets, especially if memory is limited. This makes it less memory-efficient
             compared to some in-place sorting algorithms like Quick Sort.</li>
-          <li style="margin-left:0px;"><strong>Slower for Small Datasets</strong>: Merge Sort's overhead in terms
+          <li><strong>Slower for Small Datasets</strong>: Merge Sort's overhead in terms
             of function calls and memory usage makes it slower than some other algorithms,
             such as Quick Sort or Insertion Sort, for small datasets. It shines when
             sorting larger datasets.</li>
-          <li style="margin-left:0px;"><strong>Slower for Sequential Access Data</strong>: Merge Sort is slower
+          <li><strong>Slower for Sequential Access Data</strong>: Merge Sort is slower
             when sorting data with poor locality, such as linked lists, as it involves
             more random access to elements, which can lead to cache inefficiency.</li>
-          <li
-          style="margin-left:0px;"><strong>Not Adaptive</strong>: Merge Sort's performance is not adaptive.
+          <li><strong>Not Adaptive</strong>: Merge Sort's performance is not adaptive.
             It has a consistent time complexity of O(n*log(n)) regardless of the initial
             order of elements. Quick Sort, on the other hand, can be adaptive when
             the data is partially sorted.</li>
@@ -120,6 +117,12 @@ void mergeSort(int arr[], int l, int r) {
         merge(arr, l, m, r);
     }
 }</code></pre>
+        <figure class="image">
+          <img src="../../../../Internal%20Paper/Unit%201/Q3/image.jpg">
+        </figure>
+        <figure class="image">
+          <img src="Merge%20Sort/image.jpg">
+        </figure>
       </div>
     </div>
   </body>

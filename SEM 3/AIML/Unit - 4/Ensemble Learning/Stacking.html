@@ -1,0 +1,39 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Stacking</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Stacking, or "stacked generalization," is an ensemble learning technique
+          that combines multiple base models (level-0 models) with a high-level model
+          (meta-learner or level-1 model) to enhance prediction accuracy. The process
+          involves:</p>
+        <ol>
+          <li><strong>Training Base Learners:</strong> Train various machine learning
+            models (like decision trees, SVMs, neural networks) on the same dataset.</li>
+          <li><strong>Generating Base Predictions:</strong> Use these models to predict
+            on a separate dataset (holdout or validation set), creating a new dataset
+            with these predictions as features.</li>
+          <li><strong>Training the Meta-Learner:</strong> This high-level model is trained
+            on the new dataset to learn how to optimally combine the base learners'
+            predictions.</li>
+          <li><strong>Final Prediction:</strong> Base models predict on new data, and
+            the meta-learner makes the final prediction based on these.</li>
+        </ol>
+        <p style="margin-left:0px;">Stacking captures the strengths of each base model, with the meta-learner
+          determining the best combination, often leading to higher performance than
+          any single model. However, it's complex and can risk overfitting, particularly
+          with many base learners and limited training data.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

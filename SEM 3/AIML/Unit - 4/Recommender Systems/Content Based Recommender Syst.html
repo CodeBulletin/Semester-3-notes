@@ -12,59 +12,37 @@
        <h1>Content Based Recommender Systems</h1>
 
       <div class="ck-content">
-        <p>Content-based recommender systems suggest items to users based on the
-          attributes of the items and a profile of the user's preferences. These
-          systems are particularly useful when explicit data about user-item interactions
-          (like ratings or purchases) are limited. Instead, they rely heavily on
-          the description of the items and a profile of the user's interests. Here's
-          how content-based recommender systems typically work:</p>
-        <p><strong>Item Representation</strong>: Each item in the dataset is represented
-          by a set of features. For example, in a movie recommendation system, movies
-          might be characterized by genres, directors, actors, and plot descriptions.
-          In text-based items like news articles or books, this could involve using
-          techniques like TF-IDF (Term Frequency-Inverse Document Frequency) to convert
-          text into a vector representation.</p>
-        <p><strong>User Profile Creation</strong>: The system builds a profile for
-          each user, which indicates the user's preferences. This profile is constructed
-          based on the features of items the user has interacted with (e.g., viewed,
-          liked, rated highly). The user profile might be a weighted average of the
-          feature vectors of the items.</p>
-        <p><strong>Matching User Profiles with Item Features</strong>: To make a
-          recommendation, the system computes a similarity score between the user's
-          profile and the feature vector of each item. Items are then ranked based
-          on their similarity scores. Commonly used similarity measures include cosine
-          similarity, Euclidean distance, and Pearson correlation.</p>
-        <p><strong>Feedback Loop</strong>: The user's interaction with the recommended
-          items is used to update and refine the user's profile. For instance, if
-          a user likes or rates an item highly, the system increases the weight of
-          that item's features in the user profile.</p>
-        <p><strong>Advantages</strong>:</p>
+        <p style="margin-left:0px;">Content-based recommender systems suggest items by matching user preferences
+          with item attributes, useful when explicit user-item data is scarce. The
+          process involves:</p>
+        <ol>
+          <li><strong>Item Representation:</strong> Items are represented by feature
+            sets (e.g., genres, directors for movies; TF-IDF vectors for text).</li>
+          <li><strong>User Profile Creation:</strong> Profiles are built based on user
+            interactions with items, often as a weighted average of item features.</li>
+          <li><strong>Matching Profiles with Items:</strong> The system calculates similarity
+            scores between the user profile and item features, using measures like
+            cosine similarity or Euclidean distance, to rank items.</li>
+          <li><strong>Feedback Loop:</strong> User interactions with recommendations
+            refine their profile.</li>
+        </ol>
+        <p style="margin-left:0px;">Advantages:</p>
         <ul>
-          <li><strong>Personalization</strong>: Content-based systems can provide personalized
-            recommendations as they are based on an individual user's preferences.</li>
-          <li><strong>Transparency</strong>: The reasons for a recommendation can be
-            more easily explained (e.g., "This movie is recommended because you like
-            action movies").</li>
+          <li><strong>Personalization:</strong> Tailors recommendations to individual
+            preferences.</li>
+          <li><strong>Transparency:</strong> Easier to explain recommendation rationale.</li>
         </ul>
-        <p><strong>Challenges and Limitations</strong>:</p>
+        <p style="margin-left:0px;">Challenges:</p>
         <ul>
-          <li><strong>Limited Content Analysis</strong>: The system is limited to recommending
-            items with similar content to what the user has previously liked, potentially
-            leading to a lack of diversity in recommendations (a problem known as the
-            "content filter bubble").</li>
-          <li><strong>New User Problem</strong>: For new users, the system may not have
-            enough information to build an accurate profile, making initial recommendations
-            less reliable.</li>
-          <li><strong>Feature Extraction Complexity</strong>: Effectively representing
-            items can be challenging, especially when dealing with complex or unstructured
-            data like images or natural language.</li>
+          <li><strong>Limited Content Analysis:</strong> May lead to a lack of diverse
+            recommendations ("content filter bubble").</li>
+          <li><strong>New User Problem:</strong> Less reliable initial recommendations
+            for new users due to insufficient data.</li>
+          <li><strong>Feature Extraction Complexity:</strong> Difficult with complex
+            or unstructured data.</li>
         </ul>
-        <p>Content-based systems are widely used in various domains like e-commerce
-          (recommending products based on features), movie and music streaming services
-          (suggesting films and songs with similar genres or artists), news aggregators
-          (proposing articles with similar topics), and more. They form a critical
-          part of modern recommendation engines, often combined with other types
-          of recommender systems to overcome their inherent limitations and improve
+        <p style="margin-left:0px;">Content-based systems are prevalent in e-commerce, movie/music streaming,
+          news aggregators, etc., often paired with other recommender types to enhance
           recommendation quality.</p>
       </div>
     </div>

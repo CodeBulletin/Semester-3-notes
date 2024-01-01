@@ -1,0 +1,82 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>TSP proof</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">To prove that the Traveling Salesman Problem (TSP) is NP-complete, we
+          use a reduction from the Hamiltonian Circuit Problem, which is known to
+          be NP-complete. The Hamiltonian Circuit Problem involves finding a Hamiltonian
+          circuit (a path in a graph that visits each vertex exactly once and returns
+          to the starting vertex) in a given graph.</p>
+        <p style="margin-left:0px;">The process involves two main steps:</p>
+        <p style="margin-left:0px;"><strong>Show that TSP is in NP:</strong> This means demonstrating that
+          any proposed solution (a tour in this case) to the TSP can be verified
+          quickly (in polynomial time).</p>
+        <p style="margin-left:0px;"><strong>Show that TSP is NP-hard:</strong> This involves proving that any
+          problem in NP, specifically the Hamiltonian Circuit Problem in this case,
+          can be reduced to TSP in polynomial time.</p>
+        <h3 style="margin-left:0px;"><strong>1. TSP is in NP</strong></h3>
+        <p style="margin-left:0px;">To show that TSP is in NP, we need to demonstrate that given a particular
+          tour, we can verify whether this tour is a valid solution (visits each
+          city exactly once and returns to the starting city) and whether the total
+          distance of the tour is less than or equal to a given value (for decision-version
+          TSP) in polynomial time. Verifying a tour involves checking the order of
+          cities and summing the distances, which can be done in polynomial time.
+          Therefore, TSP is in NP.</p>
+        <h3 style="margin-left:0px;"><strong>2. TSP is NP-hard</strong></h3>
+        <p style="margin-left:0px;">To prove NP-hardness, we use a reduction from the Hamiltonian Circuit
+          Problem. The goal is to show that any instance of the Hamiltonian Circuit
+          Problem can be transformed into an instance of TSP in such a way that the
+          graph has a Hamiltonian circuit if and only if there is a tour in the TSP
+          instance with a total distance less than or equal to a specific value.</p>
+        <p
+        style="margin-left:0px;">Here's how the reduction works:</p>
+          <p style="margin-left:0px;"><strong>Step 1:</strong> Take an instance of the Hamiltonian Circuit Problem,
+            represented by a graph&nbsp;<span class="math-tex">\(G\)</span>.</p>
+          <p
+          style="margin-left:0px;"><strong>Step 2:</strong> Create an instance of TSP using the same graph&nbsp;
+            <span
+            class="math-tex">\(G\)</span>. Set the distance between two cities (vertices) to 1 if there
+              is an edge between them in&nbsp;<span class="math-tex">\(G\)</span>, and
+              to a very large number (say&nbsp;<span class="math-tex">\(M\)</span>, larger
+              than the number of vertices in&nbsp;<span class="math-tex">\(G\)</span>)
+              if there is no edge.</p>
+              <p style="margin-left:0px;"><strong>Step 3:</strong> Set the maximum allowed distance for the TSP tour
+                to be equal to the number of vertices in&nbsp;<span class="math-tex">\(G\)</span>.</p>
+              <p
+              style="margin-left:0px;">Now, if&nbsp;<span class="math-tex">\(G\)</span>&nbsp;has a Hamiltonian
+                circuit, there will be a TSP tour in the corresponding TSP instance with
+                a total distance equal to the number of vertices in&nbsp;<span class="math-tex">\(G\)</span>&nbsp;(since
+                each edge in the Hamiltonian circuit contributes a distance of 1). Conversely,
+                if there is a TSP tour with a total distance equal to the number of vertices
+                in&nbsp;<span class="math-tex">\(G\)</span>, it means that the tour only
+                uses edges that exist in&nbsp;<span class="math-tex">\(G\)</span>, and
+                since it visits each vertex exactly once before returning to the start,
+                it forms a Hamiltonian circuit in&nbsp;<span class="math-tex">\(G\)</span>.</p>
+                <p
+                style="margin-left:0px;">This transformation can be done in polynomial time. Since we've shown
+                  that any instance of the Hamiltonian Circuit Problem can be reduced to
+                  TSP in polynomial time, and verifying a TSP solution is in NP, it follows
+                  that TSP is NP-complete. This proof has significant implications in computational
+                  complexity theory and practical applications involving optimization and
+                  routing problems.</p>
+                  <figure class="image">
+                    <img src="TSP%20proof/image.png">
+                  </figure>
+                  <p style="margin-left:0px;"><a href="https://www.youtube.com/watch?v=h9X3iIb7kIY">https://www.youtube.com/watch?v=h9X3iIb7kIY</a>
+                  </p>
+                  <p style="margin-left:0px;">&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

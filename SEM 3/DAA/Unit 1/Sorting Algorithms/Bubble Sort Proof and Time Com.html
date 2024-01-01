@@ -1,0 +1,54 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Bubble Sort Proof and Time Complexity</h1>
+
+      <div class="ck-content">
+        <h3 style="margin-left:0px;"><strong>Defining the Loop Invariant</strong></h3>
+        <p style="margin-left:0px;">For Bubble Sort, the loop invariant we consider is:</p>
+        <p style="margin-left:0px;">"At the start of each iteration of the outer loop (say, the i-th iteration),
+          the last i elements of the array are in their final sorted position."</p>
+        <h3
+        style="margin-left:0px;"><strong>Initialization</strong>
+          </h3>
+          <p style="margin-left:0px;">Before the first iteration of the loop (i.e., when <strong>i = 0</strong>),
+            the invariant holds trivially because there are no "last elements" to consider,
+            so there's nothing to sort.</p>
+          <h3 style="margin-left:0px;"><strong>Maintenance</strong></h3>
+          <p style="margin-left:0px;">Assuming the invariant is true before an iteration of the loop, we need
+            to show it remains true after the iteration. During the i-th iteration,
+            the algorithm bubbles the largest element within the unsorted part of the
+            array to the end of this part. Therefore, after completing the i-th iteration,
+            the last i + 1 elements are in their final sorted position. This maintains
+            the invariant.</p>
+          <h3 style="margin-left:0px;"><strong>Termination</strong></h3>
+          <p style="margin-left:0px;">At the end of the algorithm, when the outer loop completes, the invariant
+            tells us that the last n elements are in their final sorted position. Since
+            the array only contains n elements, this means the entire array is sorted.</p>
+          <h3
+          style="margin-left:0px;"><strong>Conclusion</strong>
+            </h3>
+            <p style="margin-left:0px;">The maintenance of the loop invariant, along with its initialization and
+              termination conditions, prove that the Bubble Sort algorithm correctly
+              sorts the list. Each iteration of the loop moves the largest element within
+              the unsorted part to its final position, ensuring that the array is fully
+              sorted when the algorithm completes.</p>
+            <figure class="image">
+              <img src="Bubble%20Sort%20Proof%20and%20Time%20Complexity/image.png">
+            </figure>
+            <figure class="image">
+              <img src="Bubble%20Sort%20Proof%20and%20Time%20Complexity/1_image.png">
+            </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

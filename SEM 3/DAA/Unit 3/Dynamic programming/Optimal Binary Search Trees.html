@@ -34,24 +34,28 @@
           efficiently search for keys. The expected search time for a key in an optimal
           binary search tree is minimized compared to other possible binary search
           trees.</p>
-        <p>number of treen with&nbsp;<span class="math-tex">\(n\)</span>&nbsp;nodes
+        <p>number of trees with&nbsp;<span class="math-tex">\(n\)</span>&nbsp;nodes
           =&nbsp;<span class="math-tex">\(\frac{\binom{2n}{n}}{n+1}\)</span>
         </p>
         <p><span class="math-tex">\(cost[0, n] = \sum_{1}^{n}p_i*level(p_i) + \sum_{0}^{n} q_i * (level(q_i)-1)\)</span>&nbsp;for
           existing trees</p>
-        <p><span class="math-tex">\(cost[i, j] = min_{i \le k \lt j}\{c[i, k-1] + c[k, j]\} + w[i, j]\)</span>
+        <p><span class="math-tex">\(cost[i, j] = \underset{i \le k \lt j}{\text{min}}\{c[i, k] + c[k+1, j]\} + w[i, j]\)</span>,&nbsp;
+          <span
+          class="math-tex">\(r[i, j] = k+1\)</span>
         </p>
-        <p>(uns)</p>
         <p><span class="math-tex">\(w[i, j] = w[i, j-1] + p_i + q_j\)</span>,&nbsp;
           <span
           class="math-tex">\(w[i, i] =q_i\)</span>
         </p>
-        <p>(s)</p>
-        <p><span class="math-tex">\(w[i, j] = 4 \sum_{i+1}^{j} f(i)\)</span>
-        </p>
         <figure class="image">
           <img src="Optimal%20Binary%20Search%20Trees/photo_6305253376736213239_y.jp">
         </figure>
+        <p><span class="math-tex">\(w[i, j] = \sum_{x=i+1}^j(f(x))\)</span>
+        </p>
+        <p><span class="math-tex">\(c[i, j] = \underset{i \le k \lt j}{\text{min}}(c[i, k] + c[k+1, j]) + w[i, j]\)</span>,&nbsp;
+          <span
+          class="math-tex">\(r[i, j] = k+1\)</span>
+        </p>
         <figure class="image">
           <img src="Optimal%20Binary%20Search%20Trees/photo_6305253376736213303_y.jp">
         </figure>

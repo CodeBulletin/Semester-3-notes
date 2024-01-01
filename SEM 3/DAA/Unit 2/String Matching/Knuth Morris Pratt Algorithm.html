@@ -12,6 +12,7 @@
        <h1>Knuth Morris Pratt Algorithm</h1>
 
       <div class="ck-content">
+        <p>Knuth Morris Pratt Algorithm</p>
         <p style="margin-left:0px;">The key idea behind the KMP algorithm is to avoid redundant character
           comparisons by using a precomputed partial match table, often referred
           to as the "failure function" or "prefix function." This table is used to
@@ -19,23 +20,27 @@
           comparing the same characters multiple times.</p>
         <p style="margin-left:0px;">Here's a high-level overview of how the KMP algorithm works:</p>
         <p style="margin-left:0px;"><strong>Preprocessing</strong>:</p>
-        <ul>
+        <ul style="list-style-type:circle;">
           <li>Create a prefix function (or failure function) for the pattern string.
             This function stores the length of the longest proper prefix of the pattern
             that is also a suffix of that prefix. The goal is to use this information
             to avoid unnecessary character comparisons during the search.</li>
         </ul>
         <p style="margin-left:0px;"><strong>Searching</strong>:</p>
-        <ul>
+        <ul style="list-style-type:circle;">
           <li>Start with both the text and pattern pointers at the beginning.</li>
+        </ul>
+        <ul>
           <li>Compare the characters of the text and pattern:
-            <ul>
+            <ul style="list-style-type:disc;">
               <li>If they match, increment both pointers.</li>
               <li>If they don't match, use the prefix function to determine how far to shift
                 the pattern. This allows the algorithm to skip some characters in the text
                 without missing potential matches.</li>
             </ul>
           </li>
+        </ul>
+        <ul style="list-style-type:circle;">
           <li>Repeat the comparison and shifting until you reach the end of the text
             or find a full match of the pattern.</li>
         </ul>
@@ -49,62 +54,638 @@
           sequence matching, where it can significantly improve search performance.</p>
         <p
         style="margin-left:0px;"><strong>Worst Case Time Complexity</strong>:&nbsp;<span class="math-tex">\(O(n+m)\)</span>
-          </p><pre><code class="language-text-plain">def KMPSearch(pat, txt):
-    M = len(pat)
-    N = len(txt)
- 
-    # create lps[] that will hold the longest prefix suffix
-    # values for pattern
-    lps = [0]*M
-    j = 0  # index for pat[]
- 
-    # Preprocess the pattern (calculate lps[] array)
-    computeLPSArray(pat, M, lps)
- 
-    i = 0  # index for txt[]
-    while (N - i) &gt;= (M - j):
-        if pat[j] == txt[i]:
+          </p><pre><code class="language-text-plain">def lps_alg(pat):
+    l = 0
+    m = len(pat)
+    lps = [0]*m
+
+    i = 1
+    while i &lt; m:
+        if pat[i] == pat[l]:
+            l += 1
+            lps[i] = l
+            i += 1
+        else:
+            if l != 0:
+                l = lps[l-1]
+            else:
+                lps[i] = 0
+                i += 1
+    return lps
+
+def kmp(txt, pat):
+    n = len(txt)
+    m = len(pat)
+
+    lps = lps_alg(pat)
+    i = 0
+    j = 0
+    matches = []
+    while i &lt; n:
+        if txt[i] == pat[j]:
             i += 1
             j += 1
- 
-        if j == M:
-            print("Found pattern at index " + str(i-j))
+        if j == m:
+            matches.append(i-j)
             j = lps[j-1]
- 
-        # mismatch after j matches
-        elif i &lt; N and pat[j] != txt[i]:
-            # Do not match lps[0..lps[j-1]] characters,
-            # they will match anyway
+        elif i &lt; n and txt[i] != pat[j]:
             if j != 0:
                 j = lps[j-1]
             else:
                 i += 1
- 
- 
-# Function to compute LPS array
-def computeLPSArray(pat, M, lps):
-    len = 0  # length of the previous longest prefix suffix
- 
-    lps[0] = 0  # lps[0] is always 0
+    return matches</code></pre>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">&nbsp;</p>
+          <p style="margin-left:0px;">The key idea behind the KMP algorithm is to avoid redundant character
+            comparisons by using a precomputed partial match table, often referred
+            to as the "failure function" or "prefix function." This table is used to
+            determine how far to shift the pattern during the search, thus avoiding
+            comparing the same characters multiple times.</p>
+          <p style="margin-left:0px;">Here's a high-level overview of how the KMP algorithm works:</p>
+          <p style="margin-left:0px;"><strong>Preprocessing</strong>:</p>
+          <ul>
+            <li>Create a prefix function (or failure function) for the pattern string.
+              This function stores the length of the longest proper prefix of the pattern
+              that is also a suffix of that prefix. The goal is to use this information
+              to avoid unnecessary character comparisons during the search.</li>
+          </ul>
+          <p style="margin-left:0px;"><strong>Searching</strong>:</p>
+          <ul>
+            <li>Start with both the text and pattern pointers at the beginning.</li>
+            <li>Compare the characters of the text and pattern:
+              <ul>
+                <li>If they match, increment both pointers.</li>
+                <li>If they don't match, use the prefix function to determine how far to shift
+                  the pattern. This allows the algorithm to skip some characters in the text
+                  without missing potential matches.</li>
+              </ul>
+            </li>
+            <li>Repeat the comparison and shifting until you reach the end of the text
+              or find a full match of the pattern.</li>
+          </ul>
+          <p style="margin-left:0px;">The key to the KMP algorithm's efficiency is the ability to calculate
+            how far the pattern can be shifted during a mismatch efficiently using
+            the prefix function. This allows the algorithm to avoid redundant character
+            comparisons and, in the worst case, performs pattern matching in linear
+            time with respect to the length of the text and pattern.</p>
+          <p style="margin-left:0px;">The KMP algorithm is widely used in various applications, including text
+            search in text editors, file search utilities, and bioinformatics for DNA
+            sequence matching, where it can significantly improve search performance.</p>
+          <p
+          style="margin-left:0px;"><strong>Worst Case Time Complexity</strong>:&nbsp;<span class="math-tex">\(O(n+m)\)</span>
+            </p><pre><code class="language-text-plain">def lps_alg(pat):
+    l = 0
+    m = len(pat)
+    lps = [0]*m
+
     i = 1
- 
-    # the loop calculates lps[i] for i = 1 to M-1
-    while i &lt; M:
-        if pat[i] == pat[len]:
-            len += 1
-            lps[i] = len
+    while i &lt; m:
+        if pat[i] == pat[l]:
+            l += 1
+            lps[i] = l
             i += 1
         else:
-            # This is tricky. Consider the example.
-            # AAACAAAA and i = 7. The idea is similar
-            # to search step.
-            if len != 0:
-                len = lps[len-1]
- 
-                # Also, note that we do not increment i here
+            if l != 0:
+                l = lps[l-1]
             else:
                 lps[i] = 0
-                i += 1</code></pre>
+                i += 1
+    return lps
+
+def kmp(txt, pat):
+    n = len(txt)
+    m = len(pat)
+
+    lps = lps_alg(pat)
+    i = 0
+    j = 0
+    matches = []
+    while i &lt; n:
+        if txt[i] == pat[j]:
+            i += 1
+            j += 1
+        if j == m:
+            matches.append(i-j)
+            j = lps[j-1]
+        elif i &lt; n and txt[i] != pat[j]:
+            if j != 0:
+                j = lps[j-1]
+            else:
+                i += 1
+    return matches</code></pre>
       </div>
     </div>
   </body>

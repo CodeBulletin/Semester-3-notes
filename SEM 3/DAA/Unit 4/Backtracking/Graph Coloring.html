@@ -64,6 +64,26 @@
         <p>Without any conditions it takes&nbsp;<span class="math-tex">\(C^{n+1}\)</span>&nbsp;time
           to compute where&nbsp;<span class="math-tex">\(C\)</span>&nbsp;is number
           of colors,&nbsp;<span class="math-tex">\(n\)</span>&nbsp;is number of nodes</p>
+        <p><strong>Algorithm Backtracking:</strong>
+        </p>
+        <ol>
+          <li style="margin-left:0px;"><strong>Choose a Vertex:</strong> Start with an uncolored vertex.</li>
+          <li
+          style="margin-left:0px;"><strong>Assign a Color:</strong> Assign the vertex the first available
+            color (one that has not been assigned to its neighbors).</li>
+            <li style="margin-left:0px;"><strong>Check for Validity:</strong> If the current color assignment is
+              valid (i.e., no two adjacent vertices share the same color), then proceed
+              to color the next vertex.</li>
+            <li style="margin-left:0px;"><strong>Backtrack if Necessary:</strong> If no valid color assignment is
+              possible for a vertex, backtrack and change the color of the previously
+              colored vertex.</li>
+            <li style="margin-left:0px;"><strong>Repeat:</strong> Continue this process until all vertices are colored,
+              or it is determined that the graph cannot be colored with the given number
+              of colors.</li>
+            <li style="margin-left:0px;"><strong>Optimization:</strong> To optimize, the algorithm can be combined
+              with heuristics like ordering vertices by degree (coloring the most connected
+              vertices first) or using least-used colors.</li>
+        </ol>
       </div>
     </div>
   </body>

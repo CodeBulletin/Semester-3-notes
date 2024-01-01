@@ -1,0 +1,90 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Test for Independence</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The Chi-Square Test for Independence, also known as the Chi-Square Test
+          of Association, is a statistical method used to determine if there is a
+          significant association between two categorical variables. This test is
+          widely used in various fields like social sciences, marketing, healthcare,
+          and other areas where understanding relationships between categorical variables
+          is important.</p>
+        <h3 style="margin-left:0px;"><strong>Key Concepts of the Test for Independence:</strong></h3>
+        <p style="margin-left:0px;"><strong>Purpose</strong>: The main goal is to assess whether there's an
+          association or relationship between two categorical variables in a population.
+          It tests whether the variables are independent (not related) or dependent
+          (related).</p>
+        <p style="margin-left:0px;"><strong>Chi-Square Statistic</strong>: The test uses the Chi-Square statistic,
+          calculated as:</p>
+        <p><span class="math-tex">\(\chi^2= \sum \sum \frac {(O_{ij}-E_{ij})^2}{E_{ij}}\)</span>
+        </p>
+        <p style="margin-left:0px;">Here,&nbsp;<span class="math-tex">\(O_ij\)</span>&nbsp;is the observed
+          frequency in each cell of the contingency table, and&nbsp;<span class="math-tex">\(E_{ij}\)</span>&nbsp;is
+          the expected frequency, calculated under the assumption that the variables
+          are independent.</p>
+        <p style="margin-left:0px;"><strong>Degrees of Freedom</strong>: The degrees of freedom for this test
+          are determined by&nbsp;<span class="math-tex">\((\text{number&nbsp;of&nbsp;rows}−1)×(\text{number&nbsp;of&nbsp;columns}−1)\)</span>
+        </p>
+        <p style="margin-left:0px;"><strong>Assumptions</strong>:</p>
+        <ul>
+          <li>The data should be in a frequency format (counts of categories).</li>
+          <li>The samples are independent of each other.</li>
+          <li>Expected frequencies should be reasonably high (typically, at least 5).</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Procedure</strong>:</p>
+        <ul>
+          <li><strong>Step 1</strong>: Formulate the null and alternative hypotheses:
+            <ul>
+              <li>Null Hypothesis (<span class="math-tex">\(H_0\)</span>​): The two variables
+                are independent (no association).</li>
+              <li>Alternative Hypothesis (<span class="math-tex">\(H_a\)</span>​): The two
+                variables are not independent (there is an association).</li>
+            </ul>
+          </li>
+          <li><strong>Step 2</strong>: Create a contingency table to observe the frequency
+            distribution of variables.</li>
+          <li><strong>Step 3</strong>: Calculate expected frequencies and the Chi-Square
+            statistic.</li>
+          <li><strong>Step 4</strong>: Determine the critical value from the Chi-Square
+            distribution for the chosen level of significance and degrees of freedom.</li>
+          <li><strong>Step 5</strong>: Compare the calculated Chi-Square statistic with
+            the critical value and make a decision.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Interpretation</strong>:</p>
+        <ul>
+          <li><strong>Reject&nbsp;</strong><span class="math-tex">\(H_0\)</span><strong>​</strong>:
+            If the calculated Chi-Square is greater than the critical value, conclude
+            that there is a significant association between the variables.</li>
+          <li><strong>Fail to Reject&nbsp;</strong><span class="math-tex">\(H_0\)</span><strong>​</strong>:
+            If the calculated Chi-Square is less than or equal to the critical value,
+            conclude that there is no significant evidence of association.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Applications:</strong></h3>
+        <ul>
+          <li><strong>Social Sciences</strong>: Studying the relationship between demographic
+            factors and opinions or behaviors.</li>
+          <li><strong>Market Research</strong>: Understanding consumer behavior across
+            different demographic segments.</li>
+          <li><strong>Medical Research</strong>: Investigating the association between
+            risk factors and diseases.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Limitations:</strong></h3>
+        <ul>
+          <li>It cannot measure the strength of an association, only its existence.</li>
+          <li>Large sample sizes can lead to significant results for even trivial associations.</li>
+          <li>Assumes that the observations are independent and the data are categorical.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

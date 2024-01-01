@@ -62,7 +62,7 @@
     int pivot = arr[high];
     int i = (low - 1);
 
-    for (int j = low; j &lt;= high - 1; j++) {
+    for (int j = low; j &lt; high; j++) {
         if (arr[j] &lt; pivot) {
             i++;
             swap(&amp;arr[i], &amp;arr[j]);

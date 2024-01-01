@@ -1,0 +1,54 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Biased vs Unbiased</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;"><strong>Unbiased Estimation:</strong> An estimator is called unbiased if,
+          on average, it produces the true value of the parameter being estimated.
+          This means that if the estimation process was repeated many times, the
+          average of the estimates would be equal to the true parameter value. An
+          unbiased estimator does not systematically overestimate or underestimate
+          the parameter.</p>
+        <p style="margin-left:0px;">Mathematically, an estimator&nbsp;<span class="math-tex">\(\^θ\)</span>&nbsp;for
+          a parameter&nbsp;<span class="math-tex">\(θ\)</span>&nbsp;is unbiased if
+          the expected value of&nbsp;<span class="math-tex">\(\^θ\)</span>&nbsp;is
+          equal to&nbsp;
+          <br><span class="math-tex">\(E(\^\theta) = \theta\)</span>
+        </p>
+        <p style="margin-left:0px;">For example, the sample mean is an unbiased estimator of the population
+          mean. If you take many samples from a population and calculate the mean
+          of each sample, the average of all these sample means will be very close
+          to the population mean.</p>
+        <p style="margin-left:0px;"><strong>Biased Estimation:</strong> A biased estimator, on the other hand,
+          does not have this property. If an estimator is biased, it means that its
+          expected value is not equal to the true parameter value. In other words,
+          a biased estimator systematically overestimates or underestimates the parameter.</p>
+        <p
+        style="margin-left:0px;">Mathematically, an estimator&nbsp;<span class="math-tex">\(\^θ\)</span>&nbsp;is
+          biased if:</p>
+          <p style="margin-left:0px;"><span class="math-tex">\(E(\^\theta) \ne \theta\)</span>
+          </p>
+          <p style="margin-left:0px;">The bias of an estimator is the difference between the estimator's expected
+            value and the true value of the parameter:&nbsp;<span class="math-tex">\(\text{Bias}(\^\theta) = &nbsp;E(\^\theta) - \theta\)</span>
+          </p>
+          <p style="margin-left:0px;">For example, if you use the sample variance formula without applying Bessel's
+            correction (i.e., dividing by&nbsp;<span class="math-tex">\(n\)</span>&nbsp;instead
+            of&nbsp;<span class="math-tex">\(n-1\)</span>&nbsp;for a sample size&nbsp;
+            <span
+            class="math-tex">\(n\)</span>), you get a biased estimator of the population variance.
+              This is because it tends to underestimate the variance, especially for
+              small sample sizes.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

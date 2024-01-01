@@ -25,41 +25,37 @@
           <p
           style="margin-left:0px;">The Strassen's algorithm divides the matrix multiplication problem into
             seven multiplications of smaller submatrices, along with some additional
-            matrix additions and subtractions.</p><pre><code class="language-text-plain">def strassen(x, y):
-    """
-    Computes matrix product by divide and conquer approach, recursively.
-    Input: nxn matrices x and y
-    Output: nxn matrix, product of x and y
-    """
- 
-    # Base case when size of matrices is 1x1
-    if len(x) == 1:
-        return x * y
- 
-    # Splitting the matrices into quadrants. This will be done recursively
-    # until the base case is reached.
-    a, b, c, d = split(x)
-    e, f, g, h = split(y)
- 
-    # Computing the 7 products, recursively (p1, p2...p7)
-    p1 = strassen(a, f - h)  
-    p2 = strassen(a + b, h)        
-    p3 = strassen(c + d, e)        
-    p4 = strassen(d, g - e)        
-    p5 = strassen(a + d, e + h)        
-    p6 = strassen(b - d, g + h)  
-    p7 = strassen(a - c, e + f)  
- 
-    # Computing the values of the 4 quadrants of the final matrix c
-    c11 = p5 + p4 - p2 + p6  
-    c12 = p1 + p2           
-    c21 = p3 + p4            
-    c22 = p1 + p5 - p3 - p7  
- 
-    # Combining the 4 quadrants into a single matrix by stacking horizontally and vertically.
-    c = np.vstack((np.hstack((c11, c12)), np.hstack((c21, c22)))) 
- 
-    return c</code></pre>
+            matrix additions and subtractions.</p><pre><code class="language-text-plain">Input: Two n x n matrices A and B
+Output: The product of A and B, i.e., A * B
+
+1. If n is not a power of 2, pad both A and B with zeros to make them of size 2^k x 2^k where 2^k &gt;= n.
+
+2. If the matrices are small enough (e.g., 1x1 or 2x2), perform and return the standard matrix multiplication.
+
+3. Divide each matrix into four sub-matrices. 
+   For A: A11, A12, A21, A22
+   For B: B11, B12, B21, B22
+
+4. Recursively compute the seven products using Strassen's formulas:
+   M1 = StrassenMatrixMultiply(A11 + A22, B11 + B22)
+   M2 = StrassenMatrixMultiply(A21 + A22, B11)
+   M3 = StrassenMatrixMultiply(A11, B12 - B22)
+   M4 = StrassenMatrixMultiply(A22, B21 - B11)
+   M5 = StrassenMatrixMultiply(A11 + A12, B22)
+   M6 = StrassenMatrixMultiply(A21 - A11, B11 + B12)
+   M7 = StrassenMatrixMultiply(A12 - A22, B21 + B22)
+
+5. Combine the intermediate matrices to get the four parts of the result matrix:
+   C11 = M1 + M4 - M5 + M7
+   C12 = M3 + M5
+   C21 = M2 + M4
+   C22 = M1 - M2 + M3 + M6
+
+6. Combine C11, C12, C21, and C22 to get the final result matrix C.
+
+7. If padding was added in step 1, truncate C to get the final n x n product matrix.
+
+8. Return the final product matrix.</code></pre>
             <p>We Need,</p>
             <p><span class="math-tex">\(n^{log_2(7)}\)</span>, Multipications</p>
       </div>

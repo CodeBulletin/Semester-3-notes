@@ -1,0 +1,40 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>random restart hill climbing</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Random Restart Hill Climbing is a modified hill climbing algorithm that
+          addresses its limitation of getting stuck in local maxima by introducing
+          random restarts.</p>
+        <p style="margin-left:0px;">Key Points:</p>
+        <ul>
+          <li><strong>Basic Hill Climbing</strong>: An iterative algorithm starting
+            with a random solution, making incremental improvements.</li>
+          <li><strong>Local Maxima Problem</strong>: Tendency to get stuck at local
+            maxima, points higher than immediate neighbors but not the highest overall.</li>
+          <li><strong>Random Restarts Solution</strong>: Runs the hill climbing algorithm
+            multiple times from different random start points to avoid local maxima.</li>
+          <li><strong>Process</strong>: Starts randomly, follows hill climbing steps,
+            and restarts from a new random point when a peak is reached. Repeats until
+            a satisfactory solution is found or a set number of times.</li>
+          <li><strong>Advantages</strong>: Better chance of finding global maxima, simple
+            to implement.</li>
+          <li><strong>Disadvantages</strong>: Computationally expensive, no guarantee
+            of finding the global maximum.</li>
+        </ul>
+        <p style="margin-left:0px;">Random Restart Hill Climbing is effective in landscapes with many local
+          maxima, providing a balance of exploration and exploitation.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

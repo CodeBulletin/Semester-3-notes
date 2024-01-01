@@ -19,9 +19,9 @@
           match. If there is no match, the algorithm shifts the window one position
           to the right and recalculates the hash value.</p>
         <p style="margin-left:0px;">Here's how the Rabin-Karp algorithm works:</p>
-        <ol>
+        <ol style="list-style-type:decimal;">
           <li><strong>Preprocessing</strong>:
-            <ul>
+            <ul style="list-style-type:circle;">
               <li>Compute the hash value of the pattern.</li>
               <li>Create a rolling hash function that allows you to update the hash value
                 of a substring efficiently as you slide the window over the text. This
@@ -30,7 +30,7 @@
             </ul>
           </li>
           <li><strong>Searching</strong>:
-            <ul>
+            <ul style="list-style-type:circle;">
               <li>Compute the hash value of the first window (substring) of the text that
                 is the same length as the pattern.</li>
               <li>Compare the hash value of this window with the hash value of the pattern.</li>
@@ -51,41 +51,38 @@
         style="margin-left:0px;">The Rabin-Karp algorithm is known for its average-case and worst-case
           time complexity of O(n + m) in most scenarios, where n is the length of
           the text and m is the length of the pattern. However, in the worst-case
-          scenario where hash collisions are frequent, it may degrade to O(n * m).
-          Despite this worst-case scenario, the Rabin-Karp algorithm can be quite
-          efficient for many practical applications.</p><pre><code class="language-text-plain">def rabin_karp(text, pattern):
-    # Define the base for the rolling hash (usually a prime number)
+          scenario where hash collisions are frequent, it may degrade to&nbsp;
+          <span
+          class="math-tex">\(O(n * m)\)</span>. Despite this worst-case scenario, the Rabin-Karp
+            algorithm can be quite efficient for many practical applications.</p><pre><code class="language-text-plain">def RabinKarp(text, pattern):
+    if pattern == "" or text == "":
+        return 0
+    if len(pattern) &gt; len(text):
+        return -1
+    
     base = 256
-    # Define a prime number to avoid hash collisions
-    prime = 101
+    modulus = 101
+    m = len(pattern)
 
-    text_length = len(text)
-    pattern_length = len(pattern)
+    # Calculate rolling hash of pattern
     pattern_hash = 0
     text_hash = 0
+    for i in range(len(pattern)):
+        pattern_hash = (base * pattern_hash + ord(pattern[i])) % modulus
+        text_hash = (base * text_hash + ord(text[i])) % modulus
 
-    # Calculate the initial hash for the pattern and the first window of text
-    for i in range(pattern_length):
-        pattern_hash = (pattern_hash * base + ord(pattern[i])) % prime
-        text_hash = (text_hash * base + ord(text[i])) % prime
-
-    # Iterate through the text with a sliding window
-    for i in range(text_length - pattern_length + 1):
-        # If the hash values match, perform character-by-character comparison
+    for i in range(len(text) - len(pattern) + 1):
         if pattern_hash == text_hash:
-            if text[i:i + pattern_length] == pattern:
-                print(f"Pattern found at index {i}")
+            if pattern == text[i:i+len(pattern)]:
+                return i
+            
+        text_hash = (base * (text_hash - ord(text[i]) * (base ** (m - 1))) + ord(text[m+i])) % modulus
+    return -1
 
-        # Calculate the hash for the next window
-        if i &lt; text_length - pattern_length:
-            text_hash = (base * (text_hash - ord(text[i]) * (base**(pattern_length - 1))) + ord(text[i + pattern_length])) % prime
-            if text_hash &lt; 0:
-                text_hash += prime
 
-# Example usage:
-text = "ABABDABACDABABCABAB"
-pattern = "ABABCABAB"
-rabin_karp(text, pattern)</code></pre>
+# test cases
+print(RabinKarp("hello", "ll")) # 2
+print(RabinKarp("abcdabce", "bce")) # 5</code></pre>
       </div>
     </div>
   </body>

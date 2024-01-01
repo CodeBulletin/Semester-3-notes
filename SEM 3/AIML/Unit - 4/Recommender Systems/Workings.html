@@ -12,55 +12,32 @@
        <h1>Workings</h1>
 
       <div class="ck-content">
-        <p>Recommender systems work by filtering large amounts of information to
-          provide personalized recommendations that are relevant to the user. These
-          systems aim to predict the user's preference or interest in an item (like
-          a movie, book, product, etc.) based on various inputs and algorithms. Here’s
-          an overview of the general workflow:</p>
-        <p><strong>Data Collection</strong>: The first step is to gather data, which
-          can be explicit (such as ratings, likes, or dislikes) or implicit (like
-          browsing history, purchase history, or time spent on an item). This data
-          forms the basis for understanding user preferences and behaviors.</p>
-        <p><strong>Data Storage</strong>: The collected data is stored in a database.
-          Efficient storage and retrieval of this data are crucial for the performance
-          of the recommender system.</p>
-        <p><strong>Data Processing</strong>: This stage involves cleaning and structuring
-          the data to make it suitable for analysis. It might involve handling missing
-          values, normalizing data, or transforming it into a specific format.</p>
-        <p><strong>User-Item Matrix Creation</strong>: Many recommender systems work
-          by constructing a user-item matrix, where rows represent users, columns
-          represent items, and the values in the matrix represent the user’s preference
-          for an item (ratings, number of purchases, etc.).</p>
-        <p><strong>Algorithm Selection</strong>: There are several algorithms to
-          choose from, depending on the type of recommender system:</p>
-        <ul>
-          <li><strong>Collaborative Filtering</strong>: Either user-based (recommendations
-            are made based on similarities between users) or item-based (recommendations
-            are based on similarities between items).</li>
-          <li><strong>Content-Based Filtering</strong>: Recommendations are based on
-            the similarity of item features and user preferences.</li>
-          <li><strong>Hybrid Methods</strong>: Combine collaborative and content-based
-            filtering to improve recommendation quality.</li>
-          <li><strong>Other Methods</strong>: Include knowledge-based systems, demographic-based
-            recommendations, and utility-based systems.</li>
-        </ul>
-        <p><strong>Model Training</strong>: The selected algorithm is trained with
-          the existing data to learn about user preferences. This step is crucial
-          for making accurate predictions.</p>
-        <p><strong>Prediction and Recommendation</strong>: The system predicts the
-          user's preference for unseen items. Based on these predictions, it generates
-          a list of recommended items.</p>
-        <p><strong>Feedback Loop</strong>: In many systems, user interactions with
-          the recommendations (such as clicks, purchases, or ratings) are fed back
-          into the system to further refine and improve the recommendations.</p>
-        <p><strong>Evaluation</strong>: The performance of the recommender system
-          is evaluated using metrics like accuracy, precision, recall, or F1 score.
-          This evaluation helps in fine-tuning the model for better performance.</p>
-        <p>Recommender systems are complex and need to be constantly updated and
-          refined to adapt to changing user preferences and behaviors. They are extensively
-          used in various domains like e-commerce (Amazon, eBay), streaming services
-          (Netflix, Spotify), social media (Facebook, Twitter), and many more, enhancing
-          user experience by helping users find relevant and personalized content.</p>
+        <p style="margin-left:0px;">Recommender systems personalize recommendations by predicting user interests
+          based on data and algorithms. The workflow includes:</p>
+        <ol>
+          <li><strong>Data Collection:</strong> Gathering explicit (ratings, likes/dislikes)
+            and implicit (browsing history, purchases) data to understand user preferences.</li>
+          <li><strong>Data Storage:</strong> Efficiently storing the collected data in
+            databases.</li>
+          <li><strong>Data Processing:</strong> Cleaning and structuring data for analysis,
+            including handling missing values and normalization.</li>
+          <li><strong>User-Item Matrix Creation:</strong> Constructing a matrix with
+            users as rows, items as columns, and matrix values indicating user preferences.</li>
+          <li><strong>Algorithm Selection:</strong> Choosing from collaborative filtering
+            (user-based or item-based), content-based filtering, hybrid methods, or
+            other techniques like knowledge-based or demographic-based systems.</li>
+          <li><strong>Model Training:</strong> Training the algorithm with existing data
+            to learn user preferences.</li>
+          <li><strong>Prediction and Recommendation:</strong> Predicting preferences
+            for unseen items and generating recommendation lists.</li>
+          <li><strong>Feedback Loop:</strong> Incorporating user interactions with recommendations
+            to refine the system.</li>
+          <li><strong>Evaluation:</strong> Using metrics like accuracy, precision, recall,
+            or F1 score to assess and improve system performance.</li>
+        </ol>
+        <p style="margin-left:0px;">Recommender systems, crucial in domains like e-commerce, streaming services,
+          and social media, require ongoing updates and refinements to align with
+          evolving user preferences and behaviors.</p>
       </div>
     </div>
   </body>

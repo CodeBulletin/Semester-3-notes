@@ -1,0 +1,23 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class DisjointSetLinkedList:
+    def __init__(self, n):
+        # Create n disjoint sets (one for each element)
+        self.sets = [Node(i) for i in range(n)]
+
+    def find(self, element):
+        # Find the representative of the set containing 'element'
+        current = self.sets[element]
+        while current.next:
+            current = current.next
+        return current
+
+    def union(self, x, y):
+        # Find the tail of the list containing 'x'
+        parrent = self.find(x)
+        
+        # Attach the list containing 'y' to the tail of list containing 'x'
+        parrent.next = self.find(y)

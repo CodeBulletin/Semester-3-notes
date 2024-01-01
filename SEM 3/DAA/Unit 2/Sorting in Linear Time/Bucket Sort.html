@@ -43,35 +43,25 @@
           term&nbsp;<span class="math-tex">\(\frac {n^2} k\)</span>&nbsp;represents
           the time it takes to sort each bucket. The algorithm can perform quite
           well when the input data is evenly distributed among the buckets, and the
-          number of buckets is chosen appropriately.</p><pre><code class="language-text-plain">def bucket_sort(arr, num_buckets):
-    if len(arr) == 0:
-        return arr
+          number of buckets is chosen appropriately.</p><pre><code class="language-text-plain">BucketSort(Array, BucketCount)
+    1. Let InputArray[1..n] be the array to be sorted.
+    2. Let BucketArray[1..BucketCount] be an array of initially empty "buckets" (lists).
 
-    min_val, max_val = min(arr), max(arr)
-    bucket_range = (max_val - min_val) / num_buckets
+    // Step 1: Place each element of the input array into a bucket
+    3. For i = 1 to n
+           Determine the appropriate bucket for InputArray[i] (usually using a function of the form f(x) = x * BucketCount / (MaxValue + 1))
+           Add InputArray[i] to BucketArray[f(InputArray[i])]
 
-    # Create empty buckets
-    buckets = [[] for _ in range(num_buckets)]
+    // Step 2: Sort each bucket individually
+    4. For i = 1 to BucketCount
+           Sort BucketArray[i] using any sorting algorithm or recursively apply Bucket Sort
 
-    # Scatter the elements into buckets
-    for num in arr:
-        index = int((num - min_val) / bucket_range)
-        buckets[index].append(num)
-
-    sorted_buckets = []
-    
-    # Sort each bucket (you can use another sorting algorithm)
-    for bucket in buckets:
-        if bucket:
-            sorted_buckets.extend(sorted(bucket))
-
-    return sorted_buckets
-
-# Example usage:
-arr = [4, 2, 2, 8, 3, 3, 1]
-num_buckets = 5
-sorted_arr = bucket_sort(arr, num_buckets)
-print(sorted_arr)</code></pre>
+    // Step 3: Concatenate all buckets back into the input array
+    5. Index = 1
+    6. For i = 1 to BucketCount
+           For each element in BucketArray[i]
+               InputArray[Index] = element
+               Index = Index + 1</code></pre>
       </div>
     </div>
   </body>

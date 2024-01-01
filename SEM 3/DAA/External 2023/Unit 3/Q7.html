@@ -1,0 +1,44 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q7</h1>
+
+      <div class="ck-content">
+        <h2>Define the basic ingredients of Greedy Method in the Context of Kruskal's Algorithms and Explain and analyze it's time Complexity</h2>
+        <p style="margin-left:0px;">The Greedy Method is an algorithmic approach that makes a series of choices,
+          each of which is the best or most optimal at that moment, without regard
+          to future consequences. This method is used in various algorithms, including
+          Kruskal's algorithm, which is designed for finding the minimum spanning
+          tree of a graph.</p>
+        <h3 style="margin-left:0px;"><strong>Basic Ingredients of the Greedy Method in Kruskal's Algorithm:</strong></h3>
+        <p style="margin-left:0px;"><strong>Sorting of Edges</strong>: Kruskal's algorithm starts by sorting
+          all the edges of the graph in non-decreasing order of their weight.</p>
+        <p
+        style="margin-left:0px;"><strong>Edge Selection</strong>: After sorting, it processes the edges
+          in the sorted order and applies the following greedy criterion: if adding
+          the edge to the growing forest does not create a cycle, the edge is included
+          in the solution; otherwise, it is discarded. This is the "greedy" step,
+          as it chooses the smallest edge that doesn't form a cycle.</p>
+          <p style="margin-left:0px;"><strong>Disjoint Sets</strong>: To efficiently detect cycles, Kruskal's
+            algorithm uses a disjoint-set data structure. This structure helps to keep
+            track of the subsets of vertices and allows for quick checks of whether
+            two vertices belong to the same subset (i.e., whether adding an edge would
+            create a cycle).</p>
+          <p style="margin-left:0px;"><strong>Termination</strong>: The algorithm terminates when all vertices
+            are connected or all edges have been processed.</p>
+          <figure class="image">
+            <img src="Q7/image.png">
+          </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

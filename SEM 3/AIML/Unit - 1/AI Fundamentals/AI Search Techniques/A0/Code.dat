@@ -3,7 +3,7 @@ from queue import PriorityQueue
 def aostar_pathfinding(graph, start, goal):
     open_set = PriorityQueue()
     open_set.put((0, start))
-    came_from = {}
+    came_from = dict()
     g_score = {node: float('inf') for node in graph}
     g_score[start] = 0
     f_score = {node: float('inf') for node in graph}

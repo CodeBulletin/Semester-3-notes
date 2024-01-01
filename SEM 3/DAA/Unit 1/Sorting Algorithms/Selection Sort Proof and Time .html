@@ -1,0 +1,50 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Selection Sort Proof and Time Complexity</h1>
+
+      <div class="ck-content">
+        <h3 style="margin-left:0px;"><strong>Defining the Loop Invariant</strong></h3>
+        <p style="margin-left:0px;">The loop invariant we can consider for Selection Sort is:</p>
+        <p style="margin-left:0px;">"At the start of each iteration of the loop (say, the i-th iteration),
+          the first i elements of the array are sorted and are the smallest i elements
+          of the array."</p>
+        <h3 style="margin-left:0px;"><strong>Initialization</strong></h3>
+        <p style="margin-left:0px;">Before the first iteration of the loop (i.e., when <strong>i = 0</strong>),
+          the invariant holds because there are no elements in the sorted section,
+          and thus it is trivially sorted.</p>
+        <h3 style="margin-left:0px;"><strong>Maintenance</strong></h3>
+        <p style="margin-left:0px;">Assuming the invariant is true before an iteration of the loop, it must
+          be shown that it remains true after the iteration. In the i-th iteration,
+          the algorithm selects the smallest element from the unsorted part of the
+          array and swaps it with the element at the i-th position. This ensures
+          that the first i+1 elements are sorted and are the smallest i+1 elements
+          of the array. This maintains the invariant.</p>
+        <h3 style="margin-left:0px;"><strong>Termination</strong></h3>
+        <p style="margin-left:0px;">At the end of the algorithm, when the loop completes, the invariant tells
+          us that the first n elements are sorted and are the smallest n elements
+          of the array, where n is the total number of elements in the array. Since
+          these are all the elements in the array, it follows that the entire array
+          is sorted.</p>
+        <h3 style="margin-left:0px;"><strong>Conclusion</strong></h3>
+        <p style="margin-left:0px;">The maintenance of the loop invariant, along with its initialization and
+          termination conditions, proves that the Selection Sort algorithm correctly
+          sorts the array. Each iteration of the loop extends the sorted section
+          of the array by one element, ensuring that the array is fully sorted when
+          the algorithm completes.</p>
+        <figure class="image">
+          <img src="Selection%20Sort%20Proof%20and%20Time%20Complexity/image.png">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

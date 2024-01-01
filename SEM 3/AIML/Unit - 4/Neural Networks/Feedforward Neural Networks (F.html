@@ -12,76 +12,30 @@
        <h1>Feedforward Neural Networks (FNN)</h1>
 
       <div class="ck-content">
-        <p>Feedforward Neural Networks (FNNs) are the simplest type of artificial
-          neural network architecture. In this network, the information moves in
-          only one direction, forward, from the input nodes, through any hidden nodes,
-          and to the output nodes. There are no cycles or loops in the network. FNNs
-          are the foundation upon which more complex neural network architectures
-          are built.</p>
-        <p>Key characteristics of Feedforward Neural Networks include:</p>
-        <p><strong>Layered Structure:</strong>
-        </p>
+        <p style="margin-left:0px;">Feedforward Neural Networks (FNNs) are a basic type of artificial neural
+          network with a unidirectional flow of data from input to output nodes,
+          without cycles or loops. Their structure includes an input layer for receiving
+          data, one or more hidden layers for computations, and an output layer for
+          the final result.</p>
+        <p style="margin-left:0px;">Key features of FNNs are:</p>
         <ul>
-          <li><strong>Input Layer:</strong> This is where the network receives its input
-            data.</li>
-          <li><strong>Hidden Layers:</strong> One or more layers of neurons that process
-            the input. These layers perform computations and then transfer the output
-            to the next layer. The hidden layers are where most of the computation
-            is done.</li>
-          <li><strong>Output Layer:</strong> The final layer that produces the output
-            of the network.</li>
+          <li><strong>Layered Structure</strong>: Input layer, hidden layers for processing,
+            and output layer for results.</li>
+          <li><strong>Neurons and Activation Function</strong>: Connections between
+            layers use neurons applying functions like ReLU, sigmoid, or tanh.</li>
+          <li><strong>Weights and Biases</strong>: Adjustable weights on connections
+            and biases on neurons tailor the network's output.</li>
+          <li><strong>Forward Propagation</strong>: Data flows from input to output,
+            with each neuron outputting a processed sum of inputs.</li>
+          <li><strong>Backpropagation and Training</strong>: Uses backpropagation and
+            gradient descent methods to minimize output error and adjust weights and
+            biases.</li>
         </ul>
-        <p><strong>Neurons and Activation Function:</strong>
-        </p>
-        <ul>
-          <li>Each neuron in a layer is connected to every neuron in the previous layer.</li>
-          <li>These neurons apply an activation function to the input data. Common activation
-            functions include ReLU (Rectified Linear Unit), sigmoid, and tanh.</li>
-        </ul>
-        <p><strong>Weights and Biases:</strong>
-        </p>
-        <ul>
-          <li>Each connection between neurons has an associated weight, which is adjusted
-            during the training process.</li>
-          <li>Neurons may also have a bias, further fine-tuning the output.</li>
-        </ul>
-        <p><strong>Forward Propagation:</strong>
-        </p>
-        <ul>
-          <li>In forward propagation, data moves through the network from the input
-            layer to the output layer.</li>
-          <li>At each neuron, the sum of the weighted inputs and the bias is calculated
-            and passed through an activation function to produce the neuron's output.</li>
-        </ul>
-        <p><strong>Backpropagation and Training:</strong>
-        </p>
-        <ul>
-          <li>The network is trained using a process called backpropagation, where the
-            output is compared with the desired output, and the error is propagated
-            back through the network to adjust the weights and biases.</li>
-          <li>This training typically uses gradient descent or variations thereof to
-            minimize the error.</li>
-        </ul>
-        <p><strong>Applications:</strong>
-        </p>
-        <ul>
-          <li>FNNs are used for a variety of machine learning tasks like regression,
-            classification, and as a part of more complex tasks in deep learning.</li>
-        </ul>
-        <p><strong>Limitations:</strong>
-        </p>
-        <ul>
-          <li>FNNs are not suitable for processing data with sequential or time-dependent
-            patterns (like in time series analysis or natural language processing)
-            as they do not have memory of previous inputs. Recurrent Neural Networks
-            (RNNs) or Long Short-Term Memory Networks (LSTMs) are more suited for these
-            types of tasks.</li>
-        </ul>
-        <p>Feedforward Neural Networks are fundamental in the field of neural networks
-          and provide a basis for understanding more complex network architectures.
-          They are instrumental in solving a wide range of machine learning problems
-          where the goal is to learn a mapping from inputs to outputs.</p>
-        <p>&nbsp;</p>
+        <p style="margin-left:0px;">FNNs excel in tasks like regression and classification but struggle with
+          sequential or time-dependent data, where Recurrent Neural Networks (RNNs)
+          or Long Short-Term Memory Networks (LSTMs) are more effective. They serve
+          as a foundational concept for understanding more complex neural network
+          architectures and are widely used in various machine learning problems.</p>
       </div>
     </div>
   </body>

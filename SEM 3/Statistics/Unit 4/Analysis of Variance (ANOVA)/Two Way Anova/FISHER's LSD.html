@@ -1,0 +1,82 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>FISHER&#39;s LSD</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Fisher's LSD (Least Significant Difference) test is a post-hoc statistical
+          analysis technique used in conjunction with ANOVA (Analysis of Variance).
+          When an ANOVA indicates that there are significant differences among group
+          means, Fisher’s LSD test is used to determine exactly which means are significantly
+          different from each other.</p>
+        <h3 style="margin-left:0px;"><strong>Key Aspects of Fisher's LSD Test:</strong></h3>
+        <p style="margin-left:0px;"><strong>Purpose</strong>:</p>
+        <ul>
+          <li>To make pairwise comparisons between group means after an ANOVA test has
+            found a significant F-statistic.</li>
+          <li>To identify which specific group means differ from each other.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Procedure</strong>:</p>
+        <ul>
+          <li>Conduct an ANOVA to assess whether there are overall differences among
+            the group means.</li>
+          <li>If the ANOVA is significant, proceed with Fisher's LSD test to compare
+            each pair of means.</li>
+          <li>The LSD test calculates the difference between each pair of group means
+            and compares this difference to a critical value derived from the Student’s
+            t-distribution.</li>
+        </ul>
+        <figure class="image">
+          <img src="FISHER's%20LSD/image.png">
+        </figure>
+        <figure class="image">
+          <img src="FISHER's%20LSD/1_image.png">
+        </figure>
+        <p style="margin-left:0px;"><strong>Comparison of Means</strong>:</p>
+        <ul>
+          <li>Compare the absolute difference between each pair of group means to the
+            LSD value.</li>
+          <li>If the difference is greater than the LSD, the difference between those
+            two means is considered statistically significant.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Assumptions</strong>:</p>
+        <ul>
+          <li>The groups should be independent.</li>
+          <li>The populations from which samples are drawn should be normally distributed.</li>
+          <li>Homogeneity of variances (equal variances across groups).</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Interpretation</strong>:</p>
+        <ul>
+          <li>A significant result indicates that the two group means being compared
+            are significantly different.</li>
+          <li>It’s important to interpret the results in the context of the number of
+            comparisons being made.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Limitations</strong>:</p>
+        <ul>
+          <li>Fisher’s LSD does not control the familywise error rate (the probability
+            of making one or more Type I errors when performing multiple comparisons),
+            which can lead to an increased risk of false positives, especially when
+            the number of groups is large.</li>
+          <li>It is often criticized for being too liberal (i.e., too likely to find
+            significance) in comparison to other post-hoc tests that control for Type
+            I error rate more strictly, such as Tukey’s HSD or Bonferroni correction.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Applications:</strong></h3>
+        <p style="margin-left:0px;">Fisher's LSD is commonly used in experimental studies where researchers
+          are interested in comparing multiple group means, like in agricultural,
+          medical, or psychological research, especially when the number of comparisons
+          is not too large.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

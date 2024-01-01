@@ -1,0 +1,64 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Proving Correctness of algorithm</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Proving the correctness of an algorithm is a crucial step in algorithm
+          design and analysis, ensuring that the algorithm will perform as expected
+          for all valid inputs. Here are some common methods used to prove algorithm
+          correctness:</p>
+        <p style="margin-left:0px;"><strong>Induction and Loop Invariants</strong>:</p>
+        <ul>
+          <li><strong>Mathematical Induction</strong>: This is often used for recursive
+            algorithms. The base case is proven first, and then it's shown that if
+            the algorithm works for some case, it also works for the next case.</li>
+          <li><strong>Loop Invariants</strong>: For iterative algorithms, a loop invariant
+            is a condition that holds true before and after each iteration of a loop.
+            Proving the invariant true at the start, maintaining it during each iteration,
+            and showing that the invariant being true when the loop terminates implies
+            the correctness of the algorithm.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Assertion and Pre/Post-Conditions</strong>:</p>
+        <ul>
+          <li><strong>Assertions</strong>: Statements about program variables that are
+            true at specific points in the algorithm. Proving these assertions true
+            at those points helps in demonstrating the correctness of the algorithm.</li>
+          <li><strong>Pre-conditions and Post-conditions</strong>: These specify the
+            conditions under which an algorithm works correctly. A pre-condition is
+            what needs to be true before the start of the algorithm to ensure it works
+            correctly, and a post-condition is what is true after the algorithm has
+            finished.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Formal Verification</strong>:</p>
+        <ul>
+          <li>This approach involves using mathematical methods and formal verification
+            tools to prove the correctness of algorithms. It includes constructing
+            formal mathematical models of the algorithms and rigorously proving their
+            properties.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Contradiction</strong>:</p>
+        <ul>
+          <li>This involves assuming that the algorithm is incorrect and then showing
+            that this assumption leads to a contradiction, thereby proving that the
+            algorithm must be correct.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Invariants in Data Structures</strong>:</p>
+        <ul>
+          <li>For algorithms that manipulate data structures, proving that certain key
+            properties (invariants) of the data structure are maintained throughout
+            the operation of the algorithm can be used to show its correctness.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

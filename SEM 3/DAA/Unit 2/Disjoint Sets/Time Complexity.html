@@ -1,0 +1,53 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Time Complexity</h1>
+
+      <div class="ck-content">
+        <figure class="table" style="width:700px;">
+          <table style="background-color:rgb(52, 53, 65);border:0px solid inherit;">
+            <thead>
+              <tr>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Operation</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Array (with Path Compression and Union by Rank)</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border:1px solid rgb(217, 217, 227);padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Linked List</strong>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>make_set</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n)</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>find</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(α(n)) [Amortized] O(1) in short</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n)</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;"><strong>union</strong>
+                </td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(α(n)) [Amortized] O(1) in short</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n)</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

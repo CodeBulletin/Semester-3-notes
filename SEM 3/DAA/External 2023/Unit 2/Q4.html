@@ -1,0 +1,111 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q4</h1>
+
+      <div class="ck-content">
+        <h2>Explain Divide and conquer. How Strassen applied it to the matrix problem? Compare the asymptotic time complexity of the classical matrix multiplication algorithm to Strassen's algorithm?</h2>
+        <p style="margin-left:0px;">The Divide and Conquer approach is a problem-solving technique used in
+          various fields, including computer science, mathematics, and algorithms.
+          It involves breaking down a complex problem into smaller, more manageable
+          subproblems, solving those subproblems independently, and then combining
+          their solutions to solve the original problem. The key idea is to divide
+          a problem into smaller parts, conquer each part, and then combine the results.</p>
+        <p
+        style="margin-left:0px;">The Divide and Conquer approach typically consists of three main steps:</p>
+          <ol>
+            <li><strong>Divide</strong>: The problem is divided into smaller, often equal-sized,
+              subproblems. This division continues until the subproblems are simple enough
+              to be solved directly. The goal is to break the problem into smaller, more
+              manageable pieces.</li>
+            <li><strong>Conquer</strong>: Each subproblem is solved independently. This
+              can involve applying the same Divide and Conquer approach recursively to
+              further subdivide the subproblems until they become trivial to solve. In
+              some cases, the subproblems are solved using other techniques, such as
+              brute force or dynamic programming.</li>
+            <li><strong>Combine</strong>: The solutions to the subproblems are combined
+              to obtain a solution for the original problem. This step can involve aggregating
+              results, merging data, or performing additional computations as needed.</li>
+          </ol><pre><code class="language-text-plain">DAC(p) {
+	if (small(p)) {
+	    solve(p)
+	}
+	else {
+	    Divide the problem into p1, p2, p3, ..., pk
+	    Apply DAC(p1), DAC(p2), DAC(p3), ... DAC(pk)
+		Combine DAC(p1), DAC(p2), DAC(p3), ... DAC(pk)
+	}
+}</code></pre>
+          <p style="margin-left:0px;"><span class="text-big"><strong>Strassen's Matrix Multiplication</strong></span>
+          </p>
+          <p style="margin-left:0px;">Strassen's Matrix Multiplication is a divide-and-conquer algorithm for
+            multiplying two matrices. It was developed by Volker Strassen in 1969 and
+            is known for its efficiency in reducing the number of basic multiplications
+            required compared to the standard matrix multiplication algorithm.</p>
+          <p
+          style="margin-left:0px;">The basic idea behind Strassen's algorithm is to divide each of the two
+            input matrices into smaller submatrices, perform a limited number of recursive
+            multiplications (subproblems), and then combine the results to obtain the
+            final matrix product. This approach reduces the number of multiplications
+            needed, which results in improved time complexity for large matrices.</p>
+            <p
+            style="margin-left:0px;">The Strassen's algorithm divides the matrix multiplication problem into
+              seven multiplications of smaller submatrices, along with some additional
+              matrix additions and subtractions.</p><pre><code class="language-text-plain">Input: Two n x n matrices A and B
+Output: The product of A and B, i.e., A * B
+
+1. If n is not a power of 2, pad both A and B with zeros to make them of size 2^k x 2^k where 2^k &gt;= n.
+
+2. If the matrices are small enough (e.g., 1x1 or 2x2), perform and return the standard matrix multiplication.
+
+3. Divide each matrix into four sub-matrices. 
+   For A: A11, A12, A21, A22
+   For B: B11, B12, B21, B22
+
+4. Recursively compute the seven products using Strassen's formulas:
+   M1 = StrassenMatrixMultiply(A11 + A22, B11 + B22)
+   M2 = StrassenMatrixMultiply(A21 + A22, B11)
+   M3 = StrassenMatrixMultiply(A11, B12 - B22)
+   M4 = StrassenMatrixMultiply(A22, B21 - B11)
+   M5 = StrassenMatrixMultiply(A11 + A12, B22)
+   M6 = StrassenMatrixMultiply(A21 - A11, B11 + B12)
+   M7 = StrassenMatrixMultiply(A12 - A22, B21 + B22)
+
+5. Combine the intermediate matrices to get the four parts of the result matrix:
+   C11 = M1 + M4 - M5 + M7
+   C12 = M3 + M5
+   C21 = M2 + M4
+   C22 = M1 - M2 + M3 + M6
+
+6. Combine C11, C12, C21, and C22 to get the final result matrix C.
+
+7. If padding was added in step 1, truncate C to get the final n x n product matrix.
+
+8. Return the final product matrix.</code></pre>
+              <p>The Time Complexity is given by
+                <br><span class="math-tex">\(T(n) = 7T(\frac n 2)+n^2\)</span>
+              </p>
+              <p style="margin-left:0px;"><span class="text-big"><strong>Asymptotic Time Complexity Comparison:</strong></span>
+              </p>
+              <p style="margin-left:0px;"><strong>Classical Algorithm</strong>: The classical algorithm for matrix
+                multiplication has a time complexity of&nbsp;<span class="math-tex">\(O(n^3)\)</span>.
+                This is because it performs a cubic number of operations relative to the
+                matrix size.</p>
+              <p style="margin-left:0px;"><strong>Strassen's Algorithm</strong>: Strassen's algorithm improves this
+                to approximately&nbsp;<span class="math-tex">\(O(n^{\log_2(7)})\)</span>.
+                This is derived from the master theorem for divide and conquer recurrences,
+                considering the seven recursive multiplications and the linear work for
+                additions and subtractions.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

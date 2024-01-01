@@ -38,7 +38,7 @@
         <p style="margin-left:40px;"><strong>Case 1</strong>: if&nbsp;<span class="math-tex">\(log_b(a) \lt c\)</span>:</p>
         <p
         style="margin-left:80px;"><strong>Case 1.1</strong>: if&nbsp;<span class="math-tex">\(d \ge 0\)</span>&nbsp;:
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(T(n) = O(f(n))\)</span>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(T(n) = O(n^c*\text{log}^d(n))\)</span>
           </p>
           <p style="margin-left:80px;"><strong>Case 1.2</strong>: if&nbsp;<span class="math-tex">\(d \lt 0\)</span>&nbsp;:
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(T(n) = O(n^c)\)</span>
@@ -46,10 +46,10 @@
           <p style="margin-left:40px;"><strong>Case 2</strong>: if&nbsp;<span class="math-tex">\(log_b(a) = c\)</span>:</p>
           <p
           style="margin-left:80px;"><strong>Case 2.1</strong>: if&nbsp;<span class="math-tex">\(d \gt -1\)</span>&nbsp;:
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(T(n) = O(n^c*log^{p+1}(n))\)</span>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="math-tex">\(T(n) = O(n^c*\log^{d+1}(n))\)</span>
             </p>
             <p style="margin-left:80px;"><strong>Case 2.2</strong>: if&nbsp;<span class="math-tex">\(d = -1\)</span>&nbsp;:
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(T(n) = O(n^c * log(log(n)))\)</span>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(T(n) = O(n^c * \log(\log(n)))\)</span>
             </p>
             <p style="margin-left:80px;"><strong>Case 2.3</strong>: if&nbsp;<span class="math-tex">\(d \lt -1\)</span>&nbsp;:
               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="math-tex">\(T(n) = O(n^c)\)</span>
@@ -57,7 +57,7 @@
             <p style="margin-left:40px;"><strong>Case 3</strong>: if&nbsp;<span class="math-tex">\(log_b(a) \gt c\)</span>:
               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
               <span
-              class="math-tex">\(T(n) = O(n^{log_b(a)})\)</span>
+              class="math-tex">\(T(n) = O(n^{\log_b(a)})\)</span>
             </p>
       </div>
     </div>

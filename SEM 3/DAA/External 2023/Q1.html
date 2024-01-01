@@ -1,0 +1,113 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q1</h1>
+
+      <div class="ck-content">
+        <h2>a) Define "Optimal Substructure" in dynamic programming</h2>
+        <p>O<strong>ptimal Substructure in Dynamic Programming</strong>: This refers
+          to a property of a problem that indicates an optimal solution can be constructed
+          efficiently from optimal solutions of its subproblems. In dynamic programming,
+          this principle is crucial because it allows us to build up the solution
+          to a larger problem from the solutions to smaller problems, usually via
+          recursion and memoization. For instance, in the classic Fibonacci sequence
+          calculation or the shortest path problem in graph theory, the optimal solution
+          for each part of the problem (like a smaller Fibonacci number or a shorter
+          path between two nodes) can be used to construct the optimal solution for
+          the entire problem.</p>
+        <h2>b) Can we get more than one minimum spanning trees for a given weighted undirected connected graph?</h2>
+        <p style="margin-left:0px;">Yes, a given weighted undirected connected graph can have more than one
+          minimum spanning tree (MST). This occurs when there are edges with equal
+          weights that can be swapped without increasing the total weight of the
+          tree. If the graph has unique weights for all edges, it will have a unique
+          MST.</p>
+        <figure class="image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Multiple_minimum_spanning_trees.svg/1200px-Multiple_minimum_spanning_trees.svg.png"
+          alt="File:Multiple minimum spanning trees.svg - Wikipedia">
+        </figure>
+        <h2>c) Write your exact your comments on the implications of knowing an relationship that is "equality" or "Non-equality" in between P and NP complexity classes.</h2>
+        <p><strong>Equality (P = NP)</strong>: This would imply that every problem
+          for which a solution can be verified quickly (in polynomial time, i.e.,
+          NP) can also be solved quickly (in polynomial time, i.e., P). This would
+          have profound implications for fields like cryptography, optimization,
+          and algorithm design, as many problems currently thought to be hard (like
+          NP-complete problems) would become tractable.</p>
+        <p><strong>Non-Equality (P ≠ NP)</strong>: This suggests that there are problems
+          for which solutions can be verified quickly but cannot be found quickly.
+          This maintains the status quo in computational theory and practice, with
+          many important problems remaining intractable.</p>
+        <h2>d) Show that the number of vertices with odd degree in a graph is always even&nbsp;</h2>
+        <p style="margin-left:0px;">Here is a proof of why the number of vertices with odd degree in a graph
+          must be even:</p>
+        <p style="margin-left:0px;"><strong>Total Degree Sum is Even</strong>: First, we note that the total
+          sum of all vertex degrees in a graph is an even number, since it is twice
+          the number of edges.</p>
+        <p style="margin-left:0px;"><strong>Sum of Even and Odd Degrees</strong>: This total sum is made up
+          of the degrees of each vertex. We can categorize these degrees into even
+          degrees and odd degrees.</p>
+        <p style="margin-left:0px;"><strong>Sum of Even Degrees is Even</strong>: The sum of degrees of vertices
+          with even degree is itself even, because the sum of any set of even numbers
+          is even.</p>
+        <p style="margin-left:0px;"><strong>Sum of Odd Degrees Must be Even</strong>: Since the total sum
+          of degrees (including both even and odd degrees) is even, and the sum of
+          the even degrees is even, the sum of the odd degrees must also be even.
+          This is because the sum of an even number and another even number is always
+          even.</p>
+        <p style="margin-left:0px;"><strong>Odd Degree Vertices Count is Even</strong>: For the sum of the
+          odd degrees to be even, there must be an even number of odd-degree vertices.
+          This is because the sum of an odd number of odd numbers is odd, and the
+          sum of an even number of odd numbers is even.</p>
+        <h2>e) Why Minimum tree spanning is tractable (Solvable in polynomial time), whereas travelling salesman problem is in NP?&nbsp;</h2>
+        <p>The Minimum Spanning Tree (MST) problem is tractable (solvable in polynomial
+          time) because efficient algorithms like Kruskal’s or Prim’s algorithm can
+          find the MST. In contrast, the Traveling Salesman Problem (TSP) is in NP
+          because no polynomial-time algorithm is known for solving it, and it is
+          NP-hard, meaning it is at least as hard as the hardest problems in NP.
+          The TSP's complexity arises from having to consider a potentially exponential
+          number of routes to find the shortest one.</p>
+        <h2>f) Whether this statement is true of false&nbsp;<br>“Some problems in NP complete can not be transformed into satisfiability problem in Polynomial time”</h2>
+        <p>False. One of the defining characteristics of NP-complete problems is
+          that every problem in NP can be transformed into any NP-complete problem
+          in polynomial time. The satisfiability problem (specifically, the Boolean
+          satisfiability problem) is the classic NP-complete problem to which all
+          other NP problems can be reduced.</p>
+        <h2>g) Mention the complexity of the quick sort algorithm for best and worst case.</h2>
+        <figure class="image">
+          <img src="Q1/image.png">
+        </figure>
+        <figure class="image">
+          <img src="Q1/1_image.png">
+        </figure>
+        <h2>h) What is a randomized algorithm?</h2>
+        <p>A randomized algorithm uses a degree of randomness as part of its logic.
+          It makes random choices during execution to solve problems, which can lead
+          to different outcomes on different runs, even with the same input. These
+          algorithms are often used when a deterministic approach is too slow, or
+          when an approximate solution is acceptable. Examples include the Monte
+          Carlo and Las Vegas algorithms.</p>
+        <h2>i) What is the complexity of Floyd-warshall algorithm?</h2>
+        <p>The Floyd-Warshall algorithm, used for finding shortest paths in a weighted
+          graph with positive or negative edge weights (without any negative cycles),
+          has a time complexity of O(n^3), where n is the number of vertices in the
+          graph. The algorithm is cubic due to its triple nested loops, each iterating
+          over all vertices.</p>
+        <h2>j) Write an Optimal Huffman Code for the following Set of Frequencies based on the first 8 fibonacci numbers?<br>a:1 b:1 c:2 d:3 e:5 f:8 g:13 h:21</h2>
+        <figure class="image">
+          <img src="Q1/huffman_tree_with_labels_v2.pn">
+        </figure>
+        <figure class="image">
+          <img src="Q1/2_image.png">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,86 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Goodness of fit Chi-Square Test</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The Goodness of Fit Chi-Square Test is a statistical hypothesis test used
+          to determine how well a set of observed frequencies fits or matches a set
+          of expected frequencies. It's commonly used when dealing with categorical
+          data to test whether the observed frequencies differ significantly from
+          what would be expected under a specific hypothesis.</p>
+        <h3 style="margin-left:0px;"><strong>Key Concepts of the Goodness of Fit Chi-Square Test:</strong></h3>
+        <p style="margin-left:0px;"><strong>Purpose</strong>: To test the hypothesis that the observed frequencies
+          in a categorical dataset are consistent with a set of expected frequencies
+          derived from a theoretical distribution.</p>
+        <p style="margin-left:0px;"><strong>Chi-Square Statistic</strong>: The test is based on the Chi-Square
+          statistic, calculated using the formula:</p>
+        <p><span class="math-tex">\(\chi^2=\sum \frac {(O_i-E_i)^2}{E_i}\)</span>
+        </p>
+        <p style="margin-left:0px;">where&nbsp;<span class="math-tex">\(O_i\)</span>&nbsp;is the observed
+          frequency for category&nbsp;<span class="math-tex">\(i\)</span>, and&nbsp;
+          <span
+          class="math-tex">\(E_i\)</span>&nbsp;is the expected frequency for category&nbsp;
+            <span
+            class="math-tex">\(i\)</span>.</p>
+        <p style="margin-left:0px;"><strong>Degrees of Freedom</strong>: Calculated as&nbsp;<span class="math-tex">\(\text{number&nbsp;of&nbsp;categories}−1\)</span>.
+          This is important for determining the critical value from the Chi-Square
+          distribution.</p>
+        <p style="margin-left:0px;"><strong>Assumptions</strong>:</p>
+        <ul>
+          <li>Observations are independent.</li>
+          <li>The sample size is sufficiently large (usually, each expected frequency
+            should be at least 5).</li>
+          <li>Data is in the form of frequencies or counts of categories.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Procedure</strong>:</p>
+        <ul>
+          <li><strong>Step 1</strong>: State the null hypothesis (e.g., "The observed
+            frequencies are consistent with the expected frequencies").</li>
+          <li><strong>Step 2</strong>: Calculate the expected frequencies based on the
+            null hypothesis.</li>
+          <li><strong>Step 3</strong>: Compute the Chi-Square statistic.</li>
+          <li><strong>Step 4</strong>: Compare the calculated Chi-Square statistic to
+            the critical value from the Chi-Square distribution table based on the
+            degrees of freedom and a chosen significance level (commonly 0.05).</li>
+          <li><strong>Step 5</strong>: Make a decision (reject or fail to reject the
+            null hypothesis).</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Interpretation</strong>:</p>
+        <ul>
+          <li><strong>Reject the Null Hypothesis</strong>: If the calculated Chi-Square
+            is greater than the critical value, it suggests that the observed frequencies
+            are significantly different from the expected frequencies.</li>
+          <li><strong>Fail to Reject the Null Hypothesis</strong>: If the calculated
+            Chi-Square is less than or equal to the critical value, there is no significant
+            difference between the observed and expected frequencies.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Applications:</strong></h3>
+        <ul>
+          <li><strong>Fit of Theoretical Distributions</strong>: Testing if a sample
+            comes from a specific distribution (like normal, Poisson, etc.).</li>
+          <li><strong>Homogeneity and Independence in Contingency Tables</strong>: Checking
+            if two categorical variables are independent.</li>
+          <li><strong>Population Genetics</strong>: Testing Hardy-Weinberg equilibrium.</li>
+          <li><strong>Market Research</strong>: Understanding consumer behavior in different
+            categories.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Limitations:</strong></h3>
+        <ul>
+          <li>Sensitivity to sample size.</li>
+          <li>Cannot be used with very small expected frequencies.</li>
+          <li>Only applicable to categorical data, not continuous data.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>

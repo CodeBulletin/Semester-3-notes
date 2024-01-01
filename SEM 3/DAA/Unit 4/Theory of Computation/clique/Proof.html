@@ -1,0 +1,86 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Proof</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">To prove that the Clique problem is NP-complete, we can use a reduction
+          from the 3-CNF SAT problem, which is already known to be NP-complete. The
+          Clique problem involves determining whether a given graph contains a clique
+          (a subset of vertices, all of which are connected to each other) of a certain
+          size. Here's how the proof is structured:</p>
+        <h3 style="margin-left:0px;"><strong>1. Clique is in NP</strong></h3>
+        <p style="margin-left:0px;">To show that the Clique problem is in NP, we need to demonstrate that
+          given a set of vertices, we can verify in polynomial time whether it forms
+          a clique of the required size. Verifying a clique involves checking if
+          every pair of vertices in the set is connected by an edge, which can be
+          done in polynomial time.</p>
+        <h3 style="margin-left:0px;"><strong>2. Clique is NP-hard</strong></h3>
+        <p style="margin-left:0px;">The more challenging part is proving that Clique is NP-hard. This is achieved
+          by reducing the 3-CNF SAT problem to the Clique problem in polynomial time.
+          The reduction goes as follows:</p>
+        <p style="margin-left:0px;"><strong>Step 1:</strong> Start with an instance of 3-CNF SAT. This instance
+          is a Boolean formula in conjunctive normal form where each clause contains
+          exactly three literals (variables or their negations).</p>
+        <p style="margin-left:0px;"><strong>Step 2:</strong> Construct a graph for the Clique problem based
+          on this 3-CNF formula. The graph is built using the following rules:</p>
+        <ul>
+          <li>For each clause in the 3-CNF formula, create a set of vertices in the
+            graph, each representing a literal in the clause.</li>
+          <li>Connect two vertices with an edge if and only if they belong to different
+            clauses and they are not contradictory (i.e., one is not the negation of
+            the other).</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Step 3:</strong> Set the size of the clique to be searched for
+          in the graph to the number of clauses in the 3-CNF formula.</p>
+        <p style="margin-left:0px;"><strong>Step 4:</strong> Analyze the equivalence:</p>
+        <ul>
+          <li>If the 3-CNF formula is satisfiable, then there exists a truth assignment
+            that satisfies all clauses. This corresponds to selecting one literal from
+            each clause to be true. In the graph, this means there will be a clique
+            of size equal to the number of clauses, as these literals do not contradict
+            each other.</li>
+        </ul>
+        <figure class="image">
+          <img src="Proof/image.png">
+        </figure>
+        <figure class="image">
+          <img src="Proof/1_image.png">
+        </figure>
+        <figure class="image">
+          <img src="Proof/2_image.png">
+        </figure>
+        <ul>
+          <li>Conversely, if there is a clique of the required size in the graph, it
+            means that there is a set of non-contradictory literals, one from each
+            clause, which would satisfy the 3-CNF formula.</li>
+        </ul>
+        <figure class="image">
+          <img src="Proof/3_image.png">
+        </figure>
+        <figure class="image">
+          <img>
+        </figure>
+        <figure class="image">
+          <img src="Proof/4_image.png">
+        </figure>
+        <p style="margin-left:0px;">This transformation can be done in polynomial time. Since we've transformed
+          an instance of 3-CNF SAT (an NP-complete problem) into an instance of the
+          Clique problem, and we can verify a solution to the Clique problem in polynomial
+          time, it follows that the Clique problem is NP-complete.</p>
+        <p style="margin-left:0px;">This proof is an important part of computational complexity theory, as
+          it establishes the computational difficulty of finding cliques in graphs,
+          a problem with many applications in computer science and network analysis.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

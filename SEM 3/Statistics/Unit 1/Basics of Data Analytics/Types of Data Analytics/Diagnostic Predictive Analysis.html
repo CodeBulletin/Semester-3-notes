@@ -32,149 +32,40 @@
             directly cause changes in another variable.</li>
         </ul>
         <h3 style="margin-left:0px;"><strong>Example: Customer Churn Analysis for a Subscription Service</strong></h3>
-        <p style="margin-left:0px;">Imagine you work for a subscription-based streaming service, and you have
-          a dataset containing information about customer behavior and subscription
-          status. The dataset includes columns such as:</p>
+        <p style="margin-left:0px;">In a streaming service scenario, diagnostic analysis is performed to understand
+          customer churn using a dataset with customer behavior and subscription
+          status. The dataset includes:</p>
         <ul>
-          <li>Customer ID: Unique identifier for each customer</li>
-          <li>Subscription Start Date: Date when the customer subscribed</li>
-          <li>Subscription End Date: Date when the subscription ended (if applicable)</li>
-          <li>Number of Logins: How many times the customer logged in</li>
-          <li>Total Watch Time: Total time spent watching content</li>
-          <li>Churn Status: Whether the customer churned (cancelled their subscription)
-            or not</li>
+          <li>Customer ID</li>
+          <li>Subscription Start and End Dates</li>
+          <li>Number of Logins</li>
+          <li>Total Watch Time</li>
+          <li>Churn Status (Yes/No)</li>
         </ul>
-        <p style="margin-left:0px;">Your goal is to perform a diagnostic analysis to understand why some customers
-          are churning and identify factors contributing to churn.</p>
-        <p style="margin-left:0px;"><strong>Feature Comparison:</strong> Compare the characteristics of customers
-          who churned with those who did not:</p>
-        <ul>
-          <li>Compare average number of logins and total watch time between churned
-            and retained customers.</li>
-          <li>Examine if there are patterns in subscription start and end dates for
-            customers who churned.</li>
-        </ul>
-        <p style="margin-left:0px;"><strong>Correlation Analysis:</strong> Identify correlations between variables
-          and churn:</p>
-        <ul>
-          <li>Calculate correlations between variables like logins, watch time, and
-            churn status.</li>
-          <li>Determine if customers who log in more frequently have a lower churn rate.</li>
-        </ul>
-        <p style="margin-left:0px;"><strong>Hypothesis Testing:</strong> Formulate and test hypotheses to uncover
-          relationships:</p>
-        <ul>
-          <li>Hypothesis: Customers who have a longer total watch time are less likely
-            to churn.</li>
-          <li>Conduct a statistical test to determine if there is a significant difference
-            in watch time between churned and retained customers.</li>
-        </ul>
-        <p style="margin-left:0px;"><strong>Customer Segmentation:</strong> Segment customers based on behavior
-          and characteristics:</p>
-        <ul>
-          <li>Group customers by usage patterns (e.g., heavy users, occasional users).</li>
-          <li>Analyze churn rates within different customer segments.</li>
-        </ul>
-        <p style="margin-left:0px;"><strong>Feedback Analysis:</strong> If available, analyze feedback or survey
-          data from churned customers:</p>
-        <ul>
-          <li>Identify common reasons cited for cancellation (e.g., content quality,
-            pricing).</li>
-          <li>Determine if specific issues are consistently mentioned.</li>
-        </ul>
-        <p style="margin-left:0px;"><strong>Predictive Modeling:</strong> Build a predictive model to forecast
-          churn based on various factors:</p>
-        <ul>
-          <li>Use machine learning algorithms to predict which customers are likely
-            to churn.</li>
-          <li>Identify key features contributing to the model's predictions.</li>
-        </ul>
-        <p style="margin-left:0px;"><strong>Visualization:</strong> Create visualizations to present insights:</p>
-        <ul>
-          <li>Scatter plots showing the relationship between watch time and churn status.</li>
-          <li>Box plots comparing login frequencies between churned and retained customers.</li>
-        </ul>
-        <p style="margin-left:0px;">The outcome of your diagnostic analysis will provide a deeper understanding
-          of the factors influencing customer churn. This understanding can guide
-          strategies to reduce churn rates, such as improving content quality, enhancing
-          user experience, or offering personalized recommendations to encourage
-          customer engagement.</p>
-        <h2 style="margin-left:0px;"><strong>Predictive Analysis</strong></h2>
-        <p style="margin-left:0px;">Predictive analysis, on the other hand, involves using historical data
-          to make predictions or forecasts about future events or outcomes. This
-          type of analysis leverages patterns and relationships identified in the
-          data to build models that can make predictions about what might happen
-          next. Predictive analysis often uses statistical and machine learning techniques
-          to create these models.</p>
-        <p style="margin-left:0px;">In predictive analysis, you might use techniques such as:</p>
-        <ul>
-          <li><strong>Regression Analysis:</strong> Modeling the relationship between
-            variables to predict numerical outcomes.</li>
-          <li><strong>Time Series Analysis:</strong> Forecasting future values based
-            on historical time-based data.</li>
-          <li><strong>Classification Algorithms:</strong> Predicting categorical outcomes
-            by classifying data into predefined classes or categories.</li>
-        </ul>
-        <p style="margin-left:0px;">In summary, diagnostic analysis focuses on understanding past events and
-          their causes, while predictive analysis aims to forecast future events
-          based on historical data. Both types of analysis play crucial roles in
-          data-driven decision-making and can be used together to gain a comprehensive
-          understanding of a situation and make informed choices for the future.</p>
-        <p
-        style="margin-left:0px;"><strong>Example: Predicting Customer Churn for a Telecom Company</strong>
-          </p>
-          <p style="margin-left:0px;">Imagine you work for a telecommunications company, and you have a dataset
-            containing information about customer behaviors and whether they churned
-            (cancelled their service) or not. The dataset includes columns such as:</p>
-          <ul>
-            <li>Customer ID: Unique identifier for each customer</li>
-            <li>Contract Length: Duration of the customer's contract</li>
-            <li>Monthly Charges: Monthly charges incurred by the customer</li>
-            <li>Total Charges: Total charges incurred by the customer over the contract
-              period</li>
-            <li>Number of Support Calls: How many times the customer contacted customer
-              support</li>
-            <li>Churn Status: Whether the customer churned (yes/no)</li>
-          </ul>
-          <p style="margin-left:0px;">Your objective is to perform predictive analysis to predict which customers
-            are likely to churn in the future.</p>
-          <p style="margin-left:0px;"><strong>Data Preprocessing:</strong> Clean the data, handle missing values,
-            and encode categorical variables.</p>
-          <p style="margin-left:0px;"><strong>Feature Selection:</strong> Identify relevant features that might
-            impact churn prediction:</p>
-          <ul>
-            <li>Use domain knowledge to select features that are likely to be influential
-              (e.g., contract length, charges, support calls).</li>
-          </ul>
-          <p style="margin-left:0px;"><strong>Data Splitting:</strong> Split the dataset into training and testing
-            sets to evaluate model performance.</p>
-          <p style="margin-left:0px;"><strong>Model Selection:</strong> Choose a suitable machine learning algorithm
-            for churn prediction. For this example, let's choose a logistic regression
-            model.</p>
-          <p style="margin-left:0px;"><strong>Model Training:</strong> Train the logistic regression model on
-            the training data using historical churn data.</p>
-          <p style="margin-left:0px;"><strong>Model Evaluation:</strong> Evaluate the model's performance on
-            the testing data using metrics like accuracy, precision, recall, and F1-score.</p>
-          <p
-          style="margin-left:0px;"><strong>Feature Importance:</strong> Analyze feature importance to understand
-            which factors are driving the model's predictions.</p>
-            <p style="margin-left:0px;"><strong>Prediction:</strong> Apply the trained model to new, incoming customer
-              data to predict whether they are likely to churn in the future.</p>
-            <p style="margin-left:0px;"><strong>Actionable Insights:</strong> Use the predictions to take proactive
-              actions:</p>
-            <ul>
-              <li>Identify customers with a high likelihood of churning and offer them incentives
-                or discounts.</li>
-              <li>Target specific interventions (e.g., improved customer service) to customers
-                at risk of churning.</li>
-            </ul>
-            <p style="margin-left:0px;"><strong>Continuous Monitoring:</strong> Regularly update and retrain the
-              model as new data becomes available to ensure its accuracy and relevance.</p>
-            <p
-            style="margin-left:0px;">The outcome of your predictive analysis will be a model that can predict
-              customer churn based on the given features. This model can help the telecom
-              company take preemptive measures to retain valuable customers, leading
-              to improved customer satisfaction and reduced churn rates.</p>
+        <p style="margin-left:0px;"><strong>Diagnostic Analysis Steps:</strong>
+        </p>
+        <ol>
+          <li><strong>Feature Comparison:</strong> Contrast characteristics of churned
+            customers with retained ones, like average logins and watch time.</li>
+          <li><strong>Correlation Analysis:</strong> Calculate correlations between variables
+            (logins, watch time) and churn status.</li>
+          <li><strong>Hypothesis Testing:</strong> Test if longer watch time correlates
+            with lower churn rates.</li>
+          <li><strong>Customer Segmentation:</strong> Group customers by usage patterns
+            and analyze churn rates in each segment.</li>
+          <li><strong>Feedback Analysis:</strong> If available, examine feedback from
+            churned customers for common cancellation reasons.</li>
+          <li><strong>Predictive Modeling:</strong> Develop a model to predict churn
+            using machine learning, identifying key predictive features.</li>
+          <li><strong>Visualization:</strong> Create visualizations, such as scatter
+            plots of watch time vs. churn and box plots of login frequencies.</li>
+        </ol>
+        <p style="margin-left:0px;">The analysis aims to uncover factors contributing to churn, guiding strategies
+          for reducing churn rates by improving content, user experience, or personalized
+          engagement.</p>
+        <p style="margin-left:auto;">&nbsp;</p>
+        <p style="margin-left:auto;">&nbsp;</p>
+        <p>&nbsp;</p>
       </div>
     </div>
   </body>

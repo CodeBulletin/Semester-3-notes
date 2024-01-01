@@ -1,0 +1,77 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Refinement of solutions</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Refinement of solutions in solving systems of linear equations is a technique
+          used to improve the accuracy of a solution obtained by numerical methods.
+          Numerical solutions to linear systems, such as those obtained through methods
+          like LU Decomposition, Gaussian Elimination, or iterative methods, can
+          be imprecise due to rounding errors and other computational limitations.
+          Refinement steps help reduce these errors and provide a more accurate solution.
+          Here's a general approach to refining solutions:</p>
+        <h3 style="margin-left:0px;"><strong>Step 1: Obtain an Initial Solution</strong></h3>
+        <p style="margin-left:0px;">First, solve the system using your chosen numerical method to get an initial
+          solution. Let's denote this solution as&nbsp;<span class="math-tex">\(x_0\)</span>
+        </p>
+        <h3 style="margin-left:0px;"><strong>Step 2: Calculate the Residual</strong></h3>
+        <p style="margin-left:0px;">The residual vector,&nbsp;<span class="math-tex">\(r\)</span>, is the
+          difference between the right-hand side of the equation and the product
+          of the matrix and the initial solution. For a system&nbsp;<span class="math-tex">\(Ax=b\)</span>,
+          the residual is calculated as:</p>
+        <p style="margin-left:0px;"><span class="math-tex">\(r=b-Ax_0\)</span>
+        </p>
+        <h3 style="margin-left:0px;"><strong>Step 3: Solve for the Error</strong></h3>
+        <p style="margin-left:0px;">Treat the residual as a new right-hand side and solve the system&nbsp;
+          <span
+          class="math-tex">\(Ae=r\)</span>&nbsp;to find the error term&nbsp;<span class="math-tex">\(e\)</span>.
+            You can use the same decomposition (e.g., LU) used to solve the original
+            system.</p>
+        <h3 style="margin-left:0px;"><strong>Step 4: Update the Solution</strong></h3>
+        <p style="margin-left:0px;">Adjust your initial solution with the error term:</p>
+        <p style="margin-left:0px;"><span class="math-tex">\(x_1=x_0+e\)</span>
+        </p>
+        <p style="margin-left:0px;">This updated solution&nbsp;<span class="math-tex">\(x_1\)</span>​ is typically
+          more accurate than the initial solution&nbsp;<span class="math-tex">\(x_0\)</span>​.</p>
+        <h3
+        style="margin-left:0px;"><strong>Step 5: Iterate if Necessary</strong>
+          </h3>
+          <p style="margin-left:0px;">If the residual is still larger than your desired tolerance, you can repeat
+            the refinement process with&nbsp;<span class="math-tex">\(x_1\)</span>&nbsp;as
+            the new initial solution.</p>
+          <h3 style="margin-left:0px;"><strong>Considerations</strong></h3>
+          <ul>
+            <li><strong>Tolerance:</strong> Before starting, decide on a tolerance level
+              for the accuracy of your solution. This will dictate when you can stop
+              the refinement process.</li>
+            <li><strong>Convergence:</strong> Check if the refinement is converging towards
+              a solution. If the residual does not decrease significantly after a few
+              iterations, there may be issues with the system or the numerical method
+              used.</li>
+            <li><strong>Stability:</strong> Be aware that not all problems are well-suited
+              for refinement. In some cases, the system of equations might be ill-conditioned,
+              meaning that small errors in data can lead to large errors in the solution.</li>
+            <li><strong>Computational Cost:</strong> Each refinement step involves additional
+              computations. Balance the need for accuracy with the available computational
+              resources.</li>
+          </ul>
+          <p style="margin-left:0px;">Refinement is particularly useful in engineering and scientific computations
+            where high accuracy is required. It's a powerful tool to enhance the reliability
+            of solutions obtained from numerical methods.</p>
+          <p style="margin-left:auto;">&nbsp;</p>
+          <p style="margin-left:auto;">&nbsp;</p>
+          <p>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+
+</html>

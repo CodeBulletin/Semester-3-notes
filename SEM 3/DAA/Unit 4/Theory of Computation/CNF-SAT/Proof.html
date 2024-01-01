@@ -1,0 +1,64 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Proof</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">To prove that CNF-SAT (Conjunctive Normal Form Satisfiability) is NP-complete,
+          we typically follow two main steps:</p>
+        <p style="margin-left:0px;"><strong>Show that CNF-SAT is in NP:</strong> This means demonstrating that
+          any proposed solution to a CNF-SAT problem can be checked quickly (in polynomial
+          time).</p>
+        <p style="margin-left:0px;"><strong>Show that CNF-SAT is NP-hard:</strong> This involves proving that
+          any problem in NP can be reduced to CNF-SAT in polynomial time. The standard
+          approach is to use a known NP-complete problem, typically SAT (Satisfiability
+          Problem), and show that it can be transformed into CNF-SAT.</p>
+        <p style="margin-left:0px;">Let's go through each step:</p>
+        <h3 style="margin-left:0px;"><strong>1. CNF-SAT is in NP</strong></h3>
+        <p style="margin-left:0px;">To show that CNF-SAT is in NP, we need to demonstrate that given a particular
+          assignment of variables, we can verify whether this assignment satisfies
+          the CNF formula in polynomial time. A CNF formula is a conjunction (AND)
+          of clauses, where each clause is a disjunction (OR) of literals (a variable
+          or its negation).</p>
+        <p style="margin-left:0px;">Given an assignment, we can check each clause by verifying if at least
+          one literal in the clause evaluates to true. Since each literal can be
+          checked in constant time and the number of literals in a formula is polynomial
+          in the size of the formula, this process is polynomial in time. Therefore,
+          CNF-SAT is in NP.</p>
+        <h3 style="margin-left:0px;"><strong>2. CNF-SAT is NP-hard</strong></h3>
+        <p style="margin-left:0px;">To prove NP-hardness, we use a reduction from the SAT problem, which is
+          known to be NP-complete. SAT involves determining if there is an assignment
+          of variables that satisfies a given Boolean formula. The goal is to transform
+          any instance of SAT into an equivalent instance of CNF-SAT.</p>
+        <p style="margin-left:0px;">Here's a sketch of how this transformation can work:</p>
+        <ul>
+          <li><strong>Step 1:</strong> Take any Boolean formula from the SAT problem.
+            This formula might not be in CNF.</li>
+          <li><strong>Step 2:</strong> Convert this formula into CNF using standard logical
+            equivalences (like De Morgan's laws and distribution laws). For example,
+            we can transform expressions like&nbsp;
+            <br><strong>(A AND B) OR C</strong> into an equivalent CNF form like&nbsp;
+            <br><strong>(A OR C) AND (B OR C).</strong>
+          </li>
+        </ul>
+        <p style="margin-left:0px;">This transformation can be done in polynomial time. The resulting CNF
+          formula is satisfiable if and only if the original SAT formula is satisfiable.
+          Therefore, we have shown that any problem in SAT can be reduced to CNF-SAT
+          in polynomial time.</p>
+        <p style="margin-left:0px;">Since we've shown that CNF-SAT is both in NP and NP-hard, it follows that
+          CNF-SAT is NP-complete. This proof is significant because it not only establishes
+          the computational complexity of CNF-SAT but also lays the groundwork for
+          the NP-completeness of many other problems through further reductions.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

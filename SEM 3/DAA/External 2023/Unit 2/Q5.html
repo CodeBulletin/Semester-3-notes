@@ -1,0 +1,70 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Q5</h1>
+
+      <div class="ck-content">
+        <h2>Explain KMP Algorithm for String Matching. Illustrate its working when the text is aaabaadaabaaa and the pattern is aabaa? Repeat the process for Naive string pattern matching algorithm</h2>
+        <p><span class="text-big"><strong>KMP Algorithm</strong></span>
+        </p>
+        <p style="margin-left:0px;">KMP Algorithm is a string matching algorithm where we are given a string
+          text and another string pattern and then we have to find the occurrence
+          of patteren in the text</p>
+        <p style="margin-left:0px;">The key idea behind the KMP algorithm is to avoid redundant character
+          comparisons by using a precomputed partial match table, often referred
+          to as the "failure function" or "prefix function." This table is used to
+          determine how far to shift the pattern during the search, thus avoiding
+          comparing the same characters multiple times.</p>
+        <p style="margin-left:0px;">Here's a high-level overview of how the KMP algorithm works:</p>
+        <p style="margin-left:0px;"><strong>Preprocessing</strong>:</p>
+        <ul>
+          <li>Create a prefix function (or failure function) for the pattern string.
+            This function stores the length of the longest proper prefix of the pattern
+            that is also a suffix of that prefix. The goal is to use this information
+            to avoid unnecessary character comparisons during the search.</li>
+        </ul>
+        <p style="margin-left:0px;"><strong>Searching</strong>:</p>
+        <ul>
+          <li>Start with both the text and pattern pointers at the beginning.</li>
+          <li>Compare the characters of the text and pattern:
+            <ul>
+              <li>If they match, increment both pointers.</li>
+              <li>If they don't match, use the prefix function to determine how far to shift
+                the pattern. This allows the algorithm to skip some characters in the text
+                without missing potential matches.</li>
+            </ul>
+          </li>
+          <li>Repeat the comparison and shifting until you reach the end of the text
+            or find a full match of the pattern.</li>
+        </ul>
+        <p style="margin-left:0px;">The key to the KMP algorithm's efficiency is the ability to calculate
+          how far the pattern can be shifted during a mismatch efficiently using
+          the prefix function. This allows the algorithm to avoid redundant character
+          comparisons and, in the worst case, performs pattern matching in linear
+          time with respect to the length of the text and pattern.</p>
+        <p style="margin-left:0px;"><span class="text-big"><strong>KMP</strong></span>
+        </p>
+        <figure class="image">
+          <img src="Q5/2_image.jpg">
+        </figure>
+        <figure class="image">
+          <img src="Q5/1_image.jpg">
+        </figure>
+        <p><span class="text-big"><strong>Naive</strong></span>
+        </p>
+        <figure class="image">
+          <img src="Q5/image.jpg">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,114 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Sorting Comparisons</h1>
+
+      <div class="ck-content">
+        <figure class="table" style="width:900px;">
+          <table style="background-color:rgb(52, 53, 65);border:0px solid inherit;">
+            <thead>
+              <tr>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Algorithm</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Worst Case</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Average Case</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Best Case</strong>
+                </th>
+                <th>Space Complexity</th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:1px;padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>In-Place</strong>
+                </th>
+                <th style="background-color:rgba(236, 236, 241, 0.2);border:1px solid rgb(217, 217, 227);padding:0.25rem 0.75rem;vertical-align:bottom;"><strong>Stable</strong>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Bubble Sort</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n²)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n²)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n)</td>
+                <td>O(1)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Yes</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Yes</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Insertion Sort</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n²)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n²)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n)</td>
+                <td>O(1)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Yes</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Yes</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Selection Sort</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n²)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n²)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n²)</td>
+                <td>O(1)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Yes</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">No</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Quick Sort</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n²)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n log n)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n log n)</td>
+                <td>O(log n)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Yes</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">No</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Merge Sort</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n log n)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n log n)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n log n)</td>
+                <td>O(n)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">No</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Yes</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Count Sort</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n + k)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n + k)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n + k)</td>
+                <td>O(n + k)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">No</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Yes</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Bucket Sort</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n log n)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n + n²/k + k)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(n + n²/k + k)</td>
+                <td>O(n + k)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">No</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Yes</td>
+              </tr>
+              <tr>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Radix Sort</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(nk)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(nk)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">O(nk)</td>
+                <td>O(nk)</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:0px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">No</td>
+                <td style="border-bottom-width:1px;border-color:rgb(217, 217, 227);border-left-width:1px;border-right-width:1px;border-style:solid;border-top-width:0px;padding:0.25rem 0.75rem;">Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

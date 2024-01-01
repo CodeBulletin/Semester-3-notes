@@ -49,6 +49,42 @@
               <p
               style="margin-left:0px;"><strong>Graphs With Pendant Nodes: </strong>Some graphs have nodes with
                 1 degree these type of graphs do not have a Hamiltonian circuit</p>
+                <p style="margin-left:0px;"><strong>Algorithm</strong>:</p>
+                <ol>
+                  <li style="margin-left:0px;"><strong>Choose a Starting Point:</strong> Begin at any vertex.</li>
+                  <li
+                  style="margin-left:0px;"><strong>Explore Paths Recursively:</strong>
+                    <ul>
+                      <li>From the current vertex, try to explore a path to a vertex that has not
+                        yet been visited.</li>
+                      <li>If there is an edge to an unvisited vertex, move to that vertex and mark
+                        it as visited.</li>
+                    </ul>
+                    </li>
+                    <li style="margin-left:0px;"><strong>Check for a Circuit:</strong>
+                      <ul>
+                        <li>If you have visited all the vertices and there is an edge from the last
+                          vertex to the starting vertex, you have found a Hamiltonian circuit.</li>
+                        <li>If you reach a vertex and there is no unvisited adjacent vertex, backtrack
+                          to the previous vertex and try a different path.</li>
+                      </ul>
+                    </li>
+                    <li style="margin-left:0px;"><strong>Backtracking:</strong>
+                      <ul>
+                        <li>If you can't extend the path from any of the visited vertices, return
+                          to the previous step and try a different path.</li>
+                        <li>Continue this process until you either find a Hamiltonian circuit or exhaust
+                          all possibilities.</li>
+                      </ul>
+                    </li>
+                    <li style="margin-left:0px;"><strong>Return the Result:</strong>
+                      <ul>
+                        <li>If a Hamiltonian circuit is found, return it.</li>
+                        <li>If no circuit is found after exploring all possibilities, conclude that
+                          no Hamiltonian circuit exists for the given graph.</li>
+                      </ul>
+                    </li>
+                </ol>
       </div>
     </div>
   </body>

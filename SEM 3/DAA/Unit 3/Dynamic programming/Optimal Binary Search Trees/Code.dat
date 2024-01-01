@@ -1,22 +1,24 @@
-def optimal_bst(keys, freq):
-    n = len(keys)
-    
-    # Create a 2D table to store the optimal costs
-    cost = [[0] * n for _ in range(n)]
-    
-    # Initialize the diagonal elements of the table with the frequencies
+def optimalBST(keys, freq, n):
+    # Initialize weight and cost matrices
+    w = [[0 for x in range(n+1)] for y in range(n+1)]
+    c = [[0 for x in range(n+1)] for y in range(n+1)]
+    r = [[0 for x in range(n+1)] for y in range(n+1)]
+
+    # Calculate weights
     for i in range(n):
-        cost[i][i] = freq[i]
-    
-    # Fill the table diagonally
-    for L in range(2, n+1):
-        for i in range(n-L+1):
-            j = i + L - 1
-            cost[i][j] = float('inf')
-            
-            # Calculate the cost for each possible root in the range
-            for r in range(i, j+1):
-                c = sum(freq[i:j+1]) + (cost[i][r-1] if r > i else 0) + (cost[r+1][j] if r < j else 0)
-                cost[i][j] = min(cost[i][j], c)
-    
-    return cost[0][n-1]
+        w[i][i+1] = freq[i]
+        for j in range(i+2, n+1):
+            w[i][j] = w[i][j-1] + freq[j-1]
+
+    # Compute optimal costs
+    for length in range(1, n+1):  # Chain length
+        for i in range(n-length+1):
+            j = i + length
+            c[i][j] = float('inf')
+            for k in range(i, j):  # Try making k the root
+                cost = c[i][k] + c[k+1][j] + w[i][j]
+                if cost < c[i][j]:
+                    c[i][j] = cost
+                    r[i][j] = k+1
+                    
+    return c[0][n], r

@@ -1,0 +1,93 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>proof</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Cook's Theorem, named after the mathematician Stephen Cook, is a fundamental
+          theorem in the field of computational complexity theory. Formulated in
+          1971, this theorem established the concept of NP-completeness, which has
+          since been a central topic in computer science. Here's a summary of what
+          Cook's Theorem states and its significance:</p>
+        <h3 style="margin-left:0px;"><strong>Statement of Cook's Theorem</strong></h3>
+        <p style="margin-left:0px;">Cook's Theorem asserts that the Boolean satisfiability problem (often
+          referred to as SAT) is NP-complete. In other words, SAT is at least as
+          hard as the hardest problems in NP, and it is itself a problem in NP. The
+          formal statement of Cook's Theorem is:</p>
+        <p style="margin-left:0px;"><strong>"The SAT problem is NP-complete."</strong>
+        </p>
+        <p style="margin-left:0px;">This means two things:</p>
+        <ol>
+          <li><strong>SAT is in NP:</strong> A solution to a SAT problem (a truth assignment
+            to variables) can be verified quickly (in polynomial time).</li>
+          <li><strong>SAT is NP-hard:</strong> Any problem in NP can be reduced to SAT
+            in polynomial time.</li>
+        </ol>
+        <h2 style="margin-left:0px;">Proving Cook's Theorem</h2>
+        <p style="margin-left:0px;">Proving Cook's Theorem involves showing that the Boolean Satisfiability
+          Problem (SAT) is NP-complete. The proof is technical and involves two main
+          parts:</p>
+        <p style="margin-left:0px;"><strong>Proving SAT is in NP:</strong> This is straightforward. Given a
+          Boolean formula and an assignment of truth values to variables, we can
+          verify in polynomial time whether the formula is satisfied (i.e., evaluates
+          to true).</p>
+        <p style="margin-left:0px;"><strong>Proving SAT is NP-hard:</strong> This is the crux of the proof.
+          It involves showing that any problem in NP can be reduced to SAT. This
+          is done by simulating the computation of a nondeterministic Turing machine
+          (which defines NP problems) using a Boolean formula.</p>
+        <p style="margin-left:0px;">Here's a high-level overview of how the NP-hardness proof works:</p>
+        <h3
+        style="margin-left:0px;"><strong>Constructing the SAT Instance from a General NP Problem</strong>
+          </h3>
+          <p style="margin-left:0px;"><strong>Nondeterministic Turing Machine (NTM):</strong> Consider an NTM
+            that decides a problem in NP. Without loss of generality, assume this NTM
+            runs in polynomial time with respect to the input size.</p>
+          <p style="margin-left:0px;"><strong>Simulation with Boolean Formula:</strong>
+          </p>
+          <ul>
+            <li><strong>Encoding the Computation:</strong> We encode the entire computation
+              of the NTM as a Boolean formula. This includes the state of the machine,
+              the symbols on the tape, and the head position at each step.</li>
+            <li><strong>Time and Space Polynomial:</strong> Since the NTM runs in polynomial
+              time, the number of steps in the computation is polynomial in the size
+              of the input. The tape used by the machine is also polynomially bounded.</li>
+            <li><strong>Variables and Clauses:</strong> For each tape cell, head position,
+              and time step, we create Boolean variables. We then construct clauses that
+              represent the transition function of the NTM. These clauses ensure that
+              the variables correctly simulate the behavior of the NTM.</li>
+            <li><strong>Initial and Final Conditions:</strong> Additional clauses represent
+              the initial state (input) of the machine and the accepting condition.</li>
+          </ul>
+          <p style="margin-left:0px;"><strong>Satisfiability Implies Solution:</strong>
+          </p>
+          <ul>
+            <li>If the resulting Boolean formula is satisfiable, it encodes a valid computation
+              of the NTM that leads to an accepting state. This means the original problem
+              instance is a "yes" instance.</li>
+            <li>Conversely, if the NTM accepts the input, there exists a sequence of transitions
+              leading to an accepting state, which can be encoded as a satisfying assignment
+              to the Boolean formula.</li>
+          </ul>
+          <h3 style="margin-left:0px;"><strong>Conclusion</strong></h3>
+          <p style="margin-left:0px;">The transformation from any NP problem to a SAT instance is done in polynomial
+            time (since both the number of variables and the size of the formula are
+            polynomial in the size of the NTM's input). Hence, any problem in NP can
+            be reduced to SAT, proving that SAT is NP-hard.</p>
+          <p style="margin-left:0px;">Since SAT is both in NP and NP-hard, it is NP-complete, which is the essence
+            of Cook's Theorem.</p>
+          <p style="margin-left:0px;">This proof was groundbreaking because it provided the first concrete example
+            of an NP-complete problem and established a method for proving the NP-completeness
+            of other problems.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

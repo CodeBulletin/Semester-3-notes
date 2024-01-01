@@ -12,68 +12,36 @@
        <h1>K-means clustering</h1>
 
       <div class="ck-content">
-        <p>K-means clustering is a popular and simple unsupervised machine learning
-          algorithm used for partitioning a dataset into K distinct, non-overlapping
-          clusters. The goal is to group the data points into clusters such that
-          the total within-cluster variation (or inertia) is minimized. Here are
-          the key aspects of K-means clustering:</p>
-        <p><strong>The Basic Idea:</strong>
-        </p>
-        <ul>
-          <li>In K-means clustering, you want to classify data points into a predetermined
-            number of clusters (K).</li>
-          <li>The algorithm assigns each data point to the cluster whose center (mean)
-            is nearest. The mean of each cluster is its "centroid".</li>
-        </ul>
-        <p><strong>How It Works:</strong>
-        </p>
-        <ul>
-          <li><strong>Initialization:</strong> Start by randomly assigning K points as
-            cluster centers (centroids).</li>
-          <li><strong>Assignment Step:</strong> Assign each data point to the nearest
-            cluster center. The 'nearest' is usually defined using Euclidean distance.</li>
-          <li><strong>Update Step:</strong> Recalculate the centroids as the mean of
-            all data points in a cluster.</li>
-          <li><strong>Iteration:</strong> Repeat the assignment and update steps until
-            the centroids no longer change significantly, indicating that the clusters
-            are relatively stable and the algorithm has converged.</li>
-        </ul>
-        <p><strong>Choosing K:</strong>
-        </p>
-        <ul>
-          <li>One of the challenges with K-means is determining the value of K. It's
-            not always clear how many clusters should be used.</li>
-          <li>Methods like the Elbow Method, Silhouette Analysis, and the Gap Statistic
-            are often used to estimate the optimal number of clusters.</li>
-        </ul>
-        <p><strong>Applications:</strong>
-        </p>
-        <ul>
-          <li>K-means clustering is used in a wide range of applications, including
-            market segmentation, document clustering, image segmentation, and pattern
-            recognition.</li>
-        </ul>
-        <p><strong>Strengths and Limitations:</strong>
-        </p>
-        <ul>
-          <li><strong>Strengths:</strong> It's a simple and fast algorithm, especially
-            effective for large datasets.</li>
-          <li><strong>Limitations:</strong> It assumes spherical clusters and is sensitive
-            to the initial choice of centroids. It can also struggle with clusters
-            of different sizes and densities.</li>
-        </ul>
-        <p><strong>Variants:</strong>
-        </p>
-        <ul>
-          <li>Variants like K-means++, which provides a smarter initialization of the
-            centroids, and Mini Batch K-means, which uses small random batches of data
-            to speed up computation, are often used to improve performance.</li>
-        </ul>
-        <p>K-means clustering is a fundamental method in the field of data mining
-          and machine learning, known for its simplicity and efficiency. However,
-          the quality of the results from K-means clustering is heavily dependent
-          on the initial placement of the centroids and the value of K chosen, which
-          requires careful consideration and sometimes multiple runs of the algorithm.</p>
+        <p style="margin-left:0px;">K-means clustering is an unsupervised machine learning algorithm for dividing
+          a dataset into K distinct clusters, aiming to minimize within-cluster variation.
+          Key aspects include:</p>
+        <ol>
+          <li><strong>Basic Idea:</strong> Data points are classified into K clusters.
+            Points are assigned to the nearest cluster center, known as the centroid.</li>
+          <li><strong>Process:</strong>
+            <ul>
+              <li><strong>Initialization:</strong> Randomly select K points as initial centroids.</li>
+              <li><strong>Assignment:</strong> Assign each point to the nearest centroid,
+                typically using Euclidean distance.</li>
+              <li><strong>Update:</strong> Recalculate centroids as the mean of all points
+                in a cluster.</li>
+              <li><strong>Iteration:</strong> Repeat assignment and update until centroids
+                stabilize, indicating convergence.</li>
+            </ul>
+          </li>
+          <li><strong>Choosing K:</strong> The optimal number of clusters (K) can be
+            estimated using methods like the Elbow Method, Silhouette Analysis, or
+            the Gap Statistic.</li>
+          <li><strong>Applications:</strong> Used in market segmentation, document clustering,
+            image segmentation, and pattern recognition.</li>
+          <li><strong>Strengths and Limitations:</strong> Simple and fast, suitable for
+            large datasets, but assumes spherical clusters and is sensitive to initial
+            centroids and cluster variability.</li>
+          <li><strong>Variants:</strong> K-means++ improves initial centroid placement,
+            while Mini Batch K-means speeds up computation with small random data batches.</li>
+        </ol>
+        <p style="margin-left:0px;">K-means is fundamental in data mining and machine learning but requires
+          careful consideration for centroid placement and K selection.</p>
       </div>
     </div>
   </body>

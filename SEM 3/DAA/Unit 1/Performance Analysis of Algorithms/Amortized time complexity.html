@@ -1,0 +1,42 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Amortized time complexity</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">Amortized time complexity is a concept in computer science for analyzing
+          an algorithm's average time per operation over a series of operations.
+          It's useful for algorithms with occasional costly operations amid mostly
+          faster ones, as it spreads the cost of expensive operations across the
+          entire sequence, giving a more accurate average performance measure.</p>
+        <p
+        style="margin-left:0px;">Three methods to calculate amortized time complexity are:</p>
+          <ol>
+            <li style="margin-left:0px;"><strong>Aggregate Analysis</strong>: Totals the cost of a series of operations
+              and divides by the number of operations. It works well when operations
+              are similar and their costs can be easily summed.</li>
+            <li style="margin-left:0px;"><strong>The Accounting Method</strong>: Assigns different costs to operations,
+              with some overpaying to cover future expensive operations, akin to saving
+              money for future costs.</li>
+            <li style="margin-left:0px;"><strong>The Potential Method</strong>: Similar to the concept of potential
+              energy in physics, it assigns a potential to the data structure after each
+              operation. The potential represents stored work that can be used for future
+              operations. The amortized cost includes the actual cost plus the change
+              in potential.</li>
+          </ol>
+          <p style="margin-left:0px;">Amortized time complexity is particularly relevant for data structures
+            like binary heaps, hash tables, and splay trees, where infrequent but costly
+            operations don't significantly affect overall performance.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

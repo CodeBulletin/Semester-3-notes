@@ -18,20 +18,26 @@
           while keeping the total weight within a given capacity.</p>
         <p>Here's a high-level overview of the 0/1 Knapsack Problem:</p>
         <ol>
-          <li>Given a set of items, each with a weight and value, and a knapsack with
-            a maximum weight capacity.</li>
-          <li>The goal is to select a subset of items to maximize the total value while
-            ensuring that the total weight does not exceed the knapsack's capacity.</li>
-          <li>Each item can either be included (1) or excluded (0) in the knapsack.
-            Hence, it is called the 0/1 Knapsack Problem because each item has a binary
-            choice.</li>
-          <li>The problem can be solved using dynamic programming, where a table is
-            constructed to store the maximum value that can be achieved for different
-            subproblems.</li>
-          <li>The table is filled in a bottom-up manner, considering each item and each
-            possible weight capacity.</li>
-          <li>The final entry in the table represents the maximum value that can be
-            achieved with the given items and knapsack capacity.</li>
+          <li style="margin-left:0px;"><strong>Initialize a table:</strong> Create a table where the rows represent
+            items and the columns represent weight capacities of the knapsack. The
+            size of the table will be <strong>(number of items + 1) x (knapsack capacity + 1)</strong>.</li>
+          <li
+          style="margin-left:0px;"><strong>Fill the table:</strong> For each item, go through all weight capacities.
+            Calculate the maximum value attainable at each capacity by considering
+            the following two cases:
+            <ul>
+              <li><strong>Exclude the item</strong>: The value remains the same as it was
+                with the previous item.</li>
+              <li><strong>Include the item</strong>: Add the value of the current item to
+                the value obtained by the remaining weight (current weight capacity - item's
+                weight).</li>
+            </ul>
+            </li>
+            <li style="margin-left:0px;"><strong>Choose the maximum value:</strong> For each item and weight capacity,
+              store the maximum value obtained by either including or excluding the current
+              item.</li>
+            <li style="margin-left:0px;"><strong>Find the solution:</strong> The bottom-right corner of the table
+              will contain the maximum value that can be carried in the knapsack.</li>
         </ol>
         <p><span class="math-tex">\(V[i, j] = max\{V[i-1, j], V[i-1, j-w[i]]+p[i]\}\)</span>
         </p>

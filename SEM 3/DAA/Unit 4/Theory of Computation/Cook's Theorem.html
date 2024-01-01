@@ -22,30 +22,30 @@
           In other words, SAT is one of the hardest problems in the complexity class
           NP (nondeterministic polynomial time). Cook's Theorem has several important
           implications:</p>
+          <h3 style="margin-left:0px;"><strong>Implications of Cook's Theorem</strong></h3>
           <ol>
-            <li style="margin-left:0px;"><strong>NP-Completeness:</strong> If a problem is NP-complete, it means
-              that it is at least as hard as the hardest problems in NP. This class of
-              problems includes many decision and optimization problems. If you can prove
-              that a problem is NP-complete, it suggests that there is no known efficient
-              algorithm to solve all instances of that problem in polynomial time, unless
-              P (polynomial time) equals NP (a major open question in computer science).</li>
+            <li style="margin-left:0px;"><strong>Foundation for NP-Completeness:</strong> Cook's Theorem was the
+              first to formalize the concept of NP-completeness, providing a framework
+              for classifying problems based on their computational difficulty.</li>
             <li
-            style="margin-left:0px;"><strong>Cook's Theorem as a Blueprint:</strong> Cook's Theorem provided
-              a blueprint for proving other problems to be NP-complete. This led to the
-              development of a large family of NP-complete problems, where if you can
-              efficiently solve one of them, you can efficiently solve all of them.</li>
-              <li
-              style="margin-left:0px;"><strong>Complexity Hierarchy:</strong> Cook's Theorem is central to the
-                understanding of the hierarchy of complexity classes, which includes P,
-                NP, NP-complete, and many others. It demonstrated that there exist problems
-                that are not in P and are "complete" for NP, meaning they are as hard as
-                any problem in NP.</li>
-                <li style="margin-left:0px;"><strong>Practical Implications:</strong> The concept of NP-completeness
-                  has practical implications, as many real-world problems can be reduced
-                  to NP-complete problems. If you can show that a problem you are trying
-                  to solve is NP-complete, it implies that finding a general efficient solution
-                  for it is unlikely, and you might focus on approximation algorithms, heuristics,
-                  or special cases.</li>
+            style="margin-left:0px;"><strong>Identifying Hard Problems:</strong> Following Cook's Theorem, many
+              other problems have been shown to be NP-complete by reducing SAT to those
+              problems. This categorization helps in understanding which problems are
+              likely to be inherently difficult (under the assumption that P ≠ NP, which
+              is a major unsolved question in computer science).</li>
+              <li style="margin-left:0px;"><strong>Focus on Approximation and Heuristics:</strong> Since NP-complete
+                problems are unlikely to have efficient (polynomial-time) solutions, Cook's
+                Theorem has guided researchers towards seeking approximate solutions or
+                heuristic methods for these problems in practical scenarios.</li>
+              <li style="margin-left:0px;"><strong>P vs NP Problem:</strong> Cook's Theorem lays the groundwork for
+                the famous "P vs NP" problem. If someone were to find a polynomial-time
+                algorithm for SAT, it would imply P=NP, meaning every problem in NP can
+                be solved quickly (in polynomial time), which would be a groundbreaking
+                discovery in computer science.</li>
+              <li style="margin-left:0px;"><strong>Impact Across Disciplines:</strong> The concept of NP-completeness
+                has implications beyond theoretical computer science, affecting fields
+                like operations research, economics, biology, and cryptography, where many
+                practical problems are NP-complete.</li>
           </ol>
           <p style="margin-left:0px;">Cook's Theorem laid the groundwork for further developments in complexity
             theory, computational hardness, and the study of algorithms. It's a cornerstone

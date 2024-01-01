@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main() {
+    float a = 1;
+    float b = 1e10;
+    float c = -1e10;
+    
+    std::cout << (a+b)+c << std::endl;
+    std::cout << a+(b+c) << std::endl;
+    
+    a = 1e-5;
+    b = -1e-41;
+    c = 1e35;
+    
+    std::cout << (a*b)*c << std::endl;
+    std::cout << a*(b*c) << std::endl;
+    
+    a = 0.1;
+    b = 0.1;
+    c = 0.4;
+    
+    std::cout << (a*(b+c) == (a*b) + (a*c)) << std::endl;
+
+    return 0;
+}

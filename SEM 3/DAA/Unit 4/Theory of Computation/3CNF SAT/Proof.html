@@ -1,0 +1,68 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Proof</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">To prove that 3-CNF-SAT (3-Conjunctive Normal Form Satisfiability) is
+          NP-complete, we follow a similar approach as with CNF-SAT, but with a specific
+          focus on the 3-CNF format. In 3-CNF, each clause in the formula has exactly
+          three literals. The two main steps are:</p>
+        <p style="margin-left:0px;"><strong>Show that 3-CNF-SAT is in NP:</strong> This involves demonstrating
+          that any solution to a 3-CNF-SAT problem can be verified in polynomial
+          time.</p>
+        <p style="margin-left:0px;"><strong>Show that 3-CNF-SAT is NP-hard:</strong> This is typically done
+          by reducing a known NP-complete problem (like SAT or CNF-SAT) to 3-CNF-SAT
+          in polynomial time.</p>
+        <h3 style="margin-left:0px;"><strong>1. 3-CNF-SAT is in NP</strong></h3>
+        <p style="margin-left:0px;">To prove that 3-CNF-SAT is in NP, we need to demonstrate that given a
+          particular assignment of variables, we can verify whether this assignment
+          satisfies the 3-CNF formula in polynomial time. Since a 3-CNF formula is
+          just a special case of a CNF formula where each clause has exactly three
+          literals, the verification process is similar. We check each clause to
+          see if at least one literal is true. This can be done in polynomial time,
+          hence 3-CNF-SAT is in NP.</p>
+        <h3 style="margin-left:0px;"><strong>2. 3-CNF-SAT is NP-hard</strong></h3>
+        <p style="margin-left:0px;">The more challenging part is proving that 3-CNF-SAT is NP-hard. This is
+          done by reducing an already known NP-complete problem to 3-CNF-SAT. The
+          standard approach is to use the SAT problem. We need to show that any instance
+          of SAT can be polynomially transformed into an instance of 3-CNF-SAT that
+          is satisfiable if and only if the original SAT instance is satisfiable.</p>
+        <p
+        style="margin-left:0px;">Here's a sketch of this reduction:</p>
+          <ul>
+            <li><strong>Step 1:</strong> Start with a Boolean formula from the SAT problem.
+              This formula might be in any form, not necessarily in CNF.</li>
+            <li><strong>Step 2:</strong> Convert this formula into CNF using standard logical
+              equivalences.</li>
+            <li><strong>Step 3:</strong> Transform the CNF formula into a 3-CNF formula.
+              This is the crucial step.</li>
+          </ul>
+          <figure class="image">
+            <img src="Proof/image.png">
+          </figure>
+          <figure class="image">
+            <img src="Proof/1_image.png">
+          </figure>
+          <p style="margin-left:0px;">This transformation is done in such a way that the original formula is
+            satisfiable if and only if the new 3-CNF formula is satisfiable. Moreover,
+            this transformation can be achieved in polynomial time.</p>
+          <p style="margin-left:0px;">By completing these steps, we've shown that any instance of SAT can be
+            reduced to an instance of 3-CNF-SAT in polynomial time, and that verifying
+            a solution to 3-CNF-SAT is possible in polynomial time. Therefore, 3-CNF-SAT
+            is NP-complete. This proof is a cornerstone in computational complexity
+            theory and has significant implications for understanding the computational
+            difficulty of various problems in computer science.</p>
+      </div>
+    </div>
+  </body>
+
+</html>

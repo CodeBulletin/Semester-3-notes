@@ -1,0 +1,38 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Elbow Method</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The Elbow Method is used in k-means clustering to determine the optimal
+          number of clusters (k). The process includes:</p>
+        <ol>
+          <li><strong>Computing Clustering for Various k Values:</strong> Perform k-means
+            clustering for a range of k values, calculating the sum of squared distances
+            from each point to its assigned center for each k.</li>
+          <li><strong>Plotting Results:</strong> Plot these sums of squared distances
+            against k. The plot often resembles an arm with an elbow.</li>
+          <li><strong>Identifying the Elbow Point:</strong> The optimal k is at the 'elbow,'
+            where increasing k does not significantly decrease the total variance.
+            This point is where the plot bends.</li>
+        </ol>
+        <p style="margin-left:0px;">The Elbow Method is heuristic and sometimes ambiguous, particularly if
+          the plot lacks a clear bend. Alternative methods like the Silhouette Method
+          or the Gap Statistic are also used for determining the optimal number of
+          clusters.</p>
+        <figure class="image">
+          <img src="Elbow%20Method/image.png" alt="K-means -Elbow method (clustering)">
+        </figure>
+      </div>
+    </div>
+  </body>
+
+</html>

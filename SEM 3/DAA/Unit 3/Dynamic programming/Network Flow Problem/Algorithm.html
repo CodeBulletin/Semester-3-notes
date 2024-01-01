@@ -1,0 +1,47 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../../style.css">
+    <base target="_parent">
+  </head>
+  
+  <body>
+    <div class="content">
+       <h1>Algorithm</h1>
+
+      <div class="ck-content">
+        <p style="margin-left:0px;">The Ford-Fulkerson algorithm is a popular method used to solve network
+          flow problems, such as finding the maximum flow in a flow network. Here's
+          a basic outline of the algorithm:</p>
+        <p style="margin-left:0px;"><strong>Initialize Flow</strong>: Set the flow in the network to be 0
+          for all edges.</p>
+        <p style="margin-left:0px;"><strong>Find Augmenting Path</strong>: Search for an augmenting path from
+          the source (S) to the sink (T) in the residual graph. The residual graph
+          is created from the original graph by considering the residual capacity
+          (original capacity minus flow) of each edge. This can be done using a depth-first
+          search (DFS) or a breadth-first search (BFS).</p>
+        <p style="margin-left:0px;"><strong>Check for Termination</strong>: If no augmenting path is found,
+          the algorithm terminates, as no more flow can be added.</p>
+        <p style="margin-left:0px;"><strong>Augment Flow</strong>: If an augmenting path is found, increase
+          the flow along this path. The amount by which the flow can be increased
+          is determined by the minimum residual capacity of the edges in the augmenting
+          path.</p>
+        <p style="margin-left:0px;"><strong>Update Residual Graph</strong>: After augmenting the flow, update
+          the residual capacities of the edges in the path. This involves decreasing
+          the residual capacity of all forward edges (edges in the direction of the
+          path) by the flow added and increasing the residual capacity of all backward
+          edges (edges in the opposite direction of the path) by the same amount.
+          This reflects the new possibilities of sending flow back as part of future
+          augmentations.</p>
+        <p style="margin-left:0px;"><strong>Repeat</strong>: Return to step 2 and repeat the process until
+          no more augmenting paths can be found.</p>
+        <p style="margin-left:0px;"><strong>Output Maximum Flow</strong>: The maximum flow in the network
+          is the total flow at the sink (or equivalently, the total flow leaving
+          the source).</p>
+      </div>
+    </div>
+  </body>
+
+</html>

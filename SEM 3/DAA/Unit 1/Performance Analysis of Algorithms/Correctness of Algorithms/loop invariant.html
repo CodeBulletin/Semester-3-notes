@@ -12,9 +12,76 @@
        <h1>loop invariant</h1>
 
       <div class="ck-content">
-        <figure class="image">
-          <img>
-        </figure>
+        <p style="margin-left:0px;">A loop invariant is a property or condition that is true before and after
+          each iteration of a loop in a computer program. It helps in understanding
+          and reasoning about the correctness of loops, ensuring that the desired
+          properties are maintained throughout the loop's execution. Loop invariants
+          are a fundamental concept in loop verification and program correctness
+          analysis.</p>
+        <p style="margin-left:0px;">Here's how a loop invariant works:</p>
+        <ol>
+          <li><strong>Initialization</strong>: The loop invariant must hold true before
+            the first iteration of the loop. It represents the condition or property
+            that is true at the loop's entry point.</li>
+          <li><strong>Maintenance</strong>: The loop invariant must be preserved (or
+            maintained) through each iteration of the loop. In other words, if the
+            invariant is true at the beginning of an iteration, it should remain true
+            after the execution of that iteration.</li>
+          <li><strong>Termination</strong>: When the loop terminates, the loop invariant
+            should still be true. It serves as a condition that guarantees that the
+            loop has produced the correct result or has correctly completed its task.</li>
+        </ol>
+        <p style="margin-left:0px;">Loop invariants are especially useful in formal program verification and
+          correctness proofs because they help demonstrate that a loop is both partially
+          and totally correct:</p>
+        <p style="margin-left:0px;"><strong>Partial correctness</strong>: It ensures that when the loop terminates,
+          the desired post-condition (i.e., the desired output or final state) is
+          satisfied, given that the pre-condition (initial state) was true.</p>
+        <p
+        style="margin-left:0px;"><strong>Total correctness</strong>: In addition to partial correctness,
+          total correctness also guarantees that the loop will indeed terminate.
+          This is typically demonstrated by showing that a certain decreasing function
+          or metric on the loop control variable eventually reaches a termination
+          condition.</p>
+          <p style="margin-left:0px;">Loop invariants are not only valuable for theoretical correctness proofs
+            but also for practical purposes in software development. They aid in writing
+            and debugging loops, as they provide a clear understanding of what should
+            hold true at different points within the loop. By carefully designing and
+            maintaining loop invariants, developers can write more reliable and robust
+            code, reducing the risk of logical errors and incorrect loop behavior.</p>
+          <p
+          style="margin-left:0px;">Example</p><pre><code class="language-text-x-python">def find_max_element(arr):
+    if not arr:
+        return None  # Return None for an empty array, or you can choose an appropriate sentinel value.
+
+    max_element = arr[0]  # Initialize max_element with the first element of the array.
+
+    for i in range(1, len(arr)):
+        # Loop Invariant:
+        # At the beginning of each iteration (before updating max_element),
+        # max_element contains the maximum element in arr[0:i].
+        
+        if arr[i] &gt; max_element:
+            max_element = arr[i]
+
+    return max_element
+
+# Example usage:
+arr = [3, 7, 1, 9, 4, 6, 2, 8]
+max_value = find_max_element(arr)
+print("The maximum element is:", max_value)</code></pre>
+            <ol>
+              <li>The loop invariant is stated as a comment inside the loop.</li>
+              <li>The loop iterates through the elements of the array <strong>arr</strong>.</li>
+              <li>At each iteration, the code checks if the current element <strong>arr[i]</strong> is
+                greater than the current <strong>max_element</strong>. If it is, the <strong>max_element</strong> is
+                updated to the new maximum.</li>
+              <li>The loop invariant ensures that <strong>max_element</strong> correctly represents
+                the maximum element found in the subarray <strong>arr[0:i]</strong> at the
+                beginning of each iteration.</li>
+              <li>After the loop terminates, the final value of <strong>max_element</strong> is
+                returned, and it represents the maximum element in the entire array.</li>
+            </ol>
       </div>
     </div>
   </body>

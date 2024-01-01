@@ -1,27 +1,30 @@
-def jobSequencingWithDeadlines(jobs, n):
-    # Sort the jobs in descending order of profit
-    jobs.sort(key=lambda x: x[2], reverse=True)
+def jobSequencingWithDeadlines(jobs):
+    # Sort jobs by profit in descending order
+    jobs.sort(key=lambda x: x['profit'], reverse=True)
 
-    # The maximum deadline value
-    max_deadline = max(job[1] for job in jobs)
+    # Find the maximum deadline
+    max_deadline = max(job['deadline'] for job in jobs)
 
-    # Initialize the result array (all slots are free initially)
-    result = [-1] * (max_deadline + 1)
-    
-    max_value = 0
+    # Initialize schedule array
+    schedule = [-1] * max_deadline
 
-    # Iterate through all jobs
+    # Place the jobs in the schedule
     for job in jobs:
-        # Try to find a free slot from the job's deadline to the start
-        for j in range(job[1], 0, -1):
-            if result[j] == -1:
-                result[j] = job[0] # job name
-                max_value += job[2] # job value
+        for j in range(job['deadline'] - 1, -1, -1):
+            if schedule[j] == -1:
+                schedule[j] = job['name']
                 break
 
-    # Filter out the unassigned slots and return the job sequence
-    return [job for job in result if job != -1], max_value
+    return schedule
 
-# Example usage
-jobs = [('a', 2, 100), ('b', 1, 19), ('c', 2, 27), ('d', 1, 25), ('e', 3, 15)]
-print(jobSequencingWithDeadlines(jobs, len(jobs)))
+# Example jobs
+jobs = [
+    {'name': 'Job1', 'deadline': 2, 'profit': 100},
+    {'name': 'Job2', 'deadline': 1, 'profit': 19},
+    {'name': 'Job3', 'deadline': 2, 'profit': 27},
+    {'name': 'Job4', 'deadline': 1, 'profit': 25},
+    {'name': 'Job5', 'deadline': 3, 'profit': 15}
+]
+
+# Running the job sequencing function
+jobSequencingWithDeadlines(jobs)

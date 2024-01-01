@@ -21,41 +21,23 @@
           soon as they become available. This leads to quicker convergence in many
           cases, which means you need fewer iterations to reach a solution.</p>
         <h2>Rate of Convergence of Gauss Seidal Method</h2>
-        <p style="margin-left:0px;">The rate of convergence of the Gauss-Seidel method depends on the characteristics
-          of the system of linear equations being solved. In particular, the rate
-          of convergence is influenced by the properties of the coefficient matrix
-          and the initial guess for the solution. Here are some key factors that
-          affect the rate of convergence:</p>
+        <p style="margin-left:0px;">The convergence rate of the Gauss-Seidel method for linear equations depends
+          on the system's characteristics. Key factors include:</p>
         <ol>
-          <li style="margin-left:0px;"><strong>Diagonal Dominance</strong>: The rate of convergence is typically
-            faster when the coefficient matrix is diagonally dominant. Diagonal dominance
-            means that the absolute value of each diagonal element is greater than
-            the sum of the absolute values of the off-diagonal elements in the same
-            row. When the matrix is diagonally dominant, Gauss-Seidel often converges
-            rapidly.</li>
-          <li style="margin-left:0px;"><strong>Spectral Radius</strong>: The convergence rate can be quantified
-            using the spectral radius (ρ) of the iteration matrix. The iteration matrix
-            is obtained by dividing each row of the coefficient matrix by its corresponding
-            diagonal element. If ρ is less than 1, the method converges, and the closer
-            ρ is to 1, the slower the convergence. If ρ is very close to 0, convergence
-            is rapid.</li>
-          <li style="margin-left:0px;"><strong>Initial Guess</strong>: The choice of the initial guess also affects
-            the rate of convergence. A good initial guess that is closer to the actual
-            solution can lead to faster convergence. Conversely, a poor initial guess
-            may result in slow convergence or divergence.</li>
-          <li style="margin-left:0px;"><strong>Eigenvalues</strong>: The eigenvalues of the iteration matrix
-            can provide insights into the convergence behavior. If all the eigenvalues
-            are close to zero, it indicates slow convergence, while eigenvalues significantly
-            less than 1 suggest faster convergence.</li>
-          <li style="margin-left:0px;"><strong>Matrix Conditioning</strong>: The condition number of the coefficient
-            matrix can impact convergence. If the matrix is ill-conditioned, meaning
-            it has a high condition number, convergence may be slow. Conditioning issues
-            can result in numerical instability.</li>
+          <li><strong>Diagonal Dominance</strong>: Faster convergence if the matrix
+            is diagonally dominant, where diagonal elements outweigh the sum of off-diagonal
+            elements in each row.</li>
+          <li><strong>Spectral Radius</strong>: Convergence rate relates to the spectral
+            radius (ρ) of the iteration matrix. Lower ρ indicates faster convergence.</li>
+          <li><strong>Initial Guess</strong>: A closer initial guess to the actual solution
+            speeds up convergence, while a poor guess may slow it down or cause divergence.</li>
+          <li><strong>Eigenvalues</strong>: Eigenvalues near zero suggest slow convergence;
+            values significantly less than 1 indicate faster convergence.</li>
+          <li><strong>Matrix Conditioning</strong>: Ill-conditioned matrices (high condition
+            number) may slow convergence.</li>
         </ol>
-        <p style="margin-left:0px;">In practice, the rate of convergence of Gauss-Seidel is often assessed
-          empirically, and adjustments may be made to improve convergence. For example,
-          relaxation techniques like successive over-relaxation (SOR) can be used
-          to accelerate convergence in some cases.</p>
+        <p style="margin-left:0px;">Convergence is often assessed empirically, with techniques like successive
+          over-relaxation (SOR) sometimes used to enhance it.</p>
       </div>
     </div>
   </body>

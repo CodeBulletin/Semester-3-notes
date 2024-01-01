@@ -12,53 +12,42 @@
        <h1>Backward Propogation</h1>
 
       <div class="ck-content">
-        <p>Backward propagation, often referred to as backpropagation, is a fundamental
-          algorithm in training neural networks. It is used to compute the gradient
-          of the loss function with respect to the weights of the network, which
-          is then used to update the weights and minimize the loss. Here's a step-by-step
-          breakdown of how backpropagation works:</p>
+        <p style="margin-left:0px;">Backpropagation is a key algorithm in neural network training, used for
+          optimizing weights by computing the gradient of the loss function. The
+          process includes:</p>
         <ol>
-          <li><strong>Forward Pass</strong>: Initially, a forward pass through the network
-            is performed to compute the output. This involves calculating the output
-            for each layer using the current weights and biases (as described in the
-            forward propagation process).</li>
-          <li><strong>Loss Function</strong>: After the forward pass, the output of
-            the network is compared to the desired output, and a loss is computed using
-            a loss function. Common loss functions include Mean Squared Error (MSE)
-            for regression tasks and Cross-Entropy Loss for classification tasks.</li>
-          <li><strong>Backward Pass</strong>: The backward pass begins at the output
-            layer and moves backward through the network, layer by layer. The goal
-            is to compute the gradient of the loss function with respect to each weight
-            in the network.</li>
-          <li><strong>Compute Gradients</strong>:</li>
-          <li><strong>Output Layer</strong>: For the output layer, calculate the derivative
-            of the loss function with respect to the output of the network. This derivative
-            indicates how much the loss changes with respect to a change in the output.</li>
-          <li><strong>Hidden Layers</strong>: For each hidden layer, compute the gradient
-            of the loss with respect to the layer's inputs. This is done by using the
-            chain rule to propagate the gradients backward from the output layer through
-            the network.</li>
-          <li><strong>Chain Rule</strong>: The chain rule from calculus is used to compute
-            the gradients of the loss function with respect to the weights and biases.
-            The gradient of the loss with respect to a given weight is the product
-            of:
-            <ol>
-              <li>The derivative of the loss with respect to the output of the neuron to
-                which the weight is connected.</li>
-              <li>The activation of the neuron from which the weight is coming.</li>
-              <li>The derivative of the activation function used in the neuron to which
-                the weight is connected.</li>
-            </ol>
+          <li><strong>Forward Pass:</strong> Calculate each layer's output using current
+            weights and biases.</li>
+          <li><strong>Loss Function:</strong> After the forward pass, compare the network's
+            output to the desired output and compute the loss using functions like
+            Mean Squared Error (MSE) or Cross-Entropy Loss.</li>
+          <li><strong>Backward Pass:</strong> Move backward from the output to the input
+            layer, computing the loss gradient for each weight.</li>
+          <li><strong>Compute Gradients:</strong>
+            <ul>
+              <li><strong>Output Layer:</strong> Determine the loss function's derivative
+                with respect to the network's output.</li>
+              <li><strong>Hidden Layers:</strong> Use the chain rule to calculate each layer's
+                loss gradient, propagating from the output layer backward.</li>
+            </ul>
           </li>
-          <li><strong>Update Weights</strong>: Once the gradients are computed for all
-            weights and biases in the network, they are used to update the weights
-            and biases. This is typically done using an optimization algorithm like
-            gradient descent. The weights are adjusted in the opposite direction of
-            the gradient to minimize the loss.</li>
-          <li><strong>Iterations</strong>: This process is repeated for many iterations
-            (epochs), and with each iteration, the weights are refined, and the network
-            becomes better at producing the desired output.</li>
+          <li><strong>Chain Rule Application:</strong> Calculate the loss function gradients
+            relative to weights and biases, involving:
+            <ul>
+              <li>The loss derivative with respect to the neuron's output connected to the
+                weight.</li>
+              <li>The activation of the preceding neuron.</li>
+              <li>The derivative of the activation function in the receiving neuron.</li>
+            </ul>
+          </li>
+          <li><strong>Update Weights:</strong> Use gradients to update weights and biases,
+            typically with gradient descent, adjusting weights in the opposite direction
+            of the gradient.</li>
+          <li><strong>Iterations:</strong> Repeat the process over multiple iterations
+            (epochs) to refine weights, enhancing the network's output accuracy.</li>
         </ol>
+        <p style="margin-left:0px;">Backpropagation allows the network to learn from errors and improve performance
+          iteratively.</p>
       </div>
     </div>
   </body>

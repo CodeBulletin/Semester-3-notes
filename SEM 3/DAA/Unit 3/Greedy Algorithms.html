@@ -12,27 +12,8 @@
        <h1>Greedy Algorithms</h1>
 
       <div class="ck-content">
-        <p>Greedy algorithms are a class of algorithms that make locally optimal
-          choices at each step with the hope of finding a global optimum solution.
-          In other words, they make the best choice at each stage without considering
-          the overall consequences. Greedy algorithms are often used for optimization
-          problems where the goal is to find the best solution among a set of possible
-          solutions.</p>
-        <p>The key characteristic of greedy algorithms is that they make decisions
-          based on the current information available, without considering the future
-          implications. This can lead to efficient solutions for certain problems,
-          but it does not guarantee the optimal solution in all cases.</p>
-        <p>One example of a greedy algorithm is the "coin change" problem, where
-          the goal is to find the minimum number of coins needed to make a certain
-          amount of change. The greedy approach would involve selecting the largest
-          denomination coin at each step until the desired amount is reached. However,
-          this approach may not always yield the optimal solution, as there may be
-          cases where a combination of smaller coins would result in fewer total
-          coins.</p>
-        <p>Overall, greedy algorithms can be a useful tool for solving certain types
-          of problems efficiently, but they may not always provide the optimal solution.
-          It is important to carefully analyze the problem and consider alternative
-          approaches when using greedy algorithms.</p><pre><code class="language-text-plain">Greedy(a, n) {
+        <p><span style="background-color:rgb(52,53,65);color:rgb(209,213,219);">Greedy algorithms are a method for tackling optimization problems by making the best local choice at each step, hoping to reach an overall optimal solution. They focus on immediate benefits rather than the long-term outcome, which can lead to efficient but not always optimal results. A classic example is the coin change problem, where the algorithm picks the largest coin denomination available at each step to reach the target amount. While this method is efficient for certain scenarios, it doesn't guarantee the most optimal solution in every case, especially when a combination of smaller coins might yield a better result. Greedy algorithms are thus valuable for specific problems but require careful evaluation against other methods to ensure they're suitable for the task at hand.</span>
+        </p><pre><code class="language-text-plain">Greedy(a, n) {
 	for i = 1 to n {
 		x = Select(a)
 		if feasible(x) {
@@ -45,36 +26,35 @@
           algorithm and Prim's algorithm are used to find the minimum spanning tree
           in a graph. These algorithms iteratively select edges with the minimum
           weight to construct a tree that spans all the vertices.</p>
-        <p style="margin-left:auto;"><strong>Shortest Path</strong>: Algorithms like Dijkstra's algorithm and
-          Bellman-Ford algorithm use a greedy approach to find the shortest path
-          between two vertices in a graph. They iteratively select the vertex with
-          the minimum distance and update the distances of its neighboring vertices.</p>
-        <p
-        style="margin-left:auto;"><strong>Huffman Coding</strong>: Huffman coding is a lossless data compression
+        <p style="margin-left:auto;"><strong>Shortest Path</strong>: Algorithms like Dijkstra's algorithm use
+          a greedy approach to find the shortest path between two vertices in a graph.
+          They iteratively select the vertex with the minimum distance and update
+          the distances of its neighboring vertices.</p>
+        <p style="margin-left:auto;"><strong>Huffman Coding</strong>: Huffman coding is a lossless data compression
           algorithm that assigns variable-length codes to characters based on their
           frequency of occurrence. It uses a greedy approach to construct an optimal
           prefix code, where the most frequent characters have the shortest codes.</p>
+        <p
+        style="margin-left:auto;"><strong>Interval Scheduling</strong>: Greedy algorithms are used to solve
+          interval scheduling problems, where the goal is to select the maximum number
+          of non-overlapping intervals. The algorithm sorts the intervals based on
+          their end times and greedily selects the intervals that do not overlap.</p>
           <p
-          style="margin-left:auto;"><strong>Interval Scheduling</strong>: Greedy algorithms are used to solve
-            interval scheduling problems, where the goal is to select the maximum number
-            of non-overlapping intervals. The algorithm sorts the intervals based on
-            their end times and greedily selects the intervals that do not overlap.</p>
-            <p
-            style="margin-left:auto;"><strong>Knapsack Problem</strong>: In the fractional knapsack problem,
-              where items can be divided, a greedy algorithm can be used to select items
-              with the maximum value-to-weight ratio until the knapsack is full. However,
-              for the 0/1 knapsack problem, where items cannot be divided, a greedy approach
-              does not always yield the optimal solution.</p>
-              <p style="margin-left:auto;"><strong>Job Scheduling</strong>: Greedy algorithms are used in job scheduling
-                problems, where the goal is to schedule a set of jobs on limited resources.
-                Algorithms like the earliest deadline first (EDF) and shortest job next
-                (SJN) use a greedy approach to prioritize jobs based on their deadlines
-                or execution times.</p>
-              <p style="margin-left:auto;">These are just a few examples of how greedy algorithms can be applied.
-                Greedy approaches are often used when the problem exhibits the greedy-choice
-                property, meaning that making locally optimal choices leads to a globally
-                optimal solution. However, it's important to note that greedy algorithms
-                may not always provide the optimal solution for every problem.</p>
+          style="margin-left:auto;"><strong>Knapsack Problem</strong>: In the fractional knapsack problem,
+            where items can be divided, a greedy algorithm can be used to select items
+            with the maximum value-to-weight ratio until the knapsack is full. However,
+            for the 0/1 knapsack problem, where items cannot be divided, a greedy approach
+            does not always yield the optimal solution.</p>
+            <p style="margin-left:auto;"><strong>Job Scheduling</strong>: Greedy algorithms are used in job scheduling
+              problems, where the goal is to schedule a set of jobs on limited resources.
+              Algorithms like the earliest deadline first (EDF) and shortest job next
+              (SJN) use a greedy approach to prioritize jobs based on their deadlines
+              or execution times.</p>
+            <p style="margin-left:auto;">These are just a few examples of how greedy algorithms can be applied.
+              Greedy approaches are often used when the problem exhibits the greedy-choice
+              property, meaning that making locally optimal choices leads to a globally
+              optimal solution. However, it's important to note that greedy algorithms
+              may not always provide the optimal solution for every problem.</p>
       </div>
     </div>
   </body>

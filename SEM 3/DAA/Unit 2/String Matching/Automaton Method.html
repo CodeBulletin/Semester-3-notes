@@ -43,65 +43,7 @@
                 <li>Continue to process the next character in the text.</li>
               </ul>
             </li>
-          </ul><pre><code class="language-text-plain">from dataclasses import dataclass
-
-# Data class for DFA
-@dataclass
-class automata:
-    inputs: list
-    states: list
-    transition: list
-    initial: list
-    final: list
-    state: list
-
-    def next(self, string):
-        if string in self.inputs:
-            self.state = self.transition[self.state][self.inputs.index(string)]
-            return self.state in self.final
-        else:
-            return False
-        
-    def reset(self):
-        self.state = self.initial
-
-
-def patteren_matching_dfa(string: str, pattern: str):
-    # Create DFA
-    DFA = automata(
-        inputs = list(set(pattern)),
-        states = list(range(len(pattern) + 1)),
-        transition = [],
-        initial = 0,
-        final = [len(pattern)],
-        state = 0
-    )
-
-    # Create transition table
-    for state in DFA.states:
-        DFA.transition.append([])
-        for char in DFA.inputs:
-            k = min(len(pattern) + 1, state + 2)
-            while True:
-                k = k - 1
-                if (pattern[:state] + char).endswith(pattern[:k]):
-                    break
-            DFA.transition[state].append(k)
-
-    # Check if string is accepted
-    out = [0 for i in range(len(string))]
-    for i, char in enumerate(string):
-        out[i] = DFA.next(char)
-
-    matched_at = []
-    for i, val in enumerate(out):
-        if val:
-            matched_at.append(i - len(pattern) + 1)
-
-    return matched_at
-
-print(patteren_matching_dfa("abbababba", "abba"))
-print(patteren_matching_dfa("011101010111", "101"))</code></pre>
+          </ul>
           <p>&nbsp;</p>
       </div>
     </div>

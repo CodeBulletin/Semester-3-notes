@@ -1,51 +1,36 @@
-class Graph:
-    def __init__(self, vertices):
-        self.V = vertices
-        self.graph = [[0 for column in range(vertices)] for row in range(vertices)]
+def graph_coloring(graph, num_colors):
+    num_vertices = len(graph)
+    colors = [-1] * num_vertices
 
-    def isSafe(self, v, color, c):
-        # Check if this color assignment is safe for vertex v
-        for i in range(self.V):
-            if self.graph[v][i] == 1 and color[i] == c:
+    def is_valid_color(vertex, color):
+        for i in range(num_vertices):
+            if graph[vertex][i] == 1 and colors[i] == color:
                 return False
         return True
 
-    def graphColoringUtil(self, m, color, v):
-        if v == self.V:
+    def solve(vertex):
+        if vertex == num_vertices:
             return True
 
-        for c in range(1, m + 1):
-            if self.isSafe(v, color, c):
-                color[v] = c
-                if self.graphColoringUtil(m, color, v + 1):
+        for color in range(num_colors):
+            if is_valid_color(vertex, color):
+                colors[vertex] = color
+                if solve(vertex + 1):
                     return True
-                color[v] = 0
+                colors[vertex] = -1
 
         return False
 
-    def graphColoring(self, m, Colors):
-        color = [0] * self.V
-        if self.graphColoringUtil(m, color, 0) == False:
-            return False
+    if solve(0):
+        return colors
+    else:
+        return None
 
-        # Print the solution
-        print("Solution Exists: Following are the assigned colors:")
-        for i, c in enumerate(color):
-            print(f"v{i+1} -> {Colors[c-1]}")
-        return True
+# Example usage
+graph = [[0, 1, 1, 1],
+         [1, 0, 1, 0],
+         [1, 1, 0, 1],
+         [1, 0, 1, 0]]
 
-# Example Usage
-g = Graph(4)
-g.graph = [[0, 1, 1, 1],
-           [1, 0, 1, 0],
-           [1, 1, 0, 1],
-           [1, 0, 1, 0]]
-m = 3  # Number of colors
-if not g.graphColoring(m, Colors=['R', 'G', 'B']):
-    print("Solution does not exist")
-
-# Output:
-# v1 -> R
-# v2 -> G
-# v3 -> B
-# v4 -> G
+num_colors = 3
+solution = graph_coloring(graph, num_colors)

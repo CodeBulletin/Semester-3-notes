@@ -12,30 +12,88 @@
        <h1>Chi-Square test</h1>
 
       <div class="ck-content">
-        <figure class="image">
-          <img src="Chi-Square%20test/6_image.png">
-        </figure>
-        <figure class="image">
-          <img src="Chi-Square%20test/5_image.png">
-        </figure>
-        <figure class="image">
-          <img src="Chi-Square%20test/image.png">
-        </figure>
-        <figure class="image">
-          <img src="Chi-Square%20test/1_image.png">
-        </figure>
-        <figure class="image">
-          <img src="Chi-Square%20test/2_image.png">
-        </figure>
-        <figure class="image">
-          <img src="Chi-Square%20test/3_image.png">
-        </figure>
-        <figure class="image">
-          <img src="Chi-Square%20test/4_image.png">
-        </figure>
-        <figure class="image">
-          <img src="Chi-Square%20test/7_image.png">
-        </figure>
+        <p style="margin-left:0px;">
+          <br>The Chi-Square Test for a Single Variance is a statistical method used
+          to test hypotheses about the variance (<span class="math-tex">\(\sigma^2\)</span>)
+          of a normally distributed population. This test is different from the Chi-Square
+          Goodness of Fit Test and the Chi-Square Test for Independence. It specifically
+          focuses on whether the population variance differs from a specified value
+          (<span class="math-tex">\(\sigma_0^2\)</span>).</p>
+        <h3 style="margin-left:0px;"><strong>Hypotheses:</strong></h3>
+        <ul>
+          <li>Null Hypothesis (<span class="math-tex">\(H_0\)</span>​): The population
+            variance equals a specified value, i.e.,&nbsp;<span class="math-tex">\(\sigma^2=\sigma_0^2\)</span>​.</li>
+          <li>Alternative Hypothesis (<span class="math-tex">\(H_a\)</span>​): The population
+            variance does not equal the specified value, i.e.,&nbsp;<span class="math-tex">\(\sigma^2\ne\sigma_0^2\)</span>
+          </li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Test Statistic:</strong></h3>
+        <p style="margin-left:0px;">The test statistic for this hypothesis test is calculated using the formula:</p>
+        <p><span class="math-tex">\(\chi^2 =\frac {(n-1)s^2}{\sigma_0^2}\)</span>
+        </p>
+        <p style="margin-left:0px;">where:</p>
+        <ul>
+          <li><span class="math-tex">\(n\)</span>&nbsp;is the sample size.</li>
+          <li><span class="math-tex">\(s^2\)</span>&nbsp;is the sample variance.</li>
+          <li><span class="math-tex">\(\sigma_0^2\)</span>​ is the hypothesized population
+            variance.</li>
+        </ul>
+        <h3 style="margin-left:0px;"><strong>Degrees of Freedom:</strong></h3>
+        <p style="margin-left:0px;">The degrees of freedom for this test are&nbsp;<span class="math-tex">\(n-1\)</span>,
+          where&nbsp;<span class="math-tex">\(n\)</span>&nbsp;is the sample size.</p>
+        <h3
+        style="margin-left:0px;"><strong>Assumptions:</strong>
+          </h3>
+          <ul>
+            <li>The sample is drawn from a normally distributed population.</li>
+            <li>The sample is a simple random sample, meaning each member of the population
+              has an equal chance of being included.</li>
+          </ul>
+          <h3 style="margin-left:0px;"><strong>Procedure:</strong></h3>
+          <ol>
+            <li><strong>Calculate the Sample Variance</strong>: Compute the variance&nbsp;
+              <span
+              class="math-tex">\(s^2\)</span>&nbsp;of the sample data.</li>
+            <li><strong>Compute the Test Statistic</strong>: Use the formula to calculate
+              the Chi-Square statistic.</li>
+            <li><strong>Determine the Critical Value</strong>: Find the critical value(s)
+              from the Chi-Square distribution table for the chosen significance level
+              (<span class="math-tex">\(\alpha\)</span>) and degrees of freedom.</li>
+            <li><strong>Decision Rule</strong>:
+              <ul>
+                <li>If the test statistic falls in the critical region (beyond the critical
+                  value), reject the null hypothesis.</li>
+                <li>If the test statistic does not fall in the critical region, fail to reject
+                  the null hypothesis.</li>
+              </ul>
+            </li>
+          </ol>
+          <h3 style="margin-left:0px;"><strong>Interpretation:</strong></h3>
+          <ul>
+            <li><strong>Reject&nbsp;</strong><span class="math-tex">\(H_0\)</span>: There
+              is sufficient evidence to conclude that the population variance is different
+              from the specified value.</li>
+            <li><strong>Fail to Reject&nbsp;</strong><span class="math-tex">\(H_0\)</span><strong>​</strong>:
+              There is not enough evidence to conclude that the population variance is
+              different from the specified value.</li>
+          </ul>
+          <h3 style="margin-left:0px;"><strong>Applications:</strong></h3>
+          <p style="margin-left:0px;">This test is useful in quality control, industrial processes, and other
+            fields where variance is a measure of consistency or reliability.</p>
+          <h3
+          style="margin-left:0px;"><strong>Limitations:</strong>
+            </h3>
+            <ul>
+              <li>The test is sensitive to the normality assumption. If the population is
+                not normally distributed, the results might not be reliable.</li>
+              <li>It is not suitable for small sample sizes.</li>
+            </ul>
+            <p>Confidnece Interval:</p>
+            <figure class="image">
+              <img src="Chi-Square%20test/image.png">
+            </figure>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
       </div>
     </div>
   </body>

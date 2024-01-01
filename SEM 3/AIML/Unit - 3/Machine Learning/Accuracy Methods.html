@@ -12,40 +12,25 @@
        <h1>Accuracy Methods</h1>
 
       <div class="ck-content">
-        <p>Accuracy methods refer to evaluation metrics or techniques used to measure
-          the performance of a classification model. Accuracy is a commonly used
-          metric that quantifies the proportion of correctly classified instances
-          out of the total number of instances.</p>
-        <p>Here are a few accuracy methods commonly used in machine learning:</p>
+        <p style="margin-left:0px;">Accuracy methods are metrics to evaluate a classification model's performance,
+          focusing on correctly classified instances. Common methods include:</p>
         <ol>
-          <li><strong>Accuracy Score</strong>: It is a straightforward method that calculates
-            the ratio of correctly classified instances to the total number of instances.
-            It is suitable for balanced datasets but may not be reliable when dealing
-            with imbalanced datasets.</li>
-          <li><strong>Confusion Matrix</strong>: A confusion matrix provides a more
-            detailed analysis of the model's performance by showing the counts of true
-            positive, true negative, false positive, and false negative predictions.
-            From the confusion matrix, various metrics like precision, recall, and
-            F1-score can be derived.</li>
-          <li><strong>Precision and Recall</strong>: Precision measures the proportion
-            of correctly predicted positive instances out of all instances predicted
-            as positive. Recall, also known as sensitivity or true positive rate, measures
-            the proportion of correctly predicted positive instances out of all actual
-            positive instances.</li>
-          <li><strong>F1-Score</strong>: The F1-score is the harmonic mean of precision
-            and recall. It provides a balanced measure of a model's performance by
-            considering both precision and recall. It is particularly useful when dealing
-            with imbalanced datasets.</li>
-          <li><strong>Receiver Operating Characteristic (ROC) Curve</strong>: The ROC
-            curve is a graphical representation of the trade-off between the true positive
-            rate (sensitivity) and the false positive rate (1 - specificity) at various
-            classification thresholds. The area under the ROC curve (AUC-ROC) is often
-            used as a performance metric, with a higher value indicating better performance.</li>
-          <li><strong>Cross-Validation</strong>: Cross-validation is a technique used
-            to assess the model's performance by splitting the dataset into multiple
-            subsets, training the model on a subset, and evaluating it on the remaining
-            subset. It helps to estimate the model's performance on unseen data and
-            mitigate issues like overfitting.</li>
+          <li><strong>Accuracy Score</strong>: The ratio of correctly classified instances
+            to total instances, best for balanced datasets.</li>
+          <li><strong>Confusion Matrix</strong>: Shows true positive, true negative,
+            false positive, and false negative counts, leading to precision, recall,
+            and F1-score metrics.</li>
+          <li><strong>Precision and Recall</strong>: Precision is the correctly predicted
+            positive instances ratio among all positive predictions. Recall measures
+            correctly predicted positives out of actual positives.</li>
+          <li><strong>F1-Score</strong>: Harmonic mean of precision and recall, balancing
+            both and useful for imbalanced datasets.</li>
+          <li><strong>ROC Curve</strong>: Graphical representation showing the trade-off
+            between true positive rate and false positive rate, with Area Under the
+            Curve (AUC-ROC) as a performance indicator.</li>
+          <li><strong>Cross-Validation</strong>: Evaluates model performance on unseen
+            data by training and testing on different data subsets, helping to prevent
+            overfitting.</li>
         </ol>
       </div>
     </div>

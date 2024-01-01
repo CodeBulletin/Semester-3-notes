@@ -29,10 +29,15 @@
           <li>If there are no negative-weight cycles, the algorithm has found the shortest
             paths from the source vertex to all other vertices.</li>
         </ol>
-        <p>Time Complexity:</p>
-        <p>Best Case:&nbsp;<span class="math-tex">\(O(n^2)\)</span>
+        <p>Time Complexity:&nbsp;<span class="math-tex">\(O(VE)\)</span>
         </p>
-        <p>Worst Case:&nbsp;<span class="math-tex">\(O(n^3)\)</span>
+        <p>in best case (sparse graph&nbsp;<span class="math-tex">\(E = V\)</span>):&nbsp;
+          <span
+          class="math-tex">\(O(V^2)\)</span>
+        </p>
+        <p>in worst case (dense graph&nbsp;<span class="math-tex">\(E = V^2\)</span>):&nbsp;
+          <span
+          class="math-tex">\(O(V^3)\)</span>
         </p>
         <figure class="image">
           <img src="Bellman-Ford%20Algorithm/photo_6303001576922527868_y.jp">

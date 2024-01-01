@@ -12,33 +12,20 @@
        <h1>Gradient Descent</h1>
 
       <div class="ck-content">
-        <p>Gradient descent is an optimization algorithm commonly used in machine
-          learning to minimize the cost or loss function of a model. It is an iterative
-          algorithm that adjusts the parameters of a model in the direction of steepest
-          descent of the cost function.</p>
-        <p>The main idea behind gradient descent is to find the optimal values for
-          the parameters of a model by iteratively updating them based on the gradients
-          of the cost function with respect to those parameters. The gradient represents
-          the direction of the steepest increase of the cost function, so by moving
-          in the opposite direction (i.e., descending the gradient), we can gradually
-          minimize the cost function.</p>
-        <p>The algorithm starts with an initial set of parameter values and calculates
-          the gradient of the cost function with respect to each parameter. Then,
-          it updates the parameters by taking a step in the opposite direction of
-          the gradient, multiplied by a learning rate, which determines the size
-          of the step taken in each iteration.</p>
-        <p>The learning rate is an important hyperparameter that needs to be carefully
-          chosen. If the learning rate is too small, the algorithm may converge slowly.
-          On the other hand, if the learning rate is too large, the algorithm may
-          overshoot the minimum of the cost function and fail to converge.</p>
-        <p>The process of calculating the gradients and updating the parameters is
-          repeated iteratively until a stopping criterion is met, such as reaching
-          a maximum number of iterations or achieving a desired level of convergence.</p>
-        <p>Gradient descent is widely used in various machine learning algorithms,
-          including linear regression, logistic regression, neural networks, and
-          deep learning. It is a fundamental optimization technique that allows models
-          to learn from data and find the optimal set of parameters that minimize
-          the cost function.</p>
+        <p style="margin-left:0px;">Gradient descent is an iterative optimization algorithm used in machine
+          learning to minimize a model's cost function. It adjusts the model's parameters
+          towards the steepest descent of the cost function. The algorithm updates
+          parameters iteratively, moving opposite to the cost function's gradient,
+          guided by a learning rate that determines the step size.</p>
+        <p style="margin-left:0px;">A suitable learning rate is crucial; too small leads to slow convergence,
+          too large risks overshooting the minimum. The process involves calculating
+          gradients and updating parameters until certain criteria, like a maximum
+          number of iterations or desired convergence level, are met.</p>
+        <p style="margin-left:0px;">Gradient descent is key in various algorithms, including linear and logistic
+          regression, and neural networks, aiding in optimal parameter determination.</p>
+        <p
+        style="margin-left:0px;"><span class="math-tex">\(x_{new}=x_{old}−η⋅∇f(x_{old})\)</span>
+          </p>
       </div>
     </div>
   </body>
